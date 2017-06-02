@@ -1,6 +1,8 @@
 
 # Sass Short Notes
 
+http://sass-lang.com/documentation/file.SASS_REFERENCE.html#placeholder_selectors_
+
 #### VARIABLES
 
 ```scss
