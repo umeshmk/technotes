@@ -1,7 +1,6 @@
-
 # Sass Short Notes
 
-http://sass-lang.com/documentation/file.SASS_REFERENCE.html#placeholder_selectors_
+<http://sass-lang.com/documentation/file.SASS_REFERENCE.html>
 
 #### VARIABLES
 
@@ -27,28 +26,25 @@ nav {
 
 #### PARTIALS
 
-    _variables.scss
-    _any.scss
-
+```
+_variables.scss
+_any.scss
+```
 
 #### IMPORT
 
- *_reset.scss*
-  
 ```scss
-    ul,ol {
-      margin: 0;
-      padding: 0;
-    }
-```
+// _reset.scss
+ul,ol {
+  margin: 0;
+  padding: 0;
+}
 
-*base.scss*
- 
-```scss
-    @import 'reset';
-    body {
-      background-color: blue;
-    }
+// base.scss
+@import 'reset';
+body {
+  background-color: blue;
+}
 ```
 
 #### MIXIN
@@ -69,7 +65,7 @@ nav {
 ```scss
 .mesg {
   border: 1px solid #ccc;
-  padding: 10px; 
+  padding: 10px;
 }
 
 .alert-success {
@@ -84,7 +80,6 @@ nav {
   @extend .message;
 }
 ```
-
 
 #### OPERATORS
 
@@ -102,7 +97,6 @@ aside {
 }
 ```
 
-
 #### CLASS-NAMES AS $var
 
 ```scss
@@ -112,6 +106,3 @@ $n: "alert-success";
   color: #333;
 }
 ```
-
-
-
