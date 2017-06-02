@@ -25,9 +25,8 @@ nav {
 
 #### PARTIALS
 
-  *_variables.scss*
-
-  *_any.scss*
+    _variables.scss
+    _any.scss
 
 
 #### IMPORT
