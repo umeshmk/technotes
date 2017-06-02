@@ -1,12 +1,14 @@
 # Sass Short Notes
 
 ### VARIABLES
-    ```css   
-    $primary-color: #333;
-    body {
-      color: $primary-color;
-    }
 
+```scss
+$primary-color: #333;
+body {
+  color: $primary-color;
+}
+```
+    
 
 ### NESTING
 
