@@ -1,7 +1,7 @@
 
 # Sass Short Notes
 
-### VARIABLES
+#### VARIABLES
 
 ```scss
 $primary-color: #333;
@@ -10,7 +10,7 @@ body {
 }
 ```
 
-### NESTING
+#### NESTING
 
 ```scss
 nav {
@@ -23,14 +23,14 @@ nav {
 }
 ```
 
-### PARTIALS
+#### PARTIALS
 
   *_variables.scss*
 
   *_any.scss*
 
 
-### IMPORT
+#### IMPORT
 
  *_reset.scss*
   
@@ -50,7 +50,7 @@ nav {
     }
 ```
 
-### MIXIN
+#### MIXIN
 
 ```scss
 @mixin border-radius($radius) {
@@ -63,7 +63,7 @@ nav {
 .box { @include border-radius(10px); }
 ```
 
-### INHERITANCE
+#### INHERITANCE
 
 ```scss
 .mesg {
@@ -85,7 +85,7 @@ nav {
 ```
 
 
-### OPERATORS
+#### OPERATORS
 
 ```scss
 .container { width: 100%; }
@@ -102,7 +102,7 @@ aside {
 ```
 
 
-### CLASS-NAMES AS $var
+#### CLASS-NAMES AS $var
 
 ```scss
 $n: "alert-success";
