@@ -57,6 +57,11 @@
 - Codeanywhere
 - 
 
+### Server
+- Apache
+- Nginx
+- 
+
 
 ### Tools Design
 - [Moqups](https://app.moqups.com/)
@@ -74,5 +79,7 @@
 - BigRock
 
 ### OTHERS
-- https://www.tutorialspoint.com
+- tutorialspoint
+- trello
+- Evernote
 - 
