@@ -29,7 +29,7 @@ git log
 
 |Cmd|-|-|
 |-|-|-|
-|*Push* | Sends repo to remote server | `git push -u origin master` [ `-u` to remembers repo and branch names ] `git push` |
+|*Push* | Sends repo to remote server | `git push -u origin master` &nbsp; [ `-u` to remembers repo and branch names ] &nbsp; `git push` |
 |*Clone* | Creates local copy of remote repo | `git clone <url>` 
 |*Remote add* | Associates local repo with remote repo | `git remote add origin <url>`|
 |*Pull*| Updates local repo if remote is updated | `git pull origin master` |
