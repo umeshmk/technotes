@@ -29,12 +29,6 @@ git status
 |*Reset*| Removes file from *staged* (file is unchanged) | `git reset abc.txt` |
 |*Checkout*| Resets file to last commit (file is changed) | `git checkout abc.text` |
 
-### History
-
-```bash
-git log
-```
-
 ### Branch
 
 | Task | - | - |
@@ -55,4 +49,7 @@ git commit --amend -m "updated"
 
 ### Misc
 
-- `&nbsp;` for horizontal space
+|Task| |
+|-|-|
+| *Horizontal space* | `&nbsp;` |
+| *History* | `git log` |
