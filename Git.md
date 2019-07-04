@@ -28,8 +28,8 @@ git log
 ### Basics
 
 |Cmd|-|-|
-|-|-|-| 
-|*Push* | Sends repo to remote server | `git push -u origin master`|
+|-|-|-|
+|*Push* | Sends repo to remote server | `git push -u origin master` [ `-u` to remembers repo and branch names ] `git push` |
 |*Clone* | Creates local copy of remote repo | `git clone <url>` 
 |*Remote add* | Associates local repo with remote repo | `git remote add origin <url>`|
 |*Pull*| Updates local repo if remote is updated | `git pull origin master` |
