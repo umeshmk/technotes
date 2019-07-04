@@ -12,11 +12,11 @@ git init
 git status
 ```
 
-Status | - | -
---- | --- | ---
-*Not Tracked* | File created | `touch abc.txt`
-*Staged* | Added changes(except `.gitignore`) | `git add abc.txt`
-*Committed* | Repo updated | `git commit -m "updated"`
+|Status | - | - |
+|--- | --- | --- |
+|*Untracked* | New file created | `touch abc.txt` |
+|*Staged* | File ready for commit (except `.gitignore`) | `git add abc.txt` |
+|*Committed* | Repo updated | `git commit -m "updated"` |
 
 
 ### History
@@ -30,8 +30,8 @@ git log
 |Cmd|-|-|
 |-|-|-| 
 |*Push* | Sends repo to remote server | `git push -u origin master`|
-|*Clone* | Creates local copy of remote repo | `git clone https://github.com/user/app.git` 
-|*Remote add* | Associates local repo with remote repo | `git remote add origin https://github.com/user/app.git`|
+|*Clone* | Creates local copy of remote repo | `git clone <url>` 
+|*Remote add* | Associates local repo with remote repo | `git remote add origin <url>`|
 |*Pull*| Updates local repo if remote is updated | `git pull origin master` |
 |*Diff*| Difference between commits | `git diff HEAD` |
 |*Reset*| Removes file from *staged* (file is unchanged) | `git reset abc.txt` |
@@ -41,9 +41,9 @@ git log
 
 | Task | - | - |
 | - | - | - |
-| Create | creates new branch | `git branch <branchname>` |
-| Switch branch | Switch to new branch | `git checkout <branchname>` |
-| See branch | Lists all branches | `git branch` |
+| *Create* | Creates new branch | `git branch <branchname>` |
+| *Switch branch* | Switch to new branch | `git checkout <branchname>` |
+| *See branch* | Lists all branches | `git branch` |
 
 - **Merge** any branch with master branch
 
