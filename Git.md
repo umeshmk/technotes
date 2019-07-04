@@ -5,6 +5,15 @@ cd project
 git init
 ```
 
+### Url
+
+```bash
+# SSH
+git remote add origin git@github.com:umeshmk/Tutorials.git
+# HTTPS
+git remote add origin https://github.com/umeshmk/Tutorials.git
+```
+
 ### Tracking
 
 ```bash
@@ -53,3 +62,4 @@ git commit --amend -m "updated"
 |-|-|
 | *Horizontal space* | `&nbsp;` |
 | *History* | `git log` |
+
