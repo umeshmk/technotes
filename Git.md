@@ -9,9 +9,11 @@ git init
 
 ```bash
 # SSH
-git remote add origin git@github.com:umeshmk/Tutorials.git
+git remote add origin ssh://git@github.com:umeshmk/Tutorials.git
 # HTTPS
 git remote add origin https://github.com/umeshmk/Tutorials.git
+# HTTPS + Username
+git remote add origin https://umeshmk@github.com/umeshmk/Tutorials.git
 ```
 
 ### Tracking
