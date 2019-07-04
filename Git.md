@@ -1,7 +1,6 @@
 ## Git Version Control
 
 ```bash
-mkdir project
 cd project
 git init
 ```
@@ -18,13 +17,6 @@ git status
 |*Staged* | File ready for commit (except `.gitignore`) | `git add abc.txt` |
 |*Committed* | Repo updated | `git commit -m "updated"` |
 
-
-### History
-
-```bash
-git log
-```
-
 ### Basics
 
 |Cmd|-|-|
@@ -36,6 +28,12 @@ git log
 |*Diff*| Difference between commits | `git diff HEAD` |
 |*Reset*| Removes file from *staged* (file is unchanged) | `git reset abc.txt` |
 |*Checkout*| Resets file to last commit (file is changed) | `git checkout abc.text` |
+
+### History
+
+```bash
+git log
+```
 
 ### Branch
 
