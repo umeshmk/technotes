@@ -35,7 +35,7 @@ git log
 |*Pull*| Updates local repo if remote is updated | `git pull origin master` |
 |*Diff*| Difference between commits | `git diff HEAD` |
 |*Reset*| Removes file from *staged* (file is unchanged) | `git reset abc.txt` |
-|*Checkout*| Resets file the last commit (file is changed) | `git checkout abc.text` |
+|*Checkout*| Resets file to last commit (file is changed) | `git checkout abc.text` |
 
 ### Branch
 
@@ -44,14 +44,7 @@ git log
 | *Create* | Creates new branch | `git branch <branchname>` |
 | *Switch branch* | Switch to new branch | `git checkout <branchname>` |
 | *See branch* | Lists all branches | `git branch` |
-
-- **Merge** any branch with master branch
-
-```bash
-# switch to master
-git checkout master
-git merge <anybranch>
-```
+| *Merge* | Merge any branch with master branch | First switch to master `git checkout master` then `git merge <anybranch>` |
 
 ### Amend
 
