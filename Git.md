@@ -56,4 +56,3 @@ git commit --amend -m "updated"
 ### Misc
 
 - `&nbsp;` for horizontal space
-- `git config --global user.name umeshmk
