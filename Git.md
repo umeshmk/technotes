@@ -1,4 +1,4 @@
-# Git Version Control
+## Git Version Control
 
 ```bash
 mkdir project
@@ -6,7 +6,7 @@ cd project
 git init
 ```
 
-## Tracking
+### Tracking
 
 ```bash
 git status
@@ -19,13 +19,13 @@ Status | - | -
 *Committed* | Repo updated | `git commit -m "updated"`
 
 
-## History
+### History
 
 ```bash
 git log
 ```
 
-## Basics
+### Basics
 
 |Cmd|-|-|
 |-|-|-| 
@@ -37,7 +37,7 @@ git log
 |*Reset*| Removes file from *staged* (file is unchanged) | `git reset abc.txt` |
 |*Checkout*| Resets file the last commit (file is changed) | `git checkout abc.text` |
 
-## Branch
+### Branch
 
 | Task | - | - |
 | - | - | - |
@@ -53,7 +53,7 @@ git checkout master
 git merge <anybranch>
 ```
 
-## Amend
+### Amend
 
 - Combine *staged* changes to *previous* commit
 - Replaces the whole previous commit
@@ -61,19 +61,3 @@ git merge <anybranch>
 ```bash
 git commit --amend -m "updated"
 ```
-
-
--
-
-
-
-
-
-
-
-
-
-
-
-
-
