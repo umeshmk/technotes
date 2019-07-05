@@ -1,6 +1,7 @@
-# Sass <sm> Syntactically Awesome Stylesheets </sm>
+# Sass 
+Syntactically Awesome Stylesheets
 
-<http://sass-lang.com/documentation/file.SASS_REFERENCE.html>
+[Referenxe](http://sass-lang.com/documentation/file.SASS_REFERENCE.html>)
 
 ```bash
 sass input.scss output.css                  # 1 times
@@ -27,7 +28,7 @@ p { #{$bor}-color: red; }             // as prop-name
 
 ```scss
 nav {
-  ul { margin: 0; }           # Too much nesting is bad practice
+  ul { margin: 0; }           // Too much nesting is bad practice
   li { color: blue; }
 }
 ```
@@ -65,7 +66,7 @@ nav {
 - Helps avoid multiple classnames
 
 ```scss
-%snip { color:red; display:block; }           # Only props not selectors
+%snip { color:red; display:block; }           // Only props not selectors
 .abc { @extend %snip ; padding:5px; }
 .xyz { @extend %snip ; border: 2px solid red; }
 ```
@@ -73,7 +74,6 @@ nav {
 #### OPERATORS [ `+` `-` `*` `/` `%` ]
 
 ```scss
-# OPERATORS
 div p { width: 600px / 960px * 100%; }
 ```
 
