@@ -1,7 +1,5 @@
 # Sass 
-Syntactically Awesome Stylesheets
-
-[Referenxe](http://sass-lang.com/documentation/file.SASS_REFERENCE.html>)
+Syntactically Awesome Stylesheets - [Reference](http://sass-lang.com/documentation/file.SASS_REFERENCE.html>)
 
 ```bash
 sass input.scss output.css                  # 1 times
@@ -14,9 +12,7 @@ sass --watch resourses/sass:public/css      # All files in folder
 ```scss
 // VARIABLE
 $primary-color: #333;                 // define var
-div {  color: $primary-color; }       // as prop-value
-// usage ---> $primary-color = $primary_color
-
+div {  color: $primary-color; }       // as prop-value. Note: $primary-color = $primary_color
 // INTERPOLATION
 $classname: "alert-success";
 .#{$classname} { color: #333; }       // as class-name (dot used since class)
