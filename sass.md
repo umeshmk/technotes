@@ -1,53 +1,52 @@
-# Sass Short Notes
+# Sass <sm> Syntactically Awesome Stylesheets </sm>
 
 <http://sass-lang.com/documentation/file.SASS_REFERENCE.html>
 
-#### VARIABLES
+```bash
+sass input.scss output.css                  # 1 times
+sass --watch input.scss output.css          # watch 1 file
+sass --watch resourses/sass:public/css      # All files in folder
+```
+
+#### VARIABLES / INTERPOLATION
 
 ```scss
-$primary-color: #333;
-body {
-  color: $primary-color;
-}
+// VARIABLE
+$primary-color: #333;                 // define var
+div {  color: $primary-color; }       // as prop-value
+// usage ---> $primary-color = $primary_color
+
+// INTERPOLATION
+$classname: "alert-success";
+.#{$classname} { color: #333; }       // as class-name (dot used since class)
+$bor: "border";
+p { #{$bor}-color: red; }             // as prop-name
 ```
 
 #### NESTING
 
 ```scss
 nav {
-  ul {
-    margin: 0;
-  }
-  a {
-    display: block;
-  }
+  ul { margin: 0; }           # Too much nesting is bad practice
+  li { color: blue; }
 }
 ```
 
-#### PARTIALS
+#### PARTIALS / IMPORTS
 
-```
-_variables.scss
-_any.scss
-```
-
-#### IMPORT
+- Starts with *under_score* like `_variables.scss`
+- No `.css` file generated
+- Can be imported in any `.scss` files
+- `**@Import**`
+  - In *CSS* : Method used is `@import` which makes `http` requests [eg. Google Fonts]
+  - In *SASS* : No `http` request. Preprocessor is used.
 
 ```scss
-// _reset.scss
-ul,ol {
-  margin: 0;
-  padding: 0;
-}
-
-// base.scss
+# _reset.scss is imported in project.scss
 @import 'reset';
-body {
-  background-color: blue;
-}
 ```
 
-#### MIXIN
+#### MIXIN / INCLUDE
 
 ```scss
 @mixin border-radius($radius) {
@@ -56,53 +55,32 @@ body {
       -ms-border-radius: $radius;
           border-radius: $radius;
 }
-
 .box { @include border-radius(10px); }
 ```
 
-#### INHERITANCE
+#### EXTEND / INHERITANCE
+
+- `@import 'partials'` are files. 
+- `@extend %snip`are small css snippets for reuse.
+- Helps avoid multiple classnames
 
 ```scss
-.mesg {
-  border: 1px solid #ccc;
-  padding: 10px;
-}
-
-.alert-success {
-  @extend .mesg;
-  color: green;
-}
-.alert-error {
-  @extend .mesg;
-  color: red;
-}
-.alert-none {
-  @extend .message;
-}
+%snip { color:red; display:block; }           # Only props not selectors
+.abc { @extend %snip ; padding:5px; }
+.xyz { @extend %snip ; border: 2px solid red; }
 ```
 
-#### OPERATORS
+#### OPERATORS [ `+` `-` `*` `/` `%` ]
 
 ```scss
-.container { width: 100%; }
-
-
-article {
-  float: left;
-  width: 600px / 960px * 100%;
-}
-aside {
-  float: right;
-  width: 300px / 960px * 100%;
-}
+# OPERATORS
+div p { width: 600px / 960px * 100%; }
 ```
 
-#### CLASS-NAMES AS $var
+#### COMMENTS
 
 ```scss
-$n: "alert-success";
-
-.#{$n} {
-  color: #333;
-}
+// Single line comment are NOT passed to css files
+/* Multi-line comment is
+passed to css files */
 ```
