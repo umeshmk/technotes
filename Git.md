@@ -62,6 +62,4 @@ git commit --amend -m "updated"
 
 |Task| |
 |-|-|
-| *Horizontal space* | `&nbsp;` |
 | *History* | `git log` |
-
