@@ -1,4 +1,4 @@
-# # Sass 
+# SASS
 > Syntactically Awesome Stylesheets - [Reference](http://sass-lang.com/documentation/file.SASS_REFERENCE.html>)
 
 ```bash
@@ -7,7 +7,7 @@ sass --watch input.scss output.css          # watch 1 file
 sass --watch resourses/sass:public/css      # All files in folder
 ```
 
-#### VARIABLES / INTERPOLATION
+#### # VARIABLES / INTERPOLATION
 
 ```scss
 // VARIABLE
@@ -20,7 +20,7 @@ $bor: "border";
 p { #{$bor}-color: red; }             // as prop-name
 ```
 
-#### NESTING
+#### # NESTING
 
 ```scss
 nav {
@@ -29,7 +29,7 @@ nav {
 }
 ```
 
-#### PARTIALS / IMPORTS
+#### # PARTIALS / IMPORTS
 
 - Starts with *under_score* like `_variables.scss`
 - No `.css` file generated
@@ -43,7 +43,7 @@ nav {
 @import 'reset';
 ```
 
-#### MIXIN / INCLUDE
+#### # MIXIN / INCLUDE
 
 ```scss
 @mixin border-radius($radius) {
@@ -55,7 +55,7 @@ nav {
 .box { @include border-radius(10px); }
 ```
 
-#### EXTEND / INHERITANCE
+#### # EXTEND / INHERITANCE
 
 - `@import 'partials'` are files. 
 - `@extend %snip`are small css snippets for reuse.
@@ -67,13 +67,13 @@ nav {
 .xyz { @extend %snip ; border: 2px solid red; }
 ```
 
-#### OPERATORS [ `+` `-` `*` `/` `%` ]
+#### # OPERATORS [ `+` `-` `*` `/` `%` ]
 
 ```scss
 div p { width: 600px / 960px * 100%; }
 ```
 
-#### COMMENTS
+#### # COMMENTS
 
 ```scss
 // Single line comment are NOT passed to css files
