@@ -1,11 +1,12 @@
-## Git Version Control
+# Git 
+Version Control
 
 ```bash
 cd project
 git init
 ```
 
-### Url
+#### SSH / HTTPS
 
 ```bash
 # SSH
@@ -16,19 +17,16 @@ git remote add origin https://github.com/umeshmk/Tutorials.git
 git remote add origin https://umeshmk@github.com/umeshmk/Tutorials.git
 ```
 
-### Tracking
+#### TRACKING
 
-```bash
-git status
-```
-
-|Status | - | - |
+|Tracking |  |  |
 |--- | --- | --- |
+|*Status* | View git status | `git status` |
 |*Untracked* | New file created | `touch abc.txt` |
 |*Staged* | File ready for commit (except `.gitignore`) | `git add abc.txt` |
 |*Committed* | Repo updated | `git commit -m "updated"` |
 
-### Basics
+#### BASICS
 
 |Cmd|-|-|
 |-|-|-|
@@ -40,7 +38,7 @@ git status
 |*Reset*| Removes file from *staged* (file is unchanged) | `git reset abc.txt` |
 |*Checkout*| Resets file to last commit (file is changed) | `git checkout abc.text` |
 
-### Branch
+#### BRANCH
 
 | Task | - | - |
 | - | - | - |
@@ -49,7 +47,7 @@ git status
 | *See branch* | Lists all branches | `git branch` |
 | *Merge* | Merge any branch with master branch | First switch to master `git checkout master` then `git merge <anybranch>` |
 
-### Amend
+#### AMEND
 
 - Combine *staged* changes to *previous* commit
 - Replaces the whole previous commit
@@ -58,7 +56,7 @@ git status
 git commit --amend -m "updated"
 ```
 
-### Misc
+#### MISC
 
 |Task| |
 |-|-|
