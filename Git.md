@@ -1,4 +1,4 @@
-# # Git 
+# Git 
 > Version Control System For Any Projects
 
 ```bash
@@ -6,7 +6,7 @@ cd project
 git init
 ```
 
-#### SSH / HTTPS
+#### # SSH / HTTPS
 
 ```bash
 # SSH
@@ -17,7 +17,7 @@ git remote add origin https://github.com/umeshmk/Tutorials.git
 git remote add origin https://umeshmk@github.com/umeshmk/Tutorials.git
 ```
 
-#### TRACKING
+#### # TRACKING
 
 |Tracking |  |  |
 |--- | --- | --- |
@@ -26,7 +26,7 @@ git remote add origin https://umeshmk@github.com/umeshmk/Tutorials.git
 |*Staged* | File ready for commit (except `.gitignore`) | `git add abc.txt` |
 |*Committed* | Repo updated | `git commit -m "updated"` |
 
-#### BASICS
+#### # BASICS
 
 |Cmd|-|-|
 |-|-|-|
@@ -38,7 +38,7 @@ git remote add origin https://umeshmk@github.com/umeshmk/Tutorials.git
 |*Reset*| Removes file from *staged* (file is unchanged) | `git reset abc.txt` |
 |*Checkout*| Resets file to last commit (file is changed) | `git checkout abc.text` |
 
-#### BRANCH
+#### # BRANCH
 
 | Task | - | - |
 | - | - | - |
@@ -47,7 +47,7 @@ git remote add origin https://umeshmk@github.com/umeshmk/Tutorials.git
 | *See branch* | Lists all branches | `git branch` |
 | *Merge* | Merge any branch with master branch | First switch to master `git checkout master` then `git merge <anybranch>` |
 
-#### AMEND
+#### # AMEND
 
 - Combine *staged* changes to *previous* commit
 - Replaces the whole previous commit
@@ -56,7 +56,7 @@ git remote add origin https://umeshmk@github.com/umeshmk/Tutorials.git
 git commit --amend -m "updated"
 ```
 
-#### MISC
+#### # MISC
 
 |Task| |
 |-|-|
