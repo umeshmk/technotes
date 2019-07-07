@@ -10,22 +10,18 @@
 - Based on `Client-Server` / `Request-Response` Model
 - *Stateless* protocol
 - **Headers**
-    - In form `name : value`
-    - *case-sensitive*
+    - In form of`name : value` & it is *case-sensitive*
     - 2 types - *Request* & *Response*
-```
+    ```
     GET /file.html HTTP/version
     Host : Hostname
     From : Username
     Cache-Control : no-cache
-```
-    tab
+    ```
 
-    4 spaces
- 
- #### # CRUD REQUEST
+#### # CRUD REQUEST
 
-| **C**reate | **R**ead | **U**pdate | **D**elete |
+| Create | Read | Update | Delete |
 |-|-|-|-|
 |`*POST*` | `*GET*` | `*PUT*` | `*DELETE*` |
 
