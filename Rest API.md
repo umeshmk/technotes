@@ -13,6 +13,7 @@
     - In form `name : value`
     - *case-sensitive*
     - 2 types - *Request* & *Response*
+
     GET /file.html HTTP/version
     Host : Hostname
     From : Username
@@ -21,6 +22,6 @@
  #### # CRUD REQUEST
 
 | **C**reate | **R**ead | **U**pdate | **D**elete |
-|-|-|
+|-|-|-|-|
 |`*POST*` | `*GET*` | `*PUT*` | `*DELETE*` |
 
