@@ -18,12 +18,12 @@
            From : Username
            Cache-Control : no-cache 
  
- #### #CRUD** Request Types
+ #### # CRUD Request Types
  
-    - | REQUEST | | 
-      |-|-|
-      | GET | Read |
-      | PUT | Update |
-      | POST | Create |
-      | DELETE | Delete |
-      
+| REQUEST | | 
+|-|-|
+| GET | Read |
+| PUT | Update |
+| POST | Create |
+| DELETE | Delete |
+
