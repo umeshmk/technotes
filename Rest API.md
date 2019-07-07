@@ -19,11 +19,8 @@
     Cache-Control : no-cache 
  
  #### # CRUD REQUEST
- 
-| Type | |
+
+| **C**reate | **R**ead | **U**pdate | **D**elete |
 |-|-|
-| **C**reate | `*POST*` |
-| **R**ead | `*GET*` |
-| **U**pdate | `*PUT*` |
-| **D**elete | `*DELETE*` |
+|`*POST*` | `*GET*` | `*PUT*` | `*DELETE*` |
 
