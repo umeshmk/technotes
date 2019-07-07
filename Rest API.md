@@ -14,9 +14,12 @@
     - *case-sensitive*
     - 2 types - *Request* & *Response*
     
-    GET /file.html HTTP/version
-    Host : Hostname
-    From : Username
+ GET /file.html HTTP/version
+
+  Host : Hostname
+
+   From : Username
+
     Cache-Control : no-cache 
  
  #### # CRUD REQUEST
