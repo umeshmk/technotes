@@ -11,19 +11,19 @@
 - *Stateless* protocol
 - **Headers**
     - In form `name : value`
-    - case-sensitive
+    - *case-sensitive*
     - 2 types - *Request* & *Response*
-    - eg:- GET /file.html HTTP/version
-           Host : Hostname
-           From : Username
-           Cache-Control : no-cache 
+    GET /file.html HTTP/version
+    Host : Hostname
+    From : Username
+    Cache-Control : no-cache 
  
- #### # CRUD Request Types
+ #### # CRUD REQUEST
  
-| REQUEST | | 
+| Type | |
 |-|-|
-| GET | Read |
-| PUT | Update |
-| POST | Create |
-| DELETE | Delete |
+| **C**reate | `*POST*` |
+| **R**ead | `*GET*` |
+| **U**pdate | `*PUT*` |
+| **D**elete | `*DELETE*` |
 
