@@ -13,18 +13,15 @@
     - In form `name : value`
     - *case-sensitive*
     - 2 types - *Request* & *Response*
-
+```
     GET /file.html HTTP/version
     Host : Hostname
     From : Username
     Cache-Control : no-cache
+```
+    tab
 
-
-    From : Username
-    Cache-Control : no-cache
-
-    tab 1
-        tab2
+    4 spaces
  
  #### # CRUD REQUEST
 
