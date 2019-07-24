@@ -3,7 +3,7 @@
 > **TIME** & **SPACE** are key factors any actions
 
 #### # BUBBLE SORT
-
+> 
 - Sorts elements list like an *array*.
 - Compares 2 adjacent elements
 
@@ -29,9 +29,8 @@
 |Simple|Not optimal due to multiple iterations|
 |No additional space required|*worst-case* for *n* number of elements requires swappings ` (n-1) + (n-2) + (n-3) + .... + 3 + 2 + 1 = n(n-1)/2 ` |
 
-
 #### # SELECTION SORT
-
+> 
 - Finds smallest element and place it at start. 
 - Repeat for rest of elements.
 
