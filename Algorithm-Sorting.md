@@ -101,24 +101,25 @@ Step 1 -> [2,0] (3) [7,4]                 // (3) is pivot
 |Faster|Slow if bad pivot is choosen|
 |No extra space||
 
+> - 3-way Quicksort is another way in which 3 arrays are created (lesser, equal, greater) instead of 2 arrays
+
 #### # TOWER OF HANOI
 
+> - Do google search
 
 #### # LINEAR SEARCH
+> - Every item is searched and the index is returned if matched.
+> - `-1` is returned if not matched
+> - Starts from left of the list
 
+**Disadvantages**
+> - Rarely used.
+> - Binary search(see below) is better
 
 #### # BINARY SEARCH
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+> - Sorted list is required
+> - Divide and conquer. Into 2 parts.
+> - Matches elements with middle element of list
+> - Index is returned if matched
+> - If middle item is greater than search item then use left side array else use right side array.
+> - Repeat on each sub-arrays till sub-array size is 0.
