@@ -24,16 +24,11 @@
          3 -> [1,2,3,5]         // no (SO STOP ITERATION)
 ```
 
-**Advantages**
+|**Advantages**|**Disadvantage**|
+|-|-|
+|Simple|Not optimal due to multiple iterations|
+|No additional space required|*worst-case* for *n* number of elements requires swappings ` (n-1) + (n-2) + (n-3) + .... + 3 + 2 + 1 = n(n-1)/2 ` |
 
-- Simple
-- No additional space required
-
-**Disadvantages**
-
-- Not optimal due to multiple iterations
-- *worst-case* for *n* number of elements requires swappings
-    - ` (n-1) + (n-2) + (n-3) + .... + 3 + 2 + 1 = n(n-1)/2 `
 
 #### # SELECTION SORT
 
