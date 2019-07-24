@@ -47,13 +47,41 @@ Step 1 -> [1,3,5,2]
 |Very good for smaller list|Bad for big lists|
 |No additional space required|-|
 
-
-
 #### # INSERTION SORT
 
+> - Similar to sorting playing cards
+
+```js
+Take [3,1,5,2]
+Step 1 -> [1,3,5,2]       // 2 elements [1,3] are sorted
+     2 -> [1,3,5,2]       // element [5] is placed correctly
+     3 -> [1,2,3,5]       // element [2] is placed correctly
+```
+
+|*Advantages*|*Disadvantage*|
+|-|-|
+|Good for small lists| Bad for large lists|
+|No extra space|-|
 
 #### # MERGE SORT
 
+> - Divide and conquer
+> - Divide array into half until each item is single element
+
+```js
+Take [31,4,88,1,4,2,42]
+
+Step 1 -> [31,4,88,1] [4,2,42]
+     2 -> [31,4] [88,1] [4,2] [42]
+     3 -> [31] [4] [88] [1] [4] [2] [42]      // All array has 1 element
+     4 -> [4,31] [1,88] [2,4] [42]
+     5 -> [1,4,31,88] [2,4,42]
+     6 -> [1,2,4,4,31,42,88]                  // Sorted array
+```
+
+|*Advantages*|*Disadvantage*|
+|-|-|
+|Good for sorting Linkedlists with no extra space| Array needs temporary extra space|
 
 #### # QUICK SORT
 
