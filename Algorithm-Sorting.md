@@ -81,10 +81,25 @@ Step 1 -> [31,4,88,1] [4,2,42]
 
 |*Advantages*|*Disadvantage*|
 |-|-|
-|Good for sorting Linkedlists with no extra space| Array needs temporary extra space|
+|Good for sorting *Linked lists* with no extra space| *Array* needs temporary extra space|
 
 #### # QUICK SORT
 
+> - Select any element as **pivot** element
+> - Sort rest of elements as `[] <= (pivot) >= []`
+> - Repeat for remaining arrays.
+
+```js
+Take [2,0,7,4,3]
+
+Step 1 -> [2,0] (3) [7,4]                 // (3) is pivot
+     2 -> [ (0) [2] ] (3) [ (4) [7] ]     // (0) & (4) as pivot. Sorted.
+```
+
+|*Advantages*|*Disadvantage*|
+|-|-|
+|Faster|Slow if bad pivot is choosen|
+|No extra space||
 
 #### # TOWER OF HANOI
 
