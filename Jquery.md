@@ -1,13 +1,14 @@
 # JQUERY
 
-- Used for - DOM, CSS, event, animations, ajax, utilities
-- Has various plugins
-- 2 versions - production (jquery.min.js) & development (jquery.js)
-- Via - CDN or Download
+- Used for - *DOM, CSS, event, animations, ajax, utilities*
+- Has various *plugins*
+- 2 versions - production *(jquery.min.js)* & development *(jquery.js)*
+- Via - *CDN or Download*
 
 #### # SYNTAX
 
 ```js
+// BASIC
 $(selector).action();
 $("p"); $("#demo"); $(".myclass"); $("[href]");         //use css selectors
 
@@ -15,8 +16,8 @@ $(document).ready(function (){ ... });
 $(function () { ... });
 
 // EVENTS
+// click(), dblclick(), mouseenter(), mouseleave(), mouseup(), mousedown()
 $("p").click(function () { ... });
-// dblclick() , mouseenter() , mouseleave() , mouseup() , mousedown()
 $("p").hover(function () { /*mouseenter*/ } ,
              function () { /*mouseleave*/ }
             );
@@ -141,7 +142,7 @@ $("p").siblings();              // all siblings
 
       .next();                  // 1 sibling after <p>
       .nextAll();               // n siblings after <p>
-      .nextUntill("span");      // 
+      .nextUntill("span");      
 
       .prev();
       .prevAll();
