@@ -49,7 +49,7 @@ Step 1 -> [1,3,5,2]
 ```
 
 |**Advantages**|**Disadvantage**|
-| | |
+|-|-|
 |Very good for smaller list|Bad for big lists|
 |No additional space required|-|
 
