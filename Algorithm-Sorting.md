@@ -1,6 +1,6 @@
 # ALGORITHM-SORTING
 
-> **TIME** & **SPACE** are key factors any actions
+**TIME** & **SPACE** are key factors any actions
 
 #### # BUBBLE SORT
 
@@ -111,8 +111,7 @@ Step 1 -> [2,0] (3) [7,4]                 // (3) is pivot
 > - Every item is searched and the index is returned if matched.
 > - `-1` is returned if not matched
 > - Starts from left of the list
-
-**Disadvantages**
+> **Disadvantages**
 > - Rarely used.
 > - Binary search(see below) is better
 
