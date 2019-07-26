@@ -34,7 +34,7 @@
 #### # Stack
 
 - Create using *Array* or *Linked List*
-- LIFO -> Last In First Out
+- `LIFO` -> Last In First Out
 - *push* & *pop* operations can be performed.
 - **Usage**
     - *Undo/redo* functions.
@@ -42,12 +42,13 @@
 #### # Queue
 
 - Create using *Array* or *Linked List*
-- FIFO -> First In First Out
+- `FIFO` -> First In First Out
 - **Usage**
     - *Printer*, *Call center* calls, etc
 
 #### # Graph
-
+- Set of *nodes* (vertex) and its *connections* (edges)
+- ![](/images/graph.png?raw=1)
 
 #### # Binary Tree
 
