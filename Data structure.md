@@ -18,20 +18,33 @@
 #### # Linked list
 
 ![](https://miro.medium.com/max/919/1*1B4X5Jbe5LNXeZNWx2msyw.gif)
-```js
- _______________
-|      | Link   |
-| Data |  to    |
-|      | Node 2 |
-|______|________|
-    Node 1
-    (start)
 
-```
+- Similar to *Array*
+    - *Array* -> data is stored contigously in memory
+    - *Linked list* -> Data need not be continous
+- Hence, *Linked List* can insert/remove without reallocation or reorganisation.
+- **Drawbacks**
+    - Random access not allowed. Only from start.
+    - Cannot do binary search.
+    - Needs extra space.
+- **Usage**
+    - Its a fundamental DS for *stack, tree, queue, graph*
+
+
 #### # Stack
+
+- Create using *Array* or *Linked List*
+- LIFO -> Last In First Out
+- *push* & *pop* operations can be performed.
+- **Usage**
+    - *Undo/redo* functions.
 
 #### # Queue
 
+- Create using *Array* or *Linked List*
+- FIFO -> First In First Out
+- **Usage**
+    - *Printer*, *Call center* calls, etc
 
 #### # Graph
 
