@@ -60,8 +60,6 @@
 - *Height* = No of nodes from root to leaves
 
 ![](/images/tree3.png?raw=1)
-![](/images/tree2.png?raw=1)
-![](/images/tree.png?raw=1)
 
 - **TYPES**
     - *FULL* - Each node has 2 childrens
