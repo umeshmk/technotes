@@ -52,6 +52,26 @@
 
 #### # Binary Tree
 
+- Interconnected nodes.
+    - Topmost = *root*
+    - Below root = *childrens*
+    - No children = *leaves*
+- 1 Node can have max 2 childrens. Hence called *Binary*
+- *Height* = No of nodes from root to leaves
+![](/images/tree.png?raw=1)
+
+- **TYPES**
+    - *FULL* - Each node has 2 childrens
+    - *COMPLETE* - Each levels are filled. Except last level
+    - *PERFECT* - Each node has 2 childrens. All leaves at same levels
+- **Advantage**
+    - Hierarchies relationship
+    - Good insert
+    - Good search
+    - Easy to get subtree
+- **Usage**
+    - *Binary Search Tree* in search applications
+
 #### # Hash Tables
 
 
