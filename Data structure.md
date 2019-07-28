@@ -96,3 +96,5 @@
     - Digital image -> Each pixel has its color value
     - Digital video
     - Digital sound
+- *Operations*
+![](/images/matrix.png?raw=1)
