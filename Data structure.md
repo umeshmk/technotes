@@ -48,7 +48,8 @@
 
 #### # Graph
 - Set of *nodes* (vertex) and its *connections* (edges)
-- ![](/images/graph.png?raw=1)
+
+![](/images/graph.png?raw=1)
 
 #### # Binary Tree
 
@@ -61,7 +62,7 @@
 
 ![](/images/tree3.png?raw=1)
 
-- **TYPES**
+- **Types**
     - *FULL* - Each node has 2 childrens
     - *COMPLETE* - Each levels are filled. Except last level
     - *PERFECT* - Each node has 2 childrens. All leaves at same levels
@@ -75,5 +76,23 @@
 
 #### # Hash Tables
 
+- Key-value 
+- Hash is a unique value. eg: Student id, Book number, etc
+- *Hash function*
+    - Maps dataset(anysize) to fixed size dataset.
+    - Return values are called *hashes*
+    - Unique hash for each elements in dataset
+- *Disadvantage* 
+    - Bad for ordering and sorting data.
+- *Usage* 
+    - Associative arrays
+    - Database indexing
 
 #### # Matrix
+
+- *2-d* arrays having *rows* and *columns*
+- `6x3` matrix = 6 *rows* and 3 *columns*
+- **Usage**
+    - Digital image -> Each pixel has its color value
+    - Digital video
+    - Digital sound
