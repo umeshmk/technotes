@@ -33,8 +33,8 @@ Way to structure code
 |Pattern|Description|
 |-|-|
 |**Factory**|Simple class to create objects|
-|**Singleton**|Access to only one instance at a particular time <br/>`__construct()` [protected] prevents creating new instance outside <br/>`__clone()` [private] prevents cloning of object <br/>`__wakeup()` [private] prevents unserializing |
+|**Singleton**|Access to only one instance at a particular time <li/>`__construct()` [*protected*] prevents creating new instance outside <li/>`__clone()` [*private*] prevents cloning of object <li/>`__wakeup()` [*private*] prevents unserializing |
 |**Strategy**||
 |**Front-controller**|`index.php` single entry point|
-|**MVC-Model-View-Controller**| Most *popular* architecture|
+|**MVC** (Model-View-Controller) | Most *popular* architecture|
 
