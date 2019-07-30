@@ -48,10 +48,14 @@ Way to structure code
 
 #### # PDO
 - Common interface to connect to mant databases
+    
     $conn = new PDO("mysql:host=localhost;dbname=foo", "user", "password");
-      $query = $conn->query("select * from bar");
-    $row = $query->fetch(PDO::FETCH_ASSOC);
-    echo htmlentities($row["anycolumn"]);
+
+        $query = $conn->query("select * from bar");
+    
+      $row = $query->fetch(PDO::FETCH_ASSOC);
+    
+        echo htmlentities($row["anycolumn"]);
 
 
 
