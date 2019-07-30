@@ -17,7 +17,8 @@
 
 #### # Linked list
 
-![](https://miro.medium.com/max/919/1*1B4X5Jbe5LNXeZNWx2msyw.gif)
+<!-- ![](https://miro.medium.com/max/919/1*1B4X5Jbe5LNXeZNWx2msyw.gif) -->
+![](/images/Linkedlist.png?raw=1)
 
 - Similar to *Array*
     - *Array* -> data is stored contigously in memory
@@ -97,4 +98,5 @@
     - Digital video
     - Digital sound
 - *Operations*
+
 ![](/images/matrix.png?raw=1)
