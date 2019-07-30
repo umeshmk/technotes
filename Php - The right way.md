@@ -2,7 +2,7 @@
 
 [Php - The right way](http://phptherightway.com)
 
-#### SOLID Principles
+#### # SOLID Principles
 
 | | |
 |-|-|
@@ -12,7 +12,7 @@
 |**I**| Interface segregation principle (Many client-specific interface is better than 1 general-purpose interface) |
 |**D**| Depebdency Inversions (depend upon abstractions not concretion - decoupling modules) |
 
-#### Dependency Managements
+#### # Dependency Managements
 
 - Package management : `composer`, `composer.json` & `composer.lock`
 - *Website* : http://packagist.org
@@ -24,7 +24,7 @@
 - *index.php* : `require 'vendor/autoload.php'`
 - *Security of packages* : http://security,sensiolabs.org/check
 
-#### BASIC CODING PRACTICES
+#### # BASIC CODING PRACTICES
 
 *DESIGN PATTERN / ARCHITECTURE*
 
@@ -37,4 +37,24 @@ Way to structure code
 |**Strategy**||
 |**Front-controller**|`index.php` single entry point|
 |**MVC** (Model-View-Controller) | Most *popular* architecture|
+
+*DEPENDENCY INJECTION*
+
+- *Inversion-of-control* / *Dependencies inversion*  problem is solved by this dependency injection
+- Dependencies can imported in 3 ways
+    - *Constructor* : `function __construct ( Bar $b ) { ... }`
+    - *Methods* : `function foo ( Bar $b ) { ... }`
+    - *Property* : `public $b = new Bar ();`
+
+#### # PDO
+- Common interface to connect to mant databases
+    $conn = new PDO("mysql:host=localhost;dbname=foo", "user", "password");
+    $query = $conn->query("select * from bar");
+    $row = $query->fetch(PDO::FETCH_ASSOC);
+    echo htmlentities($row["anycolumn"]);
+
+
+
+
+
 
