@@ -49,7 +49,7 @@ Way to structure code
 #### # PDO
 - Common interface to connect to mant databases
     
-    $conn = new PDO("mysql:host=localhost;dbname=foo", "user", "password");
+     $conn = new PDO("mysql:host=localhost;dbname=foo", "user", "password");
 
         $query = $conn->query("select * from bar");
     
