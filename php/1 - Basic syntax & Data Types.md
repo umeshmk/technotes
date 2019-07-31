@@ -18,10 +18,14 @@
 - Protocols : `LDAP/IMAP/SNMP/NMTP/POP3/HTTP/COM(in windows)`
 
 ```php
+// Opening-closing tag
 <?php .... ?>               # Can avoid end tag "?>" if pure php file
-phpinfo()
-echo "hi $firstname" . $lastname
-htmlspecialchars($a)        # Text sanitize [eg: "<" is converted to "&lt;"
+// php version & extensions enabled information
+phpinfo() ;
+// print/display
+echo "hi $firstname" . $lastname ;
+// Text sanitize
+htmlspecialchars($a);        # eg: "<" is converted to "&lt;"
 
 ```
 
