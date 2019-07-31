@@ -55,13 +55,24 @@ Way to structure code
       echo htmlentities($row["anycolumn"]);
 
 - Prevent SQL Injections
+
       $conn = new PDO("mysql:host=localhost;dbname=foo", "user", "passsword");
       $query = $conn->prepare("select * from bar where id = :id");
       $id = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT );
       $query->bindParam( ":id", $id, PDO::PARAM_INT);
       $query->execute();
 
+#### # ERRORS AND EXCEPTIONS
 
+- *ERROR SEVERITY*
+  - *ERROR*  -->  fatal (runtime)
+  - *NOTICE*  -->  non-fatal (runtime) [may or maynot cause error]
+  - *WARNING*  -->  non-fatal(runtime)
+  - *E_STRICT*  -->  compatible to future php versions (compile-time)
+
+- *EXCEPTIONS*
+  - Errors are thrown as exceptions to make developer aware & handle error
+  - **SPL** extension has many predefined exception classes. Just reuse and throw them.
 
 
 
