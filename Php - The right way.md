@@ -45,14 +45,15 @@
     - *Property* : `public $b = new Bar ();`
 
 #### # PDO
-- Common interface to connect to many databases
-    
+
+> Common interface to connect to many databases
+
       $conn = new PDO("mysql:host=localhost;dbname=foo", "user", "password");
       $query = $conn->query("select * from bar");    
       $row = $query->fetch(PDO::FETCH_ASSOC);    
       echo htmlentities($row["anycolumn"]);
 
-- Prevent SQL Injections
+> Prevent SQL Injections
 
       $conn = new PDO("mysql:host=localhost;dbname=foo", "user", "passsword");
       $query = $conn->prepare("select * from bar where id = :id");
@@ -63,10 +64,10 @@
 #### # ERRORS AND EXCEPTIONS
 
 > *ERROR SEVERITY*
-  - *ERROR*  -->  fatal (runtime)
-  - *NOTICE*  -->  non-fatal (runtime) [may or maynot cause error]
-  - *WARNING*  -->  non-fatal(runtime)
-  - *E_STRICT*  -->  compatible to future php versions (compile-time)
+  - `ERROR`  :  fatal (runtime)
+  - `NOTICE`  :  non-fatal (runtime) [may or maynot cause error]
+  - `WARNING`  :  non-fatal(runtime)
+  - `E_STRICT`  :  compatible to future php versions (compile-time)
 
 > *EXCEPTIONS*
   - Errors are thrown as exceptions to make developer aware & handle error
