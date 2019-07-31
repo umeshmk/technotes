@@ -64,15 +64,15 @@ FALSE = false = 0 = "" = "0" = NULL = empty_array[]
 
 > Integers
 ```php
-# can be
-0b111       Binary 
-0a213       Octal 
-10          Decimal 
-0x5a2fee    Hexadecimal
+0b111       # Binary 
+0a213       # Octal 
+10          # Decimal 
+0x5a2fee    # Hexadecimal
 
-+ or -                          # sign
-2 billion in 32-bit variable    # size [If exceeds then it is considered as float]
-# type-casting to int for
+"+" or "-"                      # sign
+2 billion in 32-bit variable    # size (double for 64-bit) 
+// Note : If exceeds then it is considered as a float
+# Type-casting to int for
 NaN = 0
 infinity = 0
 ```
