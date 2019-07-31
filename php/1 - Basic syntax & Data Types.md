@@ -23,11 +23,11 @@
 - Protocols : `LDAP/IMAP/SNMP/NMTP/POP3/HTTP/COM(in windows)`
 
 ```php
-<?php .... ?>
+<?php .... ?>               # Can avoid end tag "?>" if pure php file
 phpinfo()
 echo "hi $firstname" . $lastname
-Text sanitize [eg: "<" is converted to "&lt;"
-htmlspecialchars($a)
+htmlspecialchars($a)        # Text sanitize [eg: "<" is converted to "&lt;"
+
 ```
 
 - *PECL* : Repository for PEAR packages
