@@ -26,9 +26,7 @@
 
 #### # BASIC CODING PRACTICES
 
-*DESIGN PATTERN / ARCHITECTURE*
-
-Way to structure code
+> *DESIGN PATTERN / ARCHITECTURE* - Way to structure code
 
 |Pattern|Description|
 |-|-|
@@ -38,7 +36,7 @@ Way to structure code
 |**Front-controller**|`index.php` single entry point|
 |**MVC** (Model-View-Controller) | Most *popular* architecture|
 
-*DEPENDENCY INJECTION*
+> *DEPENDENCY INJECTION*
 
 - *Inversion-of-control* / *Dependencies inversion*  problem is solved by this dependency injection
 - Dependencies can imported in 3 ways
