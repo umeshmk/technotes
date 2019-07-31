@@ -62,13 +62,13 @@
 
 #### # ERRORS AND EXCEPTIONS
 
-- *ERROR SEVERITY*
+> *ERROR SEVERITY*
   - *ERROR*  -->  fatal (runtime)
   - *NOTICE*  -->  non-fatal (runtime) [may or maynot cause error]
   - *WARNING*  -->  non-fatal(runtime)
   - *E_STRICT*  -->  compatible to future php versions (compile-time)
 
-- *EXCEPTIONS*
+> *EXCEPTIONS*
   - Errors are thrown as exceptions to make developer aware & handle error
   - **SPL** extension has many predefined exception classes. Just reuse and throw them.
 
