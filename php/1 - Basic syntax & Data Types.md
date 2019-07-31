@@ -7,7 +7,7 @@
 - phpbestpractices.org
 - OOP php on Udemy
 - Search on Github
-- (Awesome PHP)[https://github.com/ziadoz/awesome-php]
+- [Awesome PHP - Github](https://github.com/ziadoz/awesome-php)
 
 
 
