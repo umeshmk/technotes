@@ -48,18 +48,22 @@
 
 > Common interface to connect to many databases
 
-      $conn = new PDO("mysql:host=localhost;dbname=foo", "user", "password");
-      $query = $conn->query("select * from bar");    
-      $row = $query->fetch(PDO::FETCH_ASSOC);    
-      echo htmlentities($row["anycolumn"]);
+```php
+$conn = new PDO("mysql:host=localhost;dbname=foo", "user", "password");
+$query = $conn->query("select * from bar");    
+$row = $query->fetch(PDO::FETCH_ASSOC);    
+echo htmlentities($row["anycolumn"]);
+```
 
 > Prevent SQL Injections
 
-      $conn = new PDO("mysql:host=localhost;dbname=foo", "user", "passsword");
-      $query = $conn->prepare("select * from bar where id = :id");
-      $id = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT );
-      $query->bindParam( ":id", $id, PDO::PARAM_INT);
-      $query->execute();
+```php
+$conn = new PDO("mysql:host=localhost;dbname=foo", "user", "passsword");
+$query = $conn->prepare("select * from bar where id = :id");
+$id = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT );
+$query->bindParam( ":id", $id, PDO::PARAM_INT);
+$query->execute();
+```
 
 #### # ERRORS AND EXCEPTIONS
 
@@ -72,6 +76,20 @@
 > *EXCEPTIONS*
   - Errors are thrown as exceptions to make developer aware & handle error
   - **SPL** extension has many predefined exception classes. Just reuse and throw them.
+
+#### # SECURITY
+
+> HASHING SALTING PASSWORD
+- Irreversible process to prevent dictionary attacks
+- *Salting* means adding some strings to password before *Hashing*
+- `password_hash()` function uses BCrypt Algorithm
+
+```php
+$hashed = password_hash("anypassword", PASSWORD_DEFAULT );
+# check
+if (password_verify("tryingpassword", $hashed)) { ... }
+```
+
 
 
 
