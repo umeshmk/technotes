@@ -27,6 +27,7 @@ phpinfo() ;
 echo "hi $firstname" . $lastname ;
 # Text sanitize
 htmlspecialchars($a);        // eg: "<" is converted to "&lt;"
+
 // Single-line comment
 # Single-line comment
 /* Multi-line comment */
@@ -39,6 +40,21 @@ Else print this
 <?php endif; ?>
 ```
 
+#### # Datatypes
+
+- `double` is same as `float`. Hence always use `float`
+
+```php
+# print variable datatype and value
+var_dump($a);
+# Print variable datatype
+gettype($a);
+# check variable datatype
+if (is_string($a) && is_int($b))
+# convert variable datatype 
+settype($a, "integer");
+$a = (int) $b ;                     # Type-casting
+```
 
 
 
