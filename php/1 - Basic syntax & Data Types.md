@@ -16,20 +16,29 @@
 - Output : `text/html/pdf/flash/images`
 - Database : `mysql/pdo/odbc` or `sockets for couchDB, etc`
 - Protocols : `LDAP/IMAP/SNMP/NMTP/POP3/HTTP/COM(in windows)`
+- *PECL* : Repository for PEAR packages
 
 ```php
-// Opening-closing tag [Can omit end-tag incase pure php file]
+# Opening-closing tag [Can omit end-tag incase pure php file]
 `<?php .... ?>`
-// php version & extensions enabled information
+# php version & extensions enabled information
 phpinfo() ;
-// print/display
+# print/display
 echo "hi $firstname" . $lastname ;
-// Text sanitize
-htmlspecialchars($a);        # eg: "<" is converted to "&lt;"
+# Text sanitize
+htmlspecialchars($a);        // eg: "<" is converted to "&lt;"
+// Single-line comment
+# Single-line comment
+/* Multi-line comment */
 
+// Immediate next line works even after closing `?>` tag 
+<?php if(a==1) ; ?>
+Print this
+<?php else ; ?>
+Else print this
+<?php endif; ?>
 ```
 
-- *PECL* : Repository for PEAR packages
 
 
 
