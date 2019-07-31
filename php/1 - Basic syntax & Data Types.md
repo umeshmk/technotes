@@ -53,10 +53,13 @@ gettype($a);
 if (is_string($a) && is_int($b))
 # convert variable datatype 
 settype($a, "integer");
-$a = (int) $b ;                     # Type-casting
+$a = (int) $b ;                     // Type-casting
 ```
 
-
+> Boolean
+```php
+FALSE = false = 0 = "" = "0" = NULL = empty_array[]
+```
 
 
 
