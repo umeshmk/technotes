@@ -47,17 +47,19 @@ Way to structure code
     - *Property* : `public $b = new Bar ();`
 
 #### # PDO
-- Common interface to connect to mant databases
+- Common interface to connect to many databases
     
       $conn = new PDO("mysql:host=localhost;dbname=foo", "user", "password");
+      $query = $conn->query("select * from bar");    
+      $row = $query->fetch(PDO::FETCH_ASSOC);    
+      echo htmlentities($row["anycolumn"]);
 
-        $query = $conn->query("select * from bar");
-    
-      $row = $query->fetch(PDO::FETCH_ASSOC);
-    
-        echo htmlentities($row["anycolumn"]);
-
-
+- Prevent SQL Injections
+      $conn = new PDO("mysql:host=localhost;dbname=foo", "user", "passsword");
+      $query = $conn->prepare("select * from bar where id = :id");
+      $id = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT );
+      $query->bindParam( ":id", $id, PDO::PARAM_INT);
+      $query->execute();
 
 
 
