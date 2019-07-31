@@ -19,7 +19,7 @@
 
 ```php
 // Opening-closing tag [Can omit end-tag incase pure php file]
-<?php .... ?>               # 
+`<?php .... ?>`
 // php version & extensions enabled information
 phpinfo() ;
 // print/display
