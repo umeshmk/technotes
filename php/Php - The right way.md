@@ -85,9 +85,8 @@ $query->execute();
 - `password_hash()` function uses BCrypt Algorithm
 
 ```php
-$hashed = password_hash("anypassword", PASSWORD_DEFAULT );
-# check
-if (password_verify("tryingpassword", $hashed)) { ... }
+$hashed = password_hash("anypassword", PASSWORD_DEFAULT );      # Hashing
+if (password_verify("tryingpassword", $hashed)) { ... }         # check
 ```
 
 
