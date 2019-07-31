@@ -18,8 +18,8 @@
 - Protocols : `LDAP/IMAP/SNMP/NMTP/POP3/HTTP/COM(in windows)`
 
 ```php
-// Opening-closing tag
-<?php .... ?>               # Can avoid end tag "?>" if pure php file
+// Opening-closing tag [Can omit end-tag incase pure php file]
+<?php .... ?>               # 
 // php version & extensions enabled information
 phpinfo() ;
 // print/display
