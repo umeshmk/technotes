@@ -63,10 +63,11 @@ FALSE = false = 0 = "" = "0" = NULL = empty_array[]
 **NaN ........ ? google it**
 
 > Integers
+
 ```php
 0b111       # Binary 
 0a213       # Octal 
-10          # Decimal 
+910         # Decimal 
 0x5a2fee    # Hexadecimal
 
 "+" or "-"                      # sign
@@ -76,34 +77,107 @@ FALSE = false = 0 = "" = "0" = NULL = empty_array[]
 NaN = 0
 infinity = 0
 ```
+
+> Float
+
+```php
+1.234   1.2e3   7E-10
+
+# Use "math()" for higher precisions
+# Never compare two floating variables directly for equality. Because float is internally represented as binary. This can give precision error.
+```
+
+> Strings
+
+```php
+# 250 character code & no unicode support
+# Quotes
+$a = "Hii"
+echo "$a"           // Hii     [Variable is parsed]
+echo '$a'           // $a      [Variable is NOT parsed]
+# Parenthesis
+echo "$a"           // Hii
+echo "${a}bc"       // Hiibc
+echo "${b}bc"       // abc      [where $b = "a"]
+echo "${$b}bc"      // Hiibc    [where $b = "a"]
+echo {$a}           // error
+echo "{$a}"         // Hii
+# String as array
+$a[23] == $a{23}
+# String to Numbers (automatic conversion)
+echo 10 + "1.5"     // 11.5     [./e/E has 'Float' as datatype. Else 'Int']
+echo 10 + "b3"      // error
+echo 10 + "3b"      // 13
+echo "3b" + 10      // 13
+echo "b3" + 10      // error
+# Others
+TRUE = "1"
+FALSE = NULL = ""
+function __toString() { ... }    // return anything in string only
+"Serialization"       // (Avoid it.) Converts any php value to sting for storing like blobs in DB.
+```
+
+> Arrays
+
+```php
+# Ordered maps (in key-value form)
+[ arrays, list, hashtable. dictionary, collection, stack, queue ]
+# define
+$a = array(k1 => v1, k2 => v2);
+   = [k1 => v1, k2 => v2];
+$a[3] = a{3}          // same
+# Key
+"8"                 // 8
+"08"                // invalid
+"8.7"               // 8
+true                // 1
+NULL                // empty ""
+Array/object        // invalid
+same key is used    // last one overrides all previous keys
+
+$a[b]               // invalid
+$a["b"]             // valid
+$a[$b]              // valid
+$a["$b"]            // invalid
+
+# others
+unset($a[3])        // 4th element is removed
+unset($a)           // removes $a (Not just empty array but variable)
+
+# Type casting
+[int,float,string,boolean,Null]  // gives array of length 1
+[object]                         // gives array with properties(& not functions) as elements 
+
+```
+
+> Object
+
+```php
+# stdClass - creates anonymous objects. Class is predefined in php.
+$emptyObject = new stdClass();
+# But NOT a base class for all objects
+class a {...}
+$o = new a();
+echo ($a instanceof stdClass)?'Y':'N';   // No
+# use of stdClass
+$j = {"name":"umesh", "age":"28"};
+$o = json_decode($j);                    // $o is stdClass object
+echo $o->name;                           // umesh
+
+# Type casting
+NULL        // empty object of stdClass
+array       // elements(key-value) are converted to object properties
+```
+
+> Null
+
+```php
+$a = NULL = null;
+is_null($a)             // 1
+$a = [];
+is_null($a)             // gives nothing. (niether 1 nor 0)
+```
  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

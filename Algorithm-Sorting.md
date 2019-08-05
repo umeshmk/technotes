@@ -122,3 +122,7 @@ Step 1 -> [2,0] (3) [7,4]                 // (3) is pivot
 > - Index is returned if matched
 > - If middle item is greater than search item then use left side array else use right side array.
 > - Repeat on each sub-arrays till sub-array size is 0.
+
+#### # RESOURCES
+- Algoexpert
+- https://www.youtube.com/watch?v=r1MXwyiGi_U
