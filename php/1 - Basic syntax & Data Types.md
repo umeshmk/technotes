@@ -177,7 +177,17 @@ is_null($a)             // 1
 $a = [];
 is_null($a)             // gives nothing. (niether 1 nor 0)
 ```
- 
+
+> Callback/callable
+
+```php
+# A function/method can be called with its name.
+# For any built-in/user-defined functions [ except : array(),echo(),empty(),eval(),exit(),isset(),list(),print(),unset() ]
+call_user_func("foo")                   // foo(){..}
+call_user_func("Fooclass", "foo")       // class Fooclass{ foo(){..}}
+call_user_func("Fooclass::foo")         // class Fooclass{ static foo(){..}}
+call_user_func($foo_obj, "foo")         // $foo_obj = new Fooclass()
+```
 
 
 
