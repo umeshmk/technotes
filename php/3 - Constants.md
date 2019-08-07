@@ -1,12 +1,13 @@
 # PHP - CONSTANTS
 
-- read-only | UPPERCASE | Access-anywhere
+- Access-anywhere
 - static (shared by all instances)
 
 ```php
 # Define - outside any class
-define("PI",3.14);
+define("PI",3.14);      // UPPERCASE
 echo PI;                // 3.14
+PI = 333;               // error [Read-only]
 
 # Define - inside/outside any class
 const PI = 3.14;
