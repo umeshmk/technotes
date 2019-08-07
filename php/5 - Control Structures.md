@@ -48,8 +48,8 @@ require "file.php"          //
 # INCLUDE - "warning" if not found
 include "file.php"      // variables outside can be accessed inside file
 <?php .... ?>           // MUST be written inside file.
-./                      // current folder
-../                     // parent folder
+"./ "                   // current folder
+"../ "                  // parent folder
 
 # REQUIRE_ONCE / INCLUDE_ONCE 
 require_once("file.php") | include_once("file.php")
