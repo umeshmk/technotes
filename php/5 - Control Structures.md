@@ -47,12 +47,13 @@ require "file.php"          //
 
 # INCLUDE - "warning" if not found
 include "file.php"      // variables outside can be accessed inside file
-<?php .... ?>           // MUST be written inside file.
-"./ "                   // current folder
-"../ "                  // parent folder
+"<?php .... ?> "        // MUST be written inside file.
+"./a.php"               // current folder
+"../foo/a.php"          // parent folder
 
-# REQUIRE_ONCE / INCLUDE_ONCE 
-require_once("file.php") | include_once("file.php")
+# REQUIRE_ONCE / INCLUDE_ONCE
+require_once("file.php")
+include_once("file.php")
 
 # GOTO
 goto foo;
