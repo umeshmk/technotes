@@ -7,3 +7,13 @@
 $a = [] | "umesh" | 23 | {...}      
 
 ```
+
+
+
+> How to create a simple php library ?
+
+
+> What is Overloading/Overriding ?
+
+
+> Closure ?

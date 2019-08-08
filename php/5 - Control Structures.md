@@ -60,9 +60,9 @@ goto foo;
 echo "not printed";
 foo : { echo "printed"; }
 
-jump "in/out" of functions      // ERROR
-jump "in" loop                  // ERROR
-jump "out" loop                 // WORKS
+To jump "in/out" of functions      // ERROR
+To jump "in" loop                  // ERROR
+To jump "out" loop                 // WORKS
 
 ```
 
