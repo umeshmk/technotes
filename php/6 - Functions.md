@@ -43,15 +43,15 @@ foo("123");                         // error
 
 # ANY-LENGTH ARGS
 function foo (...$a){ echo count($a) ; }
-foo(2)          // 1
-foo(2,7,3);     // 3
+foo(2)                              // 1
+foo(2,7,3);                         // 3
 ```
 
-> CLOSURE/ANONYMOUS FUNCTIONS 
+> CLOSURE/ANONYMOUS FUNCTIONS
 
 ```php
-$foo = function (){...};    // Uses "Closure" class
-$foo();                     // call using variable name not function name
+$foo = function (){...};            // Uses "Closure" class
+$foo();                             // call using variable name not function name
 ```
 
 
