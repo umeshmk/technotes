@@ -361,6 +361,7 @@ echo isset($b)?"yes":"no";          // yes
 ```
 
 
+> Predefined variable - see "Variables.md"
 
 
 
