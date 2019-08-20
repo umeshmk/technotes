@@ -23,6 +23,8 @@
 `<?php .... ?>`
 # php version & extensions enabled information
 phpinfo() ;
+# php serve own server (Nginx is better)
+php -S localhost:8000
 # print/display
 echo "hi $firstname" . $lastname ;
 # Text sanitize

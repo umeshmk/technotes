@@ -11,6 +11,8 @@
 - Quick editing (sublime-text)
 - IDE (vscode)
 - SSH key for github
+- Drawing (Inkspace / Gimp)
+
 
 
 #### Manual / help

@@ -4,13 +4,13 @@
 
 #### # SOLID Principles
 
-| | |
-|-|-|
-|**S**| Single responsibility|
-|**O**| Open(for extensions) / closed (for modifications) |
-|**L**| Liskov Principle (Objects of program should be able to be replaced by instances of sub-types) |
-|**I**| Interface segregation principle (Many client-specific interface is better than 1 general-purpose interface) |
-|**D**| Depebdency Inversions (depend upon abstractions not concretion - decoupling modules) |
+| | | |
+|-|-| |
+|**S**| Single responsibility|Code reuse is possible|
+|**O**| Open(for extensions) / closed (for modifications) |It means classes should use interfaces.|
+|**L**| Liskov Substitution Principle (Objects of program should be able to be replaced by instances of sub-types) | Say Database is interface & we use same code for all types of databases. Mysql can be substituted by Redis without changing a thing in our code.|
+|**I**| Interface segregation principle (Many client-specific interface is better than 1 general-purpose interface) | Break interface to many specific interfaces|
+|**D**| Depebdency Inversions (depend upon abstractions not concretion - decoupling modules) | If any dependencies are required, it is good if it's a interface or abstract class|
 
 #### # Dependency Managements
 
@@ -26,10 +26,15 @@
 
 #### # BASIC CODING PRACTICES
 
-> *DESIGN PATTERN / ARCHITECTURE* - Way to structure code
+> Basics
+
+- https://phptherightway.com/pages/The-Basics.html
+
+> *DESIGN PATTERN / ARCHITECTURE* - Way to structure code(Frameworks already decide which ones to use.)
 
 |Pattern|Description|
 |-|-|
+|*Full details*|https://designpatternsphp.readthedocs.io/en/latest/|
 |**Factory**|Simple class to create objects|
 |**Singleton**|Access to only one instance at a particular time <li/>`__construct()` [*protected*] prevents creating new instance outside <li/>`__clone()` [*private*] prevents cloning of object <li/>`__wakeup()` [*private*] prevents unserializing |
 |**Strategy**||
@@ -43,6 +48,34 @@
     - *Constructor* : `function __construct ( Bar $b ) { ... }`
     - *Methods* : `function foo ( Bar $b ) { ... }`
     - *Property* : `public $b = new Bar ();`
+
+#### Standard PHP Library (SPL)
+
+- Collection of classes and interfaces.
+- *Datastructure* classes **(stack, queue, heap, etc)**
+- *Iterators* methods to traverse datastructures
+- Your own classes which implement SPL interfaces
+
+#### XDebug
+- Extension of php to assist debugging
+- Used by code editor like phpStorm
+
+
+#### Composer & packagist
+- Composer is like npm used to manage dependencies
+- [Packagist.com](https://packagist.org/) has tons of libraries
+- `composer.json` has list of dependencies needed.
+- `composer.lock` has fixed version of dependencies. Its created by composer.
+- `composer update` will use *json* and alter versions
+- `composer install` will use *lock* with same versions
+- `composer require twig/twig:*2.0` adds repo/library
+- `./vendor/autoload.php` folder has all dependencies.
+- `~1.8` means “anything newer than `1.8.0`, but less than `2.0.x-dev`”
+- `1.8.*` using wildcard
+- *Security vulnerabilities*
+    - https://security.symfony.com/
+    - https://libraries.io/
+
 
 #### # PDO
 

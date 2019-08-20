@@ -1,6 +1,10 @@
 https://github.com/ziadoz/awesome-php
 
+https://github.com/jupeter/clean-code-php
+
 https://github.com/PatrickLouys/no-framework-tutorial
+
+https://packagist.org/
 
 PHP Conferences videos on youtube
 
