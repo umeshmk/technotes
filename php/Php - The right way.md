@@ -8,7 +8,7 @@
 |-|-|-|
 |**S**| Single responsibility|Code reuse is possible|
 |**O**| Open(for extensions) / closed (for modifications) |It means classes should use interfaces.|
-|**L**| Liskov Substitution Principle (Objects of program should be able to be replaced by instances of sub-types) | Say Database is interface & we use same code for all types of databases. Mysql can be substituted by Redis without changing a thing in our code.|
+|**L**| Liskov Substitution Principle (Objects of program should be able to be replaced by instances of sub-types) | Say Database is interface & we use same code for all types of databases. Mysql can be substituted by Redis without changing a thing in our code which stores session data.|
 |**I**| Interface segregation principle (Many client-specific interface is better than 1 general-purpose interface) | Break interface to many specific interfaces|
 |**D**| Depebdency Inversions (depend upon abstractions not concretion - decoupling modules) | If any dependencies are required, it is good if it's a interface or abstract class|
 
