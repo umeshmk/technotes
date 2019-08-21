@@ -135,6 +135,10 @@ $query->execute();
 - Network
 - web browser
 
+> BASIC CRYPTOGRAPHY
+![](../images/crypto-categories.png?raw=1)
+- 
+
 > HASHING SALTING PASSWORD
 
 - Irreversible process to prevent dictionary attacks
