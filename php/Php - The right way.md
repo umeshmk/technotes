@@ -77,7 +77,7 @@
     - https://libraries.io/
 
 
-#### # PDO
+#### # PDO (Used by Doctrine2 library)
 
 > Common interface to connect to many databases
 
@@ -108,11 +108,25 @@ $query->execute();
 
 > *EXCEPTIONS*
   - Errors are thrown as exceptions to make developer aware & handle error
-  - **SPL** extension has many predefined exception classes. Just reuse and throw them.
+  - **SPL** extension : List of predefined exception classes. Just reuse them.
+  - Laravel uses *Whoops* library to nicely display exceptions.
 
 #### # SECURITY
 
+- [Guide to building secure php apps](https://paragonie.com/blog/2017/12/2018-guide-building-secure-php-software)
+
+> BASICS
+
+|Threat| Info|
+|-|-|
+| *Cross-Site Scripting:* |   Affects web browsers. Improperly handled data by the application will cause Javascript to execute on another user's computer. |
+| *SQL Injection:* |   Affects database queries. By sending a specially crafted string, you can change the query that the application runs. In many cases, you can abuse this to upload malware. |
+| *LDAP Injection:* |   Affects Active Directory, similar to SQL Injection. LDAP Injection can result in arbitrary reading/writing of data from the directory server, which can result in privilege escalation of user accounts in an entire network. |
+| *XPath Injection:* |   Affects XML document querying. Can result in arbitrary data disclosure from the remainder of the document. |
+| *Command Injection:* |   Affects shell executions |
+
 > HASHING SALTING PASSWORD
+
 - Irreversible process to prevent dictionary attacks
 - *Salting* means adding some strings to password before *Hashing*
 - `password_hash()` function uses BCrypt Algorithm
