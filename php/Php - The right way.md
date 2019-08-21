@@ -139,12 +139,27 @@ $query->execute();
 
 ![](../images/crypto-categories.png?raw=1)
 
-- Keyless `[BLAKE2, SHA-256, MD5]`
-    - `String ---> Hash`  [ `Hash ---> String` NOT possible]
+- **Keyless** `[BLAKE2, SHA-256, MD5]`
+    - `String ---> Hash`  
+    - `Hash ---> String` NOT possible
+
     - ```php
         hash("sha256", "The quick brown fox jumps over the lazy dog");
         // d7a8fbb307d7809469ca9abcb0082e4f8d5651e46d3cdb762d02d0bf37c9e592
         ```
+
+- **Secret Key** [HMAC]
+    > 1) *Keyed hash functions* [Irreversible]
+
+    - Creates MAC - Message Authentication Code
+    - Send `mesg + MAC` . Then receiver will create `MAC` with the secret key known to both sender & receiver. `MAC` matches then origin of `mesg` is authenticated.
+    - ```php
+        # Message is authentic when MAC is same for sender-receiver.
+        hash_hmac("sha256", "The quick brown fox jumps over the lazy dog", "secret key");
+        // 4a513ac60b4f0253d95c2687fa104691c77c9ed77e884453c6a822b7b010d36f
+
+        # Secret Key Encryption
+
 
 > HASHING SALTING PASSWORD
 
