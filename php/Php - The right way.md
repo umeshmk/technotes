@@ -125,6 +125,16 @@ $query->execute();
 | *XPath Injection:* |   Affects XML document querying. |
 | *Command Injection:* |   Affects shell executions |
 
+> OPERATING ENVIRONMENT
+
+- 3rd-party libraries
+- Operating system
+- Hardware components
+- Hypervisor, if virtual machine
+- power supply
+- Network
+- web browser
+
 > HASHING SALTING PASSWORD
 
 - Irreversible process to prevent dictionary attacks
