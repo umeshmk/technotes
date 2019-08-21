@@ -136,8 +136,15 @@ $query->execute();
 - web browser
 
 > BASIC CRYPTOGRAPHY
+
 ![](../images/crypto-categories.png?raw=1)
-- 
+
+- Keyless `[BLAKE2, SHA-256, MD5]`
+    - `String ---> Hash`  [ `Hash ---> String` NOT possible]
+    - ```php
+        hash("sha256", "The quick brown fox jumps over the lazy dog");
+        // d7a8fbb307d7809469ca9abcb0082e4f8d5651e46d3cdb762d02d0bf37c9e592
+        ```
 
 > HASHING SALTING PASSWORD
 
