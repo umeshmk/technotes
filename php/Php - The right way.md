@@ -168,7 +168,7 @@ $query->execute();
     - **Openssl** is a extension/library used to encrypt
     - `AES` algorithm is used
 
-    >
+    > 
     > **3] Authenticated Secret Key Encryption**
 
     - `Encrypt` first then create `MAC`.
