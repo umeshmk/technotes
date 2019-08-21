@@ -167,7 +167,7 @@ $query->execute();
     - `PlainText + Secret = CipherText`
     - **Openssl** is a extension/library used to encrypt
     - `AES` is the algorithm used
-</br>
+<br/>
     > **3] Authenticated Secret Key Encryption**
 
     - `Encrypt` first then create `MAC`.
@@ -177,7 +177,7 @@ $query->execute();
     - Generate key-pair `someMathsOn(private key) = public key`
     - `public key ---> private` is almost Impossible.
 
-</br>
+<br/>
     > **1] Shared Secret Key Agreement [Diffie-Hellman]**
 
     - Share each other's public key `A ---> B` & `B ---> A`
