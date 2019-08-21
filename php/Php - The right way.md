@@ -167,6 +167,7 @@ $query->execute();
     - `PlainText + Secret = CipherText`
     - **Openssl** is a extension/library used to encrypt
     - `AES` algorithm is used
+
     >
     > **3] Authenticated Secret Key Encryption**
 
