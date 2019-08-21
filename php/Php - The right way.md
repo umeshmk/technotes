@@ -120,9 +120,9 @@ $query->execute();
 |Threat| Info|
 |-|-|
 | *Cross-Site Scripting:* |   Affects web browsers. Improperly handled data by the application will cause Javascript to execute on another user's computer. |
-| *SQL Injection:* |   Affects database queries. By sending a specially crafted string, you can change the query that the application runs. In many cases, you can abuse this to upload malware. |
-| *LDAP Injection:* |   Affects Active Directory, similar to SQL Injection. LDAP Injection can result in arbitrary reading/writing of data from the directory server, which can result in privilege escalation of user accounts in an entire network. |
-| *XPath Injection:* |   Affects XML document querying. Can result in arbitrary data disclosure from the remainder of the document. |
+| *SQL Injection:* |   Using Crafted string inputs, you can change the query that the application runs. |
+| *LDAP Injection:* |   Affects Active Directory causing arbitrary reading/writing in directory server.|
+| *XPath Injection:* |   Affects XML document querying. |
 | *Command Injection:* |   Affects shell executions |
 
 > HASHING SALTING PASSWORD
