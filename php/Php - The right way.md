@@ -139,9 +139,9 @@ $query->execute();
 
 ![](../images/crypto-categories.png?raw=1)
 
-- **Keyless** `[BLAKE2, SHA-256, MD5]`
-    - `String ---> Hash`  
-    - `Hash ---> String` NOT possible
+- **Keyless** `[BLAKE2, SHA-1, SHA-256, MD5]`
+    - `TextMsg ---> Hash`  
+    - `Hash ---> TextMsg` NOT possible
 
     - ```php
         hash("sha256", "The quick brown fox jumps over the lazy dog");
@@ -149,29 +149,70 @@ $query->execute();
         ```
 
 - **Secret Key** [HMAC]
-    > 1) *Keyed hash functions* [Irreversible]
+    > Keyed hash functions 
 
-    - Creates MAC - Message Authentication Code
-    - Send `mesg + MAC` . Then receiver will create `MAC` with the secret key known to both sender & receiver. `MAC` matches then origin of `mesg` is authenticated.
+    - Creates `MAC - Message Authentication Code`
+    - `MAC = mesg + secret`
+    - Send `mesg + MAC` . Then receiver will create `MAC` with the `secret` key known to both sender & receiver. If `MAC` matches then origin of `mesg` is authenticated.
+
     - ```php
-        # Message is authentic when MAC is same for sender-receiver.
         hash_hmac("sha256", "The quick brown fox jumps over the lazy dog", "secret key");
         // 4a513ac60b4f0253d95c2687fa104691c77c9ed77e884453c6a822b7b010d36f
+        ```
 
-        # Secret Key Encryption
+    > Secret Key Encryption
 
+    - Reversible process
+    - `PlainText + Secret = CipherText`
+    - **Openssl** is a extension/library used to encrypt
+    - `AES` is the algorithm used
+
+    > Authenticated Secret Key Encryption
+
+    - `Encrypt` first then create `MAC`.
+    - Two `secret`keys is used.
+
+- **Public Key Encryption**
+    - Generate Key-pair `someMathsOn(private key) = public key`
+    - `public key ---> private` is almost Impossible.
+
+    > Shared Secret Key Agreement *[Diffie-Hellman]*
+
+    - Share each other's public key `A ---> B` & `B ---> A`
+    - `sharedkey = A(public) + B(private) = B(public) + A(private)`
+    - Shared key generated is same because it uses `Diffie-Hellman`. Modular Arithmatic !!!
+
+    > Digital Signatures [EdDSA (Edwards-curve Digital Signature Algorithm]*
+
+    - `digitalSign = mesg + privateKey`
+    - Anyone who has `public` key can authenticate the origin of `mesg`
+    - Unlike the above mentioned `MAC` private keys are not shared.
+    - *Minsign* or *GPG* signatures can be used.
+
+- **Encoding** using `base64` & **compression** are NOT cryptographic.
+
+> PASSWORD STORAGE
+
+- Always use `bcrypt` hashes and not encryption. First Hash then encrypt is good like database encryption.
+- `password_hash()` and `password_verify()` rather than `crypt()`
+- Hashes are purposefully slow to avoid brute-force attack
 
 > HASHING SALTING PASSWORD
 
 - Irreversible process to prevent dictionary attacks
 - *Salting* means adding some strings to password before *Hashing*
-- `password_hash()` function uses BCrypt Algorithm
+- It is unique per user. This makes brute-force more difficult.
+
 
 ```php
 $hashed = password_hash("anypassword", PASSWORD_DEFAULT );      # Hashing
 if (password_verify("tryingpassword", $hashed)) { ... }         # check
 ```
 
+> FILE VERIFICATIONS
 
+- Calculate hash of the file using `SHA1` OR `MD5`
+- It should match the one shown on website.
+- **Note :** Use *Digital signatures* since it is more secure than hashing.
 
 
