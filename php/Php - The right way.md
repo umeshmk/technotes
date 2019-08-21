@@ -166,14 +166,14 @@ $query->execute();
     - Reversible process
     - `PlainText + Secret = CipherText`
     - **Openssl** is a extension/library used to encrypt
-    - `AES` is the algorithm used
-
+    - `AES` algorithm is used
+    >
     > **3] Authenticated Secret Key Encryption**
 
     - `Encrypt` first then create `MAC`.
-    - Two `secret`keys is used.
+    - Two `secret`keys are used.
 
-- **Public Key Encryption**
+- **Public Key**
     - Generate key-pair `someMathsOn(private key) = public key`
     - `public key ---> private` is almost Impossible.
 
