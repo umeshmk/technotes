@@ -2,17 +2,17 @@
 
 ### PaaS
 
-    - Little or No configuration needed
-    - A lot Popular to deploy, host, scale php apps
-    - Providers
-        - *AWS Elastic Beanstalk*
-        - *Cloudways*
-        - *Google App Engine*
-        - *Heroku*
-        - *IBM Cloud*
-        - *Microsoft Azure*
-        - *Platform.sh*
-        - *Red Hat OpenShift*
+- Little or No configuration needed
+- A lot Popular to deploy, host, scale php apps
+- Providers
+    - *AWS Elastic Beanstalk*
+    - *Cloudways*
+    - *Google App Engine*
+    - *Heroku*
+    - *IBM Cloud*
+    - *Microsoft Azure*
+    - *Platform.sh*
+    - *Red Hat OpenShift*
 
 ### Virtual Dedicated Servers
 
