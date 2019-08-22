@@ -3,17 +3,17 @@
 
 ![](../images/crypto-categories.png?raw=1)
 
-### **Keyless** `[BLAKE2, SHA-1, SHA-256, MD5]`
-    - `TextMsg ---> Hash`  
-    - `Hash ---> TextMsg` NOT possible
+### **# Keyless** `[BLAKE2, SHA-1, SHA-256, MD5]`
+- `TextMsg ---> Hash`  
+- `Hash ---> TextMsg` NOT possible
 
-    - ```php
-        hash("sha256", "The quick brown fox jumps over the lazy dog");
-        // d7a8fbb307d7809469ca9abcb0082e4f8d5651e46d3cdb762d02d0bf37c9e592
-        ```
+- ```php
+    hash("sha256", "The quick brown fox jumps over the lazy dog");
+    // d7a8fbb307d7809469ca9abcb0082e4f8d5651e46d3cdb762d02d0bf37c9e592
+    ```
 
 
-### **Secret Key** `[HMAC]`
+### **# Secret Key** `[HMAC]`
 
 - **1] Keyed hash functions**
 
@@ -38,9 +38,10 @@
     - `Encrypt` first then create `MAC`.
     - Two `secret`keys are used.
 
-### **Public Key**
-    - Generate key-pair `someMathsOn(private key) = public key`
-    - `public key ---> private` is almost Impossible.
+### **# Public Key**
+
+- Generate key-pair `someMathsOn(private key) = public key`
+- `public key ---> private` is almost Impossible.
 
 
 - **1] Shared Secret Key Agreement [Diffie-Hellman]**
