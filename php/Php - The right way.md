@@ -186,14 +186,55 @@ error_reporting = E_ALL
 log_errors = On
 ```
 
-#### # CACHING [ZendOpcache]
+#### # CACHING 
 
-- **OpCode caching**
+- **OpCode caching [ZendOpcache]**
     - PHP converts source code to this machine readable code.
     - If source code is same then convertion is a wastage each time we execute.
     - By storing each `OpCodes` in memory we eliminate the convertion step.
     - If source code is unmodified with same signatures/modification-time then cached `OpCodes` can be used skipping the convertion.
     - `ZendOpcache` - php extension enabled by default
-- **Object caching**
-    - `Redis, Memcache` is used to cache objects data which is frequently needed and unlikely to be changed.
+
+- **Object caching [Redis, Memcache]**
+    - It is used to cache data which is frequently accessed and unlikely to be changed.
     - This objects are stored in memory.
+
+
+#### # DOCUMENTATION [PHPDocs]
+
+- [PHPDocs](https://docs.phpdoc.org/index.html) library helps to document the classes and its methods using comments
+
+```php
+<?php
+/**
+ * @author A Name <a.name@example.com>
+ * @link http://www.phpdoc.org/docs/latest/index.html
+ */
+class DateTimeHelper
+{
+    /**
+     * @param mixed $anything Anything that we can convert to a \DateTime object
+     *
+     * @throws \InvalidArgumentException
+     *
+     * @return \DateTime
+     */
+    public function dateTimeFromAnything($anything)
+    {
+        $type = gettype($anything);
+
+        switch ($type) { //a \DateTime object    }
+        throw new \InvalidArgumentException(....);
+    }
+
+    /**
+     * @param mixed $date Anything that we can convert to a \DateTime object
+     *
+     * @return void (Optional)
+     */
+    public function printISO8601Date($date)
+    {
+        echo $this->dateTimeFromAnything($date)->format('c');
+    }
+}
+```
