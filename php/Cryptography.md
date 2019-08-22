@@ -1,9 +1,9 @@
 
-> BASIC CRYPTOGRAPHY
+# BASIC CRYPTOGRAPHY
 
 ![](../images/crypto-categories.png?raw=1)
 
-- **Keyless** `[BLAKE2, SHA-1, SHA-256, MD5]`
+### **Keyless** `[BLAKE2, SHA-1, SHA-256, MD5]`
     - `TextMsg ---> Hash`  
     - `Hash ---> TextMsg` NOT possible
 
@@ -13,9 +13,9 @@
         ```
 
 
-- **Secret Key** `[HMAC]`
+### **Secret Key** `[HMAC]`
 
-    > **1] Keyed hash functions**
+- **1] Keyed hash functions**
 
     - Creates `MAC - Message Authentication Code`
     - `MAC = mesg + secret`
@@ -26,33 +26,31 @@
         // 4a513ac60b4f0253d95c2687fa104691c77c9ed77e884453c6a822b7b010d36f
         ```
 
-
-
-    > **2] Secret Key Encryption**
+- **2] Secret Key Encryption**
 
     - Reversible process
     - `PlainText + Secret = CipherText`
     - **Openssl** is a extension/library used to encrypt
     - `AES` algorithm is used  
 
-    > **3] Authenticated Secret Key Encryption**
+- **3] Authenticated Secret Key Encryption**
 
     - `Encrypt` first then create `MAC`.
     - Two `secret`keys are used.
 
-- **Public Key**
+### **Public Key**
     - Generate key-pair `someMathsOn(private key) = public key`
     - `public key ---> private` is almost Impossible.
 
 
-    > **1] Shared Secret Key Agreement [Diffie-Hellman]**
+- **1] Shared Secret Key Agreement [Diffie-Hellman]**
 
     - Share each other's public key `A ---> B` & `B ---> A`
     - `sharedkey = A(public) + B(private) = B(public) + A(private)`
     - Shared key generated is same because it uses `Diffie-Hellman`. Modular Arithmatic !!!
 
 
-    > **2] Digital Signatures [EdDSA (Edwards-curve Digital Signature Algorithm]**
+- **2] Digital Signatures [EdDSA (Edwards-curve Digital Signature Algorithm]**
 
     - `digitalSign = mesg + privateKey`
     - Anyone who has `public` key can authenticate the origin of `mesg`
