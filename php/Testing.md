@@ -1,7 +1,5 @@
 # TESTING
 
----
-
 ## # TDD - Test Driven Development
 
 - *STEPS*
