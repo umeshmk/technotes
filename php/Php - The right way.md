@@ -188,8 +188,12 @@ log_errors = On
 
 #### # CACHING [ZendOpcache]
 
-- `OpCode` - PHP converts source code to this machine readable code.
-- If source code is same then convertion is a wastage each time we execute.
-- By storing each `OpCodes` in memory we eliminate the convertion step.
-- If source code is unmodified with same signatures/modification-time then cached `OpCodes` can be used skipping the convertion.
-- `ZendOpcache` - php extension enabled by default
+- **OpCode caching**
+    - PHP converts source code to this machine readable code.
+    - If source code is same then convertion is a wastage each time we execute.
+    - By storing each `OpCodes` in memory we eliminate the convertion step.
+    - If source code is unmodified with same signatures/modification-time then cached `OpCodes` can be used skipping the convertion.
+    - `ZendOpcache` - php extension enabled by default
+- **Object caching**
+    - `Redis, Memcache` is used to cache objects data which is frequently needed and unlikely to be changed.
+    - This objects are stored in memory.
