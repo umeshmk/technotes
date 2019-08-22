@@ -58,3 +58,12 @@
 - *Files, CodeEditor & browser* run in Host-machine but the code runs in virtual-machine.
 - *Config* file can be created using provisioning tools
 -  **YAML** is easy to create using GUI services like *[Phupet, Protobox, Phansible]*
+
+> **Docker**
+
+- Use containers which uses the same kernel of host OS.
+- Very low memory usage with small file size.
+- Very Fast to create and deploy stacks using single YAML
+- GUI service - [phpdocker.io](https://phpdocker.io/generator)
+
+
