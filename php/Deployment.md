@@ -38,18 +38,23 @@
     - Packaging
     - Deployment - [Envoyer, Deployer, Rocketeer]
 
-### Server Provisioning
+### Server Provisioning [Ansible, Puppet, Chef - OpsWorks]
 
 - *Infrastructure* - Managing, configuring & scaling many servers to work correctly.
 - Used with big clouds like AWS, DigitalOcean, etc
-- *Tools*
-    - **Ansible** - using YAML file.
-    - **Puppet** 
-    - **Chef - OpsWorks**
 
 ### Continuous Integration [TravisCI]
 
 - Approach/Practice followed by teams.
 - Each developer works and integrates code daily.
 - TravisCI is hosted service for open sources projects. Github uses it.
- 
+
+### Virtualization
+
+> **Vagrant** [Homestead]
+
+- Create a virtual environment using `VirtualBox, Vmware` in a single file called **BOX**
+- This Box is used in development of apps by all developers.
+- *Files, CodeEditor & browser* run in Host-machine but the code runs in virtual-machine.
+- *Config* file can be created using provisioning tools
+-  **YAML** is easy to create using GUI services like *[Phupet, Protobox, Phansible]*
