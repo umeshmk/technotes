@@ -9,19 +9,19 @@
     - 2] Design the new code
     - 3] Refactor code to pass test
 
-#### ## UNIT TESTING - [PHPUnit]
+#### UNIT TESTING - [PHPUnit]
 
 - `Functions / methods / classes` are tested
 - Pass input check output.
 - Must pass test at anytime in dev life cycle
 - Contributing to Github open source projects showing testing failed with proper solution.
 
-#### ## INTEGRATED TESTING [PHPUnit]
+#### INTEGRATED TESTING [PHPUnit]
 
 - First Unit test is performed.
 - Then the modules are integrated & tested.
 
-#### ## FUNCTIONAL TESTING [Selenium, Codeception]
+#### FUNCTIONAL TESTING [Selenium, Codeception]
 
 - Tools are used to create automated tests.
 - These tests are like *real users* using the application.
