@@ -58,4 +58,4 @@
     - Unlike the above mentioned `MAC` private keys are not shared.
     - *Minsign* or *GPG* signatures can be used.
 
-- **Encoding** using `base64` & **compression** are NOT cryptographic.
+- **Encoding** using `base64` & **compression** `gzip` are NOT cryptographic.

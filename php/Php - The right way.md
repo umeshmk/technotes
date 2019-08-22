@@ -139,17 +139,20 @@ $query->execute();
 
 - Refer Cryptogaphy notes.
 
-> PASSWORD STORAGE
+> PASSWORD STORAGE [Argon2, Bcrypt]
 
-- Always use `bcrypt` hashes and not encryption. First Hash then encrypt is good like database encryption.
-- `password_hash()` and `password_verify()` rather than `crypt()`
+- Always use hashes and not encryption. 
+- First Hash then encrypt is good (database encryption)
+- Use `password_hash()` and `password_verify()` rather than `crypt()`
 - Hashes are purposefully slow to avoid brute-force attack
 
 > HASHING SALTING PASSWORD
 
-- Irreversible process to prevent dictionary attacks
-- *Salting* means adding some strings to password before *Hashing*
-- It is unique per user. This makes brute-force more difficult.
+- Prevents dictionary attacks
+- `saltedPassword = password + SaltText` 
+    - Added before Hashing by `password_hash()`
+    - It is unique per user. This makes brute-force more difficult.    
+    - It is stored as a part of hash. So no need to store in database.
 
 
 ```php
@@ -163,4 +166,22 @@ if (password_verify("tryingpassword", $hashed)) { ... }         # check
 - It should match the one shown on website.
 - **Note :** Use *Digital signatures* since it is more secure than hashing.
 
+> ERROR REPORTING
 
+- **Development - php.ini**
+
+```ini
+display_errors = On
+display_startup_errors = On
+error_reporting = -1
+log_errors = On
+```
+
+- **Production - php.ini**
+
+```ini
+display_errors = Off
+display_startup_errors = Off
+error_reporting = E_ALL
+log_errors = On
+```
