@@ -186,7 +186,7 @@ error_reporting = E_ALL
 log_errors = On
 ```
 
-> CACHING [ZendOpcache]
+#### # CACHING [ZendOpcache]
 
 - `OpCode` - PHP converts source code to this machine readable code.
 - If source code is same then convertion is a wastage each time we execute.
