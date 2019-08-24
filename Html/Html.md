@@ -20,9 +20,10 @@
 <!-- This is 
 a Comments -->
 
-<!-- case-INsensitive 
-But <TAG> is always converted 
-to  <tag> -->
+<!-- case-INsensitive But 
+1] <TAG> is always converted to  <tag> 
+2] class="FOO foo" are different classes
+-->
 
 
 <h1></h1>.....<h6></h6>		<!-- Headings -->
@@ -36,6 +37,19 @@ to  <tag> -->
 	style="color:red" 
 	title="Lorem"
 	user-data="user created attribute">	
+
+
+<!-- BLOCK / INLINE ELEMENTS -->
+div, table, ul, li, form, blockquote, pre, p	<!-- BLOCK ELEMENTS -->
+span, a, hr, input, label, textarea, b			<!-- INLINE ELEMENTS -->
+
+<!-- JAVASCRIPT -->
+<script> .... </script>		<!-- can be added anywhere head/body-->
+
+<!-- ENTITIES -->
+&nbsp;			<!-- Non-breaking space -->
+&lt;			<!-- < less than  -->
+&gt;			<!-- > greater than -->
 
 ```
 
@@ -168,4 +182,56 @@ a:active			<!-- when link is clicked. Always after :hover -->
 [Jsfiddle](https://jsfiddle.net/nycdh9xm/10/)
 
 ```html
+<ul>		<!-- unordered  -->
+<ol>		<!-- Ordered -->
+<li>		<!-- List Item -->
 
+
+ul{
+	list-style-type: "circle"		<!-- { circle, disc, square, none }-->
+}
+
+<ol type = "A">						<!-- { A, a, I, i, 1 }-->
+
+<!-- Data Defination list -->
+<dl>
+<dt>		<!-- data tag -->
+<dd>		<!-- data defination -->
+
+```
+
+#### # HEAD & LAYOUT
+
+[Jsfiddle](https://jsfiddle.net/nycdh9xm/12/)
+
+```html
+<!-- HEAD -->
+<head>
+<style>
+<script>
+<title>
+<meta>
+<link>
+
+/* LAYOUT */
+<nav>
+<header>
+<section>
+	<article>
+	<aside>
+</section>
+<footer>
+```
+
+#### # CODE
+
+[Jsfiddle](https://jsfiddle.net/nycdh9xm/13/)
+
+```html
+<kbd>
+<samp>
+<var>
+<code>
+```
+
+#### # 
