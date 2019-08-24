@@ -34,7 +34,8 @@ to  <tag> -->
 <p 	class="foo" 					
 	id="bar" 
 	style="color:red" 
-	title="Lorem">	
+	title="Lorem"
+	user-data="user created attribute">	
 
 ```
 
@@ -63,6 +64,7 @@ will preserve 			white spaces
 #### # QUOTATIONS & CITATIONS
 
 [Jsfiddle](https://jsfiddle.net/nycdh9xm/4/)
+
 ```html
 <q>				<!-- Quotations "" -->
 <blockquote>	<!-- quote in a block -->
@@ -89,11 +91,11 @@ hsl(9, 90%, 50%)
 
 ```html
 <!-- INLINE -->
-<p style="color:red; border:solid blue;">
+<p style="...">
 
 <!-- INTERNAL -->
 <style>
-	div, p {color:red; border:solid blue;}
+	div, p {....}
 </style>
 
 <!-- EXTERNAL -->
