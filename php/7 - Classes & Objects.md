@@ -360,10 +360,23 @@ echo isset($a)?"yes":"no";          // no
 echo isset($b)?"yes":"no";          // yes
 ```
 
-
 > Predefined variable - see "Variables.md"
 
+> Method Chaining
 
+```php
+class A{
+    public function foo() {
+        echo "foo";
+        return $this;               // Required for chaining
+    }
+    public function bar() {
+        echo "bar";
+    }
+}
+$o = new A();
+$o->foo()->bar();                   // "foobar" Chaining methods
+```
 
 
 

@@ -19,16 +19,15 @@
 - *PECL* : Repository for PEAR packages
 
 ```php
-# Opening-closing tag [Can omit end-tag incase pure php file]
-`<?php .... ?>`
-# php version & extensions enabled information
-phpinfo() ;
-# php serve own server (Nginx is better)
-php -S localhost:8000
-# print/display
-echo "hi $firstname" . $lastname ;
-# Text sanitize
-htmlspecialchars($a);        // eg: "<" is converted to "&lt;"
+`<?php .... ?>`                     # Opening-closing tag [Can omit end-tag incase pure php file]
+phpinfo() ;                         # php version & extensions enabled information
+php -S localhost:8000               # php serve own server (Nginx is better)
+
+echo "hi $firstname" . $lastname ;  # print/display
+echo "My name is \"umesh\"";        # \ backslash to escape character
+print_r($a);                        # displays even arrays but echo doesn't
+print_r "<pre>" . $Myarray . "</pre>"; # Nicely displayed
+htmlspecialchars($a);               # Text sanitize, eg: "<" to "&lt;"
 
 // Single-line comment
 # Single-line comment
@@ -47,21 +46,21 @@ Else print this
 - `double` is same as `float`. Hence always use `float`
 
 ```php
-# print variable datatype and value
-var_dump($a);
-# Print variable datatype
-gettype($a);
-# check variable datatype
-if (is_string($a) && is_int($b))
-# convert variable datatype 
-settype($a, "integer");
+var_dump($a);                       # print variable datatype and value
+gettype($a);                        # Print variable datatype
+settype($a, "integer");             # convert variable datatype 
+
+if (is_string($a) && is_int($b))    # check variable datatype
+
 $a = (int) $b ;                     // Type-casting
 ```
 
 > Boolean
+
 ```php
 FALSE = false = 0 = "" = "0" = NULL = empty_array[]
 ```
+
 **NaN ........ ? google it**
 
 > Integers
