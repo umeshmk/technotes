@@ -1,6 +1,8 @@
 # HTML [Hyper Text Markup Language]
 
-> Basics
+#### # Basics 
+
+[Jsfiddle](https://jsfiddle.net/nycdh9xm/2/)
 
 ```html
 <!-- File extension - .htm & .html -->
@@ -36,7 +38,9 @@ to  <tag> -->
 
 ```
 
-### # TEXT FORMATTING 
+#### # TEXT FORMATTING 
+
+[Jsfiddle](https://jsfiddle.net/nycdh9xm/3/)
 
 ```html
 <pre>
@@ -52,6 +56,12 @@ will preserve 			white spaces
 <ins>   			<!-- insert -->
 <sub>   			<!-- sub-script -->
 <sup>				<!-- super-script -->
+
 ```
 
 
+#### # QUOTATIONS & CITATIONS
+
+```html
+Hello <q>Umesh</q> how are you			<!-- "Umesh" -->
+```
