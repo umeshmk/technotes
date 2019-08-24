@@ -31,7 +31,7 @@ to  <tag> -->
 
 
 <!-- ATTRIBUTES -->
-<p 	class="foo" 					
+<p 	class="foo"
 	id="bar" 
 	style="color:red" 
 	title="Lorem"
@@ -130,7 +130,42 @@ a:active			<!-- when link is clicked. Always after :hover -->
 ```html
 <img src = "url" alt="Discription">
 
-
+<picture>
+  <source media="(min-width:900px)" srcset="/pic/600/100">
+  <source media="(min-width:700px)" srcset="/pic/400/100">
+  <source media="(min-width:400px)" srcset="/pic/200/100">
+  <img src="/pic/100/100" alt="Default if media is not matches">  
+</picture>
 
 
 ```
+
+#### # TABLES
+
+[Jsfiddle](https://jsfiddle.net/nycdh9xm/9/)
+
+```html
+<table>
+	<caption>....</caption>
+	<tr>
+		<th>Heading1</th>
+		<th>Heading2</th>
+	</tr>
+	<tr>
+		<td>datacell</td>
+		<td>datacell</td>
+	</tr>
+</table>
+
+<!-- Spanning always on data-cell <td> -->
+<td rowspan="2">
+<td colspan="2">
+
+```
+
+#### # LIST
+
+[Jsfiddle](https://jsfiddle.net/nycdh9xm/10/)
+
+```html
+
