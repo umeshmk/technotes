@@ -34,14 +34,16 @@ to  <tag> -->
 	style="color:red" 
 	title="Lorem">	
 
+```
 
+### # TEXT FORMATTING 
+
+```html
 <pre>
 	This paragraph 
 will preserve 			white spaces
 </pre>
 
-
-<!-- TEXT FORMATTING -->
 <b> 				<!-- bold -->
 <i> 				<!-- italics -->
 <em>    			<!-- emphasis -->
