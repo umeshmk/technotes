@@ -25,9 +25,9 @@ But <TAG> is always converted
 to  <tag> -->
 
 
-<h1></h1>.....<h6></h6>					<!-- Headings -->
-<br>									<!-- Breakline -->
-<hr>									<!-- Horizontal line -->
+<h1></h1>.....<h6></h6>		<!-- Headings -->
+<br>						<!-- Breakline -->
+<hr>						<!-- Horizontal line -->
 
 
 <!-- ATTRIBUTES -->
