@@ -1,6 +1,6 @@
 # HTML [Hyper Text Markup Language]
 
-#### # Basics 
+#### # BASICS
 
 [Jsfiddle](https://jsfiddle.net/nycdh9xm/2/)
 
@@ -62,6 +62,73 @@ will preserve 			white spaces
 
 #### # QUOTATIONS & CITATIONS
 
+[Jsfiddle](https://jsfiddle.net/nycdh9xm/4/)
 ```html
-Hello <q>Umesh</q> how are you			<!-- "Umesh" -->
+<q>				<!-- Quotations "" -->
+<blockquote>	<!-- quote in a block -->
+<abbr>			<!-- abbreviations -->
+<address>		<!-- address -->
+<cite>			<!-- Citations in italics -->
+```
+
+#### # COLOR VALUES
+
+[Jsfiddle](https://jsfiddle.net/nycdh9xm/5/)
+
+```html
+#000 = black , #FFF = white		<!-- HEX values -->
+#F25 = #FF2255
+rgb(255, 99, 77)				<!-- RED GREEN BLUE -->
+rgba(255, 99, 74, 0.5)			<!-- RGB + Opacity -->
+hsl(9, 90%, 50%)
+```
+
+#### # STYLE CSS
+
+[Jsfiddle](https://jsfiddle.net/nycdh9xm/6/)
+
+```html
+<!-- INLINE -->
+<p style="color:red; border:solid blue;">
+
+<!-- INTERNAL -->
+<style>
+	div, p {color:red; border:solid blue;}
+</style>
+
+<!-- EXTERNAL -->
+<link rel="stylesheet" href="foo.css">
+```
+
+#### # LINK
+
+[Jsfiddle](https://jsfiddle.net/nycdh9xm/7/)
+
+```html
+<a href="url" target="TARGET"> Google </a>
+
+<!-- TARGETS: -->
+#id					<!-- Any #id on current page-->
+_blank				<!-- New blank tab is opened -->
+_self				<!-- Link opens in same window tab. (Default) -->
+_parent				<!-- IGNORE THIS - Parent frame -->
+_top				<!-- Top of same page -->
+
+<!-- css -->
+a:link
+a:visited
+a:hover
+a:active			<!-- when link is clicked. Always after :hover -->
+```
+
+#### # IMAGES
+
+[Jsfiddle](https://jsfiddle.net/nycdh9xm/8/)
+
+```html
+<img src = "url" alt="Discription">
+
+
+
+
 ```
