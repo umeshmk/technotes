@@ -187,11 +187,11 @@ a:active			<!-- when link is clicked. Always after :hover -->
 <li>		<!-- List Item -->
 
 
-ul{
-	list-style-type: "circle"		<!-- { circle, disc, square, none }-->
-}
+<!-- unordered css { circle, disc, square, none }-->
+ul{	list-style-type: "circle" }
 
-<ol type = "A">						<!-- { A, a, I, i, 1 }-->
+<!-- Ordered { A, a, I, i, 1 }-->
+<ol type = "i" start="5">
 
 <!-- Data Defination list -->
 <dl>
