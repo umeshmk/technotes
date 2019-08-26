@@ -1,6 +1,6 @@
 # FORMS
 
-[JsFiddle](https://jsfiddle.net/h2Lf4vud/)
+[JsFiddle](https://jsfiddle.net/h2Lf4vud/1/)
 
 ```html
 <form action="foo.php" method="get"></form>
