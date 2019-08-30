@@ -6,7 +6,7 @@ Like finding a *needle in a haystack* and then throwing it back to find it again
 
 I decided to **Read, Collect, Analyze** and **Organise** all those needles for future reference without getting lost on www.
 
-### **My Approach :**:
+### **My Approach **
 - Read topic to be good at it.
 - Do some practicals.
 - A quick research on topic.
@@ -20,6 +20,8 @@ I decided to **Read, Collect, Analyze** and **Organise** all those needles for f
 - More focus on core than the textual garbage.
 - No more jargons which has multiple contextual meanings.
 - Quick revision.
+
+---
 
 - **Begineers** - First get through your basic tutorials.
 - **Experts** - For more details, refer to the respective references & documentations.
