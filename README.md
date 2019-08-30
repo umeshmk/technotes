@@ -31,4 +31,4 @@ I decided to **Read, Collect, Analyze** and **Organise** all those needles for f
 
 # License
 
-All rights reserved by owner
+All Rights Reserved.
