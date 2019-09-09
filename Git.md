@@ -57,8 +57,35 @@ git remote add origin https://umeshmk@github.com/umeshmk/Tutorials.git
 git commit --amend -m "updated"
 ```
 
+#### # TAG (Releases)
+
+- Use tags like `v1, v2, v2.0.2`
+- Saves current state as a new release.
+- **Create**
+
+```bash
+git tag                                     # list tags
+
+git tag <tagname>                           # lightweight
+git tag -a <tagname> -m "Any message"       # Annotated
+```
+
+- **Push**
+
+```bash
+# By default tags are excluded when repo is pushed. So use this cmds.
+
+git push origin --tags                      # all tags pushed
+git push origin <tagname>                   # only 1 tag is pushed
+```
+
+- **Github GUI** 
+    - Create tags using github GUI.
+    - Now fetch this changes using cmd `git fetch` 
+
 #### # MISC
 
 |Task| |
 |-|-|
+| *Fetch* | `git fetch` | 
 | *History* | `git log` |
