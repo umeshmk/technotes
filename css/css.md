@@ -8,29 +8,29 @@
 ```css
 selector {property : value;}
 
-// selectors
-div, p, span {...}                  // element
-#myid {...}                         // id
-.myclass {...}                      // class
-[name="surname"] {...}              // attribute
-a:hover, a:active {...}             // event
+/**** Selectors */
+div, p, span {...}                  /* element */
+#myid {...}                         /* id */
+.myclass {...}                      /* class */
+[name="surname"] {...}              /* attribute */
+a:hover, a:active {...}             /* event */
 
 /* This is a 
 comment */
 
-/* HOW TO ADD CSS */
-<link rel="stylesheet" type="text/css" href="/path/file.css">   // EXTERNAL
-<style> ... </style>                                            // INTERNAL
-<p style=" .... ">                                              // INLINE
+/**** HOW TO ADD CSS */
+<link rel="stylesheet" type="text/css" href="/path/file.css">   /* EXTERNAL */
+<style> ... </style>                                            /* INTERNAL */
+<p style=" .... ">                                              /* INLINE */
 
-/* COLORS */
-red, purple, tomato             // NAMED
+/**** COLORS */
+red, purple, tomato                 /* NAMED */
 
-rgba( red, blue, green, alpha ) 
+rgba( red, blue, green, alpha )     /* RGBA */
     black( 0, 0, 0, 1 )
     white( 255, 255, 255, 1 )
 
-#RRBBGG 
+#RRBBGG                             /* HEX */
     Black #000000
     White #ffffff
     #ab34cd == #AB34CD
