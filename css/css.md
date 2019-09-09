@@ -62,3 +62,42 @@ border-color : red;
 border-image : url("pic.jpg") 20% round;
 border-radius : 5px ;
 ```
+
+#### # MARGIN
+
+```CSS
+margin  : top right bottom left;
+        : 5px -10px;                                        /* -ve is allowed*/
+        : 5px;
+        : auto;                                             /*center it horizontally */ 
+margin-{ left|right|top|bottom } : 10px;
+
+/*****Top+bottom margin of 2 block elements can COLLAPSE*****/
+<div>
+    <h1> ... </h1>          /* margin : 0 0 10px 0 ; */
+    <h2> ... </h2>          /* margin : 40px 0 0 0 ; */
+</div>
+
+/* Result : 40px and not (40+10)px (SOMETIMES)*/
+
+```
+
+#### # PADDING
+
+```css
+
+padding : top right bottom left;
+        : 5px -10px;                                        /* -ve is NOT allowed*/
+        : 5px;
+padding-{ left|right|top|bottom } : 10px;
+
+/*****Width = contentWidth + padding *****/
+div { width: 20px;
+      padding: 10px; }                                      /*width = 30px*/
+
+div { width: 20px;
+      padding: 10px 
+      box-sizing: border-box; }                             /*width = 20px    as padding increase contentWidth is reduced*/
+
+```
+
