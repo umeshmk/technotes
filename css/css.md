@@ -35,6 +35,12 @@ rgba( red, blue, green, alpha )     /* RGBA */
     White is #ffffff
     #ab34cd == #AB34CD
 
+/***** width/height *****/
+/* For content excluding padding, border, margin */
+{ auto|px|em|rem|% } 
+
+max-{ width|height } : 200px;
+min-{ width|height } : 200px;
 ```
 
 #### # BACKGROUNDS
@@ -101,3 +107,7 @@ div { width: 20px;
 
 ```
 
+#### # BOX-SIZING
+
+- Height & width is for content
+![](../images/css1.png?raw=1)
