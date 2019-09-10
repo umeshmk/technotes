@@ -35,12 +35,7 @@ rgba( red, blue, green, alpha )     /* RGBA */
     White is #ffffff
     #ab34cd == #AB34CD
 
-/***** width/height *****/
-/* For content excluding padding, border, margin */
-{ auto|px|em|rem|% } 
 
-max-{ width|height } : 200px;
-min-{ width|height } : 200px;
 ```
 
 #### # BACKGROUNDS
