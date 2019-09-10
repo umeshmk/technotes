@@ -112,3 +112,59 @@ div { width: 20px;
 - Height & width is for content
 
 ![](../images/css1.png?raw=1)
+
+#### # OUTLINE
+
+- May overlap other content elements without changing its width/height.
+
+```css
+outline-style : solid | dashed | dotted | double ;
+              : groove | ridge | inset | outset ;
+              : none | hidden ;  
+outline-width : 20px;
+outline-color : red;
+outline-offset : 10px;                                      /*between border and outline.*/
+```
+
+#### # TEXT/FONT FORMATTING
+
+- **Text**
+
+```css
+text-indent : 40px ;
+text-transform : capitalize | uppercase | lowercase ;
+text-align : left | right | center | justify ;
+text-decoration : none | overline | underline | line-through ;
+text-shadow : 2px 3px red;
+
+color : red;
+direction : rtl ;                                      /*right-to-left*/
+line-height : 5px;
+
+letter-spacing : 2px;
+word-spacing : 2px;
+white-space : normal | nowrap | pre | pre-line | pre-wrap ;
+
+```
+
+- **Font**
+
+```css
+/* Generic font family are { 
+    SERIF           => For printing     [Garamond, Times, Times new roman, Georgia, New York]
+    SANS-SERIF      => For online       [Arial, Geneva, Helvetica, Verdana]
+    MONOSPACE       => For coding       [Courier, Lucida console, Monaco]
+    FANTASY         => For accenting    [Copperplate, Impact, Keno, Desdemona]
+    SCRIPT          => For accenting    [Comic sans ms, Lucida handwriting]
+    } */
+
+font-family : Arial;
+            : "Times new roman";
+font-size : 20px;
+font-weight : 500;
+font-style : normal | italic | oblique;
+font-variant : normal | small-caps;
+
+```
+
+
