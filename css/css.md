@@ -126,7 +126,7 @@ outline-color : red;
 outline-offset : 10px;                                      /*between border and outline.*/
 ```
 
-#### # TEXT/FONT FORMATTING
+#### # TEXT / FONT FORMATTING
 
 - **Text**
 
@@ -167,4 +167,22 @@ font-variant : normal | small-caps;
 
 ```
 
+#### # ICONS
 
+- Use [Font-awesome](https://fontawesome.com/)
+
+#### # LINK / LIST
+
+```CSS
+/*****LINK (must be in correct order)*****/
+a:link {...}
+a:visited {...}
+a:hover {...}
+a:active {...}
+
+/*****LIST*****/
+list-style-tyoe : circle;
+list-style-image : url("/pic.jpg");
+list-style-position : inside | outside;
+
+```
