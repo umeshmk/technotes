@@ -37,3 +37,22 @@ z-index : 10;                           /*front*/
 
 clip : rect(0, 100px, 70px, 200px);     /*position must be absolute & <img>*/
 ```
+
+#### # OVERFLOW
+
+```css
+overflow : auto | scroll | hidden | visible ;
+overflow-{x|y} : auto | scroll | hidden | visible ;
+```
+
+#### # FLOAT / CLEAR
+
+```css
+float : none | left | right | inherit;
+
+clear : none;                           /*float allowed*/
+      : left | right;                   /*NOT allowed on left|right*/
+      : both;                           /*float NOT allowed*/
+
+
+```
