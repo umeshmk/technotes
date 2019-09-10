@@ -27,6 +27,24 @@ rgba( red, blue, green, alpha )         /* RGBA */
     #ab34cd == #AB34CD
 ```
 
+#### # UNITS
+
+```css
+/*****ABSOLUTE*****/
+mm | cm | in
+
+pixel       px      1/96 inch           /*Is relative since devices has DPI-Density Pixels per inch*/
+point       pt      1/72 inch
+picas       pc      1/6 inch = 12pt
+
+/*****RELATIVE*****/
+%           /* percent */
+em          /* relative to parent value */  /*RECOMMENDED*/
+rem         /* relative to root value */  /*RECOMMENDED*/
+vh | vw     /* viewport height/width */
+
+```
+
 #### # SELECTORS
 
 ```css
@@ -67,7 +85,21 @@ input:{ valid|invalid } {..}            /*<input> only*/
 div::{ before|after } {..}
    ::{ first-letter|first-line } {..}
    ::selection {..}                     /*selected by user*/
-   
+
+
+/*****ATTRIBUTES*****/
+[name="test"]
+[name~="test"]                          /*{ test a, test-a, a test }*/
+[name|="test"]                          /*{ test a, test-b, test c }*/ /*starts with exact word*/
+[name^="test"]                          /*{ test a, testb, test-c }*/
+[name$="test"]                          /*ends with*/
+[name*="te"]                            /*any match*/
+
+
+/*****SPECIFICITY*****/
+                   [name="abc"]
+inline  >  #id  >    .class      >  tag
+                     :hover
 ```
 
 #### # BACKGROUNDS
