@@ -6,15 +6,6 @@
 - Syntax: 
 
 ```css
-selector {property : value;}
-
-/**** Selectors ****/
-div, p, span {...}                  /* element */
-#myid {...}                         /* id */
-.myclass {...}                      /* class */
-[name="surname"] {...}              /* attribute */
-a:hover, a:active {...}             /* event */
-
 /* This is a 
 comment */
 
@@ -24,18 +15,59 @@ comment */
 <p style=" .... ">                                              /* INLINE */
 
 /**** COLORS ****/
-red, purple, tomato                 /* NAMED */
+red, purple, tomato                     /* NAMED */
 
-rgba( red, blue, green, alpha )     /* RGBA */
+rgba( red, blue, green, alpha )         /* RGBA */
     black is (0,0,0,1)
     white is (255,255,255,1)
 
-#RRBBGG                             /* HEX */
+#RRBBGG                                 /* HEX */
     Black is #000000
     White is #ffffff
     #ab34cd == #AB34CD
+```
+
+#### # SELECTORS
+
+```css
+selector {property : value;}
+
+/**** Selectors ****/
+div, p, span {...}                      /* element */
+#myid {...}                             /* id */
+.myclass {...}                          /* class */
+[name="surname"] {...}                  /* attribute */
+a:hover, a:active {...}                 /* event */
+
+/*****COMBINATOR*****/
+div p {..}                              /*Descendent*/
+div>p {..}                              /*Direct child*/
+div+p {..}                              /*Immediate following sibling*/
+div~p {..}                              /*All siblings*/
+
+/*****PSEUDO SELECTORS*****/
+a:{link|visited|hover|active} {..}
+div:hover {..}
+   :empty {..}
+   :not(p) {,,}                         /*all except <p>*/
+
+div:{ first-child|last-child|nth-child } {..}
+   :{ first-of-type|last-of-type|nth-of-type } {..} /*only { first|last|nth } <div> in each parent elements*/
+   :only-child {..}
+
+input:{ valid|invalid } {..}            /*<input> only*/
+     :{ read-only|read-write } {..}
+     :{ focus|checked } {..}
+     :{ enabled|disabled } {..}
+     :{ optional|required } {..}
+     :{ in-range|out-of-range }
 
 
+/*****PSEUDO ELEMENTS (::)*****/
+div::{ before|after } {..}
+   ::{ first-letter|first-line } {..}
+   ::selection {..}                     /*selected by user*/
+   
 ```
 
 #### # BACKGROUNDS
