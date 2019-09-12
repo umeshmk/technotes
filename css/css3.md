@@ -88,3 +88,69 @@ transition-delay : 4s;
 #### # ANIMATIONS
 - USE animate.css library.
 
+#### # OBJECT-FIT
+
+```css
+/* Used for `<img> <video>` */
+object-fit: none|fill|contain|cover|scale-down;
+```
+
+#### # VARIABLE
+
+```css
+:root { --mycolor : red; }
+#foo { color: var(--mycolor); }
+```
+
+#### # BOX-SIZING
+
+```css
+*{ box-sizing : content-box|border-box };       /* border-box for all is recommended*/
+```
+
+#### # FLEXBOX
+
+```css
+.container { display:flex; }
+
+/*****CONTAINER*****/
+flex-direction: { row|column|row-reverse|column-reverse };
+flex-wrap : { wrap|nowrap|wrap-reverse };
+flex-flow: row wrap;                            /*shorthand*/
+
+align-items : { flex-start|flex-end|center|stretch|baseline };
+align-content : { flex-start|flex-end|center|stretch|space-around|space-between };
+justify-content : { flex-start|flex-end|center|space-around|space-between };
+
+/*****ITEMS*****/
+order : 3;
+
+flex-grow : 2;                                  /*2 times other elements*/
+flex-shrink : 4;
+flex-basis : 200px ;                            /*initial width*/
+flex : 2 4 200px;                               /*shorthand*/
+
+align-self : { flex-start|flex-end|center|stretch|baseline};        /*overrides align-items*/
+
+```
+
+#### # MEDIA QUERIES
+
+```css
+/* TYPES */
+- all       - screen
+- print     - speech
+
+/* PROPERTIES */
+- width/height          /*viewport | device*/
+- Orientation           /*portrait|landscape*/
+- Resolution
+
+/*OPTIONS*/
+- only      - not
+
+/*queries*/
+@media all and (min-width:1200px) { .... }
+@media only screen and (orientation:portriat) { .... }
+@media screen and (min-width:700px) and (max-width:1200px) { ... }
+```
