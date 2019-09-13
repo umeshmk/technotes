@@ -50,20 +50,34 @@ Adding prefix - use `Autoprefixer` package
 > PSEUDO CLASSES
 
 ```css
+/* Classes */
 { focus|hover|disabled|active|visited }
 { first-child|last-child|odd-child|even-child }
 { group-hover|focus-within }
-
+/* Usage */
 hover:bg-color-blue-600 
 focus:text-white
 ```
 
 > ADD BASE STYLE
 
-- `preflight.css` in tailwind is `normalize.css` with little extra configs.
-- Simply add class to body element. `<body class="min-h-screen">
-- Also extra classes can be added in css file after `@tailwind base;` like `h1 { @apply text-white underline; }
-- `@font-face {...}` rule can also be added here.
+```html
+<!-- Normalize.css is included in tailwind aka preflight.css with some extras -->
+<!-- In html -->
+<body class="min-h-screen">
+```
+
+```css
+<!-- In css -->
+@tailwind base; 
+
+h1 { @apply text-white bg-red-400; }
+@font-face {....}
+
+@tailwind components;
+```
+
+
 
 > EXTRACTING COMPONENTS
 
