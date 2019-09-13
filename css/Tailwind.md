@@ -32,39 +32,40 @@ Adding prefix - use `Autoprefixer` package
 
 
 
-#### GETTING STARTED
+#### # GETTING STARTED
 
-#### CORE CONCEPT
+#### # CORE CONCEPT
 
->Responsive Design breakpoints
+> Responsive Design
 
 |sm|md|lg|xl|
 |-|-|-|-|
 |640px|768px|1024px|1280px|
 
-- Responsive Design works on **all utility classes.**
-    - Usage: `size:anyutility`
-    - Eg : `sm:text-red` , `lg:flex` etc
-    - Mobile First approach :
-        - `sm != mobile` instead use classes without any prefix.
-        - Width of 16 by default, 32 on medium screens, and 48 on large screens - `<img class="w-16 md:w-32 lg:w-48" src="...">`
+- It works on **all utility classes.** like `sm:text-red` , `lg:flex` etc
+- Mobile First approach :
+    - `sm != mobile` instead use classes without any prefix.
+    - Ex: `<img class="w-16 md:w-32 lg:w-48" src="...">`
 
->PSEUDO CLASSES
+> PSEUDO CLASSES
 
+```css
+{ focus|hover|disabled|active|visited }
+{ first-child|last-child|odd-child|even-child }
+{ group-hover|focus-within }
 
-- `focus, hover, disabled, active, visited`
-- `first-child, last-child, odd-child, even-child`
-- `group-hover, focus-within`
-- Eg: `hover:bg-color-blue-600 focus:text-white`
+hover:bg-color-blue-600 
+focus:text-white
+```
 
->ADD BASE STYLE
+> ADD BASE STYLE
 
 - `preflight.css` in tailwind is `normalize.css` with little extra configs.
 - Simply add class to body element. `<body class="min-h-screen">
 - Also extra classes can be added in css file after `@tailwind base;` like `h1 { @apply text-white underline; }
 - `@font-face {...}` rule can also be added here.
 
->EXTRACTING COMPONENTS
+> EXTRACTING COMPONENTS
 
 - Avoid duplication of code for repeatative elements.
 - Add components after `@tailwind components;`
@@ -100,27 +101,27 @@ Adding prefix - use `Autoprefixer` package
 - `@apply`, `@responsive`, `@variants`, `@screen`
 
 
-#### CUSTOMIZATION
+#### # CUSTOMIZATION
 
-#### BASE STYLES
+#### # BASE STYLES
 
-#### LAYOUT
+#### # LAYOUT
 
-#### TYPOGRAPHY
+#### # TYPOGRAPHY
 
-#### BACKGROUNDS
+#### # BACKGROUNDS
 
-#### BORDERS
+#### # BORDERS
 
-#### FLEXBOX
+#### # FLEXBOX
 
-#### SPACING
+#### # SPACING
 
-#### SIZING
+#### # SIZING
 
-#### TABLES
+#### # TABLES
 
-#### EFFECTS
+#### # EFFECTS
 
 #### INTERACTIVITY
 
