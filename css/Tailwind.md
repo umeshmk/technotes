@@ -1,38 +1,37 @@
 # Tailwind css
 
+#### # GETTING STARTED
+
 [Tailwind](https://tailwindcss.com/docs/installation)
 
 ```bash
+# install tailwind
 npm init -y
 npm install tailwindcss
 ```
 
 ```css
-<!-- src/style.css -->
+/* src/style.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 ```
 
-```bash
-<!-- create - tailwind.config.js -->
-npx tailwind init
-```
+- [Optional] create config - **tailwind.config.js** using cmd `npx tailwind init`
+
 ```json
-<!-- package.json -->
+// package.json
 script{
-    "build:css" : "tailwind build src/style.css -o dist/style.css"
+    "build" : "tailwind build src/style.css -o dist/style.css"
 }
 ```
 
-Using with Laravel Mix see [installation](https://tailwindcss.com/docs/installation#laravel-mix)
-
-Reducing file size - use `PurgeCss` package
-Adding prefix - use `Autoprefixer` package
-
+- For Laravel Mix visit [installation](https://tailwindcss.com/docs/installation#laravel-mix)
+- *file size* :- use `PurgeCss` package
+- *prefix* :- use `Autoprefixer` package
 
 
-#### # GETTING STARTED
+
 
 #### # CORE CONCEPT
 
@@ -82,32 +81,32 @@ h1 { @apply text-white bg-red-400; }
 - Reuse code as components
 
 ```css
-    /* Small components*  */
-    @tailwind components;
-    .btn-green { 
-        @apply bg-green-400 text-white ;            /*cannot use hover: , focus: , {screen}. So use normal css not utility as below.*/
-        } 
-    .btn-green:hover {
-        @apply bg-green-200;
-    }
-    @tailwind utilities;
+/* Small components*  */
+@tailwind components;
+.btn-green { 
+    @apply bg-green-400 text-white ;            /*cannot use hover: , focus: , {screen}. So use normal css not utility as below.*/
+    } 
+.btn-green:hover {
+    @apply bg-green-200;
+}
+@tailwind utilities;
 
-    /* Big Components */
-    Use Vue, React components
+/* Big Components */
+Use Vue, React components
 ```
 
 > Adding new utilities
 
 ```css
-    @tailwind utilities;
+@tailwind utilities;
 
-    @responsive {                                       /*gives sm:rotate-0, md:rotate-0, etc*/
-        @variants hover, focus {                        /*focus takes precedence over hover.*/
-            .rotate-0{ transform: rotate(0deg;) }
-            .rotate-90{ transform: rotate(90deg;) }
-            .rotate-180{ transform: rotate(180deg;) }
-        }
+@responsive {                                       /*gives sm:rotate-0, md:rotate-0, etc*/
+    @variants hover, focus {                        /*focus takes precedence over hover.*/
+        .rotate-0{ transform: rotate(0deg;) }
+        .rotate-90{ transform: rotate(90deg;) }
+        .rotate-180{ transform: rotate(180deg;) }
     }
+}
 ```
 
 > Functions / Directives
