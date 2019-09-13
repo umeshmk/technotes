@@ -2,21 +2,28 @@
 
 [Tailwind](https://tailwindcss.com/docs/installation)
 
+```bash
 npm init -y
 npm install tailwindcss
+```
 
+```css
 <!-- src/style.css -->
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+```
 
+```bash
 <!-- create - tailwind.config.js -->
 npx tailwind init
-
+```
+```json
 <!-- package.json -->
 script{
     "build:css" : "tailwind build src/style.css -o dist/style.css"
 }
+```
 
 Using with Laravel Mix see [installation](https://tailwindcss.com/docs/installation#laravel-mix)
 
@@ -25,11 +32,12 @@ Adding prefix - use `Autoprefixer` package
 
 
 
-# GETTING STARTED
+#### GETTING STARTED
 
-# CORE CONCEPT
+#### CORE CONCEPT
 
-- # Responsive Design breakpoints
+>Responsive Design breakpoints
+
 |sm|md|lg|xl|
 |-|-|-|-|
 |640px|768px|1024px|1280px|
@@ -41,20 +49,23 @@ Adding prefix - use `Autoprefixer` package
         - `sm != mobile` instead use classes without any prefix.
         - Width of 16 by default, 32 on medium screens, and 48 on large screens - `<img class="w-16 md:w-32 lg:w-48" src="...">`
 
-- # PSEUDO CLASSES
+>PSEUDO CLASSES
+
 
 - `focus, hover, disabled, active, visited`
 - `first-child, last-child, odd-child, even-child`
 - `group-hover, focus-within`
 - Eg: `hover:bg-color-blue-600 focus:text-white`
 
-- # ADD BASE STYLE
+>ADD BASE STYLE
+
     - `preflight.css` in tailwind is `normalize.css` with little extra configs.
     - Simply add class to body element. `<body class="min-h-screen">
     - Also extra classes can be added in css file after `@tailwind base;` like `h1 { @apply text-white underline; }
     - `@font-face {...}` rule can also be added here.
 
-- # EXTRACTING COMPONENTS
+>EXTRACTING COMPONENTS
+
     - Avoid duplication of code for repeatative elements.
     - Add components after `@tailwind components;`
     - *Small components* : Use `@apply`
@@ -70,7 +81,7 @@ Adding prefix - use `Autoprefixer` package
         ```
     - *Big Components* : Use Vue, React
 
-- # ADDING NEW UTILITIES
+> ADDING NEW UTILITIES
 
     ```css
     @tailwind utilities;
@@ -84,33 +95,34 @@ Adding prefix - use `Autoprefixer` package
     }
     ```
 
-- # FUNCTIONS / DIRECTIVES
+> FUNCTIONS / DIRECTIVES
+
     - `@apply`, `@responsive`, `@variants`, `@screen`
 
 
-# CUSTOMIZATION
+#### CUSTOMIZATION
 
-# BASE STYLES
+#### BASE STYLES
 
-# LAYOUT
+#### LAYOUT
 
-# TYPOGRAPHY
+#### TYPOGRAPHY
 
-# BACKGROUNDS
+#### BACKGROUNDS
 
-# BORDERS
+#### BORDERS
 
-# FLEXBOX
+#### FLEXBOX
 
-# SPACING
+#### SPACING
 
-# SIZING
+#### SIZING
 
-# TABLES
+#### TABLES
 
-# EFFECTS
+#### EFFECTS
 
-# INTERACTIVITY
+#### INTERACTIVITY
 
-# SVG
+#### SVG
 
