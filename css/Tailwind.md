@@ -59,27 +59,27 @@ Adding prefix - use `Autoprefixer` package
 
 >ADD BASE STYLE
 
-    - `preflight.css` in tailwind is `normalize.css` with little extra configs.
-    - Simply add class to body element. `<body class="min-h-screen">
-    - Also extra classes can be added in css file after `@tailwind base;` like `h1 { @apply text-white underline; }
-    - `@font-face {...}` rule can also be added here.
+- `preflight.css` in tailwind is `normalize.css` with little extra configs.
+- Simply add class to body element. `<body class="min-h-screen">
+- Also extra classes can be added in css file after `@tailwind base;` like `h1 { @apply text-white underline; }
+- `@font-face {...}` rule can also be added here.
 
 >EXTRACTING COMPONENTS
 
-    - Avoid duplication of code for repeatative elements.
-    - Add components after `@tailwind components;`
-    - *Small components* : Use `@apply`
-        ```css
-        @tailwind components;
-        .btn-green { 
-            @apply bg-green-400 text-white ;            /*cannot use hover: , focus: , {screen}. So use normal css not utility as below.*/
-            } 
-        .btn-green:hover {
-            @apply bg-green-200;
-        }
-        @tailwind utilities;
-        ```
-    - *Big Components* : Use Vue, React
+- Avoid duplication of code for repeatative elements.
+- Add components after `@tailwind components;`
+- *Small components* : Use `@apply`
+    ```css
+    @tailwind components;
+    .btn-green { 
+        @apply bg-green-400 text-white ;            /*cannot use hover: , focus: , {screen}. So use normal css not utility as below.*/
+        } 
+    .btn-green:hover {
+        @apply bg-green-200;
+    }
+    @tailwind utilities;
+    ```
+- *Big Components* : Use Vue, React
 
 > ADDING NEW UTILITIES
 
@@ -97,7 +97,7 @@ Adding prefix - use `Autoprefixer` package
 
 > FUNCTIONS / DIRECTIVES
 
-    - `@apply`, `@responsive`, `@variants`, `@screen`
+- `@apply`, `@responsive`, `@variants`, `@screen`
 
 
 #### CUSTOMIZATION
