@@ -47,7 +47,7 @@ Adding prefix - use `Autoprefixer` package
     - `sm != mobile` instead use classes without any prefix.
     - Ex: `<img class="w-16 md:w-32 lg:w-48" src="...">`
 
-> PSEUDO CLASSES
+> PSseudo classes
 
 ```css
 /* Classes */
@@ -59,16 +59,16 @@ hover:bg-color-blue-600
 focus:text-white
 ```
 
-> ADD BASE STYLE
+> Add base styles
 
 ```html
-<!-- Normalize.css is included in tailwind aka preflight.css with some extras -->
 <!-- In html -->
+<!-- Normalize.css is included in tailwind aka preflight.css with some extras -->
 <body class="min-h-screen">
 ```
 
 ```css
-<!-- In css -->
+/* In css */
 @tailwind base; 
 
 h1 { @apply text-white bg-red-400; }
@@ -77,14 +77,12 @@ h1 { @apply text-white bg-red-400; }
 @tailwind components;
 ```
 
+> Extracting components
 
+- Reuse code as components
 
-> EXTRACTING COMPONENTS
-
-- Avoid duplication of code for repeatative elements.
-- Add components after `@tailwind components;`
-- *Small components* : Use `@apply`
-    ```css
+```css
+    /* Small components*  */
     @tailwind components;
     .btn-green { 
         @apply bg-green-400 text-white ;            /*cannot use hover: , focus: , {screen}. So use normal css not utility as below.*/
@@ -93,12 +91,14 @@ h1 { @apply text-white bg-red-400; }
         @apply bg-green-200;
     }
     @tailwind utilities;
-    ```
-- *Big Components* : Use Vue, React
 
-> ADDING NEW UTILITIES
+    /* Big Components */
+    Use Vue, React components
+```
 
-    ```css
+> Adding new utilities
+
+```css
     @tailwind utilities;
 
     @responsive {                                       /*gives sm:rotate-0, md:rotate-0, etc*/
@@ -108,12 +108,11 @@ h1 { @apply text-white bg-red-400; }
             .rotate-180{ transform: rotate(180deg;) }
         }
     }
-    ```
+```
 
-> FUNCTIONS / DIRECTIVES
+> Functions / Directives
 
 - `@apply`, `@responsive`, `@variants`, `@screen`
-
 
 #### # CUSTOMIZATION
 
