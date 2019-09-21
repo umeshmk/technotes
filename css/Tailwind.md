@@ -115,6 +115,24 @@ Use Vue, React components
 
 #### # CUSTOMIZATION
 
+> Configuration [Tailwind.config.js](https://github.com/tailwindcss/tailwindcss/blob/master/stubs/defaultConfig.stub.js)
+
+```js
+module.exports = {
+    prefix: 'tw-',
+    important: true,
+    separator: '-',                 /*default is (:) [md:flex --> md-flex]*/
+}
+
+```
+
+> Theme
+> Breakpoints
+> Colors
+> Spacing
+> Variants
+> Plugins
+
 #### # BASE STYLES
 
 #### # LAYOUT
