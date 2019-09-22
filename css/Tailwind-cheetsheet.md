@@ -79,16 +79,21 @@ Functions : `@tailwind`, `@apply`, `@responsive`, `@variants`, `@screen`
 |               |              |                    |                      |                           |
 |               |              |                    |                      |                           |
 
-|Float       |
-|------------|
-|.float-right|
-|.float-left |
-|.float-none |
-|.clearfix   |
 
 
 
+#### # LAYOUT
 
+| Container         |
+| -------------     |
+| .container        |
+|                   |
+| | Float        |  |
+| | ------------ |  |
+| | .float-right |  |
+| | .float-left  |  |
+| | .float-none  |  |
+| | .clearfix    |  |
 
 #### # TYPOGRAPHY
 
