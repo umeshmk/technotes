@@ -20,15 +20,12 @@
 
 #### # Responsive Design
 
-| Mobile | sm    | md    | lg     | xl     |
-| ----- | ----- | ----- | ------ | ------ |
-| *< 640px* | *640px* | *768px* | *1024px* | *1280px* |
-| `w-4` | `sm:w-4` | `md:w-4` | `lg:w-4` |
-
 - It works on **all utility classes.** like `sm:text-red` , `lg:flex` etc
-- Mobile First approach :
-  - `sm != mobile` instead use classes without any prefix.
-  - Ex: `<img class="w-16 md:w-32 lg:w-48" src="...">`
+
+  | Mobile    | sm       | md       | lg       | xl       |
+  | --------- | -------- | -------- | -------- | -------- |
+  | _< 640px_ | _640px_  | _768px_  | _1024px_ | _1280px_ |
+  | `w-4`     | `sm:w-4` | `md:w-4` | `lg:w-4` | `xl:w-4` |
 
 > PSseudo classes
 
