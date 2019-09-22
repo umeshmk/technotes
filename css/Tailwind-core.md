@@ -1,6 +1,24 @@
-#### # CORE CONCEPT
+#### # Utility First
 
-> Responsive Design
+> **pros**
+
+- No css. Use pre existing classes
+- No time waste on creating classnames
+- css stops growing
+- More productivity
+- saves time
+  - Type `flex` instead of `.foo{ display:flex;}`
+  - Type `pt-0` instead of `padding-top: 0;`
+- Responsive
+- Pseudo classes
+- Components - Using repeated classes combination
+  ```css
+  .btn {
+    @apply bg-red-300 w-full p-4 rounded;
+  }
+  ```
+
+#### # Responsive Design
 
 | sm    | md    | lg     | xl     |
 | ----- | ----- | ------ | ------ |

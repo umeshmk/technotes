@@ -25,8 +25,11 @@ npm install tailwindcss
 @tailwind utilities;
 ```
 
-> Create **tailwind.config.js**
-> npx tailwind init
+> Create **tailwind.config.js** [Fullversion](https://github.com/tailwindcss/tailwindcss/blob/master/stubs/defaultConfig.stub.js)
+
+```bash
+npx tailwind init
+```
 
 > Edit **package.json**
 
