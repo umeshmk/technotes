@@ -1,3 +1,5 @@
+# Tailwind - core
+
 #### # Utility First
 
 > **pros**
@@ -16,6 +18,11 @@
   .btn {
     @apply bg-red-300 w-full p-4 rounded;
   }
+  /*Use custom prefix to identify easily in html*/
+  .cc-btn{ ... };
+  // OR
+  $prefix: "cc-";              // cc = custom css
+  .#{$prefix}btn { ... };       //o/p:  .cc-btn {...}
   ```
 
 #### # Responsive Design
@@ -95,7 +102,7 @@
 Use Vue, React components
 ```
 
-> Adding new utilities
+#### # Adding new utilities
 
 ```css
 @tailwind utilities;
@@ -117,7 +124,7 @@ Use Vue, React components
 }
 ```
 
-> Functions / Directives
+#### # Functions / Directives
 
 - `@apply`, `@responsive`, `@variants`, `@screen`
 
