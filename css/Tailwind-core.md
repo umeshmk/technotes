@@ -14,13 +14,17 @@
 - Responsive
 - Pseudo classes `[Hover, focus, etc]`
 - Components - Using repeated classes combination
+
   ```scss
   .btn {
     @apply bg-red-300 w-full p-4 rounded;
   }
+
   /*Use custom prefix to identify easily in html*/
   .cc-btn{ ... };
+
   // OR
+
   $prefix: "cc-";              // cc = custom css
   .#{$prefix}btn { ... };       //o/p:  .cc-btn {...}
   ```
@@ -85,22 +89,33 @@
 
 #### # Extracting components
 
-- Reuse code as components
+- Reuse code as components - [ Css OR Vuejs/Reactjs ]
+- Css Components
 
-```css
-/* Small components*  */
-@tailwind components;
-.btn-green {
-    @apply bg-green-400 text-white ;            /*cannot use hover: , focus: , {screen}. So use normal css not utility as below.*/
+  - Use `@apply`
+  - Cannot use `hover: , focus: , {screen}` in `@apply`. So use normal `.fclass:hover`.
+  - Responsive classes are not created.
+  - Use `@responsive` if it's required.
+
+    ```scss
+    @tailwind components;
+
+    /* Css components */
+    .btn-green {
+      @apply bg-green-400 text-white;
     }
-.btn-green:hover {
-    @apply bg-green-200;
-}
-@tailwind utilities;
+    .btn-green:hover {
+      @apply bg-green-200;
+    }
 
-/* Big Components */
-Use Vue, React components
-```
+    @screen md {
+        .btn-green {
+            @apply inline-block
+        }
+    }
+
+    @tailwind utilities;
+    ```
 
 #### # Adding new utilities
 
@@ -126,7 +141,7 @@ Use Vue, React components
 
 #### # Functions / Directives
 
-- `@apply`, `@responsive`, `@variants`, `@screen`
+- `@tailwind`, `@apply`, `@responsive`, `@variants`, `@screen`
 
 #### # CUSTOMIZATION
 
