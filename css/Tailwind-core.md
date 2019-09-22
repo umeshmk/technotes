@@ -62,7 +62,7 @@
   - `outline` - `focus`
   - `textColor` - `hover, focus`
   - `textDecoration` - `hover, focus`
-  - **Remaining dont have it.** - Add manually in `tailwind.config.js`
+  - **Remaining dont use hover/focus by default.** - Add manually in `tailwind.config.js`
 
 #### # Add base styles
 
