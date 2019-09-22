@@ -88,12 +88,14 @@ Functions : `@tailwind`, `@apply`, `@responsive`, `@variants`, `@screen`
 | -------------     |
 | .container        |
 |                   |
-| | Float        |  |
-| | ------------ |  |
-| | .float-right |  |
-| | .float-left  |  |
-| | .float-none  |  |
-| | .clearfix    |  |
+|- | Float        | - |
+|- | ------------ | - |
+|- | .float-right | - |
+|- | .float-left  | - |
+|- | .float-none  | - |
+|- | .clearfix    | - |
+
+
 
 #### # TYPOGRAPHY
 
