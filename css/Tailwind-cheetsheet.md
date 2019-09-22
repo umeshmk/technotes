@@ -82,7 +82,7 @@ Functions : `@tailwind`, `@apply`, `@responsive`, `@variants`, `@screen`
 #### # LAYOUT
 
 | Container  || Float        |
-| ---------- || ------------ |
+| ---------- |-| ------------ |
 | .container || .float-right |
 |            || .float-left  |
 | - -        || .float-none  |
