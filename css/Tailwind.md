@@ -19,32 +19,30 @@ npm install tailwindcss
 
 - [Optional] create config - **tailwind.config.js** using cmd `npx tailwind init`
 
+- Add to **package.json**
+
 ```json
-// package.json
 script{
     "build" : "tailwind build src/style.css -o dist/style.css"
 }
 ```
 
 - For Laravel Mix visit [installation](https://tailwindcss.com/docs/installation#laravel-mix)
-- *file size* :- use `PurgeCss` package
-- *prefix* :- use `Autoprefixer` package
-
-
-
+- _file size_ :- use `PurgeCss` package
+- _prefix_ :- use `Autoprefixer` package
 
 #### # CORE CONCEPT
 
 > Responsive Design
 
-|sm|md|lg|xl|
-|-|-|-|-|
-|640px|768px|1024px|1280px|
+| sm    | md    | lg     | xl     |
+| ----- | ----- | ------ | ------ |
+| 640px | 768px | 1024px | 1280px |
 
 - It works on **all utility classes.** like `sm:text-red` , `lg:flex` etc
 - Mobile First approach :
-    - `sm != mobile` instead use classes without any prefix.
-    - Ex: `<img class="w-16 md:w-32 lg:w-48" src="...">`
+  - `sm != mobile` instead use classes without any prefix.
+  - Ex: `<img class="w-16 md:w-32 lg:w-48" src="...">`
 
 > PSseudo classes
 
@@ -54,7 +52,7 @@ script{
 { first-child|last-child|odd-child|even-child }
 { group-hover|focus-within }
 /* Usage */
-hover:bg-color-blue-600 
+hover:bg-color-blue-600
 focus:text-white
 ```
 
@@ -63,15 +61,19 @@ focus:text-white
 ```html
 <!-- In html -->
 <!-- Normalize.css is included in tailwind aka preflight.css with some extras -->
-<body class="min-h-screen">
+<body class="min-h-screen"></body>
 ```
 
 ```css
 /* In css */
-@tailwind base; 
+@tailwind base;
 
-h1 { @apply text-white bg-red-400; }
-@font-face {....}
+h1 {
+  @apply text-white bg-red-400;
+}
+@font-face {
+  ....;
+}
 
 @tailwind components;
 ```
@@ -83,9 +85,9 @@ h1 { @apply text-white bg-red-400; }
 ```css
 /* Small components*  */
 @tailwind components;
-.btn-green { 
+.btn-green {
     @apply bg-green-400 text-white ;            /*cannot use hover: , focus: , {screen}. So use normal css not utility as below.*/
-    } 
+    }
 .btn-green:hover {
     @apply bg-green-200;
 }
@@ -100,12 +102,20 @@ Use Vue, React components
 ```css
 @tailwind utilities;
 
-@responsive {                                       /*gives sm:rotate-0, md:rotate-0, etc*/
-    @variants hover, focus {                        /*focus takes precedence over hover.*/
-        .rotate-0{ transform: rotate(0deg;) }
-        .rotate-90{ transform: rotate(90deg;) }
-        .rotate-180{ transform: rotate(180deg;) }
+@responsive {
+  /*gives sm:rotate-0, md:rotate-0, etc*/
+  @variants hover, focus {
+    /*focus takes precedence over hover.*/
+    .rotate-0 {
+      transform: rotate(0deg;);
     }
+    .rotate-90 {
+      transform: rotate(90deg;);
+    }
+    .rotate-180 {
+      transform: rotate(180deg;);
+    }
+  }
 }
 ```
 
@@ -119,11 +129,10 @@ Use Vue, React components
 
 ```js
 module.exports = {
-    prefix: 'tw-',
-    important: true,
-    separator: '-',                 /*default is (:) [md:flex --> md-flex]*/
-}
-
+  prefix: "tw-",
+  important: true,
+  separator: "-" /*default is (:) [md:flex --> md-flex]*/
+};
 ```
 
 > Theme
@@ -156,4 +165,3 @@ module.exports = {
 #### INTERACTIVITY
 
 #### SVG
-

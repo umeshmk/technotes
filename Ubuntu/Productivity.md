@@ -1,7 +1,7 @@
-
 > Make .sh scripts if necessary
 
 # List
+
 - Help (man / help / -h)
 - Shell (zsh + oh-my-zsh)
 - Terminal (Terminator)
@@ -13,34 +13,29 @@
 - SSH key for github
 - Drawing (Inkspace / Gimp)
 
-
-
 #### Manual / help
 
-```sh 
+```sh
 # Manual [Full]
-man git 			
+man git
 man git add
 
 # Help [Mid]
-git help 			
+git help
 
 # -h [Short]
-git -h 				
-git add -h 			
+git -h
+git add -h
 ```
 
+#### oh-my-ZSH
 
-
-#### oh-my-ZSH 
-
-- Plugins [git extract] 
-	- [All plugins](https://github.com/robbyrussell/oh-my-zsh/wiki/Plugins)
+- Plugins [git extract] - [All plugins](https://github.com/robbyrussell/oh-my-zsh/wiki/Plugins)
 - Themes [default is good]
 - [Git Plugin](https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/git/)
 
-```sh 
-# Install zsh 
+```sh
+# Install zsh
 sudo apt get zsh
 chsh -s $(which zsh)		# make default
 zsh							# select (2) to create  ~/.zshrc config
@@ -51,20 +46,23 @@ echo $SHELL					# check default shell
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ```
 
-> *Add Plugins*
+> _Add Plugins_
 
 ```sh
 gedit ~/.zshrc				# config file
 
 # plugins=(git extract)
 
-# **Extract Plugin 
+# **Extract Plugin
 extract abc.tar.gz			# any archive file
-extract -r abc.zip 			# Extract and remove original archive file 
+extract -r abc.zip 			# Extract and remove original archive file
 
 ```
 
-
 #### Terminator (Multiple Terminals)
+
 `sudo apt-get install terminator`
 
+#### Open VSCode from any folder
+
+`code .`
