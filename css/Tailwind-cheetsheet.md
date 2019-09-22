@@ -42,6 +42,7 @@
 
 | Utility                                        | Variant (Default                     |
 | ---------------------------------------------- | ------------------------------------ |
+| **All classes**                                | `responsive`                         |
 | backgroundColor                                | `hover, focus`                       |
 | borderColor                                    | `hover, focus`                       |
 | boxShadow                                      | `hover, focus`                       |
@@ -56,9 +57,29 @@
 
 Functions : `@tailwind`, `@apply`, `@responsive`, `@variants`, `@screen`
 
-#### # BASE STYLES
-
 #### # LAYOUT
+
+.container
+
+| Container  | Display       | Float        | Object-Fit         | Object-Positions     | Overflow                  |
+| ---------- | ------------- | ------------ | ------------------ | -------------------- | ------------------------- |
+| .container | .block        | .float-right | .object-contain    | .object-bottom       | .overflow-auto            |
+|            | .inline-block | .float-left  | .object-cover      | .object-center       | .overflow-hidden          |
+|            | .inline       | .float-none  | .object-fill       | .object-left         | .overflow-visible         |
+|            | .flex         | .clearfix    | .object-none       | .object-left-bottom  | .overflow-scroll          |
+|            | .inline-flex  |              | .object-scale-down | .object-left-top     | .overflow-x-auto          |
+|            | .table        |              |                    | .object-right        | .overflow-y-auto          |
+|            | .table-row    |              |                    | .object-right-bottom | .overflow-x-hidden        |
+|            | .table-cell   |              |                    | .object-right-top    | .overflow-y-hidden        |
+|            | .hidden       |              |                    | .object-top          | .overflow-x-visible       |
+|            |               |              |                    |                      | .overflow-y-visible       |
+|            |               |              |                    |                      | .overflow-x-scroll        |
+|            |               |              |                    |                      | .overflow-y-scroll        |
+|            |               |              |                    |                      | .scrolling-touch (webkit) |
+|            |               |              |                    |                      | .scrolling-auto (webkit)  |
+|            |               |              |                    |                      |                           |
+|            |               |              |                    |                      |                           |
+|            |               |              |                    |                      |                           |
 
 #### # TYPOGRAPHY
 
