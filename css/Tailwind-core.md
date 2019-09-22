@@ -32,12 +32,12 @@
 
 - All utility classes dont have all Pseudo classes due to file size.
 
-    ```css
-    /* Pseudo Classes */
-    { focus|hover|disabled|active|visited }             /*Use this*/
-    { group-hover|focus-within }                        /*Use this*/
-    { first-child|last-child|odd-child|even-child }     /*Avoid it. Better use core css with @apply */
-    ```
+  ```css
+  /* Pseudo Classes */
+  { focus|hover|disabled|active|visited }             /*Use this*/
+  { group-hover|focus-within }                        /*Use this*/
+  { first-child|last-child|odd-child|even-child }     /*Avoid it. Better use core css with @apply */
+  ```
 
 - Usage : `hover:bg-color-blue-600` , `focus:text-white`
 - Usage (responsive) : `md:hover:w-3`
@@ -51,31 +51,32 @@
   - `outline` - `focus`
   - `textColor` - `hover, focus`
   - `textDecoration` - `hover, focus`
-  - **Remaining dont have it.** Can add manually in `tailwind.config.js`
+  - **Remaining dont have it.** - Add manually in `tailwind.config.js`
 
-> Add base styles
+#### # Add base styles
 
-```html
-<!-- In html -->
-<!-- Normalize.css is included in tailwind aka preflight.css with some extras -->
-<body class="min-h-screen"></body>
-```
+- Base = Global = Beginning of stylesheet
+- Uses `Normalize.css` and some more initial setup.
+- Named as **Preflight** - [link to base.css](https://unpkg.com/tailwindcss@1.1.2/dist/base.css)
+- Add Custom styles
 
-```css
-/* In css */
-@tailwind base;
+  ```scss
+  @tailwind base;
 
-h1 {
-  @apply text-white bg-red-400;
-}
-@font-face {
-  ....;
-}
+  @font-face {
+    font-family: Proxima Nova;
+    font-weight: 400;
+    src: url(/fonts/proxima-nova/400-regular.woff) format("woff");
+  }
+  h1 {
+    @apply text-2xl;
+  }
+  h2 {
+    @apply text-xl;
+  }
+  ```
 
-@tailwind components;
-```
-
-> Extracting components
+#### # Extracting components
 
 - Reuse code as components
 
