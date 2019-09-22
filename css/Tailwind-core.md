@@ -26,6 +26,7 @@
   | --------- | -------- | -------- | -------- | -------- |
   | _< 640px_ | _640px_  | _768px_  | _1024px_ | _1280px_ |
   | `w-4`     | `sm:w-4` | `md:w-4` | `lg:w-4` | `xl:w-4` |
+  | Mobile    | Tablet(portriat) | Tablet(landscape) | Laptop | Desktop |
 
 > PSseudo classes
 
