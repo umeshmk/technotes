@@ -7,12 +7,12 @@
 - css stops growing
 - More productivity
 - saves time
-  - Type `flex` instead of `.foo{ display:flex;}`
-  - Type `pt-0` instead of `padding-top: 0;`
+  - Type `flex` instead of `.foo{ display:flex; }`
+  - Type `pt-0` instead of `.foo{ padding-top: 0; }`
 - Responsive
-- Pseudo classes
+- Pseudo classes `[Hover, focus, etc]`
 - Components - Using repeated classes combination
-  ```css
+  ```scss
   .btn {
     @apply bg-red-300 w-full p-4 rounded;
   }
@@ -20,9 +20,10 @@
 
 #### # Responsive Design
 
-| sm    | md    | lg     | xl     |
-| ----- | ----- | ------ | ------ |
-| 640px | 768px | 1024px | 1280px |
+| Mobile | sm    | md    | lg     | xl     |
+| ----- | ----- | ----- | ------ | ------ |
+| *< 640px* | *640px* | *768px* | *1024px* | *1280px* |
+| `w-4` | `sm:w-4` | `md:w-4` | `lg:w-4` |
 
 - It works on **all utility classes.** like `sm:text-red` , `lg:flex` etc
 - Mobile First approach :
