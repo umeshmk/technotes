@@ -49,6 +49,7 @@ I decided to **Read, Collect, Analyze** and **Organise** all those needles for f
 - Ubuntu/Basic-commands
 - css/TailwindCss
 - Js/js
+- Database design using ER diagrams
 
 # License
 

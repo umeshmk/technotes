@@ -22,23 +22,36 @@
 
 - It works on **all utility classes.** like `sm:text-red` , `lg:flex` etc
 
-  | Mobile    | sm       | md       | lg       | xl       |
-  | --------- | -------- | -------- | -------- | -------- |
-  | _< 640px_ | _640px_  | _768px_  | _1024px_ | _1280px_ |
-  | `w-4`     | `sm:w-4` | `md:w-4` | `lg:w-4` | `xl:w-4` |
-  | Mobile    | Tablet(portriat) | Tablet(landscape) | Laptop | Desktop |
+  | Mobile    | sm                  | md                   | lg       | xl       |
+  | --------- | ------------------- | -------------------- | -------- | -------- |
+  | _< 640px_ | _640px_             | _768px_              | _1024px_ | _1280px_ |
+  | `w-4`     | `sm:w-4`            | `md:w-4`             | `lg:w-4` | `xl:w-4` |
+  | Mobile    | Tablet (_Portrait_) | Tablet (_Landscape_) | Laptop   | Desktop  |
 
-> PSseudo classes
+#### # Pseudo class variant
 
-```css
-/* Classes */
-{ focus|hover|disabled|active|visited }
-{ first-child|last-child|odd-child|even-child }
-{ group-hover|focus-within }
-/* Usage */
-hover:bg-color-blue-600
-focus:text-white
-```
+- All utility classes dont have all Pseudo classes due to file size.
+
+    ```css
+    /* Pseudo Classes */
+    { focus|hover|disabled|active|visited }             /*Use this*/
+    { group-hover|focus-within }                        /*Use this*/
+    { first-child|last-child|odd-child|even-child }     /*Avoid it. Better use core css with @apply */
+    ```
+
+- Usage : `hover:bg-color-blue-600` , `focus:text-white`
+- Usage (responsive) : `md:hover:w-3`
+- Default config - [Reference](https://tailwindcss.com/docs/pseudo-class-variants#default-variants-reference)
+
+  - `backgroundColor` - `hover, focus`
+  - `borderColor` - `hover, focus`
+  - `boxShadow` - `hover, focus`
+  - `font-weight` - `hover, focus`
+  - `opacity` - `hover, focus`
+  - `outline` - `focus`
+  - `textColor` - `hover, focus`
+  - `textDecoration` - `hover, focus`
+  - **Remaining dont have it.** Can add manually in `tailwind.config.js`
 
 > Add base styles
 
