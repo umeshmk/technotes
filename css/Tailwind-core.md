@@ -54,15 +54,6 @@
 - Usage (responsive) : `md:hover:w-3`
 - Default config - [Reference](https://tailwindcss.com/docs/pseudo-class-variants#default-variants-reference)
 
-  - `backgroundColor` - `hover, focus`
-  - `borderColor` - `hover, focus`
-  - `boxShadow` - `hover, focus`
-  - `font-weight` - `hover, focus`
-  - `opacity` - `hover, focus`
-  - `outline` - `focus`
-  - `textColor` - `hover, focus`
-  - `textDecoration` - `hover, focus`
-  - **Remaining dont use hover/focus by default.** - Add manually in `tailwind.config.js`
 
 #### # Add base styles
 
@@ -109,9 +100,9 @@
     }
 
     @screen md {
-        .btn-green {
-            @apply inline-block
-        }
+      .btn-green {
+        @apply inline-block;
+      }
     }
 
     @tailwind utilities;
@@ -139,9 +130,7 @@
 }
 ```
 
-#### # Functions / Directives
 
-- `@tailwind`, `@apply`, `@responsive`, `@variants`, `@screen`
 
 #### # CUSTOMIZATION
 
@@ -155,33 +144,22 @@ module.exports = {
 };
 ```
 
-> Theme
-> Breakpoints
-> Colors
-> Spacing
-> Variants
-> Plugins
+#### # Colors
 
-#### # BASE STYLES
+```css
+/*tailwind.config.js*/
+theme: {
+  colors: {
+    primary: "var(--color-primary)"; /* :root {  --color-primary: #121547;  } */
+    secondary: "#5c6ac4";
+  }
+}
+```
 
-#### # LAYOUT
+#### # Variants
 
-#### # TYPOGRAPHY
-
-#### # BACKGROUNDS
-
-#### # BORDERS
-
-#### # FLEXBOX
-
-#### # SPACING
-
-#### # SIZING
-
-#### # TABLES
-
-#### # EFFECTS
-
-#### INTERACTIVITY
-
-#### SVG
+```js
+variants: {
+    backgroundColor: ['responsive', 'hover', 'focus', 'active'],
+}
+```
