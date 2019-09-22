@@ -59,27 +59,26 @@ Functions : `@tailwind`, `@apply`, `@responsive`, `@variants`, `@screen`
 
 #### # LAYOUT
 
-.container
 
-| Container  | Display       | Float        | Object-Fit         | Object-Positions     | Overflow                  |
-| ---------- | ------------- | ------------ | ------------------ | -------------------- | ------------------------- |
-| .container | .block        | .float-right | .object-contain    | .object-bottom       | .overflow-auto            |
-|            | .inline-block | .float-left  | .object-cover      | .object-center       | .overflow-hidden          |
-|            | .inline       | .float-none  | .object-fill       | .object-left         | .overflow-visible         |
-|            | .flex         | .clearfix    | .object-none       | .object-left-bottom  | .overflow-scroll          |
-|            | .inline-flex  |              | .object-scale-down | .object-left-top     | .overflow-x-auto          |
-|            | .table        |              |                    | .object-right        | .overflow-y-auto          |
-|            | .table-row    |              |                    | .object-right-bottom | .overflow-x-hidden        |
-|            | .table-cell   |              |                    | .object-right-top    | .overflow-y-hidden        |
-|            | .hidden       |              |                    | .object-top          | .overflow-x-visible       |
-|            |               |              |                    |                      | .overflow-y-visible       |
-|            |               |              |                    |                      | .overflow-x-scroll        |
-|            |               |              |                    |                      | .overflow-y-scroll        |
-|            |               |              |                    |                      | .scrolling-touch (webkit) |
-|            |               |              |                    |                      | .scrolling-auto (webkit)  |
-|            |               |              |                    |                      |                           |
-|            |               |              |                    |                      |                           |
-|            |               |              |                    |                      |                           |
+| Container     | Display       | Float        | Object-Fit         | Object-Positions     | Overflow                  |
+| ------------- | ------------- | ------------ | ------------------ | -------------------- | ------------------------- |
+| .container    | .block        | .float-right | .object-contain    | .object-bottom       | .overflow-auto            |
+|               | .inline-block | .float-left  | .object-cover      | .object-center       | .overflow-hidden          |
+|               | .inline       | .float-none  | .object-fill       | .object-left         | .overflow-visible         |
+| **Display**   | .flex         | .clearfix    | .object-none       | .object-left-bottom  | .overflow-scroll          |
+| ------------- | .inline-flex  |              | .object-scale-down | .object-left-top     | .overflow-x-auto          |
+| .block        | .table        |              |                    | .object-right        | .overflow-y-auto          |
+| .inline-block | .table-row    |              |                    | .object-right-bottom | .overflow-x-hidden        |
+| .inline       | .table-cell   |              |                    | .object-right-top    | .overflow-y-hidden        |
+| .flex         | .hidden       |              |                    | .object-top          | .overflow-x-visible       |
+| .inline-flex  |               |              |                    |                      | .overflow-y-visible       |
+| .table        |               |              |                    |                      | .overflow-x-scroll        |
+| .table-row    |               |              |                    |                      | .overflow-y-scroll        |
+| .table-cell   |               |              |                    |                      | .scrolling-touch (webkit) |
+| .hidden       |               |              |                    |                      | .scrolling-auto (webkit)  |
+|               |               |              |                    |                      |                           |
+|               |               |              |                    |                      |                           |
+|               |               |              |                    |                      |                           |
 
 #### # TYPOGRAPHY
 
