@@ -29,16 +29,6 @@
   .#{$prefix}btn { ... };       //o/p:  .cc-btn {...}
   ```
 
-#### # Responsive Design
-
-- It works on **all utility classes.** like `sm:text-red` , `lg:flex` etc
-
-  | Mobile    | sm                  | md                   | lg       | xl       |
-  | --------- | ------------------- | -------------------- | -------- | -------- |
-  | _< 640px_ | _640px_             | _768px_              | _1024px_ | _1280px_ |
-  | `w-4`     | `sm:w-4`            | `md:w-4`             | `lg:w-4` | `xl:w-4` |
-  | Mobile    | Tablet (_Portrait_) | Tablet (_Landscape_) | Laptop   | Desktop  |
-
 #### # Pseudo class variant
 
 - All utility classes dont have all Pseudo classes due to file size.
@@ -130,7 +120,7 @@
 }
 ```
 
-#### # CUSTOMIZATION
+# CUSTOMIZATION
 
 > Configuration - [Tailwind.config.js](https://github.com/tailwindcss/tailwindcss/blob/master/stubs/defaultConfig.stub.js)
 

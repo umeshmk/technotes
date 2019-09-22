@@ -1,8 +1,8 @@
 # Tailwind - Cheatsheet
 
-### # Responsive Design
+#### # Responsive Design
 
-- It works on **all utility classes.** 
+- It works on **all utility classes.**
 
   | Mobile    | sm                  | md                   | lg       | xl       |
   | --------- | ------------------- | -------------------- | -------- | -------- |
@@ -10,34 +10,33 @@
   | `w-4`     | `sm:w-4`            | `md:w-4`             | `lg:w-4` | `xl:w-4` |
   | Mobile    | Tablet (_Portrait_) | Tablet (_Landscape_) | Laptop   | Desktop  |
 
+#### # tailwind.config.js
 
-### # tailwind.config.js
-
-| Spacing | Colors | Variants     | 3rd Party Plugins |
-| ------- | ------ | ------------ | ----------------- |
-| 0       | Black  | responsive   | transform         |
-| px      | White  | group-hover  | transition        |
-| 1       | gray   | focus-within | gradients         |
-| 2       | red    | first        |                   |
-| 3       | orange | last         |                   |
-| 4       | yellow | odd          |                   |
-| 5       | green  | even         |                   |
-| 6       | teal   | focus        |                   |
-| 8       | blue   | active       |                   |
-| 10      | indigo | visited      |                   |
-| 12      | purple | disabled     |                   |
-| 16      | pink   |              |                   |
-| 20      |        |              |                   |
-| 24      |        |              |                   |
-| 32      |        |              |                   |
-| 40      |        |              |                   |
-| 48      |        |              |                   |
-| 56      |        |              |                   |
-| 64      |        |              |                   |
-|         |        |              |                   |
-|         |        |              |                   |
-|         |        |              |                   |
-|         |        |              |                   |
+| Spacing | Colors | Pseudo class Variants | 3rd Party Plugins |
+| ------- | ------ | --------------------- | ----------------- |
+| 0       | Black  | responsive            | transform         |
+| px      | White  | group-hover           | transition        |
+| 1, 2    | gray   | focus-within          | gradients         |
+| 3, 4    | red    | first                 |                   |
+| 5, 6    | orange | last                  |                   |
+| 8       | yellow | odd                   |                   |
+| 10      | green  | even                  |                   |
+| 12      | teal   | focus                 |                   |
+| 16      | blue   | active                |                   |
+| 20      | indigo | visited               |                   |
+| 24      | purple | disabled              |                   |
+| 32      | pink   |                       |                   |
+| 40      |        |                       |                   |
+| 48      |        |                       |                   |
+| 56      |        |                       |                   |
+| 64      |        |                       |                   |
+|         |        |                       |                   |
+|         |        |                       |                   |
+|         |        |                       |                   |
+|         |        |                       |                   |
+|         |        |                       |                   |
+|         |        |                       |                   |
+|         |        |                       |                   |
 
 ---
 
@@ -53,7 +52,7 @@
 | textDecoration                                 | `hover, focus`                       |
 | **Remaining dont use hover/focus by default.** | Add manually in `tailwind.config.js` |
 
-#### style.css
+#### # style.css
 
 Functions : `@tailwind`, `@apply`, `@responsive`, `@variants`, `@screen`
 
