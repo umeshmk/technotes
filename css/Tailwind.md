@@ -8,11 +8,15 @@
 
 - Add in Laravel Mix [installation](https://tailwindcss.com/docs/installation#laravel-mix)
 
+> New project
+
 ```bash
 # install tailwind
 npm init -y
 npm install tailwindcss
 ```
+
+> Import in css/scss
 
 ```css
 /* src/style.css */
@@ -21,15 +25,18 @@ npm install tailwindcss
 @tailwind utilities;
 ```
 
-- [Optional] create config - **tailwind.config.js** using cmd `npx tailwind init`
+> Create **tailwind.config.js**
+> npx tailwind init
 
-- Add to **package.json**
+> Edit **package.json**
 
 ```json
 script{
     "build" : "tailwind build src/style.css -o dist/style.css"
 }
 ```
+
+> Note
 
 - _Reduce file size_ :- Use `PurgeCss` package [link](https://tailwindcss.com/docs/controlling-file-size)
 - _Css prefixer_ :- Use `Autoprefixer` package
@@ -40,7 +47,12 @@ script{
 - Cannot feed directly `scss` -/-> `Postcss`
 
 ```scss
+// file.css
 .alert {
-  @apply bg-red-500 #{!important}; // Always use interpolation #{ } for !important
+  @apply bg-red-500 !important;
+}
+// file.scss
+.alert {
+  @apply bg-red-500 #{!important}; // Always use interpolation #{ } for !important in sass
 }
 ```
