@@ -59,26 +59,36 @@ Functions : `@tailwind`, `@apply`, `@responsive`, `@variants`, `@screen`
 
 #### # LAYOUT
 
+| Container     | Float        | Object-Fit         | Object-Positions     | Overflow                  |
+| ------------- | ------------ | ------------------ | -------------------- | ------------------------- |
+| .container    | .float-right | .object-contain    | .object-bottom       | .overflow-auto            |
+|               | .float-left  | .object-cover      | .object-center       | .overflow-hidden          |
+|               | .float-none  | .object-fill       | .object-left         | .overflow-visible         |
+|               | .clearfix    | .object-none       | .object-left-bottom  | .overflow-scroll          |
+| **Display**   |              | .object-scale-down | .object-left-top     | .overflow-x-auto          |
+| .block        |              |                    | .object-right        | .overflow-y-auto          |
+| .inline-block |              |                    | .object-right-bottom | .overflow-x-hidden        |
+| .inline       |              |                    | .object-right-top    | .overflow-y-hidden        |
+| .flex         |              |                    | .object-top          | .overflow-x-visible       |
+| .inline-flex  |              |                    |                      | .overflow-y-visible       |
+| .table        |              |                    |                      | .overflow-x-scroll        |
+| .table-row    |              |                    |                      | .overflow-y-scroll        |
+| .table-cell   |              |                    |                      | .scrolling-touch (webkit) |
+| .hidden       |              |                    |                      | .scrolling-auto (webkit)  |
+|               |              |                    |                      |                           |
+|               |              |                    |                      |                           |
+|               |              |                    |                      |                           |
 
-| Container     | Display       | Float        | Object-Fit         | Object-Positions     | Overflow                  |
-| ------------- | ------------- | ------------ | ------------------ | -------------------- | ------------------------- |
-| .container    | .block        | .float-right | .object-contain    | .object-bottom       | .overflow-auto            |
-|               | .inline-block | .float-left  | .object-cover      | .object-center       | .overflow-hidden          |
-|               | .inline       | .float-none  | .object-fill       | .object-left         | .overflow-visible         |
-| **Display**   | .flex         | .clearfix    | .object-none       | .object-left-bottom  | .overflow-scroll          |
-| ------------- | .inline-flex  |              | .object-scale-down | .object-left-top     | .overflow-x-auto          |
-| .block        | .table        |              |                    | .object-right        | .overflow-y-auto          |
-| .inline-block | .table-row    |              |                    | .object-right-bottom | .overflow-x-hidden        |
-| .inline       | .table-cell   |              |                    | .object-right-top    | .overflow-y-hidden        |
-| .flex         | .hidden       |              |                    | .object-top          | .overflow-x-visible       |
-| .inline-flex  |               |              |                    |                      | .overflow-y-visible       |
-| .table        |               |              |                    |                      | .overflow-x-scroll        |
-| .table-row    |               |              |                    |                      | .overflow-y-scroll        |
-| .table-cell   |               |              |                    |                      | .scrolling-touch (webkit) |
-| .hidden       |               |              |                    |                      | .scrolling-auto (webkit)  |
-|               |               |              |                    |                      |                           |
-|               |               |              |                    |                      |                           |
-|               |               |              |                    |                      |                           |
+|Float       |
+|------------|
+|.float-right|
+|.float-left |
+|.float-none |
+|.clearfix   |
+
+
+
+
 
 #### # TYPOGRAPHY
 
