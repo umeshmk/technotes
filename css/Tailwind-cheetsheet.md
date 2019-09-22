@@ -1,6 +1,17 @@
 # Tailwind - Cheatsheet
 
-### tailwind.config.js
+### # Responsive Design
+
+- It works on **all utility classes.** 
+
+  | Mobile    | sm                  | md                   | lg       | xl       |
+  | --------- | ------------------- | -------------------- | -------- | -------- |
+  | _< 640px_ | _640px_             | _768px_              | _1024px_ | _1280px_ |
+  | `w-4`     | `sm:w-4`            | `md:w-4`             | `lg:w-4` | `xl:w-4` |
+  | Mobile    | Tablet (_Portrait_) | Tablet (_Landscape_) | Laptop   | Desktop  |
+
+
+### # tailwind.config.js
 
 | Spacing | Colors | Variants     | 3rd Party Plugins |
 | ------- | ------ | ------------ | ----------------- |
@@ -32,14 +43,14 @@
 
 | Utility                                        | Variant (Default                     |
 | ---------------------------------------------- | ------------------------------------ |
-| backgroundColor                                | hover, focus                         |
-| borderColor                                    | hover, focus                         |
-| boxShadow                                      | hover, focus                         |
-| font-weight                                    | hover, focus                         |
-| opacity                                        | hover, focus                         |
-| outline                                        | focus                                |
-| textColor                                      | hover, focus                         |
-| textDecoration                                 | hover, focus                         |
+| backgroundColor                                | `hover, focus`                       |
+| borderColor                                    | `hover, focus`                       |
+| boxShadow                                      | `hover, focus`                       |
+| font-weight                                    | `hover, focus`                       |
+| opacity                                        | `hover, focus`                       |
+| outline                                        | `focus` `                            |
+| textColor                                      | `hover, focus`                       |
+| textDecoration                                 | `hover, focus`                       |
 | **Remaining dont use hover/focus by default.** | Add manually in `tailwind.config.js` |
 
 #### style.css
