@@ -44,6 +44,7 @@ I decided to **Read, Collect, Analyze** and **Organise** all those needles for f
 
 # Topics - Yet To-Do
 
+- Code Editors
 - Adobe XD
 - Ubuntu/Basic-commands
 - css/TailwindCss
