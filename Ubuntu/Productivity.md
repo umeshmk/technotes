@@ -1,5 +1,10 @@
 > Make .sh scripts if necessary
 
+# OS
+
+- Ubuntu
+- Fedora
+
 # List
 
 - Help (man / help / -h)
@@ -27,6 +32,12 @@ git help
 git -h
 git add -h
 ```
+
+#### Package management
+
+- Snap
+- [Flatpak](https://flatpak.org/) & [https://flathub.org/](https://flathub.org/)
+- Appimage
 
 #### oh-my-ZSH
 
@@ -59,6 +70,11 @@ extract -r abc.zip 			# Extract and remove original archive file
 
 ```
 
+> [TAB] - Filename completion
+
+
+
+
 #### Terminator (Multiple Terminals)
 
 `sudo apt-get install terminator`
@@ -66,3 +82,8 @@ extract -r abc.zip 			# Extract and remove original archive file
 #### Open VSCode from any folder
 
 `code .`
+
+### Theme
+
+- [Materia](https://github.com/nana-4/materia-theme)
+  `sudo apt install materia-gtk-theme`

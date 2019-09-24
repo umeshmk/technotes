@@ -20,37 +20,37 @@ git remote add origin https://umeshmk@github.com/umeshmk/Tutorials.git
 
 #### # TRACKING
 
-|Tracking |  |  |
-|--- | --- | --- |
-|*Status* | View git status | `git status` |
-|*Untracked* | New file created | `touch abc.txt` |
-|*Staged* | File ready for commit (except `.gitignore`) | `git add abc.txt` |
-|*Committed* | Repo updated | `git commit -m "updated"` |
+| Tracking    |                                             |                           |
+| ----------- | ------------------------------------------- | ------------------------- |
+| _Status_    | View git status                             | `git status`              |
+| _Untracked_ | New file created                            | `touch abc.txt`           |
+| _Staged_    | File ready for commit (except `.gitignore`) | `git add abc.txt`         |
+| _Committed_ | Repo updated                                | `git commit -m "updated"` |
 
 #### # BASICS
 
-|Cmd|-|-|
-|-|-|-|
-|*Push* | Sends repo to remote server | `git push -u origin master` &nbsp; [ `-u` to remembers repo and branch names ] &nbsp; `git push` |
-|*Clone* | Creates local copy of remote repo | `git clone <url>` 
-|*Remote add* | Associates local repo with remote repo | `git remote add origin <url>`|
-|*Pull*| Updates local repo if remote is updated | `git pull origin master` |
-|*Diff*| Difference between commits | `git diff HEAD` |
-|*Reset*| Removes file from *staged* (file is unchanged) | `git reset abc.txt` |
-|*Checkout*| Resets file to last commit (file is changed) | `git checkout abc.text` |
+| Cmd          | -                                              | -                                                                                                |
+| ------------ | ---------------------------------------------- | ------------------------------------------------------------------------------------------------ |
+| _Push_       | Sends repo to remote server                    | `git push -u origin master` &nbsp; [ `-u` to remembers repo and branch names ] &nbsp; `git push` |
+| _Clone_      | Creates local copy of remote repo              | `git clone <url>`                                                                                |
+| _Remote add_ | Associates local repo with remote repo         | `git remote add origin <url>`                                                                    |
+| _Pull_       | Updates local repo if remote is updated        | `git pull origin master`                                                                         |
+| _Diff_       | Difference between commits                     | `git diff HEAD`                                                                                  |
+| _Reset_      | Removes file from _staged_ (file is unchanged) | `git reset abc.txt`                                                                              |
+| _Checkout_   | Resets file to last commit (file is changed)   | `git checkout abc.text`                                                                          |
 
 #### # BRANCH
 
-| Task | - | - |
-| - | - | - |
-| *Create* | Creates new branch | `git branch <branchname>` |
-| *Switch branch* | Switch to new branch | `git checkout <branchname>` |
-| *See branch* | Lists all branches | `git branch` |
-| *Merge* | Merge any branch with master branch | First switch to master `git checkout master` then `git merge <anybranch>` |
+| Task            | -                                   | -                                                                         |
+| --------------- | ----------------------------------- | ------------------------------------------------------------------------- |
+| _Create_        | Creates new branch                  | `git branch <branchname>`                                                 |
+| _Switch branch_ | Switch to new branch                | `git checkout <branchname>`                                               |
+| _See branch_    | Lists all branches                  | `git branch`                                                              |
+| _Merge_         | Merge any branch with master branch | First switch to master `git checkout master` then `git merge <anybranch>` |
 
 #### # AMEND
 
-- Combine *staged* changes to *previous* commit
+- Combine _staged_ changes to _previous_ commit
 - Replaces the whole previous commit
 
 ```bash
@@ -79,13 +79,17 @@ git push origin --tags                      # all tags pushed
 git push origin <tagname>                   # only 1 tag is pushed
 ```
 
-- **Github GUI** 
-    - Create tags using github GUI.
-    - Now fetch this changes using cmd `git fetch` 
+- **Github GUI**
+  - Create tags using github GUI.
+  - Now fetch this changes using cmd `git fetch`
 
 #### # MISC
 
-|Task| |
-|-|-|
-| *Fetch* | `git fetch` | 
-| *History* | `git log` |
+| Task      |             |
+| --------- | ----------- |
+| _Fetch_   | `git fetch` |
+| _History_ | `git log`   |
+
+#### # REFERENCES
+
+- https://gist.github.com/hofmannsven/6814451

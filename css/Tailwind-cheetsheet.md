@@ -31,27 +31,22 @@
 | 56      |        |                       |                   |
 | 64      |        |                       |                   |
 |         |        |                       |                   |
-|         |        |                       |                   |
-|         |        |                       |                   |
-|         |        |                       |                   |
-|         |        |                       |                   |
-|         |        |                       |                   |
-|         |        |                       |                   |
 
----
+| Utility         | Variant (Default |
+| --------------- | ---------------- |
+| **All classes** | `responsive`     |
+| backgroundColor | `hover, focus`   |
+| borderColor     | `hover, focus`   |
+| boxShadow       | `hover, focus`   |
+| font-weight     | `hover, focus`   |
+| opacity         | `hover, focus`   |
+| outline         | `focus`          |
+| textColor       | `hover, focus`   |
+| textDecoration  | `hover, focus`   |
 
-| Utility                                        | Variant (Default                     |
-| ---------------------------------------------- | ------------------------------------ |
-| **All classes**                                | `responsive`                         |
-| backgroundColor                                | `hover, focus`                       |
-| borderColor                                    | `hover, focus`                       |
-| boxShadow                                      | `hover, focus`                       |
-| font-weight                                    | `hover, focus`                       |
-| opacity                                        | `hover, focus`                       |
-| outline                                        | `focus` `                            |
-| textColor                                      | `hover, focus`                       |
-| textDecoration                                 | `hover, focus`                       |
-| **Remaining dont use hover/focus by default.** | Add manually in `tailwind.config.js` |
+**Note: **
+
+- **Remaining dont use hover/focus by default.** [Add manually]
 
 #### # style.css
 
@@ -59,40 +54,43 @@ Functions : `@tailwind`, `@apply`, `@responsive`, `@variants`, `@screen`
 
 #### # LAYOUT
 
-| Container     | Float        | Object-Fit         | Object-Positions     | Overflow                  |
-| ------------- | ------------ | ------------------ | -------------------- | ------------------------- |
-| .container    | .float-right | .object-contain    | .object-bottom       | .overflow-auto            |
-|               | .float-left  | .object-cover      | .object-center       | .overflow-hidden          |
-|               | .float-none  | .object-fill       | .object-left         | .overflow-visible         |
-|               | .clearfix    | .object-none       | .object-left-bottom  | .overflow-scroll          |
-| **Display**   |              | .object-scale-down | .object-left-top     | .overflow-x-auto          |
-| .block        |              |                    | .object-right        | .overflow-y-auto          |
-| .inline-block |              |                    | .object-right-bottom | .overflow-x-hidden        |
-| .inline       |              |                    | .object-right-top    | .overflow-y-hidden        |
-| .flex         |              |                    | .object-top          | .overflow-x-visible       |
-| .inline-flex  |              |                    |                      | .overflow-y-visible       |
-| .table        |              |                    |                      | .overflow-x-scroll        |
-| .table-row    |              |                    |                      | .overflow-y-scroll        |
-| .table-cell   |              |                    |                      | .scrolling-touch (webkit) |
-| .hidden       |              |                    |                      | .scrolling-auto (webkit)  |
-|               |              |                    |                      |                           |
-|               |              |                    |                      |                           |
-|               |              |                    |                      |                           |
-
-#### # LAYOUT
-
-| Container  || Float        |
-| ---------- |-| ------------ |
-| .container || .float-right |
-|            || .float-left  |
-| - -        || .float-none  |
-| - -        || .clearfix    |
-| - -        |
-| - -        |
-| - -        |
-| - -        |
+| Container  | Display       | Float        | Object-Fit         | Object-Positions     | Overflow                  | Positions | Positions-TRBL                  | Visible    | z-index |
+| ---------- | ------------- | ------------ | ------------------ | -------------------- | ------------------------- | --------- | ------------------------------- | ---------- | ------- |
+| .container | .block        | .float-right | .object-contain    | .object-bottom       | .overflow-auto            | .static   | .{ top/right/bottom/left }-0    | .visible   | .z-0    |
+|            | .inline-block | .float-left  | .object-cover      | .object-center       | .overflow-hidden          | .relative | .{ top/right/bottom/left }-auto | .invisible | .z-10   |
+|            | .inline       | .float-none  | .object-fill       | .object-left         | .overflow-visible         | .absolute | .inset-0                        |            | .z-20   |
+|            | .flex         | .clearfix    | .object-none       | .object-left-bottom  | .overflow-scroll          | .fixed    | .inset-auto                     |            | .z-30   |
+|            | .inline-flex  |              | .object-scale-down | .object-left-top     | .overflow-x-auto          | .sticky   | .inset-{x/y}-0                  |            | .z-40   |
+|            | .table        |              |                    | .object-right        | .overflow-y-auto          |           | .inset-{x/y}-auto               |            | .z-50   |
+|            | .table-row    |              |                    | .object-right-bottom | .overflow-x-hidden        |           |                                 |            | .z-auto |
+|            | .table-cell   |              |                    | .object-right-top    | .overflow-y-hidden        |           |                                 |            |
+|            | .hidden       |              |                    | .object-top          | .overflow-x-visible       |           |                                 |            |
+|            |               |              |                    |                      | .overflow-y-visible       |           |                                 |            |
+|            |               |              |                    |                      | .overflow-x-scroll        |           |                                 |            |
+|            |               |              |                    |                      | .overflow-y-scroll        |           |                                 |            |
+|            |               |              |                    |                      | .scrolling-touch (webkit) |           |                                 |            |
+|            |               |              |                    |                      | .scrolling-auto (webkit)  |           |                                 |            |
+|            |               |              |                    |                      |                           |           |                                 |            |
+|            |               |              |                    |                      |                           |           |                                 |            |
+|            |               |              |                    |                      |                           |
 
 #### # TYPOGRAPHY
+
+| Family      | size       |     |     |     |     |     |
+| ----------- | ---------- | --- | --- | --- | --- | --- |
+| .font-sans  | .font-xs   |     |     |     |     |     |
+| .font-serif | .font-sm   |     |     |     |     |     |
+| .font-mono  | .font-base |     |     |     |     |     |
+|             | .font-lg   |     |     |     |     |     |
+|             | .font-xl   |     |     |     |     |     |
+|             | .font-2xl  |     |     |     |     |     |
+|             | .font-3xl  |     |     |     |     |     |
+|             | .font-4xl  |     |     |     |     |     |
+|             | .font-5xl  |     |     |     |     |     |
+|             | .font-6xl  |     |     |     |     |     |
+|             |            |     |     |     |     |     |
+|             |            |     |     |     |     |     |
+|             |            |     |     |     |     |     |
 
 #### # BACKGROUNDS
 
