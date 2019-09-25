@@ -128,9 +128,7 @@ Functions : `@tailwind`, `@apply`, `@responsive`, `@variants`, `@screen`
 
 #### # FLEXBOX
 
-**In Flex Container**
-
-> **.flex**
+> **Container** > **.flex**
 
 | direction         | wrap               | align-items     | align-content    | justify-content  |
 | ----------------- | ------------------ | --------------- | ---------------- | ---------------- |
@@ -140,7 +138,7 @@ Functions : `@tailwind`, `@apply`, `@responsive`, `@variants`, `@screen`
 | .flex-col-reverse |                    | .items-end      | .content-between | .justify-between |
 |                   |                    | .items-baseline | .content-around  | .justify-around  |
 
-**In flex childrens**
+> **Childrens**
 
 | align-self    | flex          | flex-grow    | flex-shrink    | flex-order    |
 | ------------- | ------------- | ------------ | -------------- | ------------- |
@@ -164,20 +162,20 @@ Functions : `@tailwind`, `@apply`, `@responsive`, `@variants`, `@screen`
 
 #### # SIZING
 
-| width        | min-width   | max-width      | height    | min-height    | max-height    |
-| ------------ | ----------- | -------------- | --------- | ------------- | ------------- |
-| .w-0         | .min-w-0    | .max-w-xs      | .h-{0-64} | .min-h-0      | .max-h-full   |
-| .w-px        | .min-w-full | .max-w-sm      | .h-px     | .min-h-full   | .max-h-screen |
-| .w-auto      |             | .max-w-md      | .h-auto   | .min-h-screen |               |
-| .w-{0-64}    |             | .max-w-lg      | .h-full   |               |               |
-| .w-1/2       |             | .max-w-xl      | .h-screen |               |               |
-| .w-{1-2}/3   |             | .max-w-{2-6}xl |           |               |               |
-| .w-{1-3}/4   |             | .max-w-full    |           |               |               |
-| .w-{1-4}/5   |             |                |           |               |               |
-| .w-{1-5}/6   |             |                |           |               |               |
-| .w-{1-11}/12 |             |                |           |               |               |
-| .w-full      |             |                |           |               |               |
-| .w-screen    |             |                |           |               |               |
+| width        | min-width   | max-width      |     | height    | min-height    | max-height    |
+| ------------ | ----------- | -------------- | --- | --------- | ------------- | ------------- |
+| .w-0         | .min-w-0    | .max-w-xs      |     | .h-{0-64} | .min-h-0      | .max-h-full   |
+| .w-px        | .min-w-full | .max-w-sm      |     | .h-px     | .min-h-full   | .max-h-screen |
+| .w-auto      |             | .max-w-md      |     | .h-auto   | .min-h-screen |               |
+| .w-{0-64}    |             | .max-w-lg      |     | .h-full   |               |               |
+| .w-1/2       |             | .max-w-xl      |     | .h-screen |               |               |
+| .w-{1-2}/3   |             | .max-w-{2-6}xl |     |           |               |               |
+| .w-{1-3}/4   |             | .max-w-full    |     |           |               |               |
+| .w-{1-4}/5   |             |                |     |           |               |               |
+| .w-{1-5}/6   |             |                |     |           |               |               |
+| .w-{1-11}/12 |             |                |     |           |               |               |
+| .w-full      |             |                |     |           |               |               |
+| .w-screen    |             |                |     |           |               |               |
 
 #### # TABLES
 
@@ -188,18 +186,18 @@ Functions : `@tailwind`, `@apply`, `@responsive`, `@variants`, `@screen`
 
 #### # EFFECTS
 
-| opacity      | box-shadow      |
-| ------------ | --------------- |
-| .opacity-0   | .shadow         |
-| .opacity-25  | .shadow-md      |
-| .opacity-50  | .shadow-lg      |
-| .opacity-75  | .shadow-xl      |
-| .opacity-100 | .shadow-2xl     |
-|              | .shadow-inner   |
-|              | .shadow-outline |
-|              | .shadow-none    |
+| opacity        | box-shadow        |
+| -------------- | ----------------- |
+| `.opacity-0`   | `.shadow`         |
+| `.opacity-25`  | `.shadow-md`      |
+| `.opacity-50`  | `.shadow-lg`      |
+| `.opacity-75`  | `.shadow-xl`      |
+| `.opacity-100` | `.shadow-2xl`     |
+|                | `.shadow-inner`   |
+|                | `.shadow-outline` |
+|                | `.shadow-none`    |
 
-#### INTERACTIVITY
+#### # INTERACTIVITY
 
 | cursor              | user-select  | resize        | pointer-events       | outline       | appearance       |
 | ------------------- | ------------ | ------------- | -------------------- | ------------- | ---------------- |
@@ -211,7 +209,7 @@ Functions : `@tailwind`, `@apply`, `@responsive`, `@variants`, `@screen`
 | .cursor-move        |              |               |                      |               |                  |
 | .cursor-not-allowed |              |               |                      |               |                  |
 
-#### SVG
+#### # SVG
 
 | fill          | stroke          |
 | ------------- | --------------- |
