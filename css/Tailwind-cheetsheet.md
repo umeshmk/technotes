@@ -129,6 +129,7 @@ Functions : `@tailwind`, `@apply`, `@responsive`, `@variants`, `@screen`
 #### # FLEXBOX
 
 **In Flex Container**
+
 > **.flex**
 
 | direction         | wrap               | align-items     | align-content    | justify-content  |
@@ -163,28 +164,20 @@ Functions : `@tailwind`, `@apply`, `@responsive`, `@variants`, `@screen`
 
 #### # SIZING
 
-| width        | min-width   | max-width      |
-| ------------ | ----------- | -------------- |
-| .w-0         | .min-w-0    | .max-w-xs      |
-| .w-px        | .min-w-full | .max-w-sm      |
-| .w-auto      |             | .max-w-md      |
-| .w-{0-64}    |             | .max-w-lg      |
-| .w-1/2       |             | .max-w-xl      |
-| .w-{1-2}/3   |             | .max-w-{2-6}xl |
-| .w-{1-3}/4   |             | .max-w-full    |
-| .w-{1-4}/5   |             |                |
-| .w-{1-5}/6   |             |                |
-| .w-{1-11}/12 |             |                |
-| .w-full      |             |                |
-| .w-screen    |             |                |
-
-| height    | min-height    | max-height    |
-| --------- | ------------- | ------------- |
-| .h-{0-64} | .min-h-0      | .max-h-full   |
-| .h-px     | .min-h-full   | .max-h-screen |
-| .h-auto   | .min-h-screen |               |
-| .h-full   |               |               |
-| .h-screen |               |               |
+| width        | min-width   | max-width      | height    | min-height    | max-height    |
+| ------------ | ----------- | -------------- | --------- | ------------- | ------------- |
+| .w-0         | .min-w-0    | .max-w-xs      | .h-{0-64} | .min-h-0      | .max-h-full   |
+| .w-px        | .min-w-full | .max-w-sm      | .h-px     | .min-h-full   | .max-h-screen |
+| .w-auto      |             | .max-w-md      | .h-auto   | .min-h-screen |               |
+| .w-{0-64}    |             | .max-w-lg      | .h-full   |               |               |
+| .w-1/2       |             | .max-w-xl      | .h-screen |               |               |
+| .w-{1-2}/3   |             | .max-w-{2-6}xl |           |               |               |
+| .w-{1-3}/4   |             | .max-w-full    |           |               |               |
+| .w-{1-4}/5   |             |                |           |               |               |
+| .w-{1-5}/6   |             |                |           |               |               |
+| .w-{1-11}/12 |             |                |           |               |               |
+| .w-full      |             |                |           |               |               |
+| .w-screen    |             |                |           |               |               |
 
 #### # TABLES
 
