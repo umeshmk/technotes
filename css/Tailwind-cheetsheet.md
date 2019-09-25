@@ -151,12 +151,81 @@ Functions : `@tailwind`, `@apply`, `@responsive`, `@variants`, `@screen`
 
 #### # SPACING
 
+| padding            | margin                |
+| ------------------ | --------------------- |
+| .p-px              | .{-}m-px              |
+| .p-{0-64}          | .m-auto               |
+| .p{x/y}-px         | .{-}m-{0-64}          |
+| .p{x/y}-{0-64}     | .{-}m{x/y}-px         |
+| .p{t/r/b/l}-{0-64} | .{-}m{x/y}-{0-64}     |
+|                    | .{-}m{t/r/b/l}-px     |
+|                    | .{-}m{t/r/b/l}-{0-64} |
+
 #### # SIZING
+
+> > > Width
+
+| width        | min-width   | max-width      |
+| ------------ | ----------- | -------------- |
+| .w-0         | .min-w-0    | .max-w-xs      |
+| .w-px        | .min-w-full | .max-w-sm      |
+| .w-auto      |             | .max-w-md      |
+| .w-{0-64}    |             | .max-w-lg      |
+| .w-1/2       |             | .max-w-xl      |
+| .w-{1-2}/3   |             | .max-w-{2-6}xl |
+| .w-{1-3}/4   |             | .max-w-full    |
+| .w-{1-4}/5   |             |                |
+| .w-{1-5}/6   |             |                |
+| .w-{1-11}/12 |             |                |
+| .w-full      |             |                |
+| .w-screen    |             |                |
+
+> > > Height
+
+| height    | min-height    | max-height    |
+| --------- | ------------- | ------------- |
+| .h-{0-64} | .min-h-0      | .max-h-full   |
+| .h-px     | .min-h-full   | .max-h-screen |
+| .h-auto   | .min-h-screen |               |
+| .h-full   |               |               |
+| .h-screen |               |               |
 
 #### # TABLES
 
+| collapse         |
+| ---------------- |
+| .border-collapse |
+| .border-separate |
+
+| Layout       |
+| ------------ |
+| .table-auto  |
+| .table-fixed |
+
 #### # EFFECTS
+
+| opacity      |
+| ------------ |
+| .opacity-0   |
+| .opacity-25  |
+| .opacity-50  |
+| .opacity-75  |
+| .opacity-100 |
 
 #### INTERACTIVITY
 
+| cursor              | user-select  | resize        | pointer-events       | outline       | appearance       |
+| ------------------- | ------------ | ------------- | -------------------- | ------------- | ---------------- |
+| .cursor-auto        | .select-none | .resize       | .pointer-events-auto | .outline-none | .appearance-none |
+| .cursor-default     | .select-text | .resize-{x/y} | .pointer-events-none |               |                  |
+| .cursor-pointer     | .select-all  | .resize-none  |                      |               |                  |
+| .cursor-wait        | .select-auto |               |                      |               |                  |  |
+| .cursor-text        |              |               |                      |               |                  |
+| .cursor-move        |              |               |                      |               |                  |
+| .cursor-not-allowed |              |               |                      |               |                  |
+
 #### SVG
+
+| fill          | stroke          |
+| ------------- | --------------- |
+| .fill-current | .stroke-current |
