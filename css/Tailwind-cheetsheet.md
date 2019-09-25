@@ -63,40 +63,91 @@ Functions : `@tailwind`, `@apply`, `@responsive`, `@variants`, `@screen`
 |            | .inline-flex  |              | .object-scale-down | .object-left-top     | .overflow-x-auto          | .sticky   | .inset-{x/y}-0                  |            | .z-40   |
 |            | .table        |              |                    | .object-right        | .overflow-y-auto          |           | .inset-{x/y}-auto               |            | .z-50   |
 |            | .table-row    |              |                    | .object-right-bottom | .overflow-x-hidden        |           |                                 |            | .z-auto |
-|            | .table-cell   |              |                    | .object-right-top    | .overflow-y-hidden        |           |                                 |            |
-|            | .hidden       |              |                    | .object-top          | .overflow-x-visible       |           |                                 |            |
-|            |               |              |                    |                      | .overflow-y-visible       |           |                                 |            |
-|            |               |              |                    |                      | .overflow-x-scroll        |           |                                 |            |
-|            |               |              |                    |                      | .overflow-y-scroll        |           |                                 |            |
-|            |               |              |                    |                      | .scrolling-touch (webkit) |           |                                 |            |
-|            |               |              |                    |                      | .scrolling-auto (webkit)  |           |                                 |            |
-|            |               |              |                    |                      |                           |           |                                 |            |
-|            |               |              |                    |                      |                           |           |                                 |            |
-|            |               |              |                    |                      |                           |
+|            | .table-cell   |              |                    | .object-right-top    | .overflow-y-hidden        |           |                                 |            |         |
+|            | .hidden       |              |                    | .object-top          | .overflow-x-visible       |           |                                 |            |         |
+|            |               |              |                    |                      | .overflow-y-visible       |           |                                 |            |         |
+|            |               |              |                    |                      | .overflow-x-scroll        |           |                                 |            |         |
+|            |               |              |                    |                      | .overflow-y-scroll        |           |                                 |            |         |
+|            |               |              |                    |                      | .scrolling-touch (webkit) |           |                                 |            |         |
+|            |               |              |                    |                      | .scrolling-auto (webkit)  |           |                                 |            |         |
 
 #### # TYPOGRAPHY
 
-| Family      | size       |     |     |     |     |     |
-| ----------- | ---------- | --- | --- | --- | --- | --- |
-| .font-sans  | .font-xs   |     |     |     |     |     |
-| .font-serif | .font-sm   |     |     |     |     |     |
-| .font-mono  | .font-base |     |     |     |     |     |
-|             | .font-lg   |     |     |     |     |     |
-|             | .font-xl   |     |     |     |     |     |
-|             | .font-2xl  |     |     |     |     |     |
-|             | .font-3xl  |     |     |     |     |     |
-|             | .font-4xl  |     |     |     |     |     |
-|             | .font-5xl  |     |     |     |     |     |
-|             | .font-6xl  |     |     |     |     |     |
-|             |            |     |     |     |     |     |
-|             |            |     |     |     |     |     |
-|             |            |     |     |     |     |     |
+| Family      | size       | smoothing             | style       | weight          | letter-spacing    | line-height      |
+| ----------- | ---------- | --------------------- | ----------- | --------------- | ----------------- | ---------------- |
+| .font-sans  | .font-xs   | .antialiased          | .italic     | .font-hairline  | .tracking-tighter | .leading-none    |
+| .font-serif | .font-sm   | .subpixel-antialiased | .not-italic | .font-thin      | .tracking-tight   | .leading-tight   |
+| .font-mono  | .font-base |                       |             | .font-light     | .tracking-normal  | .leading-snug    |
+|             | .font-lg   |                       |             | .font-normal    | .tracking-wide    | .leading-normal  |
+|             | .font-xl   |                       |             | .font-medium    | .tracking-wider   | .leading-relaxed |
+|             | .font-2xl  |                       |             | .font-semibold  | .tracking-widest  | .leading-loose   |
+|             | .font-3xl  |                       |             | .font-bold      |                   |                  |
+|             | .font-4xl  |                       |             | .font-extrabold |                   |                  |
+|             | .font-5xl  |                       |             | .font-black     |                   |                  |
+|             | .font-6xl  |                       |             |                 |                   |                  |
+
+| list-style-type | list-style-positions | {placeholder/text}-color              | text-align    | text-decoration |
+| --------------- | -------------------- | ------------------------------------- | ------------- | --------------- |
+| .list-none      | .list-inside         | .{placeholder/text}-transparent       | .text-left    | .underline      |
+| .list-disc      | .list-outside        | .{placeholder/text}-white             | .text-right   | .no-underline   |
+| .list-decimal   |                      | .{placeholder/text}-black             | .text-center  | .line-through   |
+|                 |                      | .{placeholder/text}-{color}-{100-900} | .text-justify |                 |
+
+| transform    | vertical-align     | white-spacing          | word-break    |
+| ------------ | ------------------ | ---------------------- | ------------- |
+| .uppercase   | .align-baseline    | .whitespacing-normal   | .break-normal |
+| .lowercase   | .align-top         | .whitespacing-no-wrap  | .break-words  |
+| .capitalize  | .align-middle      | .whitespacing-pre      | .break-all    |
+| .normal-case | .align-bottom      | .whitespacing-pre-line | .truncate     |
+|              | .align-text-top    | .whitespacing-pre-wrap |               |
+|              | .align-text-bottom |                        |               |
 
 #### # BACKGROUNDS
 
+| bg-attachment | bg-color              | bg-position                       | bg-repeat                  | bg-size     |
+| ------------- | --------------------- | --------------------------------- | -------------------------- | ----------- |
+| .bg-fixed     | .bg-transparent       | .bg-{left / right / top / bottom} | .bg-repeat                 | .bg-auto    |
+| .bg-local     | .bg-white             | .bg-center                        | .bg-norepeat               | .bg-cover   |
+| .bg-scroll    | .bg-black             | .bg-{left / right}                | .bg-repeat-{x / y}         | .bg-contain |
+|               | .bg-{color}-{100-900} | .bg-{left / right}-{top / bottom} | .bg-repeat-{round / space} |             |
+|               |                       |                                   |                            |             |
+
 #### # BORDERS
 
+| border-color              | border-style   | border-width              | border-radius                    |
+| ------------------------- | -------------- | ------------------------- | -------------------------------- |
+| .border-transparent       | .border-solid  | .border-0                 | .rounded-{none/sm}               |
+| .border-white             | .border-dotted | .border                   | .rounded                         |
+| .border-black             | .border-dashed | .border-{2/4/8}           | .rounded-{lg/full}               |
+| .border-{color}-{100-900} | .border-double | .border-{t/r/b/l}         | .rounded-{t/r/b/l}-{none/sm}     |
+|                           | .border-none   | .border-{t/r/b/l}-0       | .rounded-{t/r/b/l}               |
+|                           |                | .border-{t/r/b/l}-{2/4/8} | .rounded-{t/r/b/l}-{lg/full}     |
+|                           |                |                           | .rounded-{tr/tl/br/bl}-{none/sm} |
+|                           |                |                           | .rounded-{tr/tl/br/bl}           |
+|                           |                |                           | .rounded-{tr/tl/br/bl}-{lg/full} |
+
 #### # FLEXBOX
+
+> > > In Flex Container
+> > > **.flex**
+
+| direction         | wrap               | align-items     | align-content    | justify-content  |
+| ----------------- | ------------------ | --------------- | ---------------- | ---------------- |
+| .flex-row         | .flex-wrap         | .items-stretch  | .content-start   | .justify-start   |
+| .flex-col         | .flex-nowrap       | .items-start    | .content-center  | .justify-center  |
+| .flex-row-reverse | .flex-wrap-reverse | .items-center   | .content-end     | .justify-end     |
+| .flex-col-reverse |                    | .items-end      | .content-between | .justify-between |
+|                   |                    | .items-baseline | .content-around  | .justify-around  |
+
+> > > In flex childrens
+
+| align-self    | flex          | flex-grow    | flex-shrink    | flex-order    |
+| ------------- | ------------- | ------------ | -------------- | ------------- |
+| .self-auto    | .flex-initial | .flex-grow   | .flex-shrink   | .order-first  |
+| .self-start   | .flex-1       | .flex-grow-0 | .flex-shrink-0 | .order-last   |
+| .self-center  | .flex-auto    |              |                | .order-none   |
+| .self-end     | .flex-none    |              |                | .order-{1-12} |
+| .self-stretch |               |              |                |               |
 
 #### # SPACING
 
