@@ -14,17 +14,17 @@
 
 | Spacing | Colors   | Pseudo class Variants | 3rd Party Plugins |
 | ------- | -------- | --------------------- | ----------------- |
-| `0`     | `black`  | _responsive _         | _transform _      |
-| `px`    | `White`  | _group-hover _        | _transition _     |
-| `1, 2`  | `gray`   | _focus-within _       | _gradients _      |
-| `3, 4`  | `red`    | _first _              |                   |
-| `5, 6`  | `orange` | _last _               |                   |
-| `8`     | `yellow` | _odd _                |                   |
-| `10`    | `green`  | _even _               |                   |
-| `12`    | `teal`   | _focus _              |                   |
-| `16`    | `blue`   | _active _             |                   |
-| `20`    | `indigo` | _visited _            |                   |
-| `24`    | `purple` | _disabled _           |                   |
+| `0`     | `black`  | _responsive_          | _transform_       |
+| `px`    | `White`  | _group-hover_         | _transition_      |
+| `1, 2`  | `gray`   | _focus-within_        | _gradients_       |
+| `3, 4`  | `red`    | _first_               |                   |
+| `5, 6`  | `orange` | _last_                |                   |
+| `8`     | `yellow` | _odd_                 |                   |
+| `10`    | `green`  | _even_                |                   |
+| `12`    | `teal`   | _focus_               |                   |
+| `16`    | `blue`   | _active_              |                   |
+| `20`    | `indigo` | _visited_             |                   |
+| `24`    | `purple` | _disabled_            |                   |
 | `32`    | `pink`   |                       |                   |
 | `40`    |          |                       |                   |
 | `48`    |          |                       |                   |
@@ -36,13 +36,13 @@
 | ----------------- | ---------------- |
 | **All classes**   | `responsive`     |
 | _backgroundColor_ | `hover, focus`   |
-| _borderColor _    | `hover, focus`   |
-| _boxShadow _      | `hover, focus`   |
-| _font-weight _    | `hover, focus`   |
-| _opacity _        | `hover, focus`   |
-| _outline _        | `focus`          |
-| _textColor _      | `hover, focus`   |
-| _textDecoration _ | `hover, focus`   |
+| _borderColor_     | `hover, focus`   |
+| _boxShadow_       | `hover, focus`   |
+| _font-weight_     | `hover, focus`   |
+| _opacity_         | `hover, focus`   |
+| _outline_         | `focus`          |
+| _textColor_       | `hover, focus`   |
+| _textDecoration_  | `hover, focus`   |
 
 **Note: **
 
