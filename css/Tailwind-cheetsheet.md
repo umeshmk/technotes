@@ -128,8 +128,8 @@ Functions : `@tailwind`, `@apply`, `@responsive`, `@variants`, `@screen`
 
 #### # FLEXBOX
 
-> > > In Flex Container
-> > > **.flex**
+**In Flex Container**
+> **.flex**
 
 | direction         | wrap               | align-items     | align-content    | justify-content  |
 | ----------------- | ------------------ | --------------- | ---------------- | ---------------- |
@@ -139,7 +139,7 @@ Functions : `@tailwind`, `@apply`, `@responsive`, `@variants`, `@screen`
 | .flex-col-reverse |                    | .items-end      | .content-between | .justify-between |
 |                   |                    | .items-baseline | .content-around  | .justify-around  |
 
-> > > In flex childrens
+**In flex childrens**
 
 | align-self    | flex          | flex-grow    | flex-shrink    | flex-order    |
 | ------------- | ------------- | ------------ | -------------- | ------------- |
@@ -163,8 +163,6 @@ Functions : `@tailwind`, `@apply`, `@responsive`, `@variants`, `@screen`
 
 #### # SIZING
 
-> > > Width
-
 | width        | min-width   | max-width      |
 | ------------ | ----------- | -------------- |
 | .w-0         | .min-w-0    | .max-w-xs      |
@@ -180,8 +178,6 @@ Functions : `@tailwind`, `@apply`, `@responsive`, `@variants`, `@screen`
 | .w-full      |             |                |
 | .w-screen    |             |                |
 
-> > > Height
-
 | height    | min-height    | max-height    |
 | --------- | ------------- | ------------- |
 | .h-{0-64} | .min-h-0      | .max-h-full   |
@@ -192,25 +188,23 @@ Functions : `@tailwind`, `@apply`, `@responsive`, `@variants`, `@screen`
 
 #### # TABLES
 
-| collapse         |
-| ---------------- |
-| .border-collapse |
-| .border-separate |
-
-| Layout       |
-| ------------ |
-| .table-auto  |
-| .table-fixed |
+| collapse         | Layout       |
+| ---------------- | ------------ |
+| .border-collapse | .table-auto  |
+| .border-separate | .table-fixed |
 
 #### # EFFECTS
 
-| opacity      |
-| ------------ |
-| .opacity-0   |
-| .opacity-25  |
-| .opacity-50  |
-| .opacity-75  |
-| .opacity-100 |
+| opacity      | box-shadow      |
+| ------------ | --------------- |
+| .opacity-0   | .shadow         |
+| .opacity-25  | .shadow-md      |
+| .opacity-50  | .shadow-lg      |
+| .opacity-75  | .shadow-xl      |
+| .opacity-100 | .shadow-2xl     |
+|              | .shadow-inner   |
+|              | .shadow-outline |
+|              | .shadow-none    |
 
 #### INTERACTIVITY
 
