@@ -39,7 +39,7 @@ https://code.visualstudio.com/docs
 
 ---
 
-| Palettes                          | cmd           |
+| Screen Mode                       | cmd           |
 | --------------------------------- | ------------- |
 | Zoom                              | `ctrl + +`    |
 | Zen mode [2 times Esc to get out] | `ctrl + K, Z` |
@@ -185,7 +185,7 @@ https://code.visualstudio.com/docs
   }
   ```
 
-  > Vuejs
+> Vuejs
 
 - Create vue app
   ```bash
@@ -209,19 +209,26 @@ https://code.visualstudio.com/docs
 - `"markdown.styles": ["Style.css"]` (can be url)
 - `markdown --> html` use node library like `markdown-it`
 
+  
 # EXTENSIONS
 
 - **ALL**
-  - `Visual studio code intellisense`
-  - `Live share`
-  - `Prettier - Code formatter`
+  <!-- - `Visual studio intellicode` (not required) -->
+  - `Live Share` : Collaboration tool in real time
+  - `Live Server` : Localhost server for static Html pages
+  - `Prettier` : Code formatter
   - `Laravel blade spacer`
-  - `Docker`
-  - Emmet / bracket colorizer / vscode icons / live sass compiler / auto rename tag / Intend rainbow / REST client (api.http) /
-- **MARKDOWN** : `Markdownlint / markdown theme kit / markdown-preview-github-styles`
-- **HTML** : `Html snippets / html css support / IntelliSense for CSS class names in HTML / Auto close tag`
+  - `Bracket colorizer`  
+  - `vscode icons`  :
+  <!-- - `Intend rainbow`  : -->  
+- **MARKDOWN** : 
+  - `Markdown all in one` - Keyboard shortcuts
+  - `Markdownlint`  - Linting
+- **HTML** : `Html snippets / html css support / IntelliSense for CSS class names in HTML / Auto close tag / Auto rename tag`
 - **CSS** : `tailwind`
-- **PHP** - `php-intellisense` / `code runner` / `php debug`
+- **PHP** 
+  - `php-intellisense` / `code runner` / `php debug`
+  - `REST client (api.http)`  --> **Need to learn**
 - **JS** :
   - _snippet_ : `JavaScript (ES6) snippets / Jquery snippets`
   - _syntax highlighting_ : `Babel JavaScript / Babel ES6/ES7 / DotENV`
@@ -235,6 +242,7 @@ https://code.visualstudio.com/docs
 - **VUE** : `Vetur / vue 2 snippets`
 - **REACT** : `ES7-react-redux-graphicQl-nativeSnippets`
 - **GIT** : `Gitlens (good if team)`
+- **DOCKER** : - `Docker - (For syntax highlighting , linting, intellisense etc)`
 
 # Debug
 
