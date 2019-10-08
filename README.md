@@ -50,6 +50,7 @@ I decided to **Read, Collect, Analyze** and **Organise** all those needles for f
 - css/TailwindCss
 - Js/js
 - Database design using ER diagrams
+- Nodejs
 
 # License
 

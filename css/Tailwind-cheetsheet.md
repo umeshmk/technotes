@@ -1,5 +1,7 @@
 # Tailwind - Cheatsheet
 
+https://umeshmk.github.io/Tailwindcss-cheatsheet/
+
 #### # Responsive Design
 
 - It works on **all utility classes.**
@@ -146,7 +148,7 @@ Functions : `@tailwind`, `@apply`, `@responsive`, `@variants`, `@screen`
 | direction           | wrap                 | align-items       | align-content      | justify-content    |
 | ------------------- | -------------------- | ----------------- | ------------------ | ------------------ |
 | `.flex-row`         | `.flex-wrap`         | `.items-stretch`  | `.content-start`   | `.justify-start`   |
-| `.flex-col`         | `.flex-nowrap`       | `.items-start`    | `.content-center`  | `.justify-center`  |
+| `.flex-col`         | `.flex-no-wrap`      | `.items-start`    | `.content-center`  | `.justify-center`  |
 | `.flex-row-reverse` | `.flex-wrap-reverse` | `.items-center`   | `.content-end`     | `.justify-end`     |
 | `.flex-col-reverse` |                      | `.items-end`      | `.content-between` | `.justify-between` |
 |                     |                      | `.items-baseline` | `.content-around`  | `.justify-around`  |
