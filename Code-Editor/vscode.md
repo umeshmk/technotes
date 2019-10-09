@@ -1,5 +1,13 @@
 https://code.visualstudio.com/docs
 
+# BACKUP
+
+- Gist : https://gist.github.com/umeshmk/bd1aba52fc5a47b02701ce8a0b4cce92
+- Use extension `Settings Sync`
+- Needs
+  - To upload - **github token** (permission to create gist only)
+  - To download - **gist id** (token needed only if _uploading_ or _private_ gist)
+
 # BASICS
 
 - **Launch** --> `code /path/project`
@@ -51,7 +59,7 @@ https://code.visualstudio.com/docs
 
 | Palettes                | cmd                |
 | ----------------------- | ------------------ |
-| Workspaces              | `ctrl + R`         |
+| Workspaces(Recent)      | `ctrl + R`         |
 | All Files List          | `ctrl + P`         |
 | CMD                     | `ctrl + shift + P` |
 | Tags (current file)     | `ctrl + shift + O` |
@@ -236,19 +244,19 @@ https://code.visualstudio.com/docs
 
   - `Html snippets` - (not needed in latest version of vscode)
   - `html css support / IntelliSense for CSS class names in HTML` (Choose only one. Intellisense is better.)
-  - `Auto close tag / Auto rename tag`
+  - `Auto close tag`
+  - `Auto rename tag`
 
 - **CSS** :
 
-  - `tailwind` - (Avoid. Html's Intellisense for CSS classnames is better)
+  - `tailwind` - (Avoid it. Since _Html's Intellisense for CSS classnames_ extension is better)
   - `color highlight`
 
 - **PHP**
 
   - `php-intellisense`
-  - `php debug`
+  - `php debug` - Needs _xdebug_
   - `php docBlocker`
-  - `REST client (api.http)` --> **Good to learn**
   - `code runner`
 
 - **JS** :
@@ -264,20 +272,15 @@ https://code.visualstudio.com/docs
       <!-- - `Path IntelliSense`: (Avoid it)  -->
 
 - **LARAVEL** :
-
   - `laravel 5 snippets`
   - `Laravel-blade`
   - `Laravel-blade-snippets`
-
 - **VUE** : `Vetur / vue 2 snippets`
-
 - **REACT** : `ES7-react-redux-graphicQl-nativeSnippets`
-
 - **GIT** : `Gitlens (good if team)`
-
 - **DOCKER** : - `Docker - (For syntax highlighting , linting, inte llisense etc)`
-
 - **ENV** :- `DotENV`
+- `REST client (api.http)` --> **For Frontend - Good to learn.**
 
 # Debug
 
