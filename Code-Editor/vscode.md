@@ -30,7 +30,10 @@ https://code.visualstudio.com/docs
 - **Stackoverflow** [link](https://ux.stackexchange.com/questions/53264/dark-or-white-color-theme-is-better-for-the-eyes)
 
 - **Practice**
+
   - Interactive Playground (Help --> Welcome-page)
+
+- Create user snippets if required
 
 # Keys
 
@@ -209,41 +212,77 @@ https://code.visualstudio.com/docs
 - `"markdown.styles": ["Style.css"]` (can be url)
 - `markdown --> html` use node library like `markdown-it`
 
-  
 # EXTENSIONS
 
 - **ALL**
+
   <!-- - `Visual studio intellicode` (not required) -->
+
   - `Live Share` : Collaboration tool in real time
   - `Live Server` : Localhost server for static Html pages
   - `Prettier` : Code formatter
   - `Laravel blade spacer`
-  - `Bracket colorizer`  
-  - `vscode icons`  :
-  <!-- - `Intend rainbow`  : -->  
-- **MARKDOWN** : 
-  - `Markdown all in one` - Keyboard shortcuts
-  - `Markdownlint`  - Linting
-- **HTML** : `Html snippets / html css support / IntelliSense for CSS class names in HTML / Auto close tag / Auto rename tag`
-- **CSS** : `tailwind`
-- **PHP** 
-  - `php-intellisense` / `code runner` / `php debug`
-  - `REST client (api.http)`  --> **Need to learn**
+  - `Bracket colorizer`
+  - `vscode icons` :
+  - `Highlight Matching Tag`
+    <!-- - `Intend rainbow`  : -->
+
+- **MARKDOWN** :
+
+  - `Markdownlint` - Linting
+  - `Markdown all in one` - (Avoid it. More trouble than help like Multiple cursors not allowed instead duplicates line)
+
+- **HTML** :
+
+  - `Html snippets` - (not needed in latest version of vscode)
+  - `html css support / IntelliSense for CSS class names in HTML` (Choose only one. Intellisense is better.)
+  - `Auto close tag / Auto rename tag`
+
+- **CSS** :
+
+  - `tailwind` - (Avoid. Html's Intellisense for CSS classnames is better)
+  - `color highlight`
+
+- **PHP**
+
+  - `php-intellisense`
+  - `php debug`
+  - `php docBlocker`
+  - `REST client (api.http)` --> **Good to learn**
+  - `code runner`
+
 - **JS** :
+
   - _snippet_ : `JavaScript (ES6) snippets / Jquery snippets`
-  - _syntax highlighting_ : `Babel JavaScript / Babel ES6/ES7 / DotENV`
   - `JsDoc` / `Document-this`
-  - `EsLint, JsHint, etc` (No in-built Linter)
+  - `EsLint` (No in-built Linter)
   - `NPM / NPM intellisense`
-  - `Path IntelliSense`: autocompletes filenames. It works in HTML and CSS as well.
+  - `turbo console log` - On any variable `ctrl + alt + L`
   - **Debug**
     - **CLIENT** - Use `debugger-for-chrome`
     - **SERVER-NODEJS** - Use In-built debugger [Tutorial](https://code.visualstudio.com/docs/nodejs/nodejs-tutorial#_debugging-your-express-application)
+      <!-- - `Path IntelliSense`: (Avoid it)  -->
+
+- **LARAVEL** :
+
+  - `laravel 5 snippets`
+  - `Laravel-blade`
+  - `Laravel-blade-snippets`
+
 - **VUE** : `Vetur / vue 2 snippets`
+
 - **REACT** : `ES7-react-redux-graphicQl-nativeSnippets`
+
 - **GIT** : `Gitlens (good if team)`
-- **DOCKER** : - `Docker - (For syntax highlighting , linting, intellisense etc)`
+
+- **DOCKER** : - `Docker - (For syntax highlighting , linting, inte llisense etc)`
+
+- **ENV** :- `DotENV`
 
 # Debug
 
 - `.vscode/launch.json` - https://code.visualstudio.com/docs/editor/debugging
+
+# ISSUES
+
+- `npm` conflicts with open recent key shortcut `ctrl+R` So delete npm shortcuts.
