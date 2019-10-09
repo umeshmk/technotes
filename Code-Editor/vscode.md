@@ -1,4 +1,4 @@
-https://code.visualstudio.com/docs
+ehttps://code.visualstudio.com/docs
 
 # BACKUP
 
@@ -11,7 +11,7 @@ https://code.visualstudio.com/docs
 # BASICS
 
 - **Launch** --> `code /path/project`
-- [**Marketplace**](https://marketplace.visualstudio.com/vscode)
+- [\**Marketplace*e\*](https://marketplace.visualstudio.com/vscode)
 
 > **Fonts**
 
@@ -47,112 +47,23 @@ https://code.visualstudio.com/docs
 
 - [Emmet Cheatsheet](https://docs.emmet.io/cheat-sheet/)
 
-| HTML     | Child       | Sibling | Climb-up       | Group                            | Multiplication | Naming & Numbering (\$)    |
-| -------- | ----------- | ------- | -------------- | -------------------------------- | -------------- | -------------------------- |
-| `!`      | `nav>ul>li` | `div+p` | `div>p>span^p` | `div>(header>ul>li\*2)+footer>p` | `ul>li\*5`     | `ul>li.project\$\*5`       |
-| `html:5` |             |         |                | `dl>(dt+dd)\*3`                  |                | `ul>li[title=project$]\*3` |
+| HTML     | Child       | Sibling | Climb-up       | Group                            | Multiplication |
+| -------- | ----------- | ------- | -------------- | -------------------------------- | -------------- |
+| `!`      | `nav>ul>li` | `div+p` | `div>p>span^p` | `div>(header>ul>li\*2)+footer>p` | `ul>li\*5`     |
+| `html:5` |             |         |                | `dl>(dt+dd)\*3`                  |                |
 
-| Attributes         | Text                          | Id , Class               |
-| ------------------ | ----------------------------- | ------------------------ |
-| `div[title]`       | `p{Hello, My name is Umesh.}` | `#myid` / `p#myid`       |
-| `p[title="hello"]` |                               | `.myclass` / `p.myclass` |  |
-|                    |                               | `p#myid.myclass`         |
+| Naming & Numbering (\$)    | Attributes         | Text                          | Id , Class               |
+| -------------------------- | ------------------ | ----------------------------- | ------------------------ |
+| `ul>li.project\$\*5`       | `div[title]`       | `p{Hello, My name is Umesh.}` | `#myid` / `p#myid`       |
+| `ul>li[title=project$]\*3` | `p[title="hello"]` |                               | `.myclass` / `p.myclass` |
+|                            |                    |                               | `p#myid.myclass`         |
 
-# Keys
+# KEYS
 
 - [Keymaps](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-linux.pdf)
+- See `shortcut-keys.md` in this folder.
 
----
-
-| Screen Mode                       | cmd           |
-| --------------------------------- | ------------- |
-| Zoom                              | `ctrl + +`    |
-| Zen mode [2 times Esc to get out] | `ctrl + K, Z` |
-
----
-
-| Palettes                | cmd                |
-| ----------------------- | ------------------ |
-| Workspaces(Recent)      | `ctrl + R`         |
-| All Files List          | `ctrl + P`         |
-| CMD                     | `ctrl + shift + P` |
-| Tags (current file)     | `ctrl + shift + O` |
-| Words (All Files)       | `ctrl + T`         |
-| Opened files            | `ctrl + Tab`       |
-| Terminal                | `ctrl + Backtick`  |
-| Intellisense            | `ctrl + Space`     |
-| Intellisense (detailed) | `ctrl + Space` x 2 |
-
----
-
-| Multiple cursor                      | cmd                                |
-| ------------------------------------ | ---------------------------------- |
-| Multiple cursors                     | `alt + mouseclick`                 |
-| Multiple cursors                     | `alt + shift + arrow`              |
-| Undo click                           | `ctrl + U`                         |
-| select (text)                        | `firstClick + shift + secondClick` |
-| Select (block)                       | `shift + alt + {click/up/down}`    |
-| Select (matching words) [all]        | `ctrl + shift + L`                 |
-| Select (matching words) [one by one] | `ctrl + D`                         |
-
----
-
-| Line         | cmd                |
-| ------------ | ------------------ |
-| comment      | `ctrl + /`         |
-| selects line | `ctrl + L`         |
-| delete line  | `ctrl + shift + K` |
-
----
-
-| Refactor                           | cmd                     |
-| ---------------------------------- | ----------------------- |
-| Rename refactor (search all files) | `F2`                    |
-| Refactor (.js/.php)                | `Ctrl + .`              |
-| Go to Defination                   | `ctrl + click` or `F12` |
-
----
-
-| Code Folding | cmd                |
-| ------------ | ------------------ |
-| Fold         | `ctrl + shift + [` |
-| Unfold       | `ctrl + shift + ]` |
-
----
-
-| Errors         | cmd                |
-| -------------- | ------------------ |
-| Jump to errors | `F8`               |
-| Jump to errors | `ctrl + shift + M` |
-
----
-
-| Editor                | cmd                                          |
-| --------------------- | -------------------------------------------- |
-| Split editor (open)   | `ctrl + \`                                   |
-| Split editor (close)  | `ctrl + W`                                   |
-| Split editor (switch) | `ctrl + {1,2,3}` or `ctrl + pageUp/pageDown` |
-| Sidebar (switch)      | `ctrl + 0`                                   |
-| Sidebar (toggle)      | `ctrl + B`                                   |
-
----
-
-| Find                   | cmd             |
-| ---------------------- | --------------- |
-| Search                 | In activity bar |
-| Find                   | `ctrl + F`      |
-| Replace                | `ctrl + H`      |
-| Find/Replace Multiline | `ctrl + Enter`  |
-
----
-
-| Tricks          | cmd                        |
-| --------------- | -------------------------- |
-| select brackets | `alt + shift + left/right` |
-| Fast scroll     | `alt + scroll`             |
-| Build (Default) | `Ctrl + Shift + B`         |
-
-# Workspace
+# WORKSPACE
 
 - Workspaces - `ctrl + R`
 - Multi root folder - `.code-workspace`
@@ -296,7 +207,7 @@ https://code.visualstudio.com/docs
 - **ENV** :- `DotENV`
 - `REST client (api.http)` --> **For Frontend - Good to learn.**
 
-# Debug
+# DEBUG
 
 - `.vscode/launch.json` - https://code.visualstudio.com/docs/editor/debugging
 
