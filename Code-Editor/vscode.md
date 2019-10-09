@@ -43,9 +43,23 @@ https://code.visualstudio.com/docs
 
 - Create user snippets if required
 
-# Keys
+# EMMET
 
 - [Emmet Cheatsheet](https://docs.emmet.io/cheat-sheet/)
+
+| HTML     | Child       | Sibling | Climb-up       | Group                            | Multiplication | Naming & Numbering (\$)    |
+| -------- | ----------- | ------- | -------------- | -------------------------------- | -------------- | -------------------------- |
+| `!`      | `nav>ul>li` | `div+p` | `div>p>span^p` | `div>(header>ul>li\*2)+footer>p` | `ul>li\*5`     | `ul>li.project\$\*5`       |
+| `html:5` |             |         |                | `dl>(dt+dd)\*3`                  |                | `ul>li[title=project$]\*3` |
+
+| Attributes         | Text                          | Id , Class               |
+| ------------------ | ----------------------------- | ------------------------ |
+| `div[title]`       | `p{Hello, My name is Umesh.}` | `#myid` / `p#myid`       |
+| `p[title="hello"]` |                               | `.myclass` / `p.myclass` |  |
+|                    |                               | `p#myid.myclass`         |
+
+# Keys
+
 - [Keymaps](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-linux.pdf)
 
 ---
