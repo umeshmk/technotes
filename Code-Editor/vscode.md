@@ -158,12 +158,13 @@ ehttps://code.visualstudio.com/docs
   - `Bracket colorizer`
   - `vscode icons` :
   - `Highlight Matching Tag`
+  - `Lorem ipsum`
     <!-- - `Intend rainbow`  : -->
 
 - **MARKDOWN** :
 
   - `Markdownlint` - Linting
-  - `Markdown all in one` - (Avoid it. More trouble than help like Multiple cursors not allowed instead duplicates line)
+  - `Markdown all in one` - (Delete key shortcuts. Multiple cursors not allowed instead duplicates line. Search markdown and find alt+shift+up/down. Settings are updated on gist.)
 
 - **HTML** :
 
@@ -176,6 +177,7 @@ ehttps://code.visualstudio.com/docs
 
   - `tailwind` - (Avoid it. Since _Html's Intellisense for CSS classnames_ extension is better)
   - `color highlight`
+  - `live sass compiler`
 
 - **PHP**
 
