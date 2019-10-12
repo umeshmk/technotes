@@ -36,6 +36,7 @@ ehttps://code.visualstudio.com/docs
   - _Dark Theme_ --> **Night** --> _Good syntax highlighting_
     - Default Dark+ / Dracula / One dark Pro
 - **Stackoverflow** [link](https://ux.stackexchange.com/questions/53264/dark-or-white-color-theme-is-better-for-the-eyes)
+- **Choose something inbetween** --> **Solarized dark** 
 
 - **Practice**
 
@@ -164,7 +165,7 @@ ehttps://code.visualstudio.com/docs
 - **MARKDOWN** :
 
   - `Markdownlint` - Linting
-  - `Markdown all in one` - (Delete key shortcuts. Multiple cursors not allowed instead duplicates line. Search markdown and find alt+shift+up/down. Settings are updated on gist.)
+  - `Markdown all in one` - (Delete key shortcuts. Multiple cursors not allowed instead duplicates line. Search markdown and find alt+shift+up/down. Settings are updatedu on gist.)
 
 - **HTML** :
 
