@@ -1,12 +1,16 @@
 # Markdown
 
-Source - [https://guides.github.com/features/mastering-markdown/](https://guides.github.com/features/mastering-markdown/)
+**Reference** - [https://guides.github.com/features/mastering-markdown/](https://guides.github.com/features/mastering-markdown/)
+
+### Bold & Italic
 
 ```md
 This is some text in **bold** and in _italics_.
 ```
 
 This is some text in **bold** and in _italics_.
+
+### Headers
 
 ```md
 # Header 1
@@ -34,6 +38,8 @@ This is some text in **bold** and in _italics_.
 
 ###### Header 6
 
+### Quote
+
 ```md
 > This is a Quote
 
@@ -48,20 +54,28 @@ This is some text in **bold** and in _italics_.
 >
 > - Master Oogway
 
+### Link
+
 ```md
 [link to Google!](http://google.com)
 ```
 
 [link to Google!](http://google.com)
+
+### Horizontal line
 
 ```md
 ## This is a horizontal line
+
+---
 ```
 
 ## This is a horizontal line
 
 ---
 
+### Lists
+
 ```md
 Inordered List
 
@@ -96,6 +110,8 @@ Ordered List
    1. Reactjs
    2. Vuejs
 
+### Image
+
 ```md
 This is an Images
 ![Image - Keep it simple](https://get-a-wingman.com/wp-content/uploads/2015/10/keep-it-simple1.jpg)
@@ -103,6 +119,8 @@ This is an Images
 
 This is an Images
 ![Image - Keep it simple](https://get-a-wingman.com/wp-content/uploads/2015/10/keep-it-simple1.jpg)
+
+### Syntax Highlighting
 
 ```md
 This is an inline code `let foo = 23;` and so is this `let bar = 11;`
@@ -125,6 +143,8 @@ This is multiline code.
 let foo = 23;
 let bar = 11;
 ```
+
+### Table
 
 ```md
 This is a Table
