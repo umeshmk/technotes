@@ -97,9 +97,12 @@ Ordered List
    2. Vuejs
 
 ```md
-Images
-![Image of Markdown Logo](https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Markdown-mark.svg/1280px-Markdown-mark.svg.png)
+This is an Images
+![Image - Keep it simple](https://get-a-wingman.com/wp-content/uploads/2015/10/keep-it-simple1.jpg)
 ```
+
+This is an Images
+![Image - Keep it simple](https://get-a-wingman.com/wp-content/uploads/2015/10/keep-it-simple1.jpg)
 
 ```md
 This is an inline code `let foo = 23;` and so is this `let bar = 11;`
@@ -108,10 +111,10 @@ This is an inline code `let foo = 23;` and so is this `let bar = 11;`
 This is an inline code `let foo = 23;` and so is this `let bar = 11;`
 
 ````md
-    ```js
-        let foo = 23;
-        let bar = 11;
-    ```
+```js
+let foo = 23;
+let bar = 11;
+```
 ````
 
 ```js
@@ -120,16 +123,6 @@ let bar = 11;
 ```
 
 ```md
-[x] Task 1
-[ ] Task 2
-[ ] Task 3
-```
-
-[x] Task 1
-[ ] Task 2
-[ ] Task 3
-
-```md
 This is a Table
 
 | Headers 1 | Headers 2 |
@@ -144,9 +137,3 @@ This is a Table
 | --------- | --------- |
 | Data 1    | Data 2    |
 | Data 3    | Data 4    |
-
-```md
---I will delete this now.--
-```
-
---I will delete this now.--
