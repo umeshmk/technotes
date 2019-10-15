@@ -11,7 +11,7 @@ ehttps://code.visualstudio.com/docs
 # BASICS
 
 - **Launch** --> `code /path/project`
-- [\**Marketplace*e\*](https://marketplace.visualstudio.com/vscode)
+- [**Marketplace**](https://marketplace.visualstudio.com/vscode)
 
 > **Fonts**
 
@@ -36,28 +36,13 @@ ehttps://code.visualstudio.com/docs
   - _Dark Theme_ --> **Night** --> _Good syntax highlighting_
     - Default Dark+ / Dracula / One dark Pro
 - **Stackoverflow** [link](https://ux.stackexchange.com/questions/53264/dark-or-white-color-theme-is-better-for-the-eyes)
-- **Choose something inbetween** --> **Solarized dark** 
+- **Choosen** --> **One Dark Pro**
 
 - **Practice**
 
   - Interactive Playground (Help --> Welcome-page)
 
 - Create user snippets if required
-
-# EMMET
-
-- [Emmet Cheatsheet](https://docs.emmet.io/cheat-sheet/)
-
-| HTML     | Child       | Sibling | Climb-up       | Group                            | Multiplication |
-| -------- | ----------- | ------- | -------------- | -------------------------------- | -------------- |
-| `!`      | `nav>ul>li` | `div+p` | `div>p>span^p` | `div>(header>ul>li\*2)+footer>p` | `ul>li\*5`     |
-| `html:5` |             |         |                | `dl>(dt+dd)\*3`                  |                |
-
-| Naming & Numbering (\$)    | Attributes         | Text                          | Id , Class               |
-| -------------------------- | ------------------ | ----------------------------- | ------------------------ |
-| `ul>li.project\$\*5`       | `div[title]`       | `p{Hello, My name is Umesh.}` | `#myid` / `p#myid`       |
-| `ul>li[title=project$]\*3` | `p[title="hello"]` |                               | `.myclass` / `p.myclass` |
-|                            |                    |                               | `p#myid.myclass`         |
 
 # KEYS
 
