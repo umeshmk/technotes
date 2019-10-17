@@ -17,7 +17,7 @@
 | Basic editing              |                          | Multi-cursor and selection  |                            | Integrated terminal   |                            |
 | -------------------------- | ------------------------ | --------------------------- | -------------------------- | --------------------- | -------------------------- |
 | `Alt+ ↓/↑`                 | Move line down/up        | `Alt+Click`                 | Insert cursor              | `Ctrl+Backtick`       | Show integrated terminal   |
-| `Ctrl+Shift+K`             | Delete line              | `Shift+Alt+ ↑/↓`            | Insert cursor above/below  | `Ctrl+Shift+backtick` | Create new terminal        |
+| `Ctrl+Shift+K`/``             | Delete line              | `Shift+Alt+ ↑/↓`            | Insert cursor above/below  | `Ctrl+Shift+backtick` | Create new terminal        |
 | `Ctrl+Shift+\ (backslash)` | Jump to matching bracket | `Ctrl+U`                    | Undo last cursor operation | `Ctrl+Shift+C`        | Copy selection             |
 | `Ctrl+]/[`                 | Indent/Outdent line      | `Ctrl+L`                    | Select current line        | `Ctrl+Shift+V`        | Paste into active terminal |
 | `Home/End`                 | Go to start/end (line)   | `Click+shift+Click`         | Select (text)              | `Ctrl+Shift+ ↑/↓`     | Scroll up/down             |
