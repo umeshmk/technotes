@@ -700,3 +700,34 @@ var add = (function {
 add();  // 1
 add();  // 2
 ```
+
+### # Timing
+
+- **Timeout**
+  ```js
+  var t = setTimeout(foo(), milliseconds);
+  clearTimeout(t);
+  ```
+- **Interval**
+  ```js
+  var t = setInterval(foo(), milliseconds);
+  clearInterval(t);
+  ```
+
+### # Cookies
+
+- Small text file
+- Ex:
+
+  ```js
+  // Create - new one is created. Old one is not replaced.
+  document.cookie = 'name="foo"; expire="....."';
+  // Read
+  var c = document.cookie;
+  ```
+
+### # AJAX
+
+- Asynchronous javascript and XML
+- create - `var xhttp = new XMLHttpRequest();`
+- AVOID THIS. - USE AXIOS.
