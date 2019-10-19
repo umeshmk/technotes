@@ -93,7 +93,7 @@
 > Sails.js
 > Total.js
 
-#Python Frameworks
+## Python Frameworks
 
 > Bottle
 > CubicWeb
@@ -131,7 +131,7 @@
 > Travis CI
 > `Trello`
 
-#Databases
+## Databases
 
 > `Elasticsearch`
 > MariaDB

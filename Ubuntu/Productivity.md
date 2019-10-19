@@ -2,8 +2,7 @@
 
 # OS
 
-- Ubuntu
-- Fedora
+- Ubuntu (GNOME DE)
 
 # List
 
