@@ -9,34 +9,45 @@
   - Attributes
 - **Get**
 
-  - _id_ - `document.getElementById("foo");`
-  - _class_ - `document.getElementsByClassName("foo");`
-  - _tag_ - `document.getElementsByTagName("span");`
-  - _query_ - `document.querySelectorAll("div.foo");`
+  - <del>_id_ - `document.getElementById("foo");`</del>
+  - <del>_class_ - `document.getElementsByClassName("foo");`</del>
+  - <del>_tag_ - `document.getElementsByTagName("span");`</del>
+  - _query_ - `document.querySelector("div#foo");`
+  - _query all_ - `document.querySelectorAll("div.foo");`
+  - _Attributes_ - `el.getAttribute('id');`
+  - _data-attribute_
+
+    ```js
+    // <div data-doo="dodododo"></div>
+    el.dataset.doo;
+    ```
+
   - NOTE - _Collection object_:
 
-  ```js
-  var allFooElements = document.getElementsByClassName("foo");
-  allFooElements[5]; // A COLLECTION Object NOT ARRAY
-  allFooElements.length;
-  allFooElements.pop; // NOT Allowed
-  ```
+    ```js
+    var e = document.getElementsByClassName("foo");
+    e[5]; // A COLLECTION Object NOT ARRAY
+    e.length;
+    e.pop; // NOT Allowed
+    ```
 
 - **Set (elements)**
-  - _html_ - `el.innerHTML("....")`
-  - _attribute_ - `el.attribute("href") = "http://google.com"`
+  - _html_ - `el.innerHTML = "...."`
+  - _text_ - `el.textContent = "..."`
+  - <del> _attribute_ - `el.attribute("href") = "http://google.com"`</del>
   - _attribute_ - `el.setAttribute("href" , "http://google.com")`
   - _style_ - `el.style.property = "value"`
   - _Event_ - `el.onclick = foo()`
 - **Set (DOM)**
-  - _create_ - `document.createElement(el)`
-  - _remove_ - `document.removeChild(el)`
-  - _append_ - `document.appendChild(el)`
-  - _replace_ - `document.replaceChild(el)`
   - _write_ - `document.write(el)`
+  - _create_ - `let e = document.createElement(div)`
+    - _append_ - `el.append(e)`
+    - _prepend_ - `el.prepend(e)`
+  - _replace_ - `el.replaceChild(eNew, eOld)`
+  - _remove_ - `el.removeChild(childOfEl)`
 - **Document**
   - _baseUri_ - `document.baseUri`
-  - _url_ - `document.url`
+  - _url_ - `document.URL`
   - _readyState_ - `document.readyState`
   - _cookie_ - `document.cookie`
   - _domain_ - `document.domain`
@@ -71,6 +82,8 @@
   - _Capture_ - `<div>`
 
 ### # DOM - Navigation
+
+- **NOTE : Avoid learning this.**
 
 - **Node - Type**
   - Document

@@ -2,6 +2,9 @@
 
 - Ecmascript 2015 = ES6
 - Practice on `JsFiddle`
+- Resource - https://javascript.info/
+- Detailed Book - http://eloquentjavascript.net/index.html
+- Detailed Book - https://exploringjs.com/es6/index.html
 
 ```html
 <script src="path/to/foo.js"></script>
@@ -171,14 +174,16 @@ z = x + y;
   - backspace - `\b`
 - _Multiline_
 
-  ```js
+  ```json
   var foo = 'I\'m "foo".' + " I teach 'bar'.";
   var foo =
     "I'm \
     foo.\
     I teach bar.";
-  var foo = ` 
-  "I'm "foo". 
+  //backticks
+  var foo = `
+  "I'm "foo".
+  This is a variable ${foo}
   I teach 'bar'."
   `;
   ```
@@ -290,7 +295,7 @@ z = x + y;
   // Alter
   a.splice(start, itemsToRemove, "add-1", "add-2");
   a.splice(0, 1); // removes 1st
-
+  a.splice(3, 0, "newfoo", "newBar"); // adds without removing at position 3
   // get index of first matched
   a.indexOf("foo");
   a.lastIndexOf("foo");
@@ -311,7 +316,9 @@ z = x + y;
 - Iterations
   ```js
   a.forEach(function(value, index, array){...});
+  // MAP - to modify each value
   newArr = a.map(function(value, index, array){...});
+  // FILTER - to accept/reject values
   newArr = a.filter(function(value, index, array){...});
   ```
 
@@ -330,7 +337,7 @@ Math.round(4.7); // 5
 Math.round(4.3); // 4
 Math.round(4.5); // 5
 
-Math.power(8, 2); // 64
+Math.pow(8, 2); // 64
 Math.sqrt(64); // 8
 
 Math.abs(-4); // 4
@@ -393,7 +400,7 @@ if("2" < "12")   // false "2" is greater "1"
   ```js
   for(var i = 0; i <5 ; i++>) { ......}
 
-  for(value in arr){......}
+  for(value in arr){......}     // Never ever use  this
 
   while(cond) {......}
   do{......}while(cond) {......}
@@ -441,15 +448,17 @@ Example :
   var x;
   function foo() {
     // use x
+    var y;
   }
   // use x
+  // NO y
   ```
 
 - Automatically Global - without `var` keyword
 
   ```js
   function foo() {
-    x;
+    x = 32;
     // use x
     // var x;     // x is local if redeclared
   }
@@ -484,16 +493,6 @@ Example :
 ### # This
 
 - Based on location where it is used
-- **In method**
-
-  ```js
-  var p = {
-    foo: 23,
-    bar: function() {
-      return this.foo + 11; // this = p
-    }
-  };
-  ```
 
 - **Alone**
 
@@ -509,12 +508,27 @@ Example :
   }
   ```
 
+- **In method**
+
+  ```js
+  var p = {
+    foo: 23,
+    bar: function() {
+      return this; // this = owner of function = p object
+    },
+    barArrow: () => {
+      return this; // this = window object
+    }
+  };
+  ```
+
 - **In Event handlers**
 
   ```html
-  <div onclick="this.style.display = 'none';">
-    Hide me
-  </div>
+  // this = [object HTMLButtonElement]
+  <button onclick="alert(this);">
+    click
+  </button>
   ```
 
 ### # Let
@@ -527,11 +541,6 @@ Example :
   }
   alert(x); // 10
   ```
-- **NOT a `window` property**
-  ```js
-  var x; // window.x
-  let y; // window.y is NOT
-  ```
 
 ### # Const
 
@@ -539,9 +548,9 @@ Example :
 - Cannot reassign as `let`
   ```js
   let x = 2;
-  let x = 22; // Allowed
+  x = 22; // Allowed
   const y = 2;
-  const y = 22; // NOT Allowed
+  y = 22; // NOT Allowed
   ```
 - **Reference** and NOT **value**
 
@@ -576,24 +585,21 @@ Example :
 
 - Float precision
 
-```js
-var x = 0.1,
-  y = 0.2;
-var z = x + y; // NOT = 0.3
-var z = (x * 10 + y * 10) / 10; // = 0.3
-```
+  ```js
+  var x = 0.1,
+    y = 0.2;
+  var z = x + y; // NOT = 0.3
+  var z = (x * 10 + y * 10) / 10; // = 0.3
+  ```
 
-- Loops (Performance)
+- Performance - avoid calculating again and again
 
   ```js
   var l = arr.length;
   for(var i =0 ; i < arr.length; i++){...}    // slow
   for(var i =0 ; i < l; i++){...}   // faster
-  ```
 
-- DOM reuse (performance)
-
-  ```js
+  // DOM reuse (performance)
   var x = document.getElementById("foo");
   x.innerHTML("...."); // X IS REUSED avoiding repeated DOM access.
   ```
@@ -628,13 +634,11 @@ var z = (x * 10 + y * 10) / 10; // = 0.3
     this.age = age
   }
   var p = new Person("umesh", 23);
-  p.prototype.surname = "kadam";  // new prop
   ```
 
 - **Properties**
   - _changed, added, deleted, read-only_
   - Access - `obj.foo` or `obj['obj']`
-  - For..in loop - `for(v in foo){...}`
   - Add - `obj.newfoo = 'foooo';`
   - Prototype properties can be used.
 - **Get/Set** - Brackets `()` are not used like methods.
@@ -653,6 +657,24 @@ var z = (x * 10 + y * 10) / 10; // = 0.3
   obj.show;
   obj.change = "Foo";
   ```
+
+### # Prototype
+
+```js
+function Parent() {
+  this.add = function() {
+    return this.a + this.b;
+  };
+}
+function Child(a, b) {
+  this.a = a;
+  this.b = b;
+}
+Child.prototype = new Parent();
+
+let co = new Child(2, 5);
+alert(co.add()); // 7
+```
 
 ### # Functions
 
@@ -675,40 +697,77 @@ var z = (x * 10 + y * 10) / 10; // = 0.3
 
   ```js
   // Function
-  var foo = function (){...}  // owner of foo() = window
-  foo();    // this = window object
-  `<button onclick="foo();"> </button>`   // this = button object & so (this.style)
+  // owner of foo() = window
+  var foo = function() {
+    return this;
+  };
+  foo(); // this = window object
+  `<button onclick="foo();"> </button>`; // this = button object
 
   // Arrow
-  var foo = () => {...}  // owner of foo() = window
-  foo();    // this = window object
-  `<button onclick="foo();"> </button>`   // this = window object & so NO (this.style)
+  // owner of foo() = window
+  var foo = () => {
+    return this;
+  };
+  foo(); // this = window object
+  `<button onclick="foo();"> </button>`; // this = window object
   ```
 
 ### # Closures
 
 - Solves counter dilemma.
+- Example 1 :
 
-```js
-var add = (function {
-  var c =0;   // c is private
-  return function (){
-    return c += 1;
+  ```js
+  var add = (function {
+    var c =0;   // c is private
+    return () => {
+      return c += 1;
+    }
+  })();
+
+  add();  // 1
+  add();  // 2
+  ```
+
+- Example 2 :
+
+  ```js
+  function multiplier(m) {
+    return n => {
+      return n * m;
+    };
   }
-})();
+  let twice = multiplier(2);
+  let thrice = multiplier(3);
+  console.log(twice(5)); // 10
+  console.log(thrice(5)); // 15
+  ```
 
-add();  // 1
-add();  // 2
-```
+### # Recursion
+
+- Function code calls itself.
+- Recusion is **SLOWER** than **For loop**
+
+  ```js
+  function power(n, pow) {
+    if (pow == 0) return 1;
+    return n * power(n, pow - 1);
+  }
+  power(2, 3); // 8
+  ```
 
 ### # Timing
 
 - **Timeout**
+
   ```js
   var t = setTimeout(foo(), milliseconds);
   clearTimeout(t);
   ```
+
 - **Interval**
+
   ```js
   var t = setInterval(foo(), milliseconds);
   clearInterval(t);
@@ -731,3 +790,97 @@ add();  // 2
 - Asynchronous javascript and XML
 - create - `var xhttp = new XMLHttpRequest();`
 - AVOID THIS. - USE AXIOS.
+
+### # Classes
+
+- A type of function.
+- If `constructor()` is absent. Then javascript adds invisible & empty `constructor(){ //empty }` automatically.
+- **Class syntax**
+
+  ```js
+  class Foo {
+    constructor(a) {
+      this.a = a;
+    }
+    add(n) {
+      return this.a + n;
+    }
+    static bar() {
+      return "This is bar()";
+    }
+    static barWithObj(obj) {
+      return "This is bar(obj)" + obj.a;
+    }
+  }
+  let obj = new Foo(3);
+  // methods
+  obj.add(5); // 8
+  // methods (static)
+  Foo.bar(); // 'This is bar()'
+  Foo.barWithObj(obj); // 'This is bar(obj)' + 3
+  ```
+
+- **Inheritance**
+
+  ```js
+  class ParentName {
+    constructor(p) {
+      this.p = p;
+    }
+    pFoo() {
+      return "pFoo() and p = " + this.p;
+    }
+  }
+  class ChildName extends ParentName {
+    constructor(p, c) {
+      super(p);
+      this.c = c;
+    }
+  }
+  let cObj = new ChildName(5, 3);
+  cObj.pFoo(); // "pFoo() and p = " + 5;
+  cObj.p; // NOT allowed. Instead use methods of parent..
+  ```
+
+- **Get / Set**
+
+  ```js
+  class Foo {
+    constructor(a) {
+      this.a = a;
+    }
+    get num() {
+      return this.a;
+    }
+    set num(n) {
+      this.a = n;
+    }
+  }
+  let obj = new Foo(5);
+  obj.num; // 5   // A method is accessed as a property without parentheses().
+  obj.num(10);
+  ```
+
+### # Import/Export
+
+- **Require** - ` let foo = require(./FooJs);
+- **Export**
+
+  - _FooJs.js_
+
+  ```js
+  function A(){......};
+  function B(){......};
+  module.exports = {
+    A,
+    B
+  }
+  ```
+
+  - _main.js_
+
+  ```js
+  const foo = require("./FooJs");
+  foo.A();
+  foo.B();
+  ```
