@@ -1,12 +1,12 @@
 # GETTING STARTED
 
-## # RELEASE
+### # RELEASE
 
 - Laravel Nova admin Dashboard
 - Optional Email Verification (auth scaffholding)
 - Support for guest users in authorization gates & policies
 
-## # INSTALLATION
+### # INSTALLATION
 
 - **Install**
   - `composer create-project --prefer-dist laravel/laravel blog`
@@ -16,7 +16,7 @@
   - _Folder permissions_ `[sh-start.sh]`
   - _.env file_
 
-## # CONFIGURATION
+### # CONFIGURATION
 
 - Using **DotEnv** php library for _.env_
   - Any variable in _.env_ can be overwritten by _server/system_ environment variables
@@ -30,14 +30,14 @@
   - _View file_ :- `/views/errors/503.blade.php`
   - **Envoyer** is alternative to maintenance mode with zero-downtime.
 
-## # DIRECTORY
+### # DIRECTORY
 
 - _app, bootstrap, config, database, public, resources, routes, storage, test, vendor_
 - **app**
   - _Console, Exceptions, Http, Providers_ => Created by default
   - _Broadcast, Events, Jobs, Listeners, Mail, Notifications, Policies, Rules_ => created by artisan `make:xyz` command
 
-## # DEPLOYMENT:
+### # DEPLOYMENT:
 
 - Nginx configuration
 - Optimizing
@@ -50,7 +50,7 @@
 
 # ARCHITECTURAL CONCEPTS
 
-## # REQUEST LIFECYCLE
+### # REQUEST LIFECYCLE
 
 - **public/index.php**
   - require => `/vendor/autoload.php`
@@ -70,7 +70,7 @@
     - Dispatch request to router `route/controller`
     - Return _reponse_.
 
-## # SERVICE CONTAINER
+### # SERVICE CONTAINER
 
 - Makes dependency (finding classes) easier by **Dependency Injection**.
 - **Binding**
@@ -138,7 +138,7 @@
       }
       ```
 
-## # SERVICE PROVIDER
+### # SERVICE PROVIDER
 
 - **Bootstraped** = registering things like _bindings, event listeners, middleware and routes_
 - **Register service provider** in `config/app.php`
@@ -154,7 +154,7 @@
   - Register service provider in _config/app.php_
 - **Deferred services** loaded when required
 
-## # FACADES
+### # FACADES
 
 - **STATIC** interface to classes in service container
 - **Working**
@@ -178,7 +178,7 @@
     - Import => `use Facade\App\Contracts\Publisher;`
     - Apply => `Publisher::anyMethod()`
 
-## # CONTRACTS
+### # CONTRACTS
 
 - **Set of interfaces**
   - eg: `Illuminate\Contracts\Queue\Queue`
@@ -186,7 +186,7 @@
 
 # BASICS
 
-## # ROUTES
+### # ROUTES
 
 - Folder `routes` with 4 files _[web / api / console / channel]_
 - **App\Providers\RouteServiceProvider**
@@ -273,7 +273,7 @@
   - `Route::current();`
     - `[current(), currentRouteName(), currentRouteAction()]`
 
-  ## # MIDDLEWARES
+  ### # MIDDLEWARES
 
 - **Folder** => `app/Http/Middleware`
 - **Command** => `php artisan make:middleware CheckAge`
@@ -299,7 +299,7 @@
       }
     ```
 
-## # CSRF PROTECTION
+### # CSRF PROTECTION
 
 - **CSRF** => _Cross-site request forgery_
   - `VerifyCsrfToken` Middleware added in `web` middleware group.
@@ -325,7 +325,7 @@
   - Csrf stored in _cookie_ having `“XSRF-TOKEN”` key
   - _Angular, Axios, etc_ **automatically** uses this key to set the `x-xsrf-token` header
 
-## # CONTROLLERS
+### # CONTROLLERS
 
 - **Path** : `app/Http/Controllers`
 - Extends **Base Controller** (optional) provide methods like
@@ -396,7 +396,7 @@
     php artisan route:clear
     ```
 
-## # REQUESTS
+### # REQUESTS
 
 - **use Illuminate\Http\Request;**
 
@@ -496,7 +496,7 @@
               ->storeAs (“path”, “filename.jpg”, “s3”);
       ```
 
-## # RESPONSES
+### # RESPONSES
 
 - **Create Response**
 
@@ -569,7 +569,7 @@
     return response()->file (“path”);
     ```
 
-## # VIEWS
+### # VIEWS
 
 - **File** - `resources/views/welcome.blade.php`
 - **Return View**
@@ -609,7 +609,7 @@
     }
     ```
 
-## # URL GENERATIONS
+### # URL GENERATIONS
 
 - **Basics**
   ```php
@@ -634,7 +634,7 @@
   $url = action (“homeController@show”, [‘id’ => 11]);
   ```
 
-## # SESSIONS
+### # SESSIONS
 
 - **Introduction**
   - HTTP is _stateless_ protocol
@@ -688,7 +688,7 @@
     $request->session()->regenerate();
     ```
 
-## # VALIDATION
+### # VALIDATION
 
 - **Validate()**
   - _If validation fails response is automatic_
@@ -759,7 +759,7 @@
          ->any()                # check if any error in any field
   ```
 
-## # ERROR HANDLING
+### # ERROR HANDLING
 
 - **APP_DEBUG option in .env**
   - _true_ = development
@@ -812,7 +812,7 @@
       - `views/errors/404.blade.php`
       - `php artisan vendor:publlish --tag=laravel`
 
-## # LOGGING
+### # LOGGING
 
 - Uses _Monolog_ library
 - **config/logging.php**
@@ -823,7 +823,7 @@
     - `slack` - custom
 - see docs for details
 
-## # BLADE
+### # BLADE
 
 - **Introduction**
 
@@ -978,11 +978,11 @@
   ```
   - _Usage_ : `@datetime ($time)`
 
-## # LOCALIZATION
+### # LOCALIZATION
 
 - see docs
 
-## # FRONTEND SCAFFHOLDING
+### # FRONTEND SCAFFHOLDING
 
 - **Package.json** (_Bootstrap, Axios, Vue, Jquery, etc_)
   ```bash
@@ -1005,7 +1005,7 @@
   - _React_
     - `php artisan preset react`
 
-## # COMPILING ASSETS (MIX)
+### # COMPILING ASSETS (MIX)
 
 - Mix make Webpack easier using `Webpack.mix.js`
   ```js
@@ -1038,7 +1038,7 @@
 
 # SECURITY
 
-## # AUTHENTICATION
+### # AUTHENTICATION
 
 - **Introduction**
   - `php artisan make:auth`
@@ -1107,11 +1107,11 @@
   - _EventServiceProvider_
   - _Registered, Login, Attempting, Authenticated, Failed, Logout, Lockout, PasswordReset_
 
-## # API AUTH PASSPORT
+### # API AUTH PASSPORT
 
 - see docs.
 
-## # AUTHORIZATION
+### # AUTHORIZATION
 
 - Authorize a user to use a given resource.
 - _Gates_(closure) & _Policies_(logic group) are like _Routes_ & _Controllers_
@@ -1220,7 +1220,7 @@
     @endcan
     ```
 
-## # EMAIL VERIFICATION
+### # EMAIL VERIFICATION
 
 - **Introduction**
   - _Model preparation_
@@ -1238,7 +1238,7 @@
 - **Events**
   - Verified event
 
-## # ENCRYPTION
+### # ENCRYPTION
 
 - _OpenSSL_ provides AES-256 / AES-128
 - All encrypted values are signed with _MAC_ (Message Authentication code)
@@ -1251,7 +1251,7 @@
        :: decryptString ($encryptedKey);
   ```
 
-## # HASHING
+### # HASHING
 
 - _Bcrypt & Argon2_ algorithms are available for passwords. Bcrypt is default for laravel
 - `config/hashing.php`
@@ -1261,7 +1261,7 @@
       :: needsRehash ($hasedPassword); # true / false
   ```
 
-## # RESET PASSWORD
+### # RESET PASSWORD
 
 - User must use trait `Illuminate\Notifications\Notifiable`
 - Reset tokens expires after 1 hour. See expire option in `config/auth.php`
@@ -1276,7 +1276,7 @@
     - Browser visit _“/password/reset”_
     - `$redirectTo` property after reset of password.
 
-## # ARTISAN CONSOLE
+### # ARTISAN CONSOLE
 
 - **Introduction**
   ```bash
@@ -1367,11 +1367,11 @@
                      ::queue (….)->onConnection (‘redis’)->onQueue (“commands”);
   ```
 
-## # BROADCAST (Pusher)
+### # BROADCAST (Pusher)
 
 - Realtime / live updating user interfaces
 
-## # CACHE
+### # CACHE
 
 - **Config**
   - `config/cache.php` => drivers [*File, Database, Redis, Memcache*]
@@ -1434,7 +1434,7 @@
 - **Events**
   - _CacheHit, CacheMissed, KeyForgotten, KeyWritten_
 
-## # COLLECTION
+### # COLLECTION
 
 - Wrapper for arrays. Eloquent results are always collections
 - Are _Immutable_ meaning every method (_map, reject etc_) in chain returns new collection instance.
@@ -1458,7 +1458,7 @@
   - `all(), map(), take(), count(), dd(), min(), toArray(), get(), isEmpty(), etc…`
   - See Docs. Lots of methods.
 
-## # EVENTS
+### # EVENTS
 
 - `app/Events` & `app/Listeners`
 - 1 Event can have many Listeners
@@ -1522,7 +1522,7 @@
   - _Register_ (In `App\Providers\EventServiceProvider`)
     - `protected $subscribe = [‘App\Listeners\UserEventSubscriber’]`
 
-## # FILE STORAGE
+### # FILE STORAGE
 
 - _Flysystem_ package
 - _Local / Amazon S3 / Rackspace_
@@ -1531,7 +1531,7 @@
 - Create symbolic link - `php artisan storage:link`
 - `asset(‘storage/file.txt)`
 
-## # MAIL
+### # MAIL
 
 - **Mailgun.com** ------> 10000 mails/ month FREE
 - _Swiftmailer_ php library
@@ -1563,11 +1563,11 @@
 
 - Use **queues** for increased response time.
 
-## # NOTIFICATIONS
+### # NOTIFICATIONS
 
-## # PACKAGE DEVELOPMENT
+### # PACKAGE DEVELOPMENT
 
-## # DATABASE
+### # DATABASE
 
 - Raw / query builder / eloquent ORM
 - **Transactions** (All or none)
@@ -1578,7 +1578,7 @@
   }, 5);                                          # 5 = attempts after deadlock
   ```
 
-## # QUERY BUILDER
+### # QUERY BUILDER
 
 ```php
   DB::table(‘users’)->get()
@@ -1586,7 +1586,7 @@
   DB::table(‘users’)->where(‘name’, ‘john’)->value(‘name’)->pluck(‘anyCol’);
 ```
 
-## # PAGINATION
+### # PAGINATION
 
 - `paginate()`
   ```php
@@ -1598,7 +1598,7 @@
   App\User::simplepaginate(15); -{{ $user->links() }}
   ```
 
-## # MIGRATION
+### # MIGRATION
 
 ```bash
 php artisan make:migration create_users_table --create=users
@@ -1608,7 +1608,7 @@ php artisan migrate:refresh
 php artisan migrate:refresh --seed
 ```
 
-## # SEEDS
+### # SEEDS
 
 ```bash
 php artisan make:seeder UsersTableSeeder
@@ -1616,14 +1616,14 @@ php artisan make:seeder UsersTableSeeder
 php artisan db:seed
 ```
 
-## # REDIS
+### # REDIS
 
 - Advanced `key=value` store
 - Keys can be ----> _strings, hashes, lists, sets, sortedsets_
 - Composer require _predis/predis_
 - Use redis in `config/database.php`
 
-## # ELOQUENT
+### # ELOQUENT
 
 - ORM
 - **MODELS**
@@ -1672,7 +1672,7 @@ php artisan db:seed
     User::destroy([11, 45, 33]);;
   ```
 
-## # RELATIONSHIP
+### # RELATIONSHIP
 
 - Methods in model
 
@@ -1688,7 +1688,7 @@ php artisan db:seed
     $this->belongsToMany(“User’);         # inside Car.php model file
   ```
 
-## # ACCESSOR / MUTATORS
+### # ACCESSOR / MUTATORS
 
 - Like Get / set
 - Methods inside model
