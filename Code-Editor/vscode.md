@@ -1,4 +1,4 @@
-ehttps://code.visualstudio.com/docs
+https://code.visualstudio.com/docs
 
 # BACKUP
 
@@ -17,10 +17,12 @@ ehttps://code.visualstudio.com/docs
 
 - Default : `'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'`
 - Others :
+  - [ Source Code Pro ](https://github.com/adobe-fonts/source-code-pro/)
+    - [Install](https://askubuntu.com/a/193073/687186)
   - [ Hack ](https://github.com/source-foundry/Hack)
   - [ Fira Code ](https://github.com/tonsky/FiraCode)
-  - **Install** --> `sudo apt install fonts-firacode fonts-hack-ttf`
-- Using **Fira Code**
+    - **Install** --> `sudo apt install fonts-firacode fonts-hack-ttf`
+- If using **Fira Code**
   ```json
   "editor.fontFamily": "Fira Code",
   "editor.fontLigatures": true,
@@ -36,7 +38,6 @@ ehttps://code.visualstudio.com/docs
   - _Dark Theme_ --> **Night** --> _Good syntax highlighting_
     - Default Dark+ / Dracula / One dark Pro
 - **Stackoverflow** [link](https://ux.stackexchange.com/questions/53264/dark-or-white-color-theme-is-better-for-the-eyes)
-- **Choosen** --> **One Dark Pro**
 
 - **Practice**
 
@@ -57,6 +58,7 @@ ehttps://code.visualstudio.com/docs
   - Settings
   - Extensions
 - _Global_ workspace settings override _User_ settings
+
   ```json
   {
     "folders": [
@@ -140,6 +142,7 @@ ehttps://code.visualstudio.com/docs
   - `Live Share` : Collaboration tool in real time
   - `Live Server` : Localhost server for static Html pages
   - `Prettier` : Code formatter
+  - `Code runner` - runs short snippets of code quickly.
   - `Laravel blade spacer`
   - `Bracket colorizer`
   - `vscode icons` :
@@ -167,7 +170,7 @@ ehttps://code.visualstudio.com/docs
 
 - **PHP**
 
-  - `php-intellisense`
+  - `php-intellisense` [Too much files to parse. Can't exclude "/vendor" folder. [issue](https://github.com/felixfbecker/php-language-server/issues/159) ]
   - `php debug` - Needs _xdebug_
   - `php docBlocker`
   - `code runner`

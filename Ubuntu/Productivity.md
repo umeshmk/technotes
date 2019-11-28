@@ -6,6 +6,7 @@
 
 # List
 
+- Mouse sensitivity
 - Help (man / help / -h)
 - Shell (zsh + oh-my-zsh)
 - Terminal (Terminator)
@@ -16,6 +17,7 @@
 - IDE (vscode)
 - SSH key for github
 - Drawing (Inkspace / Gimp)
+- Use Bash profile to add functions, aliases like in Homestead.
 
 #### Manual / help
 
@@ -70,9 +72,6 @@ extract -r abc.zip 			# Extract and remove original archive file
 ```
 
 > [TAB] - Filename completion
-
-
-
 
 #### Terminator (Multiple Terminals)
 

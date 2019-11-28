@@ -1,0 +1,34 @@
+### Examples
+#static-site
+    
+FROM nginx
+ENV AUTHOR=Docker
+
+WORKDIR /usr/share/nginx/html
+COPY Hello_docker.html /usr/share/nginx/html
+
+CMD cd /usr/share/nginx/html && sed -e s/Docker/"$AUTHOR"/ Hello_docker.html > index.html ; nginx -g 'daemon off;'
+
+#-------------
+#flask-app
+#--------------
+FROM alpine:3.5
+
+# Install python and pip
+RUN apk add --update py2-pip
+
+# upgrade pip
+RUN pip install --upgrade pip
+
+# install Python modules
+COPY requirements.txt /usr/src/app/
+RUN pip install --no-cache-dir -r /usr/src/app/requirements.txt
+
+# copy files
+COPY app.py /usr/src/app/
+COPY templates/index.html /usr/src/app/templates/
+
+EXPOSE 5000
+
+# run the application
+CMD ["python", "/usr/src/app/app.py"]
