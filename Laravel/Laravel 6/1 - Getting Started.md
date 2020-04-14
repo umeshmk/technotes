@@ -138,11 +138,14 @@
 
 - **Create project**
   - `composer create-project --prefer-dist laravel/laravel blog`
-- **Basic Configuration**
+  - Error (if json is not downloading) - `composer config -g repo.packagist composer https://repo.packagist.org`
+
+* **Basic Configuration**
   - _Entry point_ `“public/index.php”`
   - _Check config folder_
-  - _Folder permissions_ `[sh-start.sh]`
+  - _Folder permissions_ (not required if Homestead) `[sh-start.sh]` - https://github.com/umeshmk/laravel/blob/master/sh-start.sh
   - _.env file_
+  - Do - `npm install`
 
 ### # CONFIGURATION
 

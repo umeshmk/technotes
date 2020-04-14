@@ -1,0 +1,22 @@
+
+[USE FILE-PERMISSIONS.SH
+sh sh-start.sh                    ------>.env/permissions/key
+sh sh-dump.sh                     ------>remove cache/compiled
+sh sh-optimize.sh                 ------>cache/compiled before production
+
+
+-------------------------
+Folder permission
+-------------------------
+sudo chown -R my-user:www-data /path/to/public
+sudo find /path/folder -type f -exec chmod 664 {} \;    
+sudo find /path/folder -type d -exec chmod 775 {} \;
+sudo chgrp -R www-data storage bootstrap/cache public
+sudo chmod -R ug+rwx storage bootstrap/cache public
+
+
+
+
+
+
+

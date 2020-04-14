@@ -133,3 +133,6 @@
 - **Set of interfaces**
   - eg: `Illuminate\Contracts\Queue\Queue`
   - Laravel Implements _Queue_ with variety of drivers
+- **Facades vs Contracts**
+  - Facade is easy and not type-hinted. (Not explicit dependency)
+  - Contract is type-hinted (Explicit dependency)

@@ -1,6 +1,6 @@
 # BASICS
 
-### # ROUTES
+## # ROUTES
 
 - Folder `routes` with 4 files _[web / api / console / channel]_
 - **App\Providers\RouteServiceProvider**
@@ -20,7 +20,7 @@
   - `@csrf`
 - **Route Parameters** (Note: cannot use ‘-’ for parameter name)
   ```php
-  Route::get (“user/{ id }/photos/{ $pid }”, function ($id, $pid) { …..});
+  Route::get (“user/{ id }/photos/{ pid }”, function ($id, $pid) { …..});
        ::get (  “user/{ name? }”, function ($name = ”Umesh”) { …..});
   ```
 - **Regular Expression**
@@ -87,7 +87,7 @@
   - `Route::current();`
     - `[current(), currentRouteName(), currentRouteAction()]`
 
-  ### # MIDDLEWARES
+  ## # MIDDLEWARES
 
 - **Folder** => `app/Http/Middleware`
 - **Command** => `php artisan make:middleware CheckAge`
@@ -113,7 +113,7 @@
       }
     ```
 
-### # CSRF PROTECTION
+## # CSRF PROTECTION
 
 - **CSRF** => _Cross-site request forgery_
   - `VerifyCsrfToken` Middleware added in `web` middleware group.
@@ -139,7 +139,7 @@
   - Csrf stored in _cookie_ having `“XSRF-TOKEN”` key
   - _Angular, Axios, etc_ **automatically** uses this key to set the `x-xsrf-token` header
 
-### # CONTROLLERS
+## # CONTROLLERS
 
 - **Path** : `app/Http/Controllers`
 - Extends **Base Controller** (optional) provide methods like
@@ -210,7 +210,7 @@
     php artisan route:clear
     ```
 
-### # REQUESTS
+## # REQUESTS
 
 - **use Illuminate\Http\Request;**
 
@@ -310,7 +310,7 @@
               ->storeAs (“path”, “filename.jpg”, “s3”);
       ```
 
-### # RESPONSES
+## # RESPONSES
 
 - **Create Response**
 
@@ -383,7 +383,7 @@
     return response()->file (“path”);
     ```
 
-### # VIEWS
+## # VIEWS
 
 - **File** - `resources/views/welcome.blade.php`
 - **Return View**
@@ -423,7 +423,7 @@
     }
     ```
 
-### # URL GENERATIONS
+## # URL GENERATIONS
 
 - **Basics**
   ```php
@@ -448,7 +448,7 @@
   $url = action (“homeController@show”, [‘id’ => 11]);
   ```
 
-### # SESSIONS
+## # SESSIONS
 
 - **Introduction**
   - HTTP is _stateless_ protocol
@@ -502,7 +502,7 @@
     $request->session()->regenerate();
     ```
 
-### # VALIDATION
+## # VALIDATION
 
 - **Validate()**
   - _If validation fails response is automatic_
@@ -573,7 +573,7 @@
          ->any()                # check if any error in any field
   ```
 
-### # ERROR HANDLING
+## # ERROR HANDLING
 
 - **APP_DEBUG option in .env**
   - _true_ = development
@@ -626,7 +626,7 @@
       - `views/errors/404.blade.php`
       - `php artisan vendor:publlish --tag=laravel`
 
-### # LOGGING
+## # LOGGING
 
 - Uses _Monolog_ library
 - **config/logging.php**
@@ -636,216 +636,3 @@
     - `daily` - monolog
     - `slack` - custom
 - see docs for details
-
-### # BLADE
-
-- **Introduction**
-
-  - _Layout Master_ (`layouts/app.blade.php`)
-    ```php
-    @yield (‘title’)                # define
-    @section (“sidebar”)
-    ……..
-    @show                           # both define & yield section
-    ```
-  - _Extending layout_ (`child.blade.php`)
-
-    ```php
-    @extends (‘layouts.app’)
-
-    @section (‘title’, “This is title”)
-
-    @section (‘title’) …….………. @endsection
-
-    @section (“sidebar”)
-      @parent
-      <p> Appended after parent’s content </p>
-    @endsection
-    ```
-
-    - _Usage_ : `return view (“child’);`
-
-- **Components & slots**
-
-  - _Component_ (`alert.blade.php`)
-    ```php
-    <div class=”alert” >
-      <h1> {{ $msg }} </h1>
-      {{ $slot }}
-    </div>
-    ```
-  - _Usage_
-
-    ```php
-    @component (‘alert’)
-      @slot ('msg')
-        # code
-      @endslot
-      …..This comes in $slot variable
-    @endcomponent
-
-    @component (“alert”, [‘foo’ => ‘bar’])    # Pass data directly
-    ```
-
-  - _Aliasing_
-    - `views/components/alert.blade.php`
-      ```php
-      # AppServiceProvider
-      boot()	 {
-       	Blade::component (“componets.alert” , “alert”);
-        }
-      ```
-    - _Usage_
-      - `@alert ... @endalert`
-
-- **Display data**
-  ```php
-  {{ $name }}                  # variable
-  {{ time() }}                 # Function / method
-  {!! $name !!}                # Unescaped data
-  ```
-  - _Unrendered_ (Vue / React js variables)
-    ```php
-    @{{ name }}
-    # OR
-    @verbatim
-    	<p> {{ name }} </p>
-    @endverbatim
-    ```
-  - _JSON_
-    - `<script> var a = @json ($array); </script>`
-- **Control structures**
-
-  - _IF_
-    ```php
-    @if (condition)
-    …….
-    @elseif (condition)
-    …….
-    @else
-    …...
-    @endif
-    ```
-  - _Auth_
-    ```php
-    @auth …….… @endauth               # also @auth (“guardname”)
-    @guest …….... @endguest           # also @guest (“admin”)
-    ```
-  - _Switch_
-    ```php
-    @switch ($i)
-    	@case(1)
-    		………
-    		@break
-    	@case(2)
-    		………
-    	@default
-    		………
-    @endswitch
-    ```
-  - _Loop_
-
-    ```php
-    @for ($a = 1; $a < 6; $a++)
-    @foreach ($users as $user)
-    @while (condition)
-
-    @condition & @break
-
-    # $loop
-    $loop->first
-         ->last
-         ->index
-         ->parent->first
-    ```
-
-  - _Comment_
-    - `{{-- This is a comment. Not shown in rendered html code --}}`
-  - _Php code_
-    - `@php ……….. @endphp`
-
-- **Forms**
-  - `@csrf`
-  - `@method (“put”);`
-- **Include partial views**
-  - `@include (“partials.profile”, [“foo” => “bar”])`
-  - _Aliasing_
-    ```php
-    # AppServiceProvider
-    boot()  {
-    	Blade::include (“partials.profile”, “profile”);
-    }
-    ```
-    - _Usage_ : `@profile([“foo” => “bar”])`
-- **Stacks**
-  - `@stack (“script”)`
-  - _Usage_ :
-    - `@push (“script”) .... @endpush`
-- **Extend Blade**
-  ```php
-  # AppServiceProvider
-  boot() {
-    Blade::directive (“datetime”, function ($t) {
-      return “ <?php echo $t->format (“m/d/y H:i “);
-    });
-  }
-  ```
-  - _Usage_ : `@datetime ($time)`
-
-### # LOCALIZATION
-
-- see docs
-
-### # FRONTEND SCAFFHOLDING
-
-- **Package.json** (_Bootstrap, Axios, Vue, Jquery, etc_)
-  ```bash
-  npm install
-  npm run dev
-          watch
-  ```
-- Laravel Mix configs in `Webpack.mix.js`
-- **Remove** (_Bootstrap, Vue_)
-  - `php artisan preset none`
-- **css**
-  - `resources/sass/` TO `public/css`
-- **js**
-  - `resources/js` TO `public/js`
-  - _Vue_
-    - `resources/js/components/ExampleComponent.vue`
-    - Single file has `<template>, <script>, <style>`
-    - `Vue.component (‘example’, require (‘./components/ExampleComponent.vue’))`
-    - Usage :- `< vc-foo > …… </ vc-foo >`
-  - _React_
-    - `php artisan preset react`
-
-### # COMPILING ASSETS (MIX)
-
-- Mix make Webpack easier using `Webpack.mix.js`
-  ```js
-  mix.js (“resources/js/app.js”, “public/js”)
-     .sass (“resources/css/app.scss”, “public/css”)
-  ```
-- Needs _nodejs_ with npm installed
-- **Install packages** :- `npm install`
-- **Run**
-  - `npm run dev | production | watch | watch-poll`
-- **Working with js**
-  - _Vendor extraction_
-    - `mix.js (….).extract ([“vue”])`
-    - Gives 3 files `manifest.js, vendor.js, app.js` (sequence must be same in `<html>`)
-    - why to use ? If updates are frequent then avoid compiling vendors again & again.
-- **Version / Cache Busting**
-  - Appends a _hash_ to filename
-  - `mix.js (……..) . version()`
-  - usage : `<script src = ‘ {{ mix (“js/app.js”) }} ‘ >`
-  - Only in production. Not use in development.
-    ```js
-    if (mix.inProduction()) {
-      mix.version();
-    }
-    ```
-- **BrowserSync**
-  - Moniters files for any changes & if changed then browser is refreshed automatically.
-  - `mix.browserSync (“domain.test”)`
-  - Run :- `npm run watch/watch-poll`
