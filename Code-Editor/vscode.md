@@ -32,7 +32,8 @@ https://code.visualstudio.com/docs
 
 - **Relaxing your eyes**
   - Look away frequently
-  - Monitor & Environment must match
+  - Brightness must be minimum
+  - 3 Views(must match) = Monitor + Environment + Browser
   - _Light Theme_ --> **Day** --> _Good memory_
     - Winter is Coming / Slack / Quietlight / Kary pro colors / Spacemacs, Verdandi
   - _Dark Theme_ --> **Night** --> _Good syntax highlighting_
