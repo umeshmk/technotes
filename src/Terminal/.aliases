@@ -1,0 +1,101 @@
+#-------------------
+# ---My Alias---
+#-------------------
+# alias [flag] [custom-alias]="[command]"
+
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+alias ~="cd ~" 
+
+# Basics
+alias install='sudo apt install'
+alias update='sudo apt update'
+alias remove="sudo apt-get remove --purge"
+alias src="source ~/.zshrc || source ~/.bashrc "
+alias l='ls -lah'
+alias ls='ls --color=tty'
+alias lsa='ls -a'
+alias c="code"
+alias cl="clear"
+alias d="dirs"
+alias history="omz_history "        # zsh
+alias zshrc='vim ~/.zshrc'          # zsh
+alias bashrc='vim ~/.bashrc'
+alias md='mkdir -p'
+alias rd=rmdir
+alias _='sudo '
+# alias z='_z 2>&1'     #zsh
+
+
+# ---default app for extensions---
+# alias -s [file-extension]=[name-of-app]
+# alias -s html="code"
+
+# ----Global---
+# alias -g [custom-alias]="[Command]"
+alias G="| grep"
+alias L="| less"
+# alias -g GG="google.com"
+
+# ---Git---
+alias g="git"
+alias g=git
+alias ga='git add'
+alias gaa='git add --all'
+alias gb='git branch'
+alias gc='git commit'
+alias gcmsg='git commit -m'
+alias gco='git checkout'
+alias gcb='git checkout -b'
+alias gcm='git checkout $(git_main_branch)'
+alias gcf='git config --list'
+alias gcl='git clone '
+alias gd='git diff'
+alias gf='git fetch'
+alias gl='git pull'
+alias ggsup='git branch --set-upstream-to=origin/$(git_current_branch)'
+alias ghp='git help'
+alias glg='git log --stat'
+alias glum='git pull upstream $(git_main_branch)'
+alias gm='git merge'
+alias gma='git merge --abort'
+alias gmt='git mergetool'
+alias gp='git push'
+alias gr='git remote'
+alias grb='git rebase'
+alias gst='git status'
+alias gs='git stash'
+alias gsw='git switch'
+alias gt='git tag'
+alias gtv='git tag | sort -V'
+
+# ---npm---
+alias ni="npm install";
+alias nrs="npm run start -s --";
+alias nrb="npm run build -s --";
+alias nrd="npm run dev -s --";
+alias nrt="npm run test -s --";
+alias nrtw="npm run test:watch -s --";
+alias nrv="npm run validate -s --";
+alias rmn="rm -rf node_modules";
+alias nflush="rm -rf node_modules && npm i";
+alias nreset="rm -rf node_modules && rm package-lock.json && npm i";
+
+# ---Yarn---
+alias yar="yarn run"; # lists all the scripts we have available
+alias yab="yarn build"; # build dist directory for each package
+alias yal="yarn lint:fix"; # format source and auto-fix eslint issues
+alias yac="yarn commit"; # open a Q&A prompt to help construct valid commit messages
+alias yas="yarn start";
+alias yasb="yarn storybook:start"; # start storybook
+alias yat="yarn test"; # run the unit tests*
+alias yatw="yarn test:watch"; #run the unit tests for files changed on save
+
+# ---others---
+alias topten="history | sort -rn | head"
+alias myip="curl http://ipecho.net/plain; echo"
+alias dirs='dirs -v | head -10'
+alias usage='du -h -d1'
+alias runp="lsof -i "
