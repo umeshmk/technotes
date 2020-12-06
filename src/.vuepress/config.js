@@ -41,10 +41,6 @@ module.exports = {
         text: "Documentation",
         link: "/documentation/vuepress",
       },
-      {
-        text: "Config",
-        link: "/config/",
-      },
     ],
     sidebar: {
       "/documentation/": [
