@@ -1,0 +1,21 @@
+{
+  "name": "Practice",
+  "version": "0.0.1",
+  "description": "This Are My Notes",
+  "main": "index.js",
+  "authors": {
+    "name": "Umesh Kadam",
+    "email": ""
+  },
+  "repository": "/Practice",
+  "scripts": {
+    "start": "nodemon --ext md,vue,js --watch .vuepress --watch . --exec vuepress dev src",
+    "dev": "vuepress dev src",
+    "build": "vuepress build src"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^2.0.6",
+    "vuepress": "^1.5.3"
+  }
+}
