@@ -1,0 +1,25 @@
+// {
+//     "overrides": [
+//         {
+//             "files": [
+//                 "*.js",
+//                 "*.json"
+//             ],
+//             "options": {
+//                 "endOfLine": "lf",
+//                 "singleQuote": true,
+//                 "tabWidth": 2,
+//                 "semi": true
+//             }
+//         },
+//         {
+//             "files": [
+//                 "*.md"
+//             ],
+//             "options": {
+//                 "singleQuote": false,
+//                 "tabWidth": 2
+//             }
+//         }
+//     ]
+// }
