@@ -1,12 +1,11 @@
 ---
-title: VuePress Notes from README.md
-# sidebar: auto
-# permalink: vuepress
+title: VuePress
 ---
 
-<img src="https://v1.vuepress.vuejs.org/hero.png" style=" height:200px;"/>
+<vc-img url="https://v1.vuepress.vuejs.org/hero.png" size="sm" />
+<!-- <img src="https://v1.vuepress.vuejs.org/hero.png" style=" height:200px;"/> -->
 
-# VuePress Notes
+# VuePress
 
 ::: tip Note
 [Vitepress](https://vitepress.vuejs.org/) may be the better alternative in near future. It's better for build up & Hot module reloading. Vuepress has its issues with Webpack.

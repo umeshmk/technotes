@@ -1,34 +1,18 @@
-- [Extensions](#extensions)
-  - [ALL](#all)
-  - [OTHERS](#others)
-  - [GIT](#git)
-  - [REMOTE](#remote)
-  - [MARKDOWN](#markdown)
-  - [HTML](#html)
-  - [CSS](#css)
-  - [Js](#js)
-  - [DOCKER](#docker)
-  - [PHP](#php)
-
 # Extensions
 
 [VSCode Marketplace](https://marketplace.visualstudio.com/vscode)
 [VSCode Api for custom theme](https://code.visualstudio.com/api)
 
-- Get Installed Extensions ids :
+**Get Installed Extensions ids :**
 
 1. `code --list-extensions`
 2. Right click extensions & copyid
 
-```json
-// .vscode/extensions.json
+Add in **.vscode/extensions.json** or **.code-workspace**
 
+```json
 {
-  "recommendations": [
-    "VisualStudioExptTeam.vscodeintellicode",
-    "ms-mssql.mssql",
-    "MS-vsliveshare.vsliveshare-pack"
-  ]
+  "recommendations": ["VisualStudioExptTeam.vscodeintellicode"]
 }
 ```
 
@@ -44,16 +28,17 @@
 - `Better comments`
 
 ```json
-
 // All
-VisualStudioExptTeam.vscodeintellicode
-GitHub.github-vscode-theme
-vscode-icons-team.vscode-icons
-esbenp.prettier-vscode
-christian-kohler.path-intellisense
-coenraads.bracket-pair-colorizer-2
-oderwat.indent-rainbow
-aaron-bond.better-comments
+[
+  "VisualStudioExptTeam.vscodeintellicode",
+  "GitHub.github-vscode-theme",
+  "vscode-icons-team.vscode-icons",
+  "esbenp.prettier-vscode",
+  "christian-kohler.path-intellisense",
+  "coenraads.bracket-pair-colorizer-2",
+  "oderwat.indent-rainbow",
+  "aaron-bond.better-comments"
+]
 ```
 
 ## OTHERS
@@ -67,12 +52,14 @@ aaron-bond.better-comments
 
 ```json
 // Others
-ms-vsliveshare.vsliveshare
-formulahendry.code-runner
-mikestead.dotenv
-humao.rest-client
-wscats.eno
-shan.code-settings-sync
+[
+  "ms-vsliveshare.vsliveshare",
+  "formulahendry.code-runner",
+  "mikestead.dotenv",
+  "humao.rest-client",
+  "wscats.eno",
+  "shan.code-settings-sync"
+]
 ```
 
 ## GIT
@@ -82,15 +69,8 @@ shan.code-settings-sync
 
 ```json
 // Git
-eamodio.gitlens
-donjayamanne.githistory
+["eamodio.gitlens", "donjayamanne.githistory"]
 ```
-
-## REMOTE
-
-- `Remote-wsl`
-- `Remote-container`
-- `Remote-ssh`
 
 ## MARKDOWN
 
@@ -101,10 +81,12 @@ donjayamanne.githistory
 
 ```json
 // Markdown
-DavidAnson.vscode-markdownlint
-yzhang.markdown-all-in-one
-shd101wyy.markdown-preview-enhanced
-ms-vscode.Theme-MarkdownKit
+[
+  "DavidAnson.vscode-markdownlint",
+  "yzhang.markdown-all-in-one",
+  "shd101wyy.markdown-preview-enhanced",
+  "ms-vscode.Theme-MarkdownKit"
+]
 ```
 
 ## HTML
@@ -123,18 +105,19 @@ ms-vscode.Theme-MarkdownKit
 
 ```json
 // html
-austenc.laravel-blade-spacer
-ms-vscode-remote.remote-wsl
-ritwickdey.liveserver
-ecmel.vscode-html-css
-zignd.html-css-class-completion
-formulahendry.auto-rename-tag
+[
+  "austenc.laravel-blade-spacer",
+  "ritwickdey.liveserver",
+  "ecmel.vscode-html-css",
+  "zignd.html-css-class-completion",
+  "formulahendry.auto-rename-tag"
+]
 ```
 
 ## CSS
 
 - `tailwind css intellisense` - (May conflict with extensions for html)
-- Stylus in vuepress
+- Stylus _(in vuepress)_
 - Avoid
   - `sass` (Inbuilt)
   - `live sass compiler` - (Avoid. Use other extension in ## All)
@@ -142,11 +125,10 @@ formulahendry.auto-rename-tag
 
 ```json
 // css
-bradlc.vscode-tailwindcss
-sysoev.language-stylus
+["bradlc.vscode-tailwindcss", "sysoev.language-stylus"]
 ```
 
-## Js
+## JS
 
 - `ES Lint`
 - `Npm`
@@ -163,15 +145,17 @@ sysoev.language-stylus
 
 ```json
 // js
-dbaeumer.vscode-eslint
-eg2.vscode-npm-script
-christian-kohler.npm-intellisense
-xabikos.JavaScriptSnippets
-jasonnutter.search-node-modules
-chakrounanas.turbo-console-log
-octref.vetur
-dsznajder.es7-react-js-snippets
-msjsdiag.debugger-for-chrome
+[
+  "dbaeumer.vscode-eslint",
+  "eg2.vscode-npm-script",
+  "christian-kohler.npm-intellisense",
+  "xabikos.JavaScriptSnippets",
+  "jasonnutter.search-node-modules",
+  "chakrounanas.turbo-console-log",
+  "octref.vetur",
+  "dsznajder.es7-react-js-snippets",
+  "msjsdiag.debugger-for-chrome"
+]
 ```
 
 ## DOCKER
@@ -187,3 +171,17 @@ msjsdiag.debugger-for-chrome
   - `laravel 5 snippets`
   - `Laravel-blade`
   - `Laravel-blade-snippets`
+
+## REMOTE
+
+- `Remote-wsl`
+- `Remote-container`
+- `Remote-ssh`
+
+```json
+[
+  "ms-vscode-remote.remote-wsl",
+  "ms-vscode-remote.remote-container",
+  "ms-vscode-remote.remote-ssh"
+]
+```

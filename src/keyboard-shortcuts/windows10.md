@@ -1,9 +1,15 @@
+---
+sidebar: auto
+---
+
+# Keyboard shortcuts
+
 **Source** :
 
 - https://support.microsoft.com/en-us/windows/keyboard-shortcuts-in-windows-dcc61a57-8ff0-cffe-9796-cb9706c75eec
 - https://www.w3schools.com/tags/ref_keyboardshortcuts.asp
 
-# Copy, paste and other general keyboard shortcuts
+## Copy, paste and other general keyboard shortcuts
 
 | Press this key                    | To do this                     |
 | --------------------------------- | ------------------------------ |
@@ -34,7 +40,7 @@
 | `Shift` or `Ctrl + Shift`         | Select                         |
 | `PrtScn`                          | Screenshot                     |
 
-# Windows keyboard shortcuts
+## Windows keyboard shortcuts
 
 | Press this key               | To do this                                 |
 | ---------------------------- | ------------------------------------------ |
@@ -63,7 +69,7 @@
 | `Windows + Spacebar`         | Switch input language and keyboard layout. |
 | `Windows + Plus (+)`         | Magnifier                                  |
 
-# Browsers
+## Browsers
 
 | Keys                      | What to do                |
 | ------------------------- | ------------------------- |
@@ -80,25 +86,25 @@
 | `ctrl + enter`            | add .com at end           |
 | `ctrl + B/H/j`            | Bookmark/History/Download |
 
-# Windows Terminal
+## Windows Terminal
 
-| Keys                               | Todo                             |
-| ---------------------------------- | -------------------------------- |
-| `ctrl + L`                         | clear screen                     |
-| `ctrl + shift + P`                 | Command Pallete                  |
-| `rightClick`                       | copy/paste                       |
-| `ctrl + f`                         | find                             |
-| `ctrl + tab`                       | change tab                       |
-| `ctrl + T`                         | New Tab                          |
-| `ctrl + W`                         | close pane/tab                   |
-| `ctrl + pageup/pagedown`           | Switch Tab                       |
-| `ctrl + =` & `ctrl + \`            | Split pane horizontal & vertical |
-| `alt + up/down/right/left`         | Switch pane                      |
-| `alt + shift + up/down/right/left` | Resize pane                      |
-| `ctrl + (+/-)`                     | Font size change                 |
-| `ctrl + numpad_0`                  | reset font size                  |
+| Keys                                                       | Todo             |
+| ---------------------------------------------------------- | ---------------- |
+| `ctrl + L`                                                 | clear screen     |
+| `ctrl + shift + P`                                         | Command Pallete  |
+| `rightClick`                                               | copy/paste       |
+| `ctrl + f`                                                 | find             |
+| `ctrl + tab`                                               | change tab       |
+| `ctrl + T`                                                 | New Tab          |
+| `ctrl + W`                                                 | close pane/tab   |
+| `ctrl + pageup/pagedown`                                   | Switch Tab       |
+| `ctrl + =` & `ctrl + \` | Split pane horizontal & vertical |
+| `alt + up/down/right/left`                                 | Switch pane      |
+| `alt + shift + up/down/right/left`                         | Resize pane      |
+| `ctrl + (+/-)`                                             | Font size change |
+| `ctrl + numpad_0`                                          | reset font size  |
 
-# Zsh
+## Zsh
 
 | Keys                        | Todo                                |
 | --------------------------- | ----------------------------------- |
@@ -107,9 +113,9 @@
 | `ctrl + backspace / delete` | delete one word backwards / forward |
 | `ctrl + delete`             | delete one word forward             |
 | `ctrl + u/k`                | delete all from cursor to start/end |
-| `ctrl + y `                 | undo delete                         |
+| `ctrl + y`                  | undo delete                         |
 
-# Youtube
+## Youtube
 
 | Keys          | What to do                  |
 | ------------- | --------------------------- |

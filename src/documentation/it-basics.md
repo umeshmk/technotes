@@ -1,17 +1,23 @@
-# It Basics
+---
+title: IT Basics
+---
 
-!
+<vc-img url="https://assignmentfirm.com/wp-content/uploads/2018/12/ITEC812-Special-Topic-In-Information-Technology.jpg" size="md"/>
 
-![img](https://ibb.co/xhW2KTQ)
+# IT Basics
 
-5 Generation of Computer
+> Source: Programming Hub Android App
+
+<vc-img url="https://i.ibb.co/5Tm1XHV/3.jpg" size="md"/>
+
+**5 Generation of Computer**
 
 1. Vacuum tubes 1946
 2. Transistors 1959
 3. Integrated circuits 1965 (keyboard, monitor)
 4. 4th & 5th - VLSI, ULSI. 1971
 
-Types of Computer
+**Types of Computer**
 
 1. Personal computer
 2. Workstation (developers in company)
@@ -19,27 +25,33 @@ Types of Computer
 4. Mainframe (company)
 5. Super Computer
 
----
+**I/O Devices**
 
-Input devices 
-    Keyboard, mouse, touchscreen, mic
-Output devices
-     Monitor, printing, speaker
-
----
-
-Processing  (CPU, memory)
-
-![img](https://ibb.co/ZdYX2Wm)
-![img](https://ibb.co/HVCKcZ5)
-![img](https://ibb.co/6vqf70W)
+- Input devices
+  - Keyboard, mouse, touchscreen, mic
+- Output devices
+  - Monitor, printing, speaker
 
 ---
 
-Memory
+## Processing 
 
-- Primary (Temporary) - RAM  - Register
-- Secondarystorage (permanent)  - Harddisk (rewrite) - ROM - Read only memory (no rewrite) (OS, Bios, Factory format etc )
+<vc-img url="https://i.ibb.co/zs7x6GJ/4.jpg" size="md"/>
+
+<vc-img url="https://i.ibb.co/0cKn05H/5.jpg" size="md"/>
+
+<vc-img url="https://i.ibb.co/9wdCkHr/6.jpg" size="md"/>
+
+---
+
+## Memory
+
+- Primary (Temporary)
+  - RAM
+  - Register
+- Secondarystorage (permanent after power off)
+  - Harddisk (rewrite)
+  - ROM - Read only memory (no rewrite) (OS, Bios, Factory format etc )
 
 ---
 
@@ -47,7 +59,7 @@ Program -> Compiler -> Binary code(machine language)
 
 ---
 
-# Network 
+## Network 
 
 In 1960
 LAN - Local Area Network
@@ -56,7 +68,7 @@ WAN - Wide Area Network
 
 Ethernet port - Uses unique MAC address (Media Access Control)
 
-Topology
+**Topology**
 
 - Bus
 - Star
@@ -73,16 +85,17 @@ Dns - Domain name system
 
 ---
 
-# Information Security
+## Information Security
 
 Computer has no Ethics
-Threats Types
+
+**Threats Types**
 
 - Secrecy
 - Integrity
 - Availablity
 
-Identification of users
+**Identification of users**
 
 1. Authentication
    1. Username/Password
@@ -90,7 +103,7 @@ Identification of users
    3. Biometric
 2. Access control
 
-Hackers
+**Hackers**
 
 - Tricks by calling, email
 - Brute force
@@ -98,9 +111,9 @@ Hackers
 
 ---
 
-# Content creation
+## Content creation
 
-Big data characteristics
+**Big data characteristics**
 
 - Volume
 - Variety (forms & format of data)

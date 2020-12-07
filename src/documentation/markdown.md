@@ -1,9 +1,15 @@
+---
+title: Markdown
+---
+
+<vc-img url="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Markdown-mark.svg/1200px-Markdown-mark.svg.png" size="sm"/>
+
 # Markdown
 
 **Reference** - [https://guides.github.com/features/mastering-markdown/](https://guides.github.com/features/mastering-markdown/)
 https://shd101wyy.github.io/markdown-preview-enhanced/#/
 
-### # Bold & Italic
+## Bold & Italic
 
 ```md
 This is some text in **bold** and in _italics_.
@@ -11,7 +17,7 @@ This is some text in **bold** and in _italics_.
 
 This is some text in **bold** and in _italics_.
 
-### # Headers
+## Headers
 
 ```md
 # Header 1
@@ -39,7 +45,7 @@ This is some text in **bold** and in _italics_.
 
 ###### Header 6
 
-### # Quote
+## Quote
 
 ```md
 > This is a Quote
@@ -55,7 +61,7 @@ This is some text in **bold** and in _italics_.
 >
 > - Master Oogway
 
-### # Link
+## Link
 
 ```md
 [link to Google!](http://google.com)
@@ -63,19 +69,19 @@ This is some text in **bold** and in _italics_.
 
 [link to Google!](http://google.com)
 
-### # Horizontal line
+## Horizontal line
 
 ```md
-## This is a horizontal line
+### This is a horizontal line
 
 ---
 ```
 
-## This is a horizontal line
+### This is a horizontal line
 
 ---
 
-### # Lists
+## Lists
 
 ```md
 Inordered List
@@ -111,7 +117,7 @@ Ordered List
    1. Reactjs
    2. Vuejs
 
-### # Image
+## Image
 
 ```md
 This is an Images
@@ -121,7 +127,7 @@ This is an Images
 This is an Images
 ![Image - Keep it simple](https://get-a-wingman.com/wp-content/uploads/2015/10/keep-it-simple1.jpg)
 
-### # Syntax Highlighting
+## Syntax Highlighting
 
 ```md
 This is an inline code `let foo = 23;` and so is this `let bar = 11;`
@@ -145,7 +151,7 @@ let foo = 23;
 let bar = 11;
 ```
 
-### # Table
+## Table
 
 ```md
 This is a Table

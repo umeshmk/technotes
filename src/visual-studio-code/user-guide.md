@@ -1,6 +1,6 @@
 # User Guide
 
-> search
+## Search
 
 - Can use regular expressions
 - Search conditions
@@ -16,7 +16,7 @@
   - `example.[0-9]` - matches example.0, example.1, etc
 - `node_modules` - excluded by default
 
-> Refactoring
+## Refactoring
 
 - Code Actions (`lightbulb`) = Quickfixes & Refactoring
 - Issues - Highlighted with green squiggles
@@ -24,7 +24,7 @@
 - Refactor
   - Restructure code with same output & faster runtime.
 
-> Debugger  - (`launch.json`)
+## Debugger - (`launch.json`)
 
 1. Default by vscode
 2. chrome debugger extension for vscode
@@ -40,6 +40,6 @@ _Points_
 1. Breakpoint
 2. Logpoint
 
-> Emmet
+## Emmet
 
 - Inbuilt & default in `html, jsx, css, scss, sass`

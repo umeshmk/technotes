@@ -1,42 +1,43 @@
-# Windows 10
-
 ---
+title: Windows 10
+---
+
+<vc-img url="https://i.ibb.co/4Pb3bpB/7.jpg" size="sm"/>
+
+# Windows 10
 
 List of Everything to increase productivity in Windows10
 
 - Enable **NightLight**
 
-## Dev environment on Windows 10
+## Dev Environment
 
----
-
-- Dev Environment - https://docs.microsoft.com/en-us/windows/dev-environment
-- Powertoys - https://github.com/microsoft/PowerToys
-- Learn - https://docs.microsoft.com/en-us/learn/browse/
+- **Dev Environment** - [https://docs.microsoft.com/en-us/windows/dev-environment](https://docs.microsoft.com/en-us/windows/dev-environment)
+- **Powertoys** - [https://github.com/microsoft/PowerToys](https://github.com/microsoft/PowerToys)
+- **Learn** - [https://docs.microsoft.com/en-us/learn/browse/](https://docs.microsoft.com/en-us/learn/browse/)
 - Winget package manager
+- Mouse sensitivity
 - Kaspersky Exclusion to `Nodejs.exe`
-- Font 
-  - My Favourite - https://www.jetbrains.com/lp/mono/
-  - https://www.programmingfonts.org/
-  - https://www.nerdfonts.com/
-  - https://www.slant.co/topics/67/~best-programming-fonts
-  - Cascadia - https://github.com/microsoft/cascadia-code
-- Github 
-  - https://github.com/sindresorhus/awesome
-  - https://github.com/jondot/awesome-devenv
-  - https://github.com/kahun/awesome-sysadmin
-  - https://github.com/k4m4/terminals-are-sexy
+- **Font**
+  - My Favourite - [https://www.jetbrains.com/lp/mono/](https://www.jetbrains.com/lp/mono/)
+  - [https://www.programmingfonts.org/](https://www.programmingfonts.org/)
+  - [https://www.nerdfonts.com/](https://www.nerdfonts.com/)
+  - [https://www.slant.co/topics/67/~best-programming-fonts](https://www.slant.co/topics/67/~best-programming-fonts)
+  - Cascadia - [https://github.com/microsoft/cascadia-code](https://github.com/microsoft/cascadia-code)
+- **Github**
+  - [https://github.com/sindresorhus/awesome](https://github.com/sindresorhus/awesome)
+  - [https://github.com/jondot/awesome-devenv](https://github.com/jondot/awesome-devenv)
+  - [https://github.com/kahun/awesome-sysadmin](https://github.com/kahun/awesome-sysadmin)
+  - [https://github.com/k4m4/terminals-are-sexy](https://github.com/k4m4/terminals-are-sexy)
 
-## SOFTWARES
+## Softwares
 
----
-
-> #### # Disk space saving
+### Disk space saving
 
 - Use portable apps
 - Use another drive to install (Program Files)
 
-> #### # System Softwares
+### System Softwares
 
 - sync clock timezone
 - Kaspersky, Bitdefender
@@ -50,20 +51,20 @@ List of Everything to increase productivity in Windows10
 - **Torrent** - qtorrent, utorrent(avoid)
 - **sound control** - Eartrumpet
 
-> #### # Work Softwares
+### Work Softwares
 
 - Help - https://alternativeto.net/
-- On Windows :
+- **On Windows :**
 
   - **VM(wsl2)** - Ubuntu, Docker Desktop
   - **VM(VirtualBox)** - Lubuntu, win10, Ubuntu, etc
   - **Browsers** - chrome, firefox, brave, edge
-  - **Editor** - Notepad++, Vscode(also code-server), vim, 
+  - **Editor** - Notepad++, Vscode(also code-server), vim,
   - **Terminal** - Windows Terminal
   - **Typing** - Easy typing(from store)
   - **Whiteboard** - Microsoft whiteboard
-  - **Draw** - Draw.io (chrome extension), paint.net, krita 
-  - **Photo editor** - Photopea, Canva,Pixlr(cloud)      
+  - **Draw** - Draw.io (chrome extension), paint.net, krita
+  - **Photo editor** - Photopea, Canva,Pixlr(cloud)
   - **UI/UX Prototype** - Figma(cloud based, easy collaboration), AdobeXD
   - **Wireframe(after pen/paper)** - Figma, AdobeXD, (eg: Platforma UI kit)
   - **Vector Graphics** - Illustrator, Inkscape
@@ -77,9 +78,9 @@ List of Everything to increase productivity in Windows10
 - On WSL:
   - **Shell** - Bash, Zsh, github-cli
 
-> #### Useful Tools in Windows10
+### Useful Tools in Windows10
 
-- Clipboard (😊)
+- Clipboard
 - MyPhone
 - OneNote
 - Store (for softwares)
@@ -96,8 +97,6 @@ List of Everything to increase productivity in Windows10
 
 ## Settings
 
----
- 
 - Disable Background/startup apps (not all)
 - Spacial sounds
 - System Restore point

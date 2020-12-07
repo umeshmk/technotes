@@ -1,4 +1,5 @@
 const { description } = require("../../package");
+const { sidebar } = require("./sidebar");
 
 module.exports = {
   /**
@@ -34,20 +35,19 @@ module.exports = {
     editLinks: false,
     docsDir: "",
     editLinkText: "",
-    // lastUpdated: true,
     lastUpdated: "Last Updated",
     nav: [
       {
         text: "Documentation",
         link: "/documentation/vuepress",
       },
+      {
+        text: "Keyboard-shortcuts",
+        link: "/keyboard-shortcuts/windows10",
+      },
     ],
-    sidebar: {
-      "/documentation/": [
-        ["vuepress.md", "Vuepress"],
-        ["markdown.md", "Markdown"],
-      ],
-    },
+    sidebarDepth: 2,
+    sidebar: sidebar,
   },
 
   /**

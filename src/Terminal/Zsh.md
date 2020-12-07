@@ -12,7 +12,7 @@ Community framework - `ohmyzsh`
 - https://grml.org/zsh/zsh-lovers.html
 - [DotFiles](https://github.com/mathiasbynens/dotfiles)
 - [Install zsh ](https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH)
-- Install zsh on GitBash 
+- Install zsh on GitBash
   - Extract [zsh package](https://packages.msys2.org/package/zsh?repo=msys&variant=x86_64)) to `C:\Program Files\Git`
   - ```sh
     # Launch Zsh (Add this in .bashrc)

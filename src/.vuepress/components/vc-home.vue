@@ -12,7 +12,9 @@ export default {
     return {
       msg: "Hello this is <demo-component>",
       topic: {
-        Documentation: "/vuepress-notes/",
+        Documentation: "/documentation/vuepress",
+        Windows10: "/windows10/windows10",
+        "Visual-Studio-Code": "/visual-studio-code/vscode",
         Html: "/",
         Css: "/",
         Javascript: "/",

@@ -1,4 +1,6 @@
-# Language - Javascript
+# Language
+
+## Javascript
 
 - Vscode use typescript (`typings` files) for intellisense.
 - Settings file - `jsconfig.json` / `tsconfig.json`
@@ -8,7 +10,7 @@ For better intellisense
 - Use `jsconfig.json` (to exclude folders for intellisense)
 - Avoid `JSDocs`
 
-> Automatic type acquisition
+### Automatic type acquisition
 
 - Most js libs comes with typings. If not then vscode will download from community maintained repo for libs in `package.json`
 - https://www.typescriptlang.org/dt/search?search=
@@ -25,11 +27,11 @@ Example of `jsconfig.json` / `tsconfig.json`
 }
 ```
 
-> JSX
+### JSX
 
 supported
 
-> Organise imports
+### Organise imports
 
 - Right click anywhere + SourceAction > Organise imports
 - Automate
@@ -40,11 +42,11 @@ supported
 }
 ```
 
-> References codelens
+### References codelens
 
 Disabled by default
 
-> Debugging
+### Debugging
 
 Good inbuilt support
 Clientside - chrome, firefox vscode extensions
@@ -82,10 +84,10 @@ Default intellisense needed ?
 "html.suggest.html5": true
 ```
 
-Define a folding region: 
-`<!-- #region --> ` and ` <!-- endregion -->`
+Define a folding region:
+`<!-- #region -->` and `<!-- endregion -->`
 
 ## Markdown
 
 Create your own css style for Markdown preview.
-` "markdown.styles": ["Style.css"]`
+`"markdown.styles": ["Style.css"]`
