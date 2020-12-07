@@ -27,5 +27,29 @@ module.exports = {
       "Testing.md",
     ],
     "/terminal/": ["Zsh.md", "Bash.md", "Bash-script.md", "WindowsTerminal.md"],
+    "/miscellaneous/": [
+      {
+        title: "Miscellaneous",
+        collapsable: false,
+        children: [
+          "Git.md",
+          "Regular Expression.md",
+          "Rest API.md",
+          "DBMS.md",
+          "github-ssh.md",
+        ],
+      },
+      {
+        title: "Data structure & algorithm",
+        collapsable: false,
+        children: [
+          "dsa/Data structures.md",
+          "dsa/Algorithms.md",
+          "dsa/Big O.md",
+          "dsa/Cracking the coding interview.md",
+        ],
+        initialOpenGroupIndex: -1,
+      },
+    ],
   },
 };

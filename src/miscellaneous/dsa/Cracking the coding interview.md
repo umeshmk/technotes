@@ -2,13 +2,6 @@
 
 ## Interview process
 
-- Amazon
-  - System design & scalability
-  - OOPs questions
-- Google
-  - Algorithms
-  - System design & scalability
-
 **Product Manager** / **Dev Leads**
 
 - Listen (dont talk in middle)
@@ -27,7 +20,7 @@
 
 ## Behaviour questions
 
-- **In Story format** - _STAR_ (Like upwork client suggested cloud9)
+- **In Story format**
   - Situation
   - Task
   - Action
@@ -105,7 +98,3 @@
   - _Career path in 2-3 years_
   - _Relationships & networks_
   - _Keep interviewing atleast 1 in a year for practice_
-
-
-
-

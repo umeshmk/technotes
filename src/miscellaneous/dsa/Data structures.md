@@ -1,6 +1,6 @@
-# DATA STRUCTURES
+# Data structure
 
-#### # Introduction
+## Introduction
 
 - Data structure organizes data. A good DS is a good algorithm.
 - _Most common_
@@ -15,7 +15,7 @@
   - Linked list is used to create a stack and queue DS.
 - Each DS has its own set of operations.
 
-#### # Linked list
+## Linked list
 
 ![](/images/Linkedlist.png?raw=1)
 
@@ -30,7 +30,7 @@
 - **Usage**
   - Its a fundamental DS for _stack, tree, queue, graph_
 
-#### # Stack
+## Stack
 
 - Create using _Array_ or _Linked List_
 - `LIFO` -> Last In First Out
@@ -38,20 +38,20 @@
 - **Usage**
   - _Undo/redo_ functions.
 
-#### # Queue
+## Queue
 
 - Create using _Array_ or _Linked List_
 - `FIFO` -> First In First Out
 - **Usage**
   - _Printer_, _Call center_ calls, etc
 
-#### # Graph
+## Graph
 
 - Set of _nodes_ (vertex) and its _connections_ (edges)
 
 ![](/images/graph.png?raw=1)
 
-#### # Binary Tree
+## Binary Tree
 
 - Interconnected nodes.
   - Topmost = _root_
@@ -74,7 +74,7 @@
 - **Usage**
   - _Binary Search Tree_ in search applications
 
-#### # Hash Tables
+## Hash Tables
 
 - Key-value
 - Hash is a unique value. eg: Student id, Book number, etc
@@ -88,7 +88,7 @@
   - Associative arrays
   - Database indexing
 
-#### # Matrix
+## Matrix
 
 - _2-d_ arrays having _rows_ and _columns_
 - `6x3` matrix = 6 _rows_ and 3 _columns_

@@ -1,13 +1,19 @@
-# GIT
+# Git
 
 > Version Control System For Any Projects
+>
+> [git-scm.com](https://git-scm.com/doc)
+>
+> [github-git-cheat-sheet.pdf](https://training.github.com/downloads/github-git-cheat-sheet.pdf)
+>
+> [hofmannsven/6814451](https://gist.github.com/hofmannsven/6814451)
 
 ```bash
 cd project
 git init
 ```
 
-#### # SSH / HTTPS
+## SSH / HTTPS
 
 ```bash
 # SSH
@@ -18,7 +24,7 @@ git remote add origin https://github.com/umeshmk/Tutorials.git
 git remote add origin https://umeshmk@github.com/umeshmk/Tutorials.git
 ```
 
-#### # TRACKING
+## TRACKING
 
 | Tracking    |                                             |                           |
 | ----------- | ------------------------------------------- | ------------------------- |
@@ -27,7 +33,7 @@ git remote add origin https://umeshmk@github.com/umeshmk/Tutorials.git
 | _Staged_    | File ready for commit (except `.gitignore`) | `git add abc.txt`         |
 | _Committed_ | Repo updated                                | `git commit -m "updated"` |
 
-#### # BASICS
+## BASICS
 
 | Cmd          | -                                              | -                                                                                                |
 | ------------ | ---------------------------------------------- | ------------------------------------------------------------------------------------------------ |
@@ -39,7 +45,7 @@ git remote add origin https://umeshmk@github.com/umeshmk/Tutorials.git
 | _Reset_      | Removes file from _staged_ (file is unchanged) | `git reset abc.txt`                                                                              |
 | _Checkout_   | Resets file to last commit (file is changed)   | `git checkout abc.text`                                                                          |
 
-#### # BRANCH
+## BRANCH
 
 | Task            | -                                   | -                                                                         |
 | --------------- | ----------------------------------- | ------------------------------------------------------------------------- |
@@ -48,7 +54,7 @@ git remote add origin https://umeshmk@github.com/umeshmk/Tutorials.git
 | _See branch_    | Lists all branches                  | `git branch`                                                              |
 | _Merge_         | Merge any branch with master branch | First switch to master `git checkout master` then `git merge <anybranch>` |
 
-#### # AMEND
+## AMEND
 
 - Combine _staged_ changes to _previous_ commit
 - Replaces the whole previous commit
@@ -57,7 +63,7 @@ git remote add origin https://umeshmk@github.com/umeshmk/Tutorials.git
 git commit --amend -m "updated"
 ```
 
-#### # TAG (Releases)
+## TAG (Releases)
 
 - Use tags like `v1, v2, v2.0.2`
 - Saves current state as a new release.
@@ -83,13 +89,9 @@ git push origin <tagname>                   # only 1 tag is pushed
   - Create tags using github GUI.
   - Now fetch this changes using cmd `git fetch`
 
-#### # MISC
+## MISC
 
 | Task      |             |
 | --------- | ----------- |
 | _Fetch_   | `git fetch` |
 | _History_ | `git log`   |
-
-#### # REFERENCES
-
-- https://gist.github.com/hofmannsven/6814451

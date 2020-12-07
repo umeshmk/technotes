@@ -1,8 +1,24 @@
-# ALGORITHM-SORTING
+# Algorithms
 
 **TIME** & **SPACE** are key factors any actions
 
-#### # BUBBLE SORT
+## Top 10 Algorithms
+
+src - https://www.youtube.com/watch?v=r1MXwyiGi_U
+
+1. Depth first search
+2. Breadth first search
+3. Match Brackets
+4. Hashtables
+5. Variables/pointers manipulations
+   - Quicksort & Mergesort are faster than Bubblesort
+6. Reverse Linked list
+7. Sort
+8. Recursion (Rarely used in production because its a stack which has limits of iterations. Not sure.)
+9. Custom Datastructures (Classes, OOPs)
+10. Binary Search
+
+## BUBBLE SORT
 
 > - Sorts elements list like an _array_.
 > - Compares 2 adjacent elements
@@ -29,7 +45,7 @@
 | Simple                       | Not optimal due to multiple iterations                                                                           |
 | No additional space required | _worst-case_ for _n_ number of elements requires swappings `(n-1) + (n-2) + (n-3) + .... + 3 + 2 + 1 = n(n-1)/2` |
 
-#### # SELECTION SORT
+## SELECTION SORT
 
 > - Finds smallest element and place it at start.
 > - Repeat for rest of elements.
@@ -47,7 +63,7 @@ Step 1 -> [1,3,5,2]
 | Very good for smaller list   | Bad for big lists |
 | No additional space required | -                 |
 
-#### # INSERTION SORT
+## INSERTION SORT
 
 > - Similar to sorting playing cards
 
@@ -63,7 +79,7 @@ Step 1 -> [1,3,5,2]       // 2 elements [1,3] are sorted
 | Good for small lists | Bad for large lists |
 | No extra space       | -                   |
 
-#### # MERGE SORT
+## MERGE SORT
 
 > - Divide and conquer
 > - Divide array into half until each item is single element
@@ -83,7 +99,7 @@ Step 1 -> [31,4,88,1] [4,2,42]
 | --------------------------------------------------- | ----------------------------------- |
 | Good for sorting _Linked lists_ with no extra space | _Array_ needs temporary extra space |
 
-#### # QUICK SORT
+## QUICK SORT
 
 > - Select any element as **pivot** element
 > - Sort rest of elements as `[] <= (pivot) >= []`
@@ -103,24 +119,24 @@ Step 1 -> [2,0] (3) [7,4]                 // (3) is pivot
 
 > - 3-way Quicksort is another way in which 3 arrays are created (lesser, equal, greater) instead of 2 arrays
 
-#### # TOWER OF HANOI
+## TOWER OF HANOI
 
 > - Do google search
 
-#### # LINEAR SEARCH
+## LINEAR SEARCH
 
-> - Every item is searched and the index is returned if matched.
-> - `-1` is returned if not matched
-> - Starts from left of the list
->   **Disadvantages**
-> - Rarely used.
-> - Binary search(see below) is better
+- Every item is searched and the index is returned if matched.
+- `-1` is returned if not matched
+- Starts from left of the list
+  **Disadvantages**
+- Rarely used.
+- Binary search(see below) is better
 
-#### # BINARY SEARCH
+## BINARY SEARCH
 
-> - Sorted list is required
-> - Divide and conquer. Into 2 parts.
-> - Matches elements with middle element of list
-> - Index is returned if matched
-> - If middle item is greater than search item then use left side array else use right side array.
-> - Repeat on each sub-arrays till sub-array size is 0.
+- Sorted list is required
+- Divide and conquer. Into 2 parts.
+- Matches elements with middle element of list
+- Index is returned if matched
+- If middle item is greater than search item then use left side array else use right side array.
+- Repeat on each sub-arrays till sub-array size is 0.
