@@ -1,15 +1,19 @@
 # Zsh
 
-https://www.zsh.org
-
-Shell - `zsh`
-Config - `~/.zshrc`
-Community framework - `ohmyzsh`
+> A very powerful shell when combined with framework like OhMyZsh
+>
+> [https://www.zsh.org](https://www.zsh.org)
+>
+> Shell - `zsh`
+>
+> Config - `~/.zshrc`
+>
+> Community framework - `ohmyzsh`
 
 ## Guides
 
 - [Reference card](http://www.bash2zsh.com/zsh_refcard/refcard.pdf)
-- https://grml.org/zsh/zsh-lovers.html
+- [https://grml.org/zsh/zsh-lovers.html](https://grml.org/zsh/zsh-lovers.html)
 - [DotFiles](https://github.com/mathiasbynens/dotfiles)
 - [Install zsh ](https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH)
 - Install zsh on GitBash
@@ -51,3 +55,11 @@ Community framework - `ohmyzsh`
 - `.zprofile`
 - `.zshrc`
 - `.zlogin`
+
+## .zshrc
+
+<<< @/src/terminal/.zshrc
+
+## .aliases
+
+<<< @/src/terminal/.aliases

@@ -26,5 +26,6 @@ module.exports = {
       "PSR Standards.md",
       "Testing.md",
     ],
+    "/terminal/": ["Zsh.md", "Bash.md", "Bash-script.md", "WindowsTerminal.md"],
   },
 };

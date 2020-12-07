@@ -1,21 +1,26 @@
-# BASH SCIPTING
+# Bash scripting
 
-Bash is a shell. A shell is a program that runs on top of kernel.
-`.sh` is unix. `.bash` is Linux. Unix is core for Linux.
-`first.sh` or `first` (extension is optional)
-Must have execute permissions.
+> Bash scripting
+>
+> `.sh` is unix. `.bash` is Linux. Unix is core for Linux.
+>
+> `first.sh` or `first` (extension is optional)
+>
+> Must have execute permissions.
 
 ```sh
 #!/bin/bash                           # called as "sha-bang" at the start
 #!/usr/bin/env bash
 
-
-# comments
 echo "Lets start scripting"
 echo $PATH
 set $PATH=$HOME/bin:$PATH
 
+```
 
+## Multiline
+
+```sh
 # -------Multiline----------------
 sudo apt install git \
                  nginx \
@@ -27,14 +32,22 @@ test -f "~/.bashrc" \
      || echo "File not found"
 
 
+```
 
+## Standards I/O : stdin , stdop, stderr
+
+```sh
 # -------Standards I/O : stdin , stdop, stderr----------------
 echo "Hello" > /dev/null              # Send to trashcan. Hides output
 echo "Hello" > /dev/null 2>&1         # Even errors are trashed
 echo "Hello" > /dev/null >&2          # Shows errors
 
 
+```
 
+## Variables
+
+```sh
 # -------Variables:----------
 env                                   # shows all variables
 a=b                                   # set variables
@@ -43,7 +56,11 @@ alias a="echo'hi'"                    # shortcut for cmds
 echo $a
 
 
+```
 
+## Arguments
+
+```sh
 # --------Arguments-----------
 $@                                    # special variable to list arguments
 $?                                    # exit code
@@ -51,7 +68,11 @@ $0                                    # cmd itself
 $1, $2, $3                            # cmd arguments
 
 
+```
 
+## IF
+
+```sh
 # --------IF :----------
 # example
 which ifconfig > /dev/null            # checks for file
@@ -73,7 +94,11 @@ if [-n "$1"] ; then
 fi
 
 
+```
 
+## FUNCTIONS
+
+```sh
 # --------FUNCTIONS :----------
 set -e                                  # exit script if errors. exit code is not needed --optional
 myfunc () {
@@ -102,7 +127,11 @@ _EOF_
 }
 
 
+```
 
+## FOR
+
+```sh
 # --------FOR :----------
 for FILE in ./\*.deb                     # FILE is a variable like $i=0
     do
@@ -115,7 +144,11 @@ for A in $@                              # loop arguments
 done
 
 
+```
 
+## INTERACTIVE
+
+```sh
 # --------INTERACTIVE :----------
 echo "Enter [y/n]"
 read -n 1 -s choice                      # saves in choice variable

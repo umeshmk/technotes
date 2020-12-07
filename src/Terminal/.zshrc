@@ -1,3 +1,4 @@
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -19,7 +20,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # CASE_SENSITIVE="true"
 # HYPHEN_INSENSITIVE="true"  # Case-sensitive completion must be off. _ and - will be interchangeable.
 
-# History timestamps 
+# History timestamps
 # "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd" or set using strftime
 HIST_STAMPS="dd.mm.yyyy"
 
@@ -54,3 +55,4 @@ bindkey '^H' backward-kill-word
 #   git add .
 #   git commit -m "$1"
 #   git push
+```

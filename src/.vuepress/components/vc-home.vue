@@ -15,6 +15,7 @@ export default {
         Documentation: "/documentation/vuepress",
         Windows10: "/windows10/windows10",
         "Visual Studio Code": "/visual-studio-code/vscode",
+        Terminal: "/terminal/Bash",
         Php: "/php",
         Html: "/",
         Css: "/",
