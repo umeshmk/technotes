@@ -1,4 +1,4 @@
-## # FILE STORAGE
+# FILE STORAGE
 
 - _Flysystem_ package
 - Same API for- _Local / Amazon S3_

@@ -51,5 +51,45 @@ module.exports = {
         initialOpenGroupIndex: -1,
       },
     ],
+    "/laravel/v6/": [
+      {
+        title: "Laravel (Deprecated)",
+        collapsable: false,
+        children: [
+          "1-GettingStarted.md",
+          "2-ArchitecturalConcepts.md",
+          "3-Basics.md",
+          "4-Frontend.md",
+        ],
+      },
+      {
+        title: "Security",
+        collapsable: false,
+        children: [
+          "5-Security/1-Authentication.md",
+          "5-Security/2-Api_authentication_incomplete.md",
+          "5-Security/3-Authorization.md",
+          "5-Security/Others.md",
+        ],
+      },
+      {
+        title: "Digging deeper",
+        collapsable: false,
+        children: [
+          "6-Digging-deeper/1-Artisan-console.md",
+          // "6-Digging-deeper/2-Broadcast_incomplete.md",
+          "6-Digging-deeper/3-Cache+Collections.md",
+          "6-Digging-deeper/4-Events.md",
+          // "6-Digging-deeper/5-Notifications-incomplete.md",
+          // "6-Digging-deeper/6-Packagedev+Queues+Taskschedule-incomplete .md",
+          "6-Digging-deeper/7-Filestorage+Mail.md",
+        ],
+      },
+      {
+        title: "Database",
+        collapsable: false,
+        children: ["7-Database.md", "8-EloquentORM.md"],
+      },
+    ],
   },
 };

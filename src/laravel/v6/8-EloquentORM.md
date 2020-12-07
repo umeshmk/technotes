@@ -1,4 +1,4 @@
-## # ELOQUENT
+# ELOQUENT
 
 - ORM (object relationship diagram)
 - **MODELS**

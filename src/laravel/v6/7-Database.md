@@ -1,4 +1,4 @@
-## # DATABASE
+# DATABASE
 
 - Raw / query builder / eloquent ORM
 - **Config (SQLite)**

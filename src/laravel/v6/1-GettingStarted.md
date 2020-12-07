@@ -1,5 +1,11 @@
 # GETTING STARTED
 
+:::danger Deprecated
+This notes are for version 6. Current version is 8+ at the time of this editing.
+
+Still most of the parts are relevent.
+:::
+
 ## RELEASE (version 6)
 
 - Laravel Vapor
