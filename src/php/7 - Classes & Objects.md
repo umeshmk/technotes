@@ -1,9 +1,9 @@
 # Classes & Objects
 
-> Basics
+## Basics
 
 ```php
-class Foo {}                        // First (letter or underscore) 
+class Foo {}                        // First (letter or underscore)
 class FooBar {}                     // CamelCase
 
 class Foo{
@@ -36,7 +36,7 @@ class Foo{                          // same name is possible since different nam
 }
 ```
 
-> Extend - Inheritance
+## Extend - Inheritance
 
 ```php
 class Foo {
@@ -83,10 +83,10 @@ class B extends A {
 $o = new B(23);
 ```
 
-> Constants
+## Constants
 
 ```php
-class A { 
+class A {
     const PI = 3.14;                // capital letters (practice)
     const PI = $a;                  // error
 }
@@ -96,22 +96,22 @@ echo A::class                       // Model\A (namespace is constant too)
 
 ```
 
-> **Autoloaders [NEEDS MORE STUDY]**
+## **Autoloaders [NEEDS MORE STUDY]**
 
 ```php
 class Foo {}                        // Foo,php
 
 spl_autoload_register{
-    function ($myclass){ 
+    function ($myclass){
         include $myclass.".php" ;   // {loads, require, include, require_once}
     }
 }
 ```
 
-> Constructor / Destructor
+## Constructor / Destructor
 
 ```php
-# custom 
+# custom
 class A {
     public function A (){..}        // same name as class
 }
@@ -127,7 +127,7 @@ class B extends A {
 }
 ```
 
-> Visibity
+## Visibity
 
 ```php
 # Types
@@ -136,11 +136,11 @@ protected Foo()                     // method
 public PI                           // constant
 ```
 
-> Scope-resolution **::** 
+## Scope-resolution **::**
 
 ```php
 # Usage in 3 ways - [static variable , constants, overridden props & methods]
-# 
+#
 class A {
     const PI = 3.14;
     public function foo (){....}
@@ -160,14 +160,14 @@ $o->foo();                          // Non static method
 
 ```
 
-> Static - (Use Props & Methods without instantiation)
+## Static - (Use Props & Methods without instantiation)
 
 ```php
-class A{ 
-    public static $x = 1; 
+class A{
+    public static $x = 1;
     public static function foo() { ... }
 }
-  
+
 $a = new A;
 #access property (no arrow)
 $a::$x;
@@ -177,10 +177,10 @@ A::foo();
 
 ```
 
-> Abstraction
+## Abstraction
 
 ```php
-abstract class A { 
+abstract class A {
   public $a = 11;                       // props can't be abstract
   abstract public function foo();       // cannot have even empty body "{}"
   public function bar(){....}           // non-abstract method with body
@@ -196,7 +196,7 @@ class B extends A {
 // 2] extends vs implements
 ```
 
->  Interfaces [visibility must be public ]
+## Interfaces [visibility must be public ]
 
 ```php
 interface I {
@@ -213,7 +213,7 @@ interface B {...}
 interface C extends A,B {...}
 ```
 
-> Traits - (code reuse)[cannot be instantiated]
+## Traits - (code reuse)[cannot be instantiated]
 
 ```php
 trait T {
@@ -228,7 +228,7 @@ class A {
 
 ```
 
-> Overloading - (NOT ALLOWED)(same name with different args length)
+## Overloading - (NOT ALLOWED)(same name with different args length)
 
 ```php
 class Foo {
@@ -237,7 +237,7 @@ class Foo {
 }
 ```
 
-> Magic Methods
+## Magic Methods
 
 ```php
 __construct() , __destruct()
@@ -251,7 +251,7 @@ __debuginfo()
 
 ```
 
-> Final (methods cannot be overriden)
+## Final (methods cannot be overriden)
 
 ```php
 // methods
@@ -259,22 +259,22 @@ class A {
     public final $a = 55;             // error (props can't be final)
     public final function foo(){..}
 }
-class B extends A {	
+class B extends A {
     public function foo(){...}        // error
 }
-# class  
+# class
 final class C {	}
 class D extends C {	}                 // error (cannot be extended)
 
 ```
 
-> Clone Object (uses "__clone()" magic method )
+## Clone Object (uses "\_\_clone()" magic method )
 
 ```php
 $c = clone $obj ;                     // a new copy of object $obj is created
 ```
 
-> Comparing Objects
+## Comparing Objects
 
 ```php
 # "=="
@@ -287,18 +287,18 @@ echo ($a == $b)                        // false (different attributes/values)
 
 ```
 
-> Un/Serialize Objects - (use "json_encode()" instead)
+## Un/Serialize Objects - (use "json_encode()" instead)
 
 ```php
 
 class A {
     public $a = "hello";
-}  
-$a = new A;  
+}
+$a = new A;
 echo serialize($a);                 // O:1:"A":1:{s:1:"a";s:5:"hello";}
 ```
 
-> Namespace
+## Namespace
 
 ```php
 # similar to folder structure but "\" is used and not"/" as in folders
@@ -313,7 +313,7 @@ class Controller extends Base{...}
 
 ```
 
-> Errors
+## Errors
 
 ```php
 Error_reporting(E_ALL)                   // (.env)
@@ -322,13 +322,13 @@ Display_errors = On                      // (php.ini) Off in production
 # Use php library like [Monolog](github.com/Seldaek/monolog)
 ```
 
-> Exceptions
+## Exceptions
 
 ```php
 try{
     $a = $b;
-    if(!$a){ 
-        throw new Exception ("Variable not found"); 
+    if(!$a){
+        throw new Exception ("Variable not found");
     }
 }
 catch(Exception $e){
@@ -339,15 +339,15 @@ finally{
 }
 ```
 
-> Generators (A function which can "return" multiple times)
+## Generators (A function which can "return" multiple times)
 
-> References
+## References
 
 ```php
-# variable_names => reference  => content 
+# variable_names => reference  => content
 $a = 5;
 $b = &$a;
-  
+
 echo $a;                            // 5
 $b++;
 echo $a;                            // 6
@@ -355,14 +355,14 @@ echo $a;                            // 6
 echo ($a == $b)?1:0 ;               // 1
 echo ($a === $b)?1:0 ;              // 1
 
-unset($a);  
+unset($a);
 echo isset($a)?"yes":"no";          // no
 echo isset($b)?"yes":"no";          // yes
 ```
 
-> Predefined variable - see "Variables.md"
+## Predefined variable - see "Variables.md"
 
-> Method Chaining
+## Method Chaining
 
 ```php
 class A{
@@ -377,8 +377,3 @@ class A{
 $o = new A();
 $o->foo()->bar();                   // "foobar" Chaining methods
 ```
-
-
-
-
-

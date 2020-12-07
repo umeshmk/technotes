@@ -1,22 +1,22 @@
-# PHP - VARIABLE
+# Variable
 
-> Basics
+## Basics
 
 ```php
 $PHP != $php        // case-sensitive
 $abc | $_foo        // First character : *Letter or underscore *
 $this               // special variable
-# Assigned 
+# Assigned
 $a = "umesh"        // by value
 $b = &$a            // By reference
 //$b = &foo()       // invalid
 ```
 
-> Scope (global & static variables)
+## Scope (global & static variables)
 
 ```php
 // gobal variable (ie not in any function)
-$a = "umesh"                            
+$a = "umesh"
 function foo() { echo $a; }             // error
 function foo() { global $a; }           // works with "global" keyword
 function foo() { echo $GLOBALS["a"]; }  // works with "global" keyword
@@ -40,7 +40,7 @@ static $b="foo"
 global $a = $b              // $a = NOT pointer [wrong since static]
 ```
 
-> `$$` - variable variables
+## `$$` - variable variables
 
 ```php
 $a = "hello"
@@ -55,7 +55,7 @@ echo ${$a}[2]       // right
 
 ```
 
-> Superglobal variables
+## Superglobal variables
 
 ```php
 $GLOBALS

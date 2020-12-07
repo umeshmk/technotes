@@ -14,12 +14,12 @@ export default {
       topic: {
         Documentation: "/documentation/vuepress",
         Windows10: "/windows10/windows10",
-        "Visual-Studio-Code": "/visual-studio-code/vscode",
+        "Visual Studio Code": "/visual-studio-code/vscode",
+        Php: "/php",
         Html: "/",
         Css: "/",
         Javascript: "/",
         Shells: "/",
-        "Visual Studio Code": "/",
       },
     };
   },
@@ -34,13 +34,15 @@ export default {
   a {
     display block
     color: lightgreen;
-    padding: 10px 40px;
+    margin-top  40px
+    // padding: 10px 40px;
   }
 
   h1 {
     font-size: 1.6em;
     background-color: #202020;
-    padding: 10px;
+    // padding: 10px;
+    padding: 15px 10px;
   }
 }
 </style>

@@ -1,6 +1,6 @@
-# Features 
+# Features - Cookies & Sessions
 
-> Cookies
+## Cookies
 
 ```php
 # Stored in browser.
@@ -12,11 +12,11 @@ $_COOKIE["name"]                            // get
 setcookie("name", "value", time()+1000)     // set
 ```
 
-> Sessions
+## Sessions
 
 ```php
 # Saves data in server
-# Unique id - stored in URL/Cookie in textform 
+# Unique id - stored in URL/Cookie in textform
 # data Text - "serialize" can be used
 # sid Text - "htmlspecialchars" can be used
 
@@ -30,7 +30,7 @@ if(session_status == PHP_SESSION_NONE){
 
 ```
 
-> PDO - Php Data Objects 
+## PDO - Php Data Objects
 
 ```php
 # It is interface to access Database - Use same functions for any DB (mysql, postgres, MSSql, etc)
@@ -38,13 +38,13 @@ if(session_status == PHP_SESSION_NONE){
 # See "Php-the right way.md" file on this repo
 ```
 
-> Datetime
+## Datetime
 
 ```php
 # Use "Carbon" library
 ```
 
-> Mail
+## Mail
 
 ```php
 # Use "SwiftMailer" library
@@ -52,7 +52,7 @@ if(session_status == PHP_SESSION_NONE){
 mail($to , $subject, $message, $headers)        // Creates mail. Then sends mail to SMTP server
 ```
 
-> Json
+## Json
 
 ```php
 $a = array("a" => 1 , "b" => 2 , "c" => 3 );    // Array/Objects can be use
@@ -62,7 +62,7 @@ $arr = json_decode($b, true);                   // "true" for associative array
 
 ```
 
-> cURL (Client URL library)
+## cURL (Client URL library)
 
 ```php
 # curl : https://curl.haxx.se
@@ -74,4 +74,4 @@ $arr = json_decode($b, true);                   // "true" for associative array
 
 ```
 
-> Memcached - (Store key=value in ram memory for caching)
+## Memcached - (Store key=value in ram memory for caching)

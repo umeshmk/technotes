@@ -1,22 +1,27 @@
-# PHP - BASIC SYNTAX & DATA TYPES
+# Basic syntax & Data types
 
-#### # Websites
- 
- > php.net | phptherightway.com | phpbestpractices.org | OOP php on Udemy | Search on Github | [Awesome PHP - Github](https://github.com/ziadoz/awesome-php)
+:::danger Deprecated
+I have stopped learning Php due low market demand & confidence.
+This notes were written years ago.
+:::
 
-#### # Usage
+## Websites
+
+> php.net | phptherightway.com | phpbestpractices.org | OOP php on Udemy | Search on Github | [Awesome PHP - Github](https://github.com/ziadoz/awesome-php)
+
+## Usage
 
 - Server side scripting (needs parser, server and browser)
 - Command line scripting (parser) [cron in linux / task schedular]
 - Desktop apps
 
-#### # Basics
+## Basics
 
 - Type : `procedural / oop / both`
 - Output : `text/html/pdf/flash/images`
 - Database : `mysql/pdo/odbc` or `sockets for couchDB, etc`
 - Protocols : `LDAP/IMAP/SNMP/NMTP/POP3/HTTP/COM(in windows)`
-- *PECL* : Repository for PEAR packages
+- _PECL_ : Repository for PEAR packages
 
 ```php
 `<?php .... ?>`                     # Opening-closing tag [Can omit end-tag incase pure php file]
@@ -33,7 +38,7 @@ htmlspecialchars($a);               # Text sanitize, eg: "<" to "&lt;"
 # Single-line comment
 /* Multi-line comment */
 
-// Immediate next line works even after closing `?>` tag 
+// Immediate next line works even after closing `?>` tag
 <?php if(a==1) ; ?>
 Print this
 <?php else ; ?>
@@ -41,21 +46,21 @@ Else print this
 <?php endif; ?>
 ```
 
-#### # Datatypes
+## Datatypes
 
 - `double` is same as `float`. Hence always use `float`
 
 ```php
 var_dump($a);                       # print variable datatype and value
 gettype($a);                        # Print variable datatype
-settype($a, "integer");             # convert variable datatype 
+settype($a, "integer");             # convert variable datatype
 
 if (is_string($a) && is_int($b))    # check variable datatype
 
 $a = (int) $b ;                     // Type-casting
 ```
 
-> Boolean
+### Boolean
 
 ```php
 FALSE = false = 0 = "" = "0" = NULL = empty_array[]
@@ -63,23 +68,23 @@ FALSE = false = 0 = "" = "0" = NULL = empty_array[]
 
 **NaN ........ ? google it**
 
-> Integers
+### Integers
 
 ```php
-0b111       # Binary 
-0a213       # Octal 
-910         # Decimal 
+0b111       # Binary
+0a213       # Octal
+910         # Decimal
 0x5a2fee    # Hexadecimal
 
 "+" or "-"                      # sign
-2 billion in 32-bit variable    # size (double for 64-bit) 
+2 billion in 32-bit variable    # size (double for 64-bit)
 // Note : If exceeds then it is considered as a float
 # Type-casting to int for
 NaN = 0
 infinity = 0
 ```
 
-> Float
+### Float
 
 ```php
 1.234   1.2e3   7E-10
@@ -88,7 +93,7 @@ infinity = 0
 # Never compare two floating variables directly for equality. Because float is internally represented as binary. This can give precision error.
 ```
 
-> Strings
+### Strings
 
 ```php
 # 250 character code & no unicode support
@@ -118,7 +123,7 @@ function __toString() { ... }    // return anything in string only
 "Serialization"       // (Avoid it.) Converts any php value to sting for storing like blobs in DB.
 ```
 
-> Arrays
+### Arrays
 
 ```php
 # Ordered maps (in key-value form)
@@ -147,11 +152,11 @@ unset($a)           // removes $a (Not just empty array but variable)
 
 # Type casting
 [int,float,string,boolean,Null]  // gives array of length 1
-[object]                         // gives array with properties(& not functions) as elements 
+[object]                         // gives array with properties(& not functions) as elements
 
 ```
 
-> Object
+### Object
 
 ```php
 # stdClass - creates anonymous objects. Class is predefined in php.
@@ -170,7 +175,7 @@ NULL        // empty object of stdClass
 array       // elements(key-value) are converted to object properties
 ```
 
-> Null
+### Null
 
 ```php
 $a = NULL = null;
@@ -179,7 +184,7 @@ $a = [];
 is_null($a)             // gives nothing. (niether 1 nor 0)
 ```
 
-> Callback/callable
+### Callback/callable
 
 ```php
 # A function/method can be called with its name.
@@ -189,6 +194,3 @@ call_user_func("Fooclass", "foo")       // class Fooclass{ foo(){..}}
 call_user_func("Fooclass::foo")         // class Fooclass{ static foo(){..}}
 call_user_func($foo_obj, "foo")         // $foo_obj = new Fooclass()
 ```
-
-
-

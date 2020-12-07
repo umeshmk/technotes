@@ -1,32 +1,53 @@
-# PHP - CONTROL STRUCTURES
+# Control structures
+
+## IF
 
 ```php
-# IF
 if(cond){..}else{...}
 if(cond){..}elseif{...}else{...}
 
-# WHILE / DO WHILE
+```
+
+## WHILE / DO WHILE
+
+```php
 while(cond){...}
 do{...}while(cond)          // runs atleast once
 
-# FOR
+```
+
+## FOR
+
+```php
 for($i=0 ; $i < 5 ; $i++){...}
 
-# FOREACH [used for array only]
+```
+
+## FOREACH [used for array only]
+
+```php
 foreach($a as $value){...}
 foreach($a as $key => $value){...}
 
-# BREAK/CONTINUE
+```
+
+## BREAK/CONTINUE
+
+```php
 break;              // 1 loop
 break n;            // n loop
 continue;
 continue n;
 
-# SWITCH
+```
+
+## SWITCH
+
+```php
 switch(case){
-    case 1:         ... 
+    case 1:         ...
         break;
-    
+
     case "foo":     ...
         break;
 
@@ -34,28 +55,52 @@ switch(case){
         break;
 }
 
-# DECLARE
+```
+
+## DECLARE
+
+```php
 declare (directive);         // starting of code [ directive = ticks, encoding, strict-typing ]
 .....
 
-# RETURN
+```
+
+## RETURN
+
+```php
 return ;        // void
 return $a;      // depends on datatype of $a
 
-# REQUIRE - "fatal error" if not found
+```
+
+## REQUIRE - "fatal error" if not found
+
+```php
 require "file.php"          //
 
-# INCLUDE - "warning" if not found
+```
+
+## INCLUDE - "warning" if not found
+
+```php
 include "file.php"      // variables outside can be accessed inside file
 "<?php .... ?> "        // MUST be written inside file.
 "./a.php"               // current folder
 "../foo/a.php"          // parent folder
 
-# REQUIRE_ONCE / INCLUDE_ONCE
+```
+
+## REQUIRE_ONCE / INCLUDE_ONCE
+
+```php
 require_once("file.php")
 include_once("file.php")
 
-# GOTO
+```
+
+## GOTO
+
+```php
 goto foo;
 echo "not printed";
 foo : { echo "printed"; }
@@ -65,4 +110,3 @@ To jump "in" loop                  // ERROR
 To jump "out" loop                 // WORKS
 
 ```
-

@@ -1,37 +1,37 @@
+# PSR Standards
+
 https://www.php-fig.org/psr/psr-1/
 https://github.com/jupeter/clean-code-php
-
 
 Related to code-style (Used by Laravel)
 PSR-1, PSR-12 and PSR-4
 
-
-# Code Editor's extensions
+## Code Editor's extensions
 
 - **php Codesniffer** - checks for errors
 - **php Coding standards fixer** - Fixes code
 - **php code beautifier & fixer** - Fixes code
 
+## PSR1 - Basic coding standard
 
-# PSR1 - Basic coding standard
 <?php .......  ?>
+
 UTF-8 files only
 Autoloading (PSR-4)
 Class names in "StudlyCaps"
-property names  anything [$StudlyCaps, $camelCase, or $under_score ]
+property names anything [$StudlyCaps, $camelCase, or $under_score ]
 Constants in "UPPERCASE"
-    const VERSION = '1.0';
-    const DATE_APPROVED = '2012-06-01'
+const VERSION = '1.0';
+const DATE_APPROVED = '2012-06-01'
 Method in "camelCase"
 
+## PSR -4 - Autoloading
 
-# PSR -4 - Autoloading
 classname = filename.php
 Namespace : `\Symfony\Core\Request`
 File path : `./vendor/Symfony/Core/Request.php`
 
-
-# PSR -12 - Extended coding guide
+## PSR -12 - Extended coding guide
 
 - No closing tag `?>` in pure php file
 - indent = 4 spaces
@@ -40,21 +40,22 @@ File path : `./vendor/Symfony/Core/Request.php`
 - `<?php` on first line
 - Instantiation with parenthesis always `new Foo()` , `new Foo($a)`
 - `use MyTrait;` first line inside class.
-    - 1 trait per line.
-    - Next line must be a blank line.
+
+  - 1 trait per line.
+  - Next line must be a blank line.
 
 - Property, method & constant
-    - Visibility(public,private, protected) is must (>=php7.1)
-    - `var` keyword is never used
-    - 1 declaration per line
-    - No starting with single underscore `_`
+  - Visibility(public,private, protected) is must (>=php7.1)
+  - `var` keyword is never used
+  - 1 declaration per line
+  - No starting with single underscore `_`
 - `abstract` & `final` is written before visibility
 - `static` is written after visibility
 
 - For loop : `for ($i = 0; $i < 10; $i++) {.....}`
 - ForEach loop : `foreach ($iterable as $key => $value) {....}`
 
-- Ternary operator : ` $foo ? 'foo' : 'bar';`
+- Ternary operator : `$foo ? 'foo' : 'bar';`
 - Closures : `$closureWithArgs = function ($arg1, $arg2) {....};`
 
 ```php
@@ -91,9 +92,3 @@ class Foo extends Bar implements FooInterface
 }
 
 ```
-
-
-
-
-
-
