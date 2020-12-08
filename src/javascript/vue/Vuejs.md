@@ -1,4 +1,8 @@
-# Vuejs - 2.6
+# Vue (2.6)
+
+:::danger Deprecated
+Current latest version is v3
+:::
 
 - A progressive framework for UI
 - API Reference - https://vuejs.org/v2/api/
@@ -8,7 +12,7 @@
 - `vue.js` & `vue.min.js` = _compiler(for .vue files) + runtime_
 - `vue.runtime.js` = _runtime_
 
-### # Syntax
+## Syntax
 
 - _Declare_ - `{{ dMessage }}`
 - _Vue instance_
@@ -53,11 +57,11 @@
   ```js
   Vue.component("vc-name", {
     props: ["pMsg"],
-    template: "<p>This is a component and 'pMsg'= {{ pMsg }}.<p>"
+    template: "<p>This is a component and 'pMsg'= {{ pMsg }}.<p>",
   });
   ```
 
-### # Vue Instance
+## Vue Instance
 
 - `var vm = new Vue({optionsObject})` where `vm` = ViewModel
 - Vue _components_ is also a Vue _instance_. Same optionsObjec too except _#root_ specific.
@@ -73,7 +77,7 @@
   - `destroyed()`
 - _ARROW => FUNCTIONS SHOULD ALWAYS BE AVOIDED._
 
-### # Template Syntax
+## Template Syntax
 
 - Uses pure HTML.
 - Vue converts `HTML --> render functions` (in virtual DOM)
@@ -96,7 +100,7 @@
   - **Dynamic arguments** (vue 2.6+)
     - `<div v-bind:[dAttrName]="dUrl"></div>` // if dAttrName = href
 
-### # Computed
+## Computed
 
 - Complex calculated property.
 
@@ -104,7 +108,7 @@
   let app = new Vue({
     el: "...",
     data: {
-      msg: "Hello"
+      msg: "Hello",
     },
     computed: {
       cReverseMsg: function() {
@@ -112,8 +116,8 @@
           .split("")
           .reverse()
           .join("");
-      }
-    }
+      },
+    },
   });
   ```
 
@@ -151,7 +155,7 @@
 
   - Example - https://vuejs.org/v2/guide/computed.html#Watchers
 
-### # Class / Style Binding
+## Class / Style Binding
 
 - **Class**
 
@@ -189,7 +193,7 @@
       }
     ```
 
-### # Conditional Rendering
+## Conditional Rendering
 
 - **v-if**
 
@@ -201,7 +205,7 @@
 
 - **v-show** - AVOID IT.
 
-### # List Rendering (v-for)
+## List Rendering (v-for)
 
 - **Array / Objects** - `arr = [3,4,5,6]` / `obj={a:3, b:4, c:5}`
 
@@ -254,7 +258,7 @@
           ```js
           app.person = Object.assign({}, app.person, {
             oldProp: value,
-            newProp: value
+            newProp: value,
           });
           ```
 
@@ -262,7 +266,7 @@
 - `v-if` **with** `v-for`
   - _NEVER USE TOGETHER_. - `<div v-for="l in list" v-if="isDone"></div>`
 
-### # Event Handling
+## Event Handling
 
 - **Listening to Events**
   - use `v-on`
@@ -287,7 +291,7 @@
   - `.right`
   - `.middle`
 
-### # Form Input Handling
+## Form Input Handling
 
 - 2-way binding with `input, textarea & select` using `v-model` directive
 - Vue ignores initial `selected, value, checked` attributes & data is source of truth.

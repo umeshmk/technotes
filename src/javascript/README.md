@@ -1,16 +1,20 @@
 # Javascript
 
-- Ecmascript 2015 = ES6
-- Practice on `JsFiddle`
-- Resource - https://javascript.info/
-- Detailed Book - http://eloquentjavascript.net/index.html
-- Detailed Book - https://exploringjs.com/es6/index.html
+> Ecmascript 2015 = ES6
+>
+> Practice on `JsFiddle`
+>
+> Resource - https://javascript.info/
+>
+> Detailed Book - http://eloquentjavascript.net/index.html
+>
+> Detailed Book - https://exploringjs.com/es6/index.html
 
 ```html
 <script src="path/to/foo.js"></script>
 ```
 
-### # Output
+## Output
 
 ```js
 // alert
@@ -26,7 +30,7 @@ console.log("hello");
 document.write("hello");
 ```
 
-### # Statement
+## Statement
 
 - Starts with **keywords** like - `var, return, function, for, if....etc`
 
@@ -36,7 +40,7 @@ var foo = "hello";
 z = x + y;
 ```
 
-### # Syntax
+## Syntax
 
 | Syntax             |                                                                                                                                |
 | ------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
@@ -50,13 +54,13 @@ z = x + y;
 | **cameCase**       | `myVariable` </br> `myFirstFunction()`                                                                                         |
 | **Concatenate**    | `"hello" + name`                                                                                                               |
 
-### # Operators
+## Operators
 
 | Arithmatic                                       | Assignment                                        | Tyoeof                                            |
 | ------------------------------------------------ | ------------------------------------------------- | ------------------------------------------------- |
 | `+ - * / %` </br> Increament/Decrement : `-- ++` | `= -= +=` </br> Equals : `a += n` --> `a = a + b` | typeof : `typeof` </br> instanceof : `instanceof` |
 
-> Comparison
+### Comparison
 
 - Equals/Not To (value): `==` / `!=`
 - Equals/Not To (value & type) : `===` / `!==`
@@ -64,13 +68,13 @@ z = x + y;
 - Greater/Lesser Or Equal To than : `<=` / `>=`
 - Ternary : `(cond) ? true : false`
 
-> Logical
+### Logical
 
 - And : `&&`
 - Or : `||`
 - Not : `!`
 
-> Bitwise
+### Bitwise
 
 - And : `&`
 - Or : `|`
@@ -78,7 +82,7 @@ z = x + y;
 - Xor : `^`
 - Shift left/right : `<<` / `>>`
 
-### # Arithmatics Precedence
+## Arithmatics Precedence
 
 | Precedence | Operator                                | Info                                   |
 | ---------- | --------------------------------------- | -------------------------------------- |
@@ -96,7 +100,7 @@ z = x + y;
 | 9 - 4      | `& ^ | ....` </br> `&& || ?:....`       | Bitwise </br> Logical                  |
 | 3          | `= += -= ....`                          | Assignment                             |
 
-### # Datatypes
+## Datatypes
 
 1. **Primitive** : `string / boolean / number / undefined`
 2. **Complex** : `Object / Function`
@@ -118,7 +122,7 @@ z = x + y;
 | `null == undefined` </br> `null === undefined` | `true` </br> `false` |
 |                                                |                      |
 
-### # Functions
+## Functions
 
 - **Invoke** means calling a function.
 - _Types of invoking_
@@ -129,41 +133,14 @@ z = x + y;
   - Define : `function foo (parameters...) {...}`
   - Invoke : `foo (arguments...);`
 
-### # Objects
-
-- **Define**
-
-  ```js
-  var foo = {
-    a: 2,
-    b: 3,
-    add: function() {
-      return this.a + this.b;
-    }
-  };
-  ```
-
-- **Access**;
-
-  ```js
-  foo.a;
-  foo[a];
-  foo.add();
-
-  // Never do this
-  var a = new String();
-  var a = new Number();
-  var a = new Boolean();
-  ```
-
-### # Events
+## Events
 
 - Events are fired by **Browser** or **User**
 - Ex:
   - `onclick onchange onmouseover onmouseout onkeydown onload`
   - `<button onclick="foo()"></button>`
 
-### # String
+## String
 
 - _Define_ - `var foo = "hello";`
 - _Length_ - `foo.length`
@@ -172,162 +149,194 @@ z = x + y;
   - newline - `\n`
   - tab - `\t`
   - backspace - `\b`
-- _Multiline_
 
-  ```json
-  var foo = 'I\'m "foo".' + " I teach 'bar'.";
-  var foo =
-    "I'm \
-    foo.\
-    I teach bar.";
-  //backticks
-  var foo = `
-  "I'm "foo".
-  This is a variable ${foo}
-  I teach 'bar'."
-  `;
-  ```
+### Template
 
-- **Methods**
+```js
+// old way
+var = "<div>Hello <span>" + name + "</span></div>";
 
-  ```js
-  // returns index "number" or "-1" if not found
-  s.indexOf("foo", startPosition);
-  s.lastIndexOf("foo");
+// new way
+var = `
+	<div>
+		Hello
+		<span>
+			${name}
+		</span>
+	</div>
+	`;
+```
 
-  // same as indexOf() but no startPosition
-  s.search("foo");
-  s.search(regularExpression);
+### Methods
 
-  // returns new string
-  s.slice(start, end); // -ve is allowed
-  s.slice(start); // rest of the string
+```js
+// returns index "number" or "-1" if not found
+s.indexOf("foo", startPosition);
+s.lastIndexOf("foo");
 
-  // similar to slice()
-  s.substring(start, end); // -ve is not allowed
-  s.substring(start);
+// same as indexOf() but no startPosition
+s.search("foo");
+s.search(regularExpression);
 
-  // similar to slice()
-  s.substr(start, length); // -ve is allowed
+// returns new string
+s.slice(start, end); // -ve is allowed
+s.slice(start); // rest of the string
 
-  // return new string
-  s.replace("foo", "newFoo"); // only 1st match is replaced NOT ALL
-  s.replace(regularExpression, "newFoo");
+// similar to slice()
+s.substring(start, end); // -ve is not allowed
+s.substring(start);
 
-  // returns new string
-  s.toUpperCase();
-  s.toLowerCase();
+// similar to slice()
+s.substr(start, length); // -ve is allowed
 
-  // removes whitespaces on both sides
-  s.trim();
+// return new string
+s.replace("foo", "newFoo"); // only 1st match is replaced NOT ALL
+s.replace(regularExpression, "newFoo");
 
-  // returns character
-  s.charAt(index);
+// returns new string
+s.toUpperCase();
+s.toLowerCase();
 
-  // returns Array
-  var s = "a,b,c";
-  s.split(","); // ["a", "b", "c"]
-  ```
+// removes whitespaces on both sides
+s.trim();
 
-# Numbers
+// returns character
+s.charAt(index);
+
+// returns Array
+var s = "a,b,c";
+s.split(","); // ["a", "b", "c"]
+```
+
+### String Api
+
+```js
+// startsWith(), endsWith(), includes(), repeat()
+
+let s = "Red Rising";
+// old way
+if (s.indexOf("Blue") == -1) {
+  //
+}
+// new way
+if (!s.include("Blue")) {
+  //
+}
+//similarly
+s.startsWith("R"); //true
+s.endsWith("R"); //false`
+```
+
+## Numbers
 
 - No _int, float, short, long_
 - only 64-bit floating point.
 - Good precision over 15-digits
-- Ex:
-  ```js
-  var x = "100",
-    y = 10;
-  x / y; // 10
-  x * y; // 1000
-  x - y; // 90
-  x + y; // "10010"
-  ```
-- **NaN**
-  ```js
-  var a = 100 / "one";
-  isNaN(a); // true
-  ```
-- **Methods**
 
-  ```js
-  // To String
-  n.toString();
+Ex:
 
-  var n = 9.656;
+```js
+var x = "100",
+  y = 10;
+x / y; // 10
+x * y; // 1000
+x - y; // 90
+x + y; // "10010"
+```
 
-  n.toFixed(2); // 9.66
-  n.toFixed(4); // 9.6600
-  n.toPrecision(2); // 9.7
-  ```
+**NaN**
 
-- **Methods - Variables to Numbers**
+```js
+var a = 100 / "one";
+isNaN(a); // true
+```
 
-  ```js
-  Number("10.33"); // 10.33
-  parseFloat("10.33"); // 10.33
-  parseInt("10.33"); // 10
-  ```
+**Methods**
 
-# Arrays
+```js
+// To String
+n.toString();
+
+var n = 9.656;
+
+n.toFixed(2); // 9.66
+n.toFixed(4); // 9.6600
+n.toPrecision(2); // 9.7
+```
+
+**Methods - Variables to Numbers**
+
+```js
+Number("10.33"); // 10.33
+parseFloat("10.33"); // 10.33
+parseInt("10.33"); // 10
+```
+
+## Arrays
+
+:::tip Lodash
+Use Lodash because it's mostly optimized for fast run time than inbuilt
+:::
 
 - Object with keys as numbers - `0, 1, 2 .... n`
 - Define : `var foo = ["foo", "bar"];`
 - Access : `foo[1]`
 - Alter : `foo[1] = "bazzz"`
-- Props & Methods :
 
-  ```js
-  a.length;
+**Props & Methods :**
 
-  // To String
-  // a = ["a", "b"];
-  a.toString(); // a, b
-  a.join("*"); // a*b
+```js
+a.length;
 
-  // add/remove
-  a.pop(); // remove last
-  a.push("c"); // add at last
-  a.shift(); // remove first
-  a.unshift("c"); // add at first
-  a[a.length] = "c"; // add at last
+// To String
+// a = ["a", "b"];
+a.toString(); // a, b
+a.join("*"); // a*b
 
-  // Alter
-  a.splice(start, itemsToRemove, "add-1", "add-2");
-  a.splice(0, 1); // removes 1st
-  a.splice(3, 0, "newfoo", "newBar"); // adds without removing at position 3
-  // get index of first matched
-  a.indexOf("foo");
-  a.lastIndexOf("foo");
-  ```
+// add/remove
+a.pop(); // remove last
+a.push("c"); // add at last
+a.shift(); // remove first
+a.unshift("c"); // add at first
+a[a.length] = "c"; // add at last
 
-- Sorting :
+// Alter
+a.splice(start, itemsToRemove, "add-1", "add-2");
+a.splice(0, 1); // removes 1st
+a.splice(3, 0, "newfoo", "newBar"); // adds without removing at position 3
+// get index of first matched
+a.indexOf("foo");
+a.lastIndexOf("foo");
+```
 
-  ```js
-  a.sort();
-  a.reverse();
+**Sorting :**
 
-  // sort numbers
-  a.sort(function(x, y) {
-    return x - y;
-  });
-  ```
+```js
+a.sort();
+a.reverse();
 
-- Iterations
-  ```js
-  a.forEach(function(value, index, array){...});
-  // MAP - to modify each value
-  newArr = a.map(function(value, index, array){...});
-  // FILTER - to accept/reject values
-  newArr = a.filter(function(value, index, array){...});
-  ```
+// sort numbers
+a.sort(function(x, y) {
+  return x - y;
+});
+```
 
-### # Date Object
+**Iterations :**
+
+```js
+a.forEach(function(value, index, array){...});
+// MAP - to modify each value
+newArr = a.map(function(value, index, array){...});
+// FILTER - to accept/reject values
+newArr = a.filter(function(value, index, array){...});
+```
+
+## Date Object
 
 - Use backend php **Carbon** library
 - Define: `vat d = new Date();`
 
-### # Math Object
+## Math Object
 
 ```js
 Math.PI();
@@ -348,11 +357,11 @@ Math.min(5, 4, 8, 12, 35, 45); // 4
 Math.max(5, 4, 8, 12, 35, 45); // 45
 ```
 
-### Boolean
+## Boolean
 
 - **FALSE** - `false` , `undefined` , `0` , `-0` , `""` , `null` , `NaN`
 
-### # Comparison & Logical Operators
+## Comparison & Logical Operators
 
 - String to Numbers
 
@@ -364,52 +373,48 @@ if(2 < "12")   // true
 if("2" < "12")   // false "2" is greater "1"
 ```
 
-### # Condition / Loop
+## Condition / Loop
 
-- _If / Switch_
+### If / Switch
 
-  ```js
-  if(cond) {......}
+```js
+if(cond) {......}
 
-  switch(n){
-    case a:
-      // code
-      break;
+switch(n){
+  case a:
+    // code
+    break;
 
-    case b:
-      // code
-      break;
+  case b:
+    // code
+    break;
 
-    case c:
-      // code
-      break;
+  case x:
+  case y:
+    // code
+    break;
 
-    case x:
-    case y:
-      // code
-      break;
+  default:
+    // code
+}
 
-    default:
-      // code
-  }
+```
 
-  ```
+### For / For in / while / do while
 
-- _For / For in / while / do while_
+```js
+for(var i = 0; i <5 ; i++>) { ......}
 
-  ```js
-  for(var i = 0; i <5 ; i++>) { ......}
+for(value in arr){......}     // Never ever use  this
 
-  for(value in arr){......}     // Never ever use  this
+while(cond) {......}
+do{......}while(cond) {......}
 
-  while(cond) {......}
-  do{......}while(cond) {......}
+break;          // stops loop
+continue;       // stops 1 iteration in loop
+```
 
-  break;          // stops loop
-  continue;       // stops 1 iteration in loop
-  ```
-
-### # Try-Catch
+## Try-Catch
 
 ```js
 try {
@@ -431,148 +436,150 @@ Example :
 
 ```
 
-### # Scope
+## Scope
 
-- Local
+**Local**
 
-  ```js
-  function foo() {
-    var x;
-    // use x
-  }
-  ```
-
-- Global
-
-  ```js
+```js
+function foo() {
   var x;
-  function foo() {
-    // use x
-    var y;
-  }
   // use x
-  // NO y
-  ```
+}
+```
 
-- Automatically Global - without `var` keyword
+**Global**
 
-  ```js
-  function foo() {
-    x = 32;
-    // use x
-    // var x;     // x is local if redeclared
-  }
+```js
+var x;
+function foo() {
   // use x
-  ```
+  var y;
+}
+// use x
+// NO y
+```
 
-### # Hoisting
+**Automatically Global - without `var` keyword**
+
+```js
+function foo() {
+  x = 32;
+  // use x
+  // var x;     // x is local if redeclared
+}
+// use x
+```
+
+## Hoisting
 
 - Move variable to top o script scope
 - First _Intialize_ & then _use_. Can _Declare_ anytime
 - Only `var` NOT `let` or `const`
-- Only **declarations** are hoisted
+- Only **declarations** are hoisted (not initialization values)
 
-  ```js
-  var x; // declaration
-  x = 23; // intialization (global)
-  var x = 23; // initialization (local)
-  ```
+```js
+var x; // declaration
+x = 23; // intialization (global)
+var x = 23; // declaration & initialization (local)
 
-- Example
+// Example
+x = 23;
+alert(x);
+var x; // x is local now
+```
 
-  ```js
-  x = 23;
-  alert(x);
-  var x; // x is local now
-  ```
-
-### # Strict
+## Strict
 
 - AVOID it. Not much useful.
 
-### # This
+## This
 
 - Based on location where it is used
 
-- **Alone**
+**Alone**
 
-  ```js
-  var foo = this; // this = window object
-  ```
+```js
+var foo = this; // this = window object
+```
 
-- **In Function**
+**In Function**
 
-  ```js
-  function foo() {
-    return this; // owner of function ie 'Window'
-  }
-  ```
+```js
+function foo() {
+  return this; // owner of function ie 'Window'
+}
+```
 
-- **In method**
+**In method**
 
-  ```js
-  var p = {
-    foo: 23,
-    bar: function() {
-      return this; // this = owner of function = p object
-    },
-    barArrow: () => {
-      return this; // this = window object
-    }
-  };
-  ```
+```js
+var p = {
+  foo: 23,
+  bar: function() {
+    return this; // this = owner of function = p object
+  },
+  barArrow: () => {
+    return this; // this = window object
+  },
+};
+```
 
-- **In Event handlers**
+**In Event handlers**
 
-  ```html
-  // this = [object HTMLButtonElement]
-  <button onclick="alert(this);">
-    click
-  </button>
-  ```
+```html
+// this = [object HTMLButtonElement]
+<button onclick="alert(this);">
+  click
+</button>
+```
 
-### # Let
+## Let/Const
 
-- **Block scope**
-  ```js
-  var x = 10;
-  {
-    let x = 5;
-  }
-  alert(x); // 10
-  ```
+**let and const are block level only ie inside curly braces { .... }**
 
-### # Const
+```js
+var x = 10;
+{
+  let x = 5;
+}
+alert(x); // 10
+```
 
-- Block scope as `let`
-- Cannot reassign as `let`
-  ```js
-  let x = 2;
-  x = 22; // Allowed
-  const y = 2;
-  y = 22; // NOT Allowed
-  ```
-- **Reference** and NOT **value**
+**Const cannot be reassign as `let` but are mutable.**
 
-  ```js
-  // primitives
-  const PI = 3.145;
-  PI = 3.15; // Not allowed
+```js
+let x = 2;
+x = 22; // Allowed
+const y = 2;
+y = 22; // NOT Allowed
 
-  // objects
-  const obj = { foo: 23, bar: 44 };
-  obj.foo = 11; // alter
-  obj.newFoo = 6767; // add
-  obj = { foo: 2113, bar: 144 }; // redefine - NOT allowed
+// But Mutable
+const a = ["hello"];
+a = ["world"]; // gives error. Is not assignable.
+a.push("world"); // works correctly. Is mutable.
+```
 
-  // array
-  const arr = [23, 44];
-  arr[0] = 11; // alter
-  arr.push(6767); // add
-  arr = [2113, 144]; // redefine - NOT allowed
-  ```
+**Reference** and NOT **value**
 
-### # Comman Mistakes
+```js
+// primitives
+const PI = 3.145;
+PI = 3.15; // Not allowed
+
+// objects
+const obj = { foo: 23, bar: 44 };
+obj.foo = 11; // alter
+obj.newFoo = 6767; // add
+obj = { foo: 2113, bar: 144 }; // redefine - NOT allowed
+
+// array
+const arr = [23, 44];
+arr[0] = 11; // alter
+arr.push(6767); // add
+arr = [2113, 144]; // redefine - NOT allowed
+```
+
+## Comman Mistakes
 
 - Loose comparison
 
@@ -604,61 +611,153 @@ Example :
   x.innerHTML("...."); // X IS REUSED avoiding repeated DOM access.
   ```
 
-### # ES6 Arrow
+## Arrow Functions
 
-- ES6 functions
+```js
+//  ES6 functions
+const x = (a.b) => {...};
+const x = a => {...};
+```
 
-  ```js
-  const x = (a.b) => {...};
-  ```
+## Objects
 
-### # Objects
+### Define
 
-- **Mutable** - Addressed by reference
-- **Create**
+```js
+var foo = {
+  a: 2,
+  b: 3,
+  add: function() {
+    return this.a + this.b;
+  },
+};
+```
 
-  - `var obj = {...} ;`
-  - `var obj = new Object();`
+### Access
 
-  ```js
-  // way 1
-  var obj = {
-    prop1: 23,
-    method1: function(){...}
-  };
+```js
+foo.a;
+foo[a];
+foo.add();
 
-  // way 2
-  // using constructor
-  function Person (name, age){
-    this.name = name
-    this.age = age
-  }
-  var p = new Person("umesh", 23);
-  ```
+// Never do this
+var a = new String();
+var a = new Number();
+var a = new Boolean();
+```
+
+:::tip
+Objects are **Mutable** because they are always addressed by **reference**.
+:::
+
+### Create
+
+```js
+// 1  var obj = {...} ;
+// 2. var obj = new Object();
+
+// way 1
+var obj = {
+  prop1: 23,
+  method1: function(){...}
+};
+
+// way 2
+// using constructor
+function Person (name, age){
+  this.name = name
+  this.age = age
+}
+var p = new Person("umesh", 23);
+```
 
 - **Properties**
   - _changed, added, deleted, read-only_
   - Access - `obj.foo` or `obj['obj']`
   - Add - `obj.newfoo = 'foooo';`
   - Prototype properties can be used.
-- **Get/Set** - Brackets `()` are not used like methods.
 
-  ```js
-  var obj = {
-    name: "umesh",
-    age: 23,
-    get show() {
-      return this.name.toUpperCase();
+### Get/Set
+
+Brackets `()` are not used like methods.
+
+```js
+var obj = {
+  name: "umesh",
+  age: 23,
+  get show() {
+    return this.name.toUpperCase();
+  },
+  set change(n) {
+    this.name = n;
+  },
+};
+obj.show;
+obj.change = "Foo";
+```
+
+### Shorthand
+
+```js
+//old way
+function person() {
+  let name = "umesh";
+  return {
+    name: name,
+    greet: function() {
+      return "hello " + this.name;
     },
-    set change(n) {
-      this.name = n;
-    }
   };
-  obj.show;
-  obj.change = "Foo";
-  ```
+}
+//new way
+function person() {
+  let name = "umesh";
+  return {
+    name,
+    greet() {
+      return `hello ${this.name}`;
+    },
+  };
+}
+```
 
-### # Prototype
+### Destructuring
+
+```js
+let obj = { name: "umesh", age: 27 };
+// without destructuring
+var name = obj.name;
+var age = obj.age;
+// with destructuring obj
+let { name, age } = obj;
+```
+
+In functions
+
+```js
+//some random ajax data
+lorem({
+  a: "foo",
+  b: "bar",
+});
+
+// without destructuring
+function foo(data) {
+  var a = data.a;
+  var b = data.b;
+  // ......
+}
+// with destructuring
+function foo({ a, b }) {
+  // ......
+}
+```
+
+## Prototype
+
+:::danger Avoid
+Better to use Classes with inheritance
+:::
 
 ```js
 function Parent() {
@@ -676,7 +775,7 @@ let co = new Child(2, 5);
 alert(co.add()); // 7
 ```
 
-### # Functions
+## Functions
 
 - Create
 
@@ -713,7 +812,7 @@ alert(co.add()); // 7
   `<button onclick="foo();"> </button>`; // this = window object
   ```
 
-### # Closures
+## Closures
 
 - Solves counter dilemma.
 - Example 1 :
@@ -734,7 +833,7 @@ alert(co.add()); // 7
 
   ```js
   function multiplier(m) {
-    return n => {
+    return (n) => {
       return n * m;
     };
   }
@@ -744,7 +843,7 @@ alert(co.add()); // 7
   console.log(thrice(5)); // 15
   ```
 
-### # Recursion
+## Recursion
 
 - Function code calls itself.
 - Recusion is **SLOWER** than **For loop**
@@ -757,7 +856,7 @@ alert(co.add()); // 7
   power(2, 3); // 8
   ```
 
-### # Timing
+## Timing
 
 - **Timeout**
 
@@ -773,7 +872,7 @@ alert(co.add()); // 7
   clearInterval(t);
   ```
 
-### # Cookies
+## Cookies
 
 - Small text file
 - Ex:
@@ -785,13 +884,13 @@ alert(co.add()); // 7
   var c = document.cookie;
   ```
 
-### # AJAX
+## AJAX
 
 - Asynchronous javascript and XML
 - create - `var xhttp = new XMLHttpRequest();`
 - AVOID THIS. - USE AXIOS.
 
-### # Classes
+## Classes
 
 - A type of function.
 - If `constructor()` is absent. Then javascript adds invisible & empty `constructor(){ //empty }` automatically.
@@ -815,7 +914,7 @@ alert(co.add()); // 7
   let obj = new Foo(3);
   // methods
   obj.add(5); // 8
-  // methods (static)
+  // methods (static) - obj is not needed
   Foo.bar(); // 'This is bar()'
   Foo.barWithObj(obj); // 'This is bar(obj)' + 3
   ```
@@ -861,26 +960,60 @@ alert(co.add()); // 7
   obj.num(10);
   ```
 
-### # Import/Export
+## Import/Export
 
-- **Require** - ` let foo = require(./FooJs);
-- **Export**
+```js
+// FooJs.js
+function A(){......};
+function B(){......};
+module.exports = {
+  A,
+  B
+}
 
-  - _FooJs.js_
+// main.js
+const foo = require("./FooJs");
+foo.A();
+foo.B();
+```
 
-  ```js
-  function A(){......};
-  function B(){......};
-  module.exports = {
-    A,
-    B
+## Rest and Spread operators
+
+- `rest` defining a function for _n_ numbers of args
+
+  ````js
+  //2 variables
+  function sum (a,b){
+  return a + b;
   }
-  ```
+  sum(1,2); //3
 
-  - _main.js_
+      		//n variables
+      		function sum(...numbers){
+      			alert (numbers);
+      		}
+      		sum(1,2,3,4,5); // [1,2,3,4,5] args are converted to a single array
 
-  ```js
-  const foo = require("./FooJs");
-  foo.A();
-  foo.B();
-  ```
+      		//NOTE
+      		function sum(...numbers , wrong);
+      		function sum(right, againRight, ...numbers);
+      	```
+
+  ````
+
+- `spread` calling a function for _fixed_ number of args
+
+  ````js
+  function sum(a,b){
+  return a+b;
+  }
+  sum(1,2); //3
+
+      		arr = [1,2];
+      		sum(...arr);	//3
+      	```
+  ````
+
+## Promises (todo)
+
+## Async/Await (todo)

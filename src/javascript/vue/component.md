@@ -1,6 +1,6 @@
-# Vuejs - Component
+# VueComponent
 
-### # Basics
+## Basics
 
 - **Define**
 
@@ -12,7 +12,7 @@
       return [(a: "data")];
     },
     prop: ["pFoo"],
-    template: "...."
+    template: "....",
   });
   ```
 
@@ -64,9 +64,9 @@
   - _Define_ - `<component v-bind:is="currentActiveComponent"></component>`
   - _currentActiveComponent_ is
     1.  Name of component registered OR
-    2.  Component's options object.
+    2mponent's options object.
 
-### # Registration
+## Registration
 
 - **Naming**
 
@@ -91,8 +91,8 @@
       const app = new Vue({
         el: "#app",
         components: {
-          "vc-foo": VcFooOptions
-        }
+          "vc-foo": VcFooOptions,
+        },
       });
       ```
 
@@ -114,12 +114,12 @@
 
         export default {
           components: {
-            VcFoo /*Both name and value*/
-          }
+            VcFoo /*Both name and value*/,
+          },
         };
-        ```
+  `
 
-### # Props
+## Props
 
 - **camelCase vs kebab-case**
   - In _html_ - `<vc-foo post-title="..."></vc-foo>`
@@ -175,17 +175,17 @@
 
   - _html_ - `<vc-foo custom-arg="..."></vc-foo>`
   - Arguments get added to the root element of the component in template.
-  - https://vuejs.org/v2/guide/components-props.html#Non-Prop-Attributes
+  - ht//vuejs.org/v2/guide/components-props.html#Non-Prop-Attributes
 
-### # Custom Events
+## Custom Events
 
 - **Names**
   - Always use kebab-case - `$emit('my-custom-event')`
 - **Customizing component v-model**
 - **Binding native events to components**
-- **`.sync` modifier.**
+- *` modifier.**
 
-### # Slots
+## Slots
 
 - In v2.6 new `v-slot` directive is added
 - **Slot content**
@@ -249,12 +249,11 @@
     </template>
     ```
 
-- **Scoped slots**
+- slots**
 
-### # Dynamic components (Yet to learn)
+ components (Yet to learn)
 
-### # Handling edge cases (Not recommended but can be done.)
+## Handling edge cases (Not recommended but can be done.)
 
 - Element and component access
-  - Use root instance (use vuex instead)   -   `this.$root.foo`
-  
+  - Use root instance (use vuex instead) - `this.$root.foo`

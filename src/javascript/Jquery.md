@@ -1,11 +1,11 @@
 # JQUERY
 
-- Used for - *DOM, CSS, event, animations, ajax, utilities*
-- Has various *plugins*
-- 2 versions - production *(jquery.min.js)* & development *(jquery.js)*
-- Via - *CDN or Download*
+- Used for - _DOM, CSS, event, animations, ajax, utilities_
+- Has various _plugins_
+- 2 versions - production _(jquery.min.js)_ & development _(jquery.js)_
+- Via - _CDN or Download_
 
-#### # SYNTAX
+## SYNTAX
 
 ```js
 // BASIC
@@ -31,36 +31,36 @@ $("p").on("click" , function () { ... });   // Single event
 
 ```
 
-#### # SHOW/HIDE 
+## SHOW/HIDE
 
 ```js
-$("p").show(speed, callback);      // show() , hide() , toggle()
+$("p").show(speed, callback); // show() , hide() , toggle()
 
-$("p").fadeIn(speed, callback);    // fadeIn() , fadeOut() , fadeToggle()
+$("p").fadeIn(speed, callback); // fadeIn() , fadeOut() , fadeToggle()
 
 $("p").slideDown(speed, callback); // slideDown() , slideUp() , slideToggle()
-
 ```
 
-#### # ANIMATE
+## ANIMATE
 
 ```js
 $("p").animate({
-    left: '100px',
-    opacity: '0.2'
+  left: "100px",
+  opacity: "0.2",
 });
 $("p").stop();
 ```
 
-#### # CHAINING
+## CHAINING
 
 ```js
-$("p").css("color" : "red")
-      .slideUp(2000)
-      .slideDown(3000);
+$("p")
+  .css(("color": "red"))
+  .slideUp(2000)
+  .slideDown(3000);
 ```
 
-#### # GET/SET
+## GET/SET
 
 ```js
 $("p").html();                              // get html()
@@ -77,7 +77,7 @@ $("a").attr("href");                        // get
 
 ```
 
-#### # ADD/REMOVE ELEMENTS
+## ADD/REMOVE ELEMENTS
 
 ```js
 // add
@@ -93,7 +93,7 @@ $("p").remove();                            // removes <p>
 
 ```
 
-#### # CSS
+## CSS
 
 ```js
 $("p").addClass("classA classB");
@@ -104,11 +104,11 @@ $("p").css("width");
       .css("width" , "200px");
       .css({
             "width" : "200px" ,
-            "color" : "red" 
+            "color" : "red"
         );
 ```
 
-#### # DIMENSIONS
+## DIMENSIONS
 
 ```js
 $("p").width();                 // content
@@ -121,7 +121,7 @@ $("p").width();                 // content
 // note : .css() method is better
 ```
 
-#### # TRAVERSING
+## TRAVERSING
 
 ```js
 // PARENT
@@ -142,14 +142,14 @@ $("p").siblings();              // all siblings
 
       .next();                  // 1 sibling after <p>
       .nextAll();               // n siblings after <p>
-      .nextUntill("span");      
+      .nextUntill("span");
 
       .prev();
       .prevAll();
       .prevUntill("span");
 ```
 
-#### # FILTER
+## FILTER
 
 ```js
 $("p").first();                     // 1st <p>
@@ -159,7 +159,7 @@ $("p").first();                     // 1st <p>
       .not(".myclass");             // all <p> without ".myclass"
 ```
 
-#### # AJAX
+## AJAX
 
 ```js
 $("p").load( url, data, function(response, status, xhrObj) {...} );
@@ -168,17 +168,10 @@ $.get(url, function(response, status) {...} );
 $.post(url, data, function(response, status) {...} );
 ```
 
-#### # NO CONFLICT
+## NO CONFLICT
 
 ```js
-// use "jq" instead of "$" 
+// use "jq" instead of "$"
 var jq = $.noConflict();
 // eg : jq("p").hide();
 ```
-
-
-
-
-
-
-

@@ -1,12 +1,17 @@
-# Js - DOM
+# DOM
 
 - _Document Object Model_
 - All html elements are objects of **DOM tree**
+
 - **Access**
+
   - All Html elements
   - Create/handle events
   - Style elements
   - Attributes
+
+## Get/Set
+
 - **Get**
 
   - <del>_id_ - `document.getElementById("foo");`</del>
@@ -17,19 +22,19 @@
   - _Attributes_ - `el.getAttribute('id');`
   - _data-attribute_
 
-    ```js
-    // <div data-doo="dodododo"></div>
-    el.dataset.doo;
-    ```
+  ```js
+  // <div data-doo="dodododo"></div>
+  el.dataset.doo;
+  ```
 
-  - NOTE - _Collection object_:
+- NOTE - _Collection object_:
 
-    ```js
-    var e = document.getElementsByClassName("foo");
-    e[5]; // A COLLECTION Object NOT ARRAY
-    e.length;
-    e.pop; // NOT Allowed
-    ```
+  ```js
+  var e = document.getElementsByClassName("foo");
+  e[5]; // A COLLECTION Object NOT ARRAY
+  e.length;
+  e.pop; // NOT Allowed
+  ```
 
 - **Set (elements)**
   - _html_ - `el.innerHTML = "...."`
@@ -54,23 +59,23 @@
   - _body_ - `document.body`
   - _title_ - `document.title`
 
-### # DOM - Events
+## Events
 
 - _Load_ - `<body onload = "foo();">`
 - _click_ - `<p onclick = "foo();"></p>`
 - _change_ - `<input onchange = "foo();">`
 - _onmousein/out_
 
-### # DOM - Event Listener
+## Event Listener
 
 - _Syntax_ - `el.addEventListener(event, function, useCapture);`
 - _Same element - same event - multiple handlers_
 
-  ```js
-    el.addEventListener("click" function(){...});
-    el.addEventListener("click" foo2());
-    el.addEventListener("click" foo3());
-  ```
+```js
+  el.addEventListener("click" function(){...});
+  el.addEventListener("click" foo2());
+  el.addEventListener("click" foo3());
+```
 
 - _window_ - `window.addEventListener("resize", foo())`
 - _remove_ - `el.removeEventListener(event, foo)`
@@ -81,9 +86,7 @@
   - _Bubbling_ (default) - `<p>`
   - _Capture_ - `<div>`
 
-### # DOM - Navigation
-
-- **NOTE : Avoid learning this.**
+## Navigation
 
 - **Node - Type**
   - Document
@@ -107,14 +110,15 @@
   - _FirstChild_ - `el.firstChild.nodeValue = "foo" ;`
   - _n-child_ - `el.childNodes[0].nodeValue = "foo" ;`
 - **Create**
-  ```js
-  var p = document.createElement("p");
-  var t = document.createTextNode("A new Text.");
-  p.appendChild(t);
-  el.appendChild(p);
-  ```
 
-### # BOM - Browser Object Model
+```js
+var p = document.createElement("p");
+var t = document.createTextNode("A new Text.");
+p.appendChild(t);
+el.appendChild(p);
+```
+
+## BOM - Browser Object Model
 
 ```js
 window.innerHeight();

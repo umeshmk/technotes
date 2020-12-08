@@ -101,5 +101,17 @@ module.exports = {
       "Tailwind.md",
       "Tailwind-core.md",
     ],
+    "/javascript/": [
+      {
+        title: "Javascript",
+        collapsable: false,
+        children: ["", "object-model.md", "Json.md", "Jquery.md"],
+      },
+      {
+        title: "Vue.js",
+        collapsable: false,
+        children: ["vue/Vuejs.md", "vue/component.md"],
+      },
+    ],
   },
 };

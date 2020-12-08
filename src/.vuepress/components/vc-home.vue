@@ -21,7 +21,7 @@ export default {
         "Laravel 6 (deprecated)": "/laravel/v6/1-GettingStarted",
         Html: "/html",
         Css: "/css",
-        Javascript: "/",
+        Javascript: "/javascript",
       },
     };
   },
