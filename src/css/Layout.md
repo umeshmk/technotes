@@ -1,6 +1,6 @@
 # LAYOUT
 
-#### # WIDTH / HEIGHT
+## WIDTH / HEIGHT
 
 ```css
 /* For content excluding padding, border, margin */
@@ -11,18 +11,19 @@ min-{ width|height } : 200px;
 
 ```
 
-#### # DISPLAY / VISIBILITY
+## DISPLAY / VISIBILITY
 
 ```css
-display : none | block | inline | inline-block | flex;
-visibility : hidden | visible;
+display: none | block | inline | inline-block | flex;
+visibility: hidden | visible;
 
 /*only display changes not behaviour*/
-span { display: block; }      /*Cannot add block element in this span even though its block element*/
-
+span {
+  display: block;
+} /*Cannot add block element in this span even though its block element*/
 ```
 
-#### # POSITION
+## POSITION
 
 ```css
 position : static;                      /*default*/
@@ -38,21 +39,19 @@ z-index : 10;                           /*front*/
 clip : rect(0, 100px, 70px, 200px);     /*position must be absolute & <img>*/
 ```
 
-#### # OVERFLOW
+## OVERFLOW
 
 ```css
 overflow : auto | scroll | hidden | visible ;
 overflow-{x|y} : auto | scroll | hidden | visible ;
 ```
 
-#### # FLOAT / CLEAR
+## FLOAT / CLEAR
 
 ```css
-float : none | left | right | inherit;
+float: none | left | right | inherit;
 
-clear : none;                           /*float allowed*/
-      : left | right;                   /*NOT allowed on left|right*/
-      : both;                           /*float NOT allowed*/
-
-
+clear: none; /*float allowed*/
+:left|right ; /*NOT allowed on left|right*/
+:both ; /*float NOT allowed*/
 ```

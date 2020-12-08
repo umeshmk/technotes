@@ -1,6 +1,8 @@
 # SASS
 
-> Syntactically Awesome Stylesheets - [Reference](http://sass-lang.com/documentation/file.SASS_REFERENCE.html>)
+> Syntactically Awesome Stylesheets
+>
+> [Reference](http://sass-lang.com/documentation/file.SASS_REFERENCE.html>)
 
 ```bash
 sass input.scss output.css                  # 1 times
@@ -8,73 +10,96 @@ sass --watch input.scss output.css          # watch 1 file
 sass --watch resourses/sass:public/css      # All files in folder
 ```
 
-#### # VARIABLES / INTERPOLATION
+## VARIABLES / INTERPOLATION
 
 ```scss
 // VARIABLE
-$primary-color: #333;                 // define var
-div {  color: $primary-color; }       // as prop-value. Note: $primary-color = $primary_color
+$primary-color: #333; // define var
+div {
+  color: $primary-color;
+} // as prop-value. Note: $primary-color = $primary_color
 // INTERPOLATION
 $classname: "alert-success";
-.#{$classname} { color: #333; }       // as class-name (dot used since class)
+.#{$classname} {
+  color: #333;
+} // as class-name (dot used since class)
 $bor: "border";
-p { #{$bor}-color: red; }             // as prop-name
+p {
+  #{$bor}-color: red;
+} // as prop-name
 ```
 
-#### # NESTING
+## NESTING
 
 ```scss
 nav {
-  ul { margin: 0; }           // Too much nesting is bad practice
-  li { color: blue; }
+  ul {
+    margin: 0;
+  } // Too much nesting is bad practice
+  li {
+    color: blue;
+  }
 }
 ```
 
-#### # PARTIALS / IMPORTS
+## PARTIALS / IMPORTS
 
-- Starts with *under_score* like `_variables.scss`
+- Starts with _under_score_ like `_variables.scss`
 - No `.css` file generated
 - Can be imported in any `.scss` files
 - `**@Import**`
-  - In *CSS* : Method used is `@import` which makes `http` requests [eg. Google Fonts]
-  - In *SASS* : No `http` request. Preprocessor is used.
+  - In _CSS_ : Method used is `@import` which makes `http` requests [eg. Google Fonts]
+  - In _SASS_ : No `http` request. Preprocessor is used.
 
 ```scss
 # _reset.scss is imported in project.scss
 @import 'reset';
 ```
 
-#### # MIXIN / INCLUDE
+## MIXIN / INCLUDE
 
 ```scss
 @mixin border-radius($radius) {
   -webkit-border-radius: $radius;
-     -moz-border-radius: $radius;
-      -ms-border-radius: $radius;
-          border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
 }
-.box { @include border-radius(10px); }
+.box {
+  @include border-radius(10px);
+}
 ```
 
-#### # EXTEND / INHERITANCE
+## EXTEND / INHERITANCE
 
-- `@import 'partials'` are files. 
+- `@import 'partials'` are files.
 - `@extend %snip`are small css snippets for reuse.
 - Helps avoid multiple classnames
 
 ```scss
-%snip { color:red; display:block; }           // Only props not selectors
-.abc { @extend %snip ; padding:5px; }
-.xyz { @extend %snip ; border: 2px solid red; }
+%snip {
+  color: red;
+  display: block;
+} // Only props not selectors
+.abc {
+  @extend %snip;
+  padding: 5px;
+}
+.xyz {
+  @extend %snip;
+  border: 2px solid red;
+}
 ```
 
-#### # OPERATORS [ `+` `-` `*` `/` `%` ]
+## OPERATORS [ `+` `-` `*` `/` `%` ]
 
 ```scss
-div p { width: 600px / 960px * 100%; }
+div p {
+  width: 600px / 960px * 100%;
+}
 ```
 
-#### # COMMENTS
+## COMMENTS
 
 ```scss
 // Single line comment are NOT passed to css files

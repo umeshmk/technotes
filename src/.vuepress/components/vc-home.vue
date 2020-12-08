@@ -19,8 +19,8 @@ export default {
         Miscellaneous: "/miscellaneous/Git",
         "Php (deprecated)": "/php",
         "Laravel 6 (deprecated)": "/laravel/v6/1-GettingStarted",
-        Html: "/",
-        Css: "/",
+        Html: "/html",
+        Css: "/css",
         Javascript: "/",
       },
     };

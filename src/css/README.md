@@ -1,6 +1,8 @@
-# CSS [Cascading style sheet]
+# CSS
 
-#### # INTRODUCTION
+> Cascading style sheet
+
+## INTRODUCTION
 
 - File ext is `.css`
 - Syntax:
@@ -27,7 +29,7 @@ rgba( red, blue, green, alpha )         /* RGBA */
     #ab34cd == #AB34CD
 ```
 
-#### # UNITS
+## UNITS
 
 ```css
 /*****ABSOLUTE*****/
@@ -45,7 +47,7 @@ vh | vw     /* viewport height/width */
 
 ```
 
-#### # SELECTORS
+## SELECTORS
 
 ```css
 selector {property : value;}
@@ -102,7 +104,7 @@ inline  >  #id  >    .class      >  tag
                      :hover
 ```
 
-#### # BACKGROUNDS
+## BACKGROUNDS
 
 ```CSS
 background-color : red;
@@ -113,7 +115,7 @@ background-size : auto | width height | cover | contain ;
 background-attachment : fixed;                              /*scrolling is disabled*/
 ```
 
-#### # BORDER
+## BORDER
 
 ```css
 border : 1px solid red;
@@ -128,7 +130,7 @@ border-image : url("pic.jpg") 20% round;
 border-radius : 5px ;
 ```
 
-#### # MARGIN
+## MARGIN
 
 ```CSS
 margin  : top right bottom left;
@@ -147,7 +149,7 @@ margin-{ left|right|top|bottom } : 10px;
 
 ```
 
-#### # PADDING
+## PADDING
 
 ```css
 
@@ -166,26 +168,27 @@ div { width: 20px;
 
 ```
 
-#### # BOX-SIZING
+## BOX-SIZING
 
 - Height & width is for content
 
-![](../images/css1.png?raw=1)
+<vc-img url="/images/css1.png" size="md"/>
 
-#### # OUTLINE
+## OUTLINE
 
 - May overlap other content elements without changing its width/height.
 
-```css
+```js
+
 outline-style: solid | dashed | dotted | double;
-:groove| ridge | inset | outset ;
-:none| hidden ;
+             :groove|ridge|inset| outset ;
+             :none|hidden ;
 outline-width: 20px;
 outline-color: red;
 outline-offset: 10px; /*between border and outline.*/
 ```
 
-#### # TEXT / FONT FORMATTING
+## TEXT / FONT FORMATTING
 
 - **Text**
 
@@ -225,11 +228,11 @@ font-variant : normal | small-caps;
 
 ```
 
-#### # ICONS
+## ICONS
 
 - Use [Font-awesome](https://fontawesome.com/)
 
-#### # LINK / LIST
+## LINK / LIST
 
 ```CSS
 /*****LINK (must be in correct order)*****/

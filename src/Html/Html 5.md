@@ -31,7 +31,7 @@
 
 ```
 
-#### # CODING CONVENTION
+## CODING CONVENTION
 
 ```html
 <foo>               <!-- lower-case -->
@@ -57,7 +57,7 @@ file.ext                <!-- use lower-case -->
 
 ```
 
-#### # SVG / CANVAS
+## SVG / CANVAS
 
 |SVG|CANVAS|
 |-|-|
@@ -67,7 +67,7 @@ file.ext                <!-- use lower-case -->
 |DOM|pixel-by-pixel|
 |Slow|Best for games|
 
-#### # MULTIMEDIA
+## MULTIMEDIA
 
 - **MULTIMEDIA** : { images, music, sound, video, films, animations }
 - **Supported**
@@ -84,14 +84,14 @@ file.ext                <!-- use lower-case -->
 </video>
 ```
 
-#### # GEOLOCATION
+## GEOLOCATION
 
-#### # DRAG & DROP
+## DRAG & DROP
 
 - Any element can be draggable
 - `<img draggable="true">`
 
-#### # WEB STORAGE (LOCAL STORAGE)
+## WEB STORAGE (LOCAL STORAGE)
 
 - Store data in local browser
 - Better & secure than cookies.
@@ -112,7 +112,7 @@ x = localStorage.foo;
 localStorage.removeItem("name");
 ```
 
-#### # WEB WORKERS
+## WEB WORKERS
 
 - Javascript runs in background (Must be external js file)
 - Good for resource intensive tasks
@@ -122,7 +122,7 @@ w = new Worker("foo.js");           // create
 w.terminate;                        // destroy
 ```
 
-#### # SERVER SENT EVENTS
+## SERVER SENT EVENTS
 
 - Earlier browser used to request servers.
 - Now server keeps sending data to browser without any request.

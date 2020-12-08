@@ -1,22 +1,22 @@
 # CSS-3
 
-#### # BORDER RADIUS
+## BORDER RADIUS
 
-```css
+```js
 border-radius : 2px 3px 4px 5px;
               : 5px;
 border-top-right-radius : 3px;
 ```
 
-#### # GRADIENT
+## GRADIENT
 
-```css
+```js
 /*****LINEAR*****/
 background-image : linear-gradient(red, green);
-                                  (to right, red, green);
-                                  (to bottom left, red, green);
-                                  (50deg, red, green);
-                                  (red, green, blue, black);
+                 :                (to right, red, green);
+                 :                (to bottom left, red, green);
+                 :                (50deg, red, green);
+                 :                (red, green, blue, black);
                  : repeating-linear-gradient(red, green 10%, yellow 50%);
 
 /*****RADIAL*****/
@@ -25,9 +25,9 @@ background-image : radial-gradient(red, yellow, green);
                                   (circle, red, green);         /*default is ecllipse*/
 ```
 
-#### # SHADOW EFFECTS
+## SHADOW EFFECTS
 
-```css
+```js
 
 {text|box}-shadow : 5px 3px;                /*horizontal vertical*/
                   : 5px 3px red;            /*color*/
@@ -36,30 +36,30 @@ background-image : radial-gradient(red, yellow, green);
 
 ```
 
-#### # TEXT-EFFECTS
+## TEXT-EFFECTS
 
-```css
-text-overflow : clip|ecllipse;              /*3 dots ... is ecllipse*/
-word-wrap : break-word;
-word-break : keep-all | break-all;
+```js
+text-overflow: clip|ecllipse; /*3 dots ... is ecllipse*/
+word-wrap: break-word;
+word-break: keep-all | break-all;
 ```
 
-#### # WEB FONTS
+## WEB FONTS
 
-```css
-TTF - True type font
+```js
+/* TTF - True type font
 OTF - Open type font
-WOFF - Web open font format
+WOFF - Web open font format */
 
 @font-family {
-    font-family : "anyname";
-    src : url("/font/doo.woff");
+  font-family: "anyname";
+  src: url("/font/doo.woff");
 }
 ```
 
-#### # TRANSFORM
+## TRANSFORM
 
-```css
+```js
 /*****2D*****/
 transform : translate(20px,50px);           /*horizontal vertical*/
           : rotate(30deg);                  /*degrees*/
@@ -75,9 +75,9 @@ transform : translate3d(x,y,z);
 
 ```
 
-#### # TRANSITION
+## TRANSITION
 
-```css
+```js
 transition : width 2s;
            : width 2s, height 3s;
 transition-timing-function : linear|ease|ease-in|ease-out|ease-in-out;
@@ -85,32 +85,33 @@ transition-delay : 4s;
 
 ```
 
-#### # ANIMATIONS
+## ANIMATIONS
+
 - USE animate.css library.
 
-#### # OBJECT-FIT
+## OBJECT-FIT
 
-```css
+```js
 /* Used for `<img> <video>` */
 object-fit: none|fill|contain|cover|scale-down;
 ```
 
-#### # VARIABLE
+## VARIABLE
 
-```css
+```js
 :root { --mycolor : red; }
 #foo { color: var(--mycolor); }
 ```
 
-#### # BOX-SIZING
+## BOX-SIZING
 
-```css
+```js
 *{ box-sizing : content-box|border-box };       /* border-box for all is recommended*/
 ```
 
-#### # FLEXBOX
+## FLEXBOX
 
-```css
+```js
 .container { display:flex; }
 
 /*****CONTAINER*****/
@@ -134,9 +135,9 @@ align-self : { flex-start|flex-end|center|stretch|baseline};        /*overrides 
 
 ```
 
-#### # MEDIA QUERIES
+## MEDIA QUERIES
 
-```css
+```js
 /* TYPES */
 - all       - screen
 - print     - speech

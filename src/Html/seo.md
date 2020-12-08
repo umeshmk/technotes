@@ -1,4 +1,8 @@
-Search Engine optimization
+# SEO
+
+> Search Engine optimization
+>
+> src - Programming Hub Android app
 
 Users
 
@@ -26,11 +30,11 @@ Google = 70% web search
 
 ---
 
-Black hat techniques
+> Black hat techniques
 
 - Farms (content, backlinks) don't work now.
 
-White hat techniques
+> White hat techniques
 
 - Keywords density
 - Backlinks from verified sources
@@ -74,23 +78,23 @@ Crawlers company
 
 Image alt tags
 SiteLinks in Google search results to improve CTR (click through rate)
-![imgbb](https://ibb.co/GxH06Zw)
-![imgbbb](https://i.ibb.co/cgY1BW5/screenshot-2020-10-21-15-06-32-005-com-freeit-java.jpg)
+
+<vc-img url="https://i.ibb.co/cgY1BW5/screenshot-2020-10-21-15-06-32-005-com-freeit-java.jpg" size="md"/>
 
 On deployment - Google webmaster, Analytics
 
-Sitemap.xml
+> Sitemap.xml
 
 - New modern way to submit webpage to google search Engine
 - Use online tools to generate
 - https://www.google.com/sitemap.xml
 
-Robots.txt
+> Robots.txt
 
 - Block google bots from crawling & indexing of some url links on this website
 - http://www.google.com/robots.txt
 
-![imgbb](https://ibb.co/txsnhyP)
+<vc-img url="https://i.ibb.co/xfjwsV8/2.jpg" size="md"/>
 
 ## Keywords research steps
 
@@ -106,7 +110,7 @@ Robots.txt
    - Url of competetor - can be used to know which keywords they are targeting
 5. Google Trends
 
-Long tail keywords
+> Long tail keywords
 
 - People use more words in search query
 - 3-5 words normally
@@ -125,13 +129,13 @@ Keywords in beginning is important (a guess by Experts)
 Use visual, infographics
 Indepth content - People like it (2000+ words)
 
-Query
+> Query
 
 1. Transactional (buy sell)
 2. Navigational (location)
 3. Informational (how to)
 
-Dwell time
+> Dwell time
 
 - search -> Click link -> back to search results
   Bounce rate

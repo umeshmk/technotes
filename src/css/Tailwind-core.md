@@ -1,6 +1,6 @@
-# Tailwind - core
+# TailwindCss (core)
 
-#### # Utility First
+## Utility First
 
 > **pros**
 
@@ -29,7 +29,7 @@
   .#{$prefix}btn { ... };       //o/p:  .cc-btn {...}
   ```
 
-#### # Pseudo class variant
+## Pseudo class variant
 
 - All utility classes dont have all Pseudo classes due to file size.
 
@@ -44,8 +44,7 @@
 - Usage (responsive) : `md:hover:w-3`
 - Default config - [Reference](https://tailwindcss.com/docs/pseudo-class-variants#default-variants-reference)
 
-
-#### # Add base styles
+## Add base styles
 
 - Base = Global = Beginning of stylesheet
 - Uses `Normalize.css` and some more initial setup.
@@ -68,7 +67,7 @@
   }
   ```
 
-#### # Extracting components
+## Extracting components
 
 - Reuse code as components - [ Css OR Vuejs/Reactjs ]
 - Css Components
@@ -98,7 +97,7 @@
     @tailwind utilities;
     ```
 
-#### # Adding new utilities
+## Adding new utilities
 
 ```css
 @tailwind utilities;
@@ -120,11 +119,11 @@
 }
 ```
 
-# CUSTOMIZATION
+## Config
 
 > Configuration - [Tailwind.config.js](https://github.com/tailwindcss/tailwindcss/blob/master/stubs/defaultConfig.stub.js)
 
-#### # Colors
+## Colors
 
 ```css
 /*tailwind.config.js*/
@@ -136,7 +135,7 @@ theme: {
 }
 ```
 
-#### # Variants
+## Variants
 
 ```js
 variants: {

@@ -1,6 +1,8 @@
-# HTML [Hyper Text Markup Language]
+# HTML 
 
-#### # BASICS
+> Hyper Text Markup Language
+
+## BASICS
 
 [Jsfiddle](https://jsfiddle.net/nycdh9xm/2/)
 
@@ -53,7 +55,7 @@ span, a, hr, input, label, textarea, b			<!-- INLINE ELEMENTS -->
 
 ```
 
-#### # TEXT FORMATTING 
+## TEXT FORMATTING 
 
 [Jsfiddle](https://jsfiddle.net/nycdh9xm/3/)
 
@@ -75,7 +77,7 @@ will preserve 			white spaces
 ```
 
 
-#### # QUOTATIONS & CITATIONS
+## QUOTATIONS & CITATIONS
 
 [Jsfiddle](https://jsfiddle.net/nycdh9xm/4/)
 
@@ -87,7 +89,7 @@ will preserve 			white spaces
 <cite>			<!-- Citations in italics -->
 ```
 
-#### # COLOR VALUES
+## COLOR VALUES
 
 [Jsfiddle](https://jsfiddle.net/nycdh9xm/5/)
 
@@ -99,7 +101,7 @@ rgba(255, 99, 74, 0.5)			<!-- RGB + Opacity -->
 hsl(9, 90%, 50%)
 ```
 
-#### # STYLE CSS
+## STYLE CSS
 
 [Jsfiddle](https://jsfiddle.net/nycdh9xm/6/)
 
@@ -116,7 +118,7 @@ hsl(9, 90%, 50%)
 <link rel="stylesheet" href="foo.css">
 ```
 
-#### # LINK
+## LINK
 
 [Jsfiddle](https://jsfiddle.net/nycdh9xm/7/)
 
@@ -137,7 +139,7 @@ a:hover
 a:active			<!-- when link is clicked. Always after :hover -->
 ```
 
-#### # IMAGES
+## IMAGES
 
 [Jsfiddle](https://jsfiddle.net/nycdh9xm/8/)
 
@@ -154,7 +156,7 @@ a:active			<!-- when link is clicked. Always after :hover -->
 
 ```
 
-#### # TABLES
+## TABLES
 
 [Jsfiddle](https://jsfiddle.net/nycdh9xm/9/)
 
@@ -177,7 +179,7 @@ a:active			<!-- when link is clicked. Always after :hover -->
 
 ```
 
-#### # LIST
+## LIST
 
 [Jsfiddle](https://jsfiddle.net/nycdh9xm/10/)
 
@@ -200,7 +202,7 @@ ul{	list-style-type: "circle" }
 
 ```
 
-#### # HEAD & LAYOUT
+## HEAD & LAYOUT
 
 [Jsfiddle](https://jsfiddle.net/nycdh9xm/12/)
 
@@ -223,7 +225,7 @@ ul{	list-style-type: "circle" }
 <footer>
 ```
 
-#### # CODE
+## CODE
 
 [Jsfiddle](https://jsfiddle.net/nycdh9xm/13/)
 
@@ -234,4 +236,4 @@ ul{	list-style-type: "circle" }
 <code>
 ```
 
-#### # 
+## 

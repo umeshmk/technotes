@@ -91,5 +91,15 @@ module.exports = {
         children: ["7-Database.md", "8-EloquentORM.md"],
       },
     ],
+    "/html/": ["", "Html 5.md", "seo.md", "Forms.md"],
+    "/css/": [
+      "",
+      "Layout.md",
+      "css3.md",
+      // "Tailwind-cheetsheet.md",
+      "sass.md",
+      "Tailwind.md",
+      "Tailwind-core.md",
+    ],
   },
 };
