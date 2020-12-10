@@ -136,6 +136,7 @@ Add in **.vscode/extensions.json** or **.code-workspace**
 - `JavaScript (ES6) Snippets`
 - `Search node_modules` - Quickly search for node modules in your project.
 - `turbo console log`
+- Dotenv
 - _Vue_ : `Vetur / vue 2 snippets`
 - _React_ : `ES7-react-redux-graphicQl-nativeSnippets`
 - `JsDoc/TsDoc` (inbuilt) - Create docs & provides typechecking (Can use npm library to generate html)
@@ -154,7 +155,8 @@ Add in **.vscode/extensions.json** or **.code-workspace**
   "chakrounanas.turbo-console-log",
   "octref.vetur",
   "dsznajder.es7-react-js-snippets",
-  "msjsdiag.debugger-for-chrome"
+  "msjsdiag.debugger-for-chrome",
+  "mikestead.dotenv"
 ]
 ```
 

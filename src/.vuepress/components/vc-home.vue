@@ -22,6 +22,7 @@ export default {
         Html: "/html",
         Css: "/css",
         Javascript: "/javascript",
+        Nodejs: "/nodejs",
       },
     };
   },

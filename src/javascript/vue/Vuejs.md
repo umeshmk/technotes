@@ -1,7 +1,10 @@
 # Vue (2.6)
 
 :::danger Deprecated
-Current latest version is v3
+Current latest version is [v3.vuejs.org](https://v3.vuejs.org/) - Dec 2020
+v2.6.11 - released on Dec 14, 2019
+
+Still a lot of things are similar
 :::
 
 - A progressive framework for UI

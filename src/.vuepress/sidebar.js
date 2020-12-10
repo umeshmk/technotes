@@ -113,5 +113,6 @@ module.exports = {
         children: ["vue/Vuejs.md", "vue/component.md"],
       },
     ],
+    "/nodejs/": ["", "bundlers/vite.md", "bundlers/snowpack.md"],
   },
 };
