@@ -1,5 +1,23 @@
 # Surveys
 
+## Best resources
+
+- _Openbase.io_
+- _Google Trends_
+- _State Of Css/Js_
+- _Stack Overflow_
+- _Npm Trends_
+- _Job Postings_
+- _Github Stars_
+- _w3techs.com_
+- _Hackr.io (Best resources for learning)_
+- _Roadmaps.sh_
+- _Product Hunt_
+- _Stackshare.io_
+- _Slant.co_
+
+**Others :**
+
 - Stackshare.io
 - [MDN-Web-DNA-Report-2019.pdf](https://mdn-web-dna.s3-us-west-2.amazonaws.com/MDN-Web-DNA-Report-2019.pdf)
 - [the-benchmarker/web-frameworks](github.com/the-benchmarker/web-frameworks)
@@ -10,12 +28,14 @@
 
 [https://ashleynolan.co.uk/blog/frontend-tooling-survey-2019-results](https://ashleynolan.co.uk/blog/frontend-tooling-survey-2019-results)
 
-Css processor
+### CSS
+
+**\_\_Css processor**
 
 - Sass
 - Postcss
 
-Css framework
+**\_\_Css framework**
 
 - No framework - 35%
 - Bootstrap - 30
@@ -23,40 +43,42 @@ Css framework
 - Tailwind - 5%
 - Bulma, foundation, materialize,semantic
 
-Css tools
+**\_\_Css tools**
 
 - Autoprefixer - 50% (users comfortable)
 - Modernizr - 25%
 - Stylelint - 24%
 
-Css methodology
+**\_\_Css methodology**
 
 - Bem
 - Css in js
 - Atomic
 
-Css feature
+**\_\_Css feature**
 
 - Flex - 80% ( users comfortable)
 - Css grid - 30%
 - Css custom property - 30%
 - Houdini - 1%
 
-Js task runners
+### JS
+
+**\_\_Js task runners**
 
 - Npm scripts - 70%
 - Gulp - 20%
 
-Js module bundler
+**\_\_Js module bundler**
 
 - Webpack
 - Parcel
 
-Js Transpiler (es6 -> es5)
+**\_\_Js Transpiler (es6 -> es5)**
 
 - 80% usage
 
-Js extension
+**\_\_Js extension**
 
 - Typescript (30% users comfortable)
 - Flow (5%)
@@ -64,17 +86,17 @@ Js extension
 - Clojurescript
 - Dart
 
-Js linting
+**\_\_Js linting**
 
 - ESLint
 
-Js testing
+**\_\_Js testing**
 
 - Jest - 44%
 - No tools used - 35%
 - Mocha - 26%
 
-Js performance testing
+**\_\_Js performance testing**
 
 - Lighthouse - 52%
 - None - 30%
@@ -82,7 +104,7 @@ Js performance testing
 - Service workers - 24%
 - Pingdom - 10%
 
-Js Accessibility tools
+**\_\_Js Accessibility tools**
 
 - None - 60%
 - Color (contrastchecker.com) - 20%
@@ -93,21 +115,21 @@ Js Accessibility tools
 
 [https://research.hackerrank.com/developer-skills/2020](https://research.hackerrank.com/developer-skills/2020)
 
-- Bootcamps :
+**> Bootcamps :**
 
-  - Codeworks
-  - AppAcademy
-  - Hack Reactor
-  - Coderhouse
-  - Byte Academy
+- Codeworks
+- AppAcademy
+- Hack Reactor
+- Coderhouse
+- Byte Academy
 
-Top language
+**> Top language**
 
 - Js
 - Python
 - Java
 
-Most wanted language
+**> Most wanted language**
 
 1. Go
 2. Python
@@ -116,13 +138,13 @@ Most wanted language
 5. R
 6. Scala
 
-High salary
+**> High salary**
 
 1. Perl
 2. Scala
 3. Go
 
-Most wanted framework
+**> Most wanted framework**
 
 1. React
 2. Angular
@@ -133,9 +155,11 @@ Most wanted framework
 
 [ https://www.jetbrains.com/lp/devecosystem-2020/](https://www.jetbrains.com/lp/devecosystem-2020/)
 
-- Plan to adopt - Go, Kotlin, Python
+**Plan to adopt**
 
-Mobile apps
+- Go, Kotlin, Python
+
+**Mobile apps**
 
 1. React Native
 2. Flutter
@@ -146,47 +170,49 @@ Mobile apps
 
 [https://ionicframework.com/survey/2020](https://ionicframework.com/survey/2020)
 
-Deploy targets
+**> Deploy targets**
 
 1. Playstore, ios
 2. Browser (include pwa)
-   Mobile devtools
-3. Ionic (80%)
-4. Cordova/phonegap (50%)
-5. React native, Flutter (15%)
 
-**Tools**
+**> Mobile devtools**
 
-- Backend
+1. Ionic (80%)
+2. Cordova/phonegap (50%)
+3. React native, Flutter (15%)
+
+### Tools
+
+**> Backend**
 
 1. Firebase/gcp
 2. Aws
 3. Azure
 
-- Database
+**> Database**
 
 1. MySQL
 2. Firebase
 3. Mongo
 
-- Auth services
+**> Auth services**
 
 1. Firebase
 2. Custom OAuth
 3. Auth0
 
-- Push services
+**> Push services**
 
 1. Firebase
 2. OneSignal
 
-PWAs
+**> PWAs**
 
 - Very popular
 - Platform independent
 - Directly to users
 
-CI/CD
+**> CI/CD**
 
 1. Gitlab
 2. Jenkins
@@ -198,28 +224,28 @@ CI/CD
 
 ## tsh.io/state-of-frontend/
 
-State management
+**> State management**
 
 1. React Context API & Hooks (prefered)
 2. Redux (popularity is going down)
 3. Vuex
 4. Rxjs
 
-Future
+**> Future**
 
 - Svelte, Stencil, Dojo (small apps)
 
-Typescript
+**> Typescript**
 
 - 75% prefer Typescript over JavaScript
 
-Hosting
+**> Hosting**
 
 - Local
 - Aws (Amplify)
 - Netlify & Vercel ( easy features for frontend) (good future)
 
-Continuous integration (CI)
+**> Continuous integration (CI)**
 
 - 75% devs use it
 - Platforms
@@ -231,14 +257,14 @@ Continuous integration (CI)
   5. Bitbucket pipeline
   6. Travis
 
-Containerization
+**> Containerization**
 
 - 60℅ usage by devs
 - Platforms
   1. Docker
   2. Kubernetes
 
-Jamstack
+**> Jamstack**
 
 - JAM - JavaScript, APIs, Markup
 - 30℅ usage
@@ -251,7 +277,7 @@ Jamstack
   5. Hugo
   6. Vuepress
 
-Micro frontend
+**> Micro frontend**
 
 - 25℅ usage
 - How to compose ?
@@ -260,7 +286,7 @@ Micro frontend
   2. Npm packages (30%)
   3. Server side rendering (20%)
 
-SEO
+**> SEO**
 
 - 50% don't care
 - Dynamic rendering should work
@@ -270,7 +296,7 @@ SEO
   2. SSR (meta tags) (25%)
   3. Detect web cfawlers on server
 
-Accessibility
+**> Accessibility**
 
 - Web content accessibility guide WCAG
 - 50% usage
@@ -281,7 +307,7 @@ Accessibility
   3. Keyboard navigation (25%)
   4. Color contrasts (25%)
 
-Designer
+**> Designer**
 
 1. Ui/ux.designer (User focused)
 2. Product designer (Business)
@@ -292,7 +318,7 @@ Designer
   2. Invision
   3. Figma
 
-Testing
+**> Testing**
 
 - 80% usage
 - Who is responsible in team ?
@@ -306,7 +332,7 @@ Testing
   2. Integration
   3. End to end UI
 
-Future
+**> Future**
 
 - Trends to go dead in 3 years
 
@@ -320,7 +346,7 @@ Future
 
 ## JavaScript
 
-Fundamentals
+**> Fundamentals**
 
 - Basic syntax
 - Variables
@@ -329,13 +355,13 @@ Fundamentals
 - Functions
 - Loops, conditions
 
-Modules
+**> Modules**
 
 - ES6 module, Typescript
 - Parcel, Webpack & Babel
 - Export & Export default
 
-Classes
+**> Classes**
 
 - Structure of class
 - Constructors
@@ -343,30 +369,30 @@ Classes
 - Instantiation
 - Extend classes
 
-Arrow functions, lexical 'this'
+**> Arrow functions, lexical 'this'**
 
-Promises/Async request
+**> Promises/Async request**
 
 - Create/receive promise
 - then() , catch()
 - Async/Await
 - Fetch api
 
-Destructuring
+**> Destructuring**
 
-Components concept
+**> Components concept**
 
 - Nested components
 - State managers redux,veux
 
-Spread operator ( … )
+**> Spread operator ( … )**
 
-High order array functions
+**> High order array functions**
 
 - forEach()
 - map()
 - filter()
 
-Functional programming
+**> Functional programming**
 
-Prototype
+**> Prototype**
