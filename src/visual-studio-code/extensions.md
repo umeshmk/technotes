@@ -1,7 +1,18 @@
 # Extensions
 
 [VSCode Marketplace](https://marketplace.visualstudio.com/vscode)
-[VSCode Api for custom theme](https://code.visualstudio.com/api)
+
+:::tip Installed extensions
+Vsocde installed extensions are also applied to workspace.
+[Feature Request: Enable/disable extensions from config file](https://github.com/microsoft/vscode/issues/40239)
+
+**Enable/Disable extensions :**
+This command in vscode will enable all installed extensions for everything or just workspace.
+
+Workspace can only recommend. But can't enable/disable automatically.
+
+**_SOLUTION : Enable/Disble extensions manually. Use workspace as just recommendations only._**
+:::
 
 **Get Installed Extensions ids :**
 
@@ -16,56 +27,40 @@ Add in **.vscode/extensions.json** or **.code-workspace**
 }
 ```
 
-## ALL
+## All
 
-- `Visual studio intellicode` (not sure if needed)
-- `Github Theme` - Theme By Github (light & dark)
-- `vscode icons`
-- `Prettier` : Code formatter
-- `Path IntelliSense` - Autocompletes filenames
-- `Bracket pair colorizer`
-- `Intend rainbow`
-- `Better comments`
+> This extensions are needed for almost every workspace.
 
 ```json
 // All
 [
-  "VisualStudioExptTeam.vscodeintellicode",
   "GitHub.github-vscode-theme",
   "vscode-icons-team.vscode-icons",
   "esbenp.prettier-vscode",
   "christian-kohler.path-intellisense",
   "coenraads.bracket-pair-colorizer-2",
   "oderwat.indent-rainbow",
-  "aaron-bond.better-comments"
+  "mikestead.dotenv",
+  "austenc.laravel-blade-spacer"
 ]
 ```
 
 ## OTHERS
 
-- `Live Share` : Collaboration tool in real time
-- `Code runner` - runs short snippets of code quickly.
-- `DotENV` - Support for dotenv file syntax
-- `REST client (api.http)` --> For Frontend - Good to learn.
-- `Sass/Less/Stylus/Typescript/Javascript/Jade/Pug Compile Hero Pro` - Compile without webpack/gulp
-- `Sync settings` - (Better to use workspace/.vscode)
+- `wscats.eno` - `Sass/Less/Stylus/Typescript/Javascript/Jade/Pug Compile Hero Pro` - Compile without webpack/gulp
 
 ```json
 // Others
 [
   "ms-vsliveshare.vsliveshare",
   "formulahendry.code-runner",
-  "mikestead.dotenv",
+  "aaron-bond.better-comments",
   "humao.rest-client",
-  "wscats.eno",
-  "shan.code-settings-sync"
+  "wscats.eno"
 ]
 ```
 
 ## GIT
-
-- `Gitlens` - good if team
-- `Git history`
 
 ```json
 // Git
@@ -73,11 +68,6 @@ Add in **.vscode/extensions.json** or **.code-workspace**
 ```
 
 ## MARKDOWN
-
-- `Markdownlint` - Linting
-- `Markdown all in one` - (Delete key shortcuts. Multiple cursors not allowed instead duplicates line. Search markdown and find alt+shift+up/down. Settings are updated on gist.)
-- `Markdown preview enhanced`
-- `Markdown theme kit` - theme (by Microsoft)
 
 ```json
 // Markdown
@@ -91,13 +81,10 @@ Add in **.vscode/extensions.json** or **.code-workspace**
 
 ## HTML
 
-- `Laravel blade spacer` - Needed for `.blade.php, .vue` too.
-- `Live Server` : Localhost server for static Html pages
 - For css _(choose any one)_
   - `html css support`
   - `IntelliSense for CSS class names in HTML`
-- `Auto rename tag`
-- Avoid. (Inbuilt now)
+- **Avoid**. (It's inbuilt now)
   - `Highlight Matching Tag`
   - `Html snippets` - (Archived)
   - `Auto close tag`
@@ -106,7 +93,6 @@ Add in **.vscode/extensions.json** or **.code-workspace**
 ```json
 // html
 [
-  "austenc.laravel-blade-spacer",
   "ritwickdey.liveserver",
   "ecmel.vscode-html-css",
   "zignd.html-css-class-completion",
@@ -116,9 +102,8 @@ Add in **.vscode/extensions.json** or **.code-workspace**
 
 ## CSS
 
-- `tailwind css intellisense` - (May conflict with extensions for html)
 - Stylus _(in vuepress)_
-- Avoid
+- **Avoid**
   - `sass` (Inbuilt)
   - `live sass compiler` - (Avoid. Use other extension in ## All)
   - `color highlight` - (Inbuilt)
@@ -130,33 +115,33 @@ Add in **.vscode/extensions.json** or **.code-workspace**
 
 ## JS
 
-- `ES Lint`
-- `Npm`
-- `Npm IntelliSense`
-- `JavaScript (ES6) Snippets`
-- `Search node_modules` - Quickly search for node modules in your project.
-- `turbo console log`
-- Dotenv
-- _Vue_ : `Vetur / vue 2 snippets`
-- _React_ : `ES7-react-redux-graphicQl-nativeSnippets`
-- `JsDoc/TsDoc` (inbuilt) - Create docs & provides typechecking (Can use npm library to generate html)
-- _Debug_
-  - CLIENT - `debugger-for-chrome`
-  - SERVER-NODEJS - In-built [Debugger](https://code.visualstudio.com/docs/nodejs/nodejs-tutorial#_debugging-your-express-application)
+- **Avoid**
+  - `Search node_modules` - Focus on sidebar and type name.
+  - `Npm` - Use tarminal.
+  - `npm-intellisense` - It's inbuilt now
+  - `turbo console log`
+- `JsDoc/TsDoc` (inbuilt) - Create docs & provides typechecking (If needed can use npm library to generate html)
+- **Typescript** - Avoid(its inbuilt) `Auto Import, TypeScript Hero, TypeScript Importer, Move TS`
 
 ```json
 // js
 [
+  "VisualStudioExptTeam.vscodeintellicode",
   "dbaeumer.vscode-eslint",
-  "eg2.vscode-npm-script",
-  "christian-kohler.npm-intellisense",
   "xabikos.JavaScriptSnippets",
-  "jasonnutter.search-node-modules",
-  "chakrounanas.turbo-console-log",
+  "msjsdiag.debugger-for-chrome"
   "octref.vetur",
   "dsznajder.es7-react-js-snippets",
-  "msjsdiag.debugger-for-chrome",
-  "mikestead.dotenv"
+]
+```
+
+## REMOTE
+
+```json
+[
+  "ms-vscode-remote.remote-wsl",
+  "ms-vscode-remote.remote-container",
+  "ms-vscode-remote.remote-ssh"
 ]
 ```
 
@@ -173,17 +158,3 @@ Add in **.vscode/extensions.json** or **.code-workspace**
   - `laravel 5 snippets`
   - `Laravel-blade`
   - `Laravel-blade-snippets`
-
-## REMOTE
-
-- `Remote-wsl`
-- `Remote-container`
-- `Remote-ssh`
-
-```json
-[
-  "ms-vscode-remote.remote-wsl",
-  "ms-vscode-remote.remote-container",
-  "ms-vscode-remote.remote-ssh"
-]
-```

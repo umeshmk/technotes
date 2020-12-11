@@ -37,6 +37,7 @@ module.exports = {
           "Rest API.md",
           "DBMS.md",
           "github-ssh.md",
+          "Http.md",
         ],
       },
       {
@@ -114,5 +115,6 @@ module.exports = {
       },
     ],
     "/nodejs/": ["", "bundlers/vite.md", "bundlers/snowpack.md"],
+    "/surveys/": [""],
   },
 };

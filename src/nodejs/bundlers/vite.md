@@ -44,14 +44,17 @@ Can import css/json in any js or vue files.
 
 ## Asset URL handling
 
-Static assets - image, media, fonts. (Included automatically in asssets.)
+**Static assets** - image, media, fonts. (Included automatically in asssets.)
 
-Referenced assets - copied to dists assets. (even absolute path urls)(hashed file name)
-Unreferenced assets - not copied
+**Referenced assets** - copied to dists assets. (even absolute path urls)(hashed file name)
 
-Image (<4kb) will be converted to base64
+**Unreferenced assets** - not copied
 
 **public** folder - Everything copied as it is. File names are not changed.
+
+:::tip Images < 4kb
+Image (<4kb) will be converted to base64
+:::
 
 ## PostCSS
 

@@ -45,6 +45,10 @@ module.exports = {
         text: "Keyboard-shortcuts",
         link: "/keyboard-shortcuts/windows10",
       },
+      {
+        text: "Surveys",
+        link: "/surveys/",
+      },
     ],
     sidebarDepth: 2,
     sidebar: sidebar,

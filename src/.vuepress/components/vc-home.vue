@@ -23,6 +23,7 @@ export default {
         Css: "/css",
         Javascript: "/javascript",
         Nodejs: "/nodejs",
+        Surveys: "/surveys",
       },
     };
   },

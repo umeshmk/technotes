@@ -1,95 +1,89 @@
 # Settings JSON
 
+## Global
+
+> Add this in User settings. No need to add in workspace.
+
 ```json
 {
   // ==> Editor Basics <==
-  // -----------------------------------------------
+  "window.zoomLevel": 1,
   "editor.fontLigatures": true,
   "editor.fontFamily": "'JetBrains Mono', 'Cascadia Code', Consolas, 'Courier New', monospace",
   "editor.fontSize": 15,
   "editor.suggestSelection": "first",
+  "editor.snippetSuggestions": "top",
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-  // "editor.tabCompletion": "off",
-  // "editor.quickSuggestions": {
-  //     "other": true,
-  //     "comments": false,
-  //     "strings": false
-  // },
-
   "editor.formatOnSave": true,
   "files.autoSave": "onFocusChange",
   // "files.autoSaveDelay": 3000
-
   // ==> Workbench - Themes <==
-  // -----------------------------------------------
   "workbench.iconTheme": "vscode-icons",
   "workbench.colorTheme": "GitHub Dark",
   "workbench.editor.showTabs": false,
-  "workbench.colorCustomizations": {
-    "[GitHub Light]": {
-      // "sideBar.background": "#3f2d3f",
-      // "sideBar.foreground": "#888",
-      // "sideBarTitle.foreground": "#999",
-      "editor.selectionBackground": "#ff000020",
-      "list.focusBackground": "#ff000015"
-    }
+  // "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
+
+  // ==> files/folders <==
+  "files.associations": {
+    ".aliases": "shellscript"
   },
-
-  // ==> Terminal Panel <==
-  // -----------------------------------------------
-  "terminal.integrated.fontFamily": "MesloLGS NF",
-  // "terminal.integrated.fontSize": 14,
-  // "[Log]": {
-  //     "editor.fontSize": 15
-  // },
-
-  // ==> Exclude files/folders <==
-  // -----------------------------------------------
-
   "files.exclude": {
-    "**/.git": true,
     "**/node_modules": true
-    //     "**/*.js": {
-    //         "when": "$(basename).ts"
-    //     }
   },
-  // "search.exclude": {
-  //     "someFolder/": true,
-  //     "somefile": true
-  // },
-
-  // ==> emmet <==
-  // -----------------------------------------------
-  // "emmet.triggerExpansionOnTab": true,
-  // "emmet.showSuggestionsAsSnippets": true,
-  // "editor.snippetSuggestions": "top",
-  // "emmet.includeLanguages": {
-  //     "javascript": "javascriptreact",
-  //     "razor": "html",
-  //     "plaintext": "pug"
-  // },
-
-  // ==> Markdown <==
-  // -----------------------------------------------
-  "[markdown]": {
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/dist": true
+  },
+  // ==> Prettier <==
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[vue]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "markdown-preview-enhanced.previewTheme": "github-light.css"
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
 
-  // ==> JSON <==
-  // -----------------------------------------------
-  // "[jsonc]": {
-  //     "editor.defaultFormatter": "vscode.json-language-features"
-  //   },
+  // ==> Markdown <==
+  "markdown-preview-enhanced.previewTheme": "github-light.css",
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.quickSuggestions": {
+      "strings": true
+    }
+  }
+}
+```
 
-  // ==> Open Unknown file ext like foo.database <==
-  // -----------------------------------------------
-  // "files.associations": {
-  //     ".database": "json"
-  // },
+## Optional
 
-  // ==> jsdocs <==
-  // -----------------------------------------------
-  // "javascript.suggest.completeJSDocs": false
+```json
+{
+  // ==> files/folders <==
+  "files.exclude": {
+    "**/*.js": {
+      "when": "$(basename).ts"
+    }
+  }
+
+  // ==>  Extension: Html-css-support <==
+  "css.remoteStyleSheets": [
+    "https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.1/tailwind.min.css"
+  ],
+  "css.enabledLanguages": [
+    "html"
+  ]
+
+  // ==> Emmet <==
+  "emmet.triggerExpansionOnTab": true,
+  "emmet.showSuggestionsAsSnippets": true,
+  "editor.snippetSuggestions": "top",
+  "emmet.includeLanguages": {
+      "javascript": "javascriptreact",
+      "razor": "html",
+      "plaintext": "pug"
+  },
+
 }
 ```
