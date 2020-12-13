@@ -1,3 +1,3 @@
 My notes as short as possible.
 
-Added Vuepress.
+Created using Vuepress.

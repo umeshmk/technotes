@@ -43,7 +43,7 @@ module.exports = {
       },
       {
         text: "Keyboard-shortcuts",
-        link: "/keyboard-shortcuts/windows10",
+        link: "/keyboard-shortcuts/",
       },
       {
         text: "Surveys",

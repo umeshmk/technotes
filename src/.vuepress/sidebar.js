@@ -99,14 +99,13 @@ module.exports = {
       "css3.md",
       // "Tailwind-cheetsheet.md",
       "sass.md",
-      "Tailwind.md",
       "Tailwind-core.md",
     ],
     "/javascript/": [
       {
         title: "Javascript",
         collapsable: false,
-        children: ["", "object-model.md", "Json.md", "Jquery.md"],
+        children: ["", "object-model.md", "node.md", "Json.md", "Jquery.md"],
       },
       {
         title: "Vue.js",
@@ -114,7 +113,7 @@ module.exports = {
         children: ["vue/Vuejs.md", "vue/component.md"],
       },
     ],
-    "/nodejs/": ["", "bundlers/vite.md", "bundlers/snowpack.md"],
-    "/surveys/": [""],
+    "/tools/": ["vite.md", "snowpack.md"],
+    "/surveys/": ["", "github.md"],
   },
 };

@@ -1,17 +1,24 @@
 # Surveys
 
+:::tip Resources
+[Npm Trends](https://www.npmtrends.com/) <br/>
+[Hackernews Hiring Trends](https://www.hntrends.com/2020/may-big-drop-developer-job-postings.html)<br/>
+[FrontendFrameworksPopularity.md](https://gist.github.com/tkrotoff/b1caa4c3a185629299ec234d2314e190) <br/>
+[star-history.t9t.io](https://star-history.t9t.io)<br/>
+[gitstar-ranking](https://gitstar-ranking.com/) <br/>
+[Static site generators & CMS](https://jamstack.org/generators/)
+:::
+
 ## Best resources
 
 - _Openbase.io_
 - _Google Trends_
 - _State Of Css/Js_
 - _Stack Overflow_
-- _Npm Trends_
 - _Job Postings_
 - _Github Stars_
 - _w3techs.com_
 - _Hackr.io (Best resources for learning)_
-- _Roadmaps.sh_
 - _Product Hunt_
 - _Stackshare.io_
 - _Slant.co_

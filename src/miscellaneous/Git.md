@@ -7,6 +7,8 @@
 > [github-git-cheat-sheet.pdf](https://training.github.com/downloads/github-git-cheat-sheet.pdf)
 >
 > [hofmannsven/6814451](https://gist.github.com/hofmannsven/6814451)
+>
+> [tiimgreen/github-cheat-sheet](https://github.com/tiimgreen/github-cheat-sheet)
 
 ```bash
 cd project
