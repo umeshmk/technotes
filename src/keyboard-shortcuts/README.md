@@ -69,7 +69,20 @@ sidebar: auto
 | `Windows + Spacebar`         | Switch input language and keyboard layout. |
 | `Windows + Plus (+)`         | Magnifier                                  |
 
-## Browsers
+## Chrome Browser
+
+### Dev Tools
+
+| Keys                       | What to do                                     |
+| -------------------------- | ---------------------------------------------- |
+| F12                        | Devtools                                       |
+| ctrl + shift + P           | command Pallete                                |
+| ctrl + shift + J           | console panel                                  |
+| ctrl + F                   | Find elements/text in HTML code (when focused) |
+| Esc                        | show/hide console                              |
+| up/down OR shift + up/down | increament/decreament by 1 OR 10               |
+
+### Basics
 
 | Keys                      | What to do                |
 | ------------------------- | ------------------------- |

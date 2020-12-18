@@ -15,12 +15,16 @@
   "editor.snippetSuggestions": "top",
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "editor.formatOnSave": true,
+  "editor.cursorStyle": "block",
+  "editor.cursorBlinking": "solid",
+  "editor.minimap.enabled": false,
   "files.autoSave": "onFocusChange",
   // "files.autoSaveDelay": 3000
   // ==> Workbench - Themes <==
   "workbench.iconTheme": "vscode-icons",
   "workbench.colorTheme": "GitHub Dark",
   "workbench.editor.showTabs": false,
+  "workbench.sideBar.location": "right",
   // "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
 
   // ==> files/folders <==

@@ -1,12 +1,27 @@
 # Surveys
 
 :::tip Resources
-[Npm Trends](https://www.npmtrends.com/) <br/>
-[Hackernews Hiring Trends](https://www.hntrends.com/2020/may-big-drop-developer-job-postings.html)<br/>
-[FrontendFrameworksPopularity.md](https://gist.github.com/tkrotoff/b1caa4c3a185629299ec234d2314e190) <br/>
-[star-history.t9t.io](https://star-history.t9t.io)<br/>
-[gitstar-ranking](https://gitstar-ranking.com/) <br/>
-[Static site generators & CMS](https://jamstack.org/generators/)
+
+- [moiva.io](https://moiva.io/?compare=angular+react+vue)
+- [Npm Trends](https://www.npmtrends.com/)
+- [Hackernews Hiring Trends](https://www.hntrends.com/2020/may-big-drop-developer-job-postings.html)
+- [FrontendFrameworksPopularity.md](https://gist.github.com/tkrotoff/b1caa4c3a185629299ec234d2314e190)
+- [star-history.t9t.io](https://star-history.t9t.io)
+- [gitstar-ranking](https://gitstar-ranking.com/)
+- [Static site generators & CMS](https://jamstack.org/generators/)
+- [Stackshare.io](https://Stackshare.io)
+- [Hackr.io](https:hackr.io) (courses & tutorials)
+  :::
+
+:::danger NpmTrends Comparisons
+
+- [sanitize-vs-normalize-vs-reset-vs-normalize-scss](https://www.npmtrends.com/sanitize.css-vs-normalize.css-vs-reset-css-vs-normalize-scss-vs-modern-normalize)
+- [angular-vs-react-vs-vue](https://www.npmtrends.com/angular-vs-react-vs-vue)
+- [Css Frameworks](https://www.npmtrends.com/tailwindcss-vs-bootstrap-vs-materialize-css-vs-material-design-lite-vs-bulma-vs-foundation-sites-vs-semantic-ui-vs-skeleton-css-vs-purecss-vs-uikit)
+- [React UI Components](https://www.npmtrends.com/antd-vs-material-ui-vs-react-bootstrap-vs-@blueprintjs/core-vs-semantic-ui-react-vs-rebass-vs-evergreen-ui-vs-rsuite-vs-primereact-vs-grommet)
+- [Redux-vs-mobx-vs-react-redux-vs-flux-vs-vuex](https://www.npmtrends.com/redux-vs-mobx-vs-react-redux-vs-flux-vs-vuex)
+- [rxjs-vs-react-vs-typescript](https://www.npmtrends.com/rxjs-vs-react-vs-typescript)
+
 :::
 
 ## Best resources
@@ -20,7 +35,6 @@
 - _w3techs.com_
 - _Hackr.io (Best resources for learning)_
 - _Product Hunt_
-- _Stackshare.io_
 - _Slant.co_
 
 **Others :**
