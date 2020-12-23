@@ -18,6 +18,7 @@
   "editor.cursorStyle": "block",
   "editor.cursorBlinking": "solid",
   "editor.minimap.enabled": false,
+  "editor.lineNumbers": "interval",
   "files.autoSave": "onFocusChange",
   // "files.autoSaveDelay": 3000
   // ==> Workbench - Themes <==

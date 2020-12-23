@@ -238,6 +238,8 @@ react-router - 42k
 awesome-react - 40k
 awesome-react-components - 24k
 react-redux-links - 20k
+airbnb/react-dates - 11k
+react-datepicker - 5k
 ```
 
 ## Animations

@@ -17,6 +17,7 @@ _(Stick to few and Official ones)_
 
 ## HTML/CSS/JS
 
+- [MDN Html Reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
 - [MDN Web Docs](https://developer.mozilla.org/en-US/)
 - [W3schools](https://www.w3schools.com/)
 - [CssTricks](https://css-tricks.com/)
@@ -104,3 +105,4 @@ _(Stick to few and Official ones)_
 - [webhint.io](https://webhint.io/)
 - [developers.google.com/web](https://developers.google.com/web)
 - [web.dev](https://web.dev/)
+- [3rd party Api - programmableweb](https://www.programmableweb.com/category/all/apis)

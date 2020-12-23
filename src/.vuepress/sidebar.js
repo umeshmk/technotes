@@ -92,7 +92,7 @@ module.exports = {
         children: ["7-Database.md", "8-EloquentORM.md"],
       },
     ],
-    "/html/": ["", "Html 5.md", "seo.md", "Forms.md"],
+    "/html/": ["", "Html 5.md", "Forms.md", "seo.md"],
     "/css/": [
       "",
       "Layout.md",
@@ -105,7 +105,14 @@ module.exports = {
       {
         title: "Javascript",
         collapsable: false,
-        children: ["", "object-model.md", "node.md", "Json.md", "Jquery.md"],
+        children: [
+          "",
+          "asynchronous.md",
+          "dom.md",
+          "node.md",
+          "Json.md",
+          "Jquery.md",
+        ],
       },
       {
         title: "Vue.js",
@@ -115,5 +122,6 @@ module.exports = {
     ],
     "/tools/": ["vite.md", "snowpack.md"],
     "/surveys/": ["", "resources.md", "github.md"],
+    "/oop/": [""],
   },
 };

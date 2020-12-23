@@ -619,144 +619,10 @@ const x = (a.b) => {...};
 const x = a => {...};
 ```
 
-## Objects
-
-### Define
-
-```js
-var foo = {
-  a: 2,
-  b: 3,
-  add: function() {
-    return this.a + this.b;
-  },
-};
-```
-
-### Access
-
-```js
-foo.a;
-foo[a];
-foo.add();
-
-// Never do this
-var a = new String();
-var a = new Number();
-var a = new Boolean();
-```
-
-:::tip
-Objects are **Mutable** because they are always addressed by **reference**.
-:::
-
-### Create
-
-```js
-// 1  var obj = {...} ;
-// 2. var obj = new Object();
-
-// way 1
-var obj = {
-  prop1: 23,
-  method1: function(){...}
-};
-
-// way 2
-// using constructor
-function Person (name, age){
-  this.name = name
-  this.age = age
-}
-var p = new Person("umesh", 23);
-```
-
-- **Properties**
-  - _changed, added, deleted, read-only_
-  - Access - `obj.foo` or `obj['obj']`
-  - Add - `obj.newfoo = 'foooo';`
-  - Prototype properties can be used.
-
-### Get/Set
-
-Brackets `()` are not used like methods.
-
-```js
-var obj = {
-  name: "umesh",
-  age: 23,
-  get show() {
-    return this.name.toUpperCase();
-  },
-  set change(n) {
-    this.name = n;
-  },
-};
-obj.show;
-obj.change = "Foo";
-```
-
-### Shorthand
-
-```js
-//old way
-function person() {
-  let name = "umesh";
-  return {
-    name: name,
-    greet: function() {
-      return "hello " + this.name;
-    },
-  };
-}
-//new way
-function person() {
-  let name = "umesh";
-  return {
-    name,
-    greet() {
-      return `hello ${this.name}`;
-    },
-  };
-}
-```
-
-### Destructuring
-
-```js
-let obj = { name: "umesh", age: 27 };
-// without destructuring
-var name = obj.name;
-var age = obj.age;
-// with destructuring obj
-let { name, age } = obj;
-```
-
-In functions
-
-```js
-//some random ajax data
-lorem({
-  a: "foo",
-  b: "bar",
-});
-
-// without destructuring
-function foo(data) {
-  var a = data.a;
-  var b = data.b;
-  // ......
-}
-// with destructuring
-function foo({ a, b }) {
-  // ......
-}
-```
-
 ## Prototype
 
-:::danger Avoid
-Better to use Classes with inheritance
+:::tip Use Classes
+Better to use Classes. But remember class is just a syntactic sugar for inherent prototype. Class gets converted to prototype. Check babel repl for es2015.
 :::
 
 ```js
@@ -890,76 +756,6 @@ alert(co.add()); // 7
 - create - `var xhttp = new XMLHttpRequest();`
 - AVOID THIS. - USE AXIOS.
 
-## Classes
-
-- A type of function.
-- If `constructor()` is absent. Then javascript adds invisible & empty `constructor(){ //empty }` automatically.
-- **Class syntax**
-
-  ```js
-  class Foo {
-    constructor(a) {
-      this.a = a;
-    }
-    add(n) {
-      return this.a + n;
-    }
-    static bar() {
-      return "This is bar()";
-    }
-    static barWithObj(obj) {
-      return "This is bar(obj)" + obj.a;
-    }
-  }
-  let obj = new Foo(3);
-  // methods
-  obj.add(5); // 8
-  // methods (static) - obj is not needed
-  Foo.bar(); // 'This is bar()'
-  Foo.barWithObj(obj); // 'This is bar(obj)' + 3
-  ```
-
-- **Inheritance**
-
-  ```js
-  class ParentName {
-    constructor(p) {
-      this.p = p;
-    }
-    pFoo() {
-      return "pFoo() and p = " + this.p;
-    }
-  }
-  class ChildName extends ParentName {
-    constructor(p, c) {
-      super(p);
-      this.c = c;
-    }
-  }
-  let cObj = new ChildName(5, 3);
-  cObj.pFoo(); // "pFoo() and p = " + 5;
-  cObj.p; // NOT allowed. Instead use methods of parent..
-  ```
-
-- **Get / Set**
-
-  ```js
-  class Foo {
-    constructor(a) {
-      this.a = a;
-    }
-    get num() {
-      return this.a;
-    }
-    set num(n) {
-      this.a = n;
-    }
-  }
-  let obj = new Foo(5);
-  obj.num; // 5   // A method is accessed as a property without parentheses().
-  obj.num(10);
-  ```
-
 ## Import/Export
 
 ```js
@@ -1003,17 +799,12 @@ foo.B();
 
 - `spread` calling a function for _fixed_ number of args
 
-  ````js
-  function sum(a,b){
-  return a+b;
-  }
-  sum(1,2); //3
+```js
+function sum(a, b) {
+  return a + b;
+}
+sum(1, 2); //3
 
-      		arr = [1,2];
-      		sum(...arr);	//3
-      	```
-  ````
-
-## Promises (todo)
-
-## Async/Await (todo)
+arr = [1, 2];
+sum(...arr); //3
+```
