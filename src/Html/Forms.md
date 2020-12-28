@@ -149,21 +149,21 @@ file, image, hidden -->
   - `dates-related`
   - `progress, meter`
 
-```css
-/* pseudo elements */
+```scss
+// pseudo elements
 ::before
 ::after
 
-/* pseudo classes */
+// pseudo classes
 :focus, :hover, :active
-:required, :optional /* (not needed its default state) */
+:required, :optional // (not needed its default state)
 :valid, :invalid,
 :in-range, :out-of-range
 :enabled, :disabled
 :read-only, :read-write
 :checked, :indeterminate, :default
 
-/* extras */
+// extras
 :focus-within
 :focus-visible
 :placeholder-shown

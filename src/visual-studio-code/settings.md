@@ -9,7 +9,7 @@
   // ==> Editor Basics <==
   "window.zoomLevel": 1,
   "editor.fontLigatures": true,
-  "editor.fontFamily": "'JetBrains Mono', 'Cascadia Code', Consolas, 'Courier New', monospace",
+  "editor.fontFamily": "'JetBrains Mono Light','Source Code Pro', 'Cascadia Code', Consolas, 'Courier New', monospace",
   "editor.fontSize": 15,
   "editor.suggestSelection": "first",
   "editor.snippetSuggestions": "top",
@@ -27,28 +27,25 @@
   "workbench.editor.showTabs": false,
   "workbench.sideBar.location": "right",
   // "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
-
+  "files.eol": "\n",
   // ==> files/folders <==
   "files.associations": {
     ".aliases": "shellscript"
   },
   "files.exclude": {
-    "**/node_modules": true
+    // "**/node_modules": true
   },
   "search.exclude": {
     "**/node_modules": true,
     "**/dist": true
   },
-  // ==> Prettier <==
-  "[json]": {
-    "editor.defaultFormatter": "vscode.json-language-features"
+
+  // ==> Prettier & Eslint Fixex<==
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
   },
-  "[vue]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
+  "eslint.alwaysShowStatus": true,
 
   // ==> Markdown <==
   "markdown-preview-enhanced.previewTheme": "github-light.css",
@@ -65,12 +62,18 @@
 
 ```json
 {
+
   // ==> files/folders <==
   "files.exclude": {
     "**/*.js": {
       "when": "$(basename).ts"
     }
   }
+
+ // ==> Prettier <==
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
 
   // ==>  Extension: Html-css-support <==
   "css.remoteStyleSheets": [

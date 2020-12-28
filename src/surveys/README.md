@@ -2,6 +2,7 @@
 
 :::tip Resources
 
+- [hotframeworks.com](http://hotframeworks.com/)
 - [moiva.io](https://moiva.io/?compare=angular+react+vue)
 - [Npm Trends](https://www.npmtrends.com/)
 - [Hackernews Hiring Trends](https://www.hntrends.com/2020/may-big-drop-developer-job-postings.html)
@@ -11,16 +12,21 @@
 - [Static site generators & CMS](https://jamstack.org/generators/)
 - [Stackshare.io](https://Stackshare.io)
 - [Hackr.io](https:hackr.io) (courses & tutorials)
-  :::
+
+:::
 
 :::danger NpmTrends Comparisons
 
+- [Webpack & Others](https://www.npmtrends.com/webpack-vs-parcel-vs-gulp-vs-rollup-vs-browserify-vs-grunt)
 - [sanitize-vs-normalize-vs-reset-vs-normalize-scss](https://www.npmtrends.com/sanitize.css-vs-normalize.css-vs-reset-css-vs-normalize-scss-vs-modern-normalize)
 - [angular-vs-react-vs-vue](https://www.npmtrends.com/angular-vs-react-vs-vue)
 - [Css Frameworks](https://www.npmtrends.com/tailwindcss-vs-bootstrap-vs-materialize-css-vs-material-design-lite-vs-bulma-vs-foundation-sites-vs-semantic-ui-vs-skeleton-css-vs-purecss-vs-uikit)
 - [React UI Components](https://www.npmtrends.com/antd-vs-material-ui-vs-react-bootstrap-vs-@blueprintjs/core-vs-semantic-ui-react-vs-rebass-vs-evergreen-ui-vs-rsuite-vs-primereact-vs-grommet)
 - [Redux-vs-mobx-vs-react-redux-vs-flux-vs-vuex](https://www.npmtrends.com/redux-vs-mobx-vs-react-redux-vs-flux-vs-vuex)
 - [rxjs-vs-react-vs-typescript](https://www.npmtrends.com/rxjs-vs-react-vs-typescript)
+- [Json Validation](https://www.npmtrends.com/joi-vs-ajv-vs-yup-vs-express-validator-vs-validator-vs-validate.js)
+- [ORM-Object relational mapping](https://www.npmtrends.com/mongodb-vs-mongoose-vs-sequelize-vs-typeorm-vs-knex-vs-pg-vs-bookshelf-vs-graphql)
+- [StyleGuide-Prettier/Airbnb/Google/Standards](https://www.npmtrends.com/eslint-config-airbnb-base-vs-eslint-config-airbnb-vs-prettier-vs-standard-vs-eslint-config-google-vs-eslint-config-standard)
 
 :::
 
@@ -323,7 +329,7 @@
 - 50% usage
 - How ??
 
-  1. <img alt= "..."> (25%)
+  1. `<img alt= "...">` (25%)
   2. Aria attribute (25%)
   3. Keyboard navigation (25%)
   4. Color contrasts (25%)

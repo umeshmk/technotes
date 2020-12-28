@@ -21,9 +21,10 @@
 
 ## CRUD REQUEST
 
-| Create   | Read    | Update  | Delete     |
-| -------- | ------- | ------- | ---------- |
-| `*POST*` | `*GET*` | `*PUT*` | `*DELETE*` |
+| Create               | Read                         | Update                 | Delete         |
+| -------------------- | ---------------------------- | ---------------------- | -------------- |
+| `*POST*`             | `*GET*`                      | `*PUT*`                | `*DELETE*`     |
+| `/api/users` (+data) | `/api/users`, `/api/users/1` | `/api/users/1` (+data) | `/api/users/1` |
 
 ## RESOURCES [ DATA URIs]
 

@@ -6,11 +6,6 @@ Filtered for myself.
 
 **NPMTrends & JobDemand - A better way than stars.**
 
-[Hackernews Hiring Trends](https://www.hntrends.com/2020/may-big-drop-developer-job-postings.html)<br/>
-[FrontendFrameworksPopularity.md](https://gist.github.com/tkrotoff/b1caa4c3a185629299ec234d2314e190) <br/>
-[star-history.t9t.io](https://star-history.t9t.io)<br/>
-[gitstar-ranking](https://gitstar-ranking.com/) <br/>
-[Static site generators & CMS](https://jamstack.org/generators/)
 :::
 
 ## Learn
@@ -70,6 +65,7 @@ wesbos/Javascript30 (learn) - 14k
 you-dont-need-Javascript - 14k
 Javascript.info (learn) - 12k
 js-must-watch (learn) - 12k
+A-to-Z-Resources-for-Students -11k
 es6-cheatsheet - 11k
 jstips (learn) - 11k
 javascript-testing-best-practices - 10k
@@ -161,7 +157,7 @@ parcel - 37k
 jest (testing) - 33k
 pdf.js - 35k
 nest - 32k
-pixi.js (webGL) - 31k
+pixi.js (webGL-game) - 31k
 immutable.js - 30k
 clipboard.js - 29k
 faker.js - 28k
