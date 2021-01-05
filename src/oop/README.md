@@ -167,11 +167,52 @@ class Teacher extends Person {
 }
 
 // objects
-let person = new Person();
-let teacher = new Teacher();
+let person = new Person("foo");
+let teacher = new Teacher("bar");
 
 person.greet(); // Hi
 teacher.greet(); // Good Morning
+```
+
+## Instanceof
+
+```js
+let a = [2, 3];
+
+console.log(a instanceof Array); // true
+console.log(a instanceof Object); // true
+```
+
+- Helpful in Polymorphism.
+
+```js
+// Parent - Person
+class Person {
+  constructor(name) {
+    this.name = name;
+  }
+  greet() {
+    return "Hi";
+  }
+}
+// Child - Teacher
+class Teacher extends Person {
+  constructor(name) {
+    super(name);
+  }
+  greet() {
+    return "Good Morning";
+  }
+}
+
+// objects
+let person = new Person("foo");
+let teacher = new Teacher("bar");
+
+console.log(person instanceof Person); // true
+console.log(teacher instanceof Person); // true
+console.log(person instanceof Teacher); // false
+console.log(teacher instanceof Teacher); // true
 ```
 
 ## Creating Objects
@@ -351,96 +392,177 @@ Object.values(obj); // all values
 if("key" in obj) // "key" is present in obj
 ```
 
+## Property Flags
+
+- **Each property has 3 Types of hidden flags (default value is always `true` for all 3 flags)**
+  - `writable` - value can be changed
+  - `enumerable` - property can be counted in loop
+  - `configurable` - property can be deleted or modified
+
+```js
+// show property flags
+let description = Object.getOwnPropertyDescriptor(obj, propName);
+console.log(description); // {value: , writable: true, enumerable: true, configurable: true, }
+
+// change flags
+Object.defineProperty(obj, propName, descriptionObj);
+Object.defineProperty(user, name, { value: "umesh" }); // If flags are absent then all flags = false.
+
+Object.defineProperties(obj, {propName: description, ....}); // Multiple properties
+```
+
 ## Setters/Getters
 
-- Methods of class that are accessed like a property without parenthesis `()`
+- **Property Types**
+  - _Data property_ - has `value`
+  - _Accessor property_ - has no `value` but `get/set`
+    - Methods that are accessed like a property without parenthesis `()`
+    - It has no `writable` property flag but `get()` & `set()` functions
+    - `set()` allows only one parameter.
 
 ### Using Object Literal
 
+- **Two ways**
+  1. Using keywords `get/set` inside literal object.
+  2. Using `Object.defineProperty` outside literal object
+
 ```js
+// first, last = data property
+// user = accessor property
 var obj = {
-  name: "umesh",
-  age: 23,
-  get show() {
-    return this.name.toUpperCase();
+  first: "umesh",
+  last: "kadam",
+  get user() {
+    return `${this.first} ${this.last}`;
   },
-  set change(n) {
-    this.name = n;
+  set user(name) {
+    let [first, last] = name.split(" "); // array destructuring
+    this.first = first;
+    this.last = last;
   },
 };
-obj.show;
-obj.change = "Foo";
+
+// Object.defineProperty can be used here
+
+obj.user = "Foo Bar"; // set
+console.log(obj.user); // get
 ```
 
-### Using Construtor - Methods
+### Using Constructor - Property
 
-:::danger Not a get/set
-This is not an example of get/set. It just uses keywords `getXxxx()` / `setXxxx()`.
-They are just methods and are accessed like methods.
-:::
-
-- Can access private members like `location` using `get/set` words in methods.
+- **One way**
+  1. Not possible - Using keywords `get/set` inside Constructor.
+  2. Using `Object.defineProperty` inside/outside Constructor by passing context `this/obj`
 
 ```js
 function Foo(name) {
-  let location = "Mumbai";
-  this.name = name;
-  this.getLocation = () => {
-    return location;
-  };
-  this.setLocation = (newLocation) => {
-    location = newLocation;
-  };
-}
-let obj = new Foo("umesh");
-obj.getLocation(); // Mumbai
-obj.setLocation("California");
-obj.getLocation(); // California
-```
-
-### Using Constructor - Property (Object.defineProperty)
-
-```js
-function Foo(name) {
-  let location = "Mumbai";
   this.name = name;
 
-  Object.defineProperty(this, "location", {
+  Object.defineProperty(this, "user", {
     get: () => {
-      return location; // readonly private member value
+      return this.name;
     },
-    set: (newLocation) => {
-      location = newLocation; // writeonly to change private member value
+    set: (name) => {
+      if (name.length > 3) {
+        this.name = name;
+      }
     },
   });
 }
 
 let obj = new Foo("Harry");
-obj.location; // Mumbai
-obj.location("California"); // error
-obj.location = "California"; // works
-obj.location; // California
+obj.user = "Potter"; // set
+console.log(obj.user); // get - Potter
+```
+
+### Using Construtor - Methods
+
+:::danger Not a get/set Syntax
+This is not an example of get/set Syntax. It just uses keywords `getXxxx()` / `setXxxx()`.
+They are just simple methods (not accessor property).
+
+**Advantage** - Arguments can be of any length & not restricted as in `get/set`
+:::
+
+```js
+function Foo(name) {
+  this.name = name;
+  this.getName = () => {
+    return this.name.toUpperCase();
+  };
+  this.setName = (name) => {
+    this.name = name;
+  };
+}
+let obj = new Foo("umesh");
+obj.getName();
+obj.setName("Harry");
 ```
 
 ### Using Class
 
 ```js
-class Circle {
-  constructor(radius) {
-    this.radius = radius;
+class Foo {
+  constructor(name) {
+    this.name = name;
   }
 
-  get diameter() {
-    return this.radius * 2;
+  get user() {
+    return this.name;
   }
-  set increaseRadiusBy(n) {
-    this.radius += n;
+  set user(name) {
+    this.name = name;
   }
 }
 
-let c = new Circle(5);
-c.diameter; // 10
-c.increaseRadiusBy = 2;
+let c = new Foo("Umesh");
+c.user = "Harry"; // set
+console.log(c.user); // get
+```
+
+## Private/Protected
+
+- **Private** - `#propName` (almost a js standard now. Visible only inside class.) (No Inheritance for child class.)
+- **Protected** - `_propName` (a convention but not official. It is assecible from anywhere outside. But `_` reminds us not to use outside class.)
+
+### In Constructor
+
+```js
+function Foo() {
+  let pri = "umesh"; // private member (not property)
+
+  this.myPrivate = () => {
+    return pri;
+  };
+}
+
+let obj = new Foo();
+
+console.log(obj.myPrivate()); // umesh
+console.log(obj.pri); // undefined
+obj.pri = "something"; // is creating property and not private member
+```
+
+### In Class
+
+```js
+class Foo {
+  let pri = "Hmmm...why I'm not allowed ?"; // unlike constructor above "let/const" is not allowed
+  #myPrivate = "Hmmm...secret"; // private
+  myPrivate = "Hmmm...no secret"; // allowed & public
+
+  // constructor if needed
+
+  #myPrivateMethod() {
+    // code
+  }
+  myPrivateMethod() {
+    return this.#myPrivate; // accessed using "this"
+  }
+}
+
+let obj = new Foo();
+console.log(obj.myPrivateMethod());
 ```
 
 ## Method Chaining
@@ -497,4 +619,55 @@ var age = obj.age;
 
 // with destructuring
 let { name, age } = obj;
+```
+
+## Symbol
+
+- A symbol is unique identifier.
+- It's always accessed using variable.
+- Hidden/Skipped by - `for in`, `Object.keys` but not by cloning `(Object.assign(dest, [src1, src2...]))`
+
+```js
+// Description is obtional
+let id = Symbol("This is description & has no side-effects on anything.");
+let id = Symbol();
+id.description; // read description
+
+// Symbold are always unique
+let x = Symbol("hello");
+let y = Symbol("hello");
+console.log(x === y); // false
+
+// To use variable as property name we use symbols.
+// This avoids conflict with other properties of same name
+let id = Symbol();
+
+let obj = {
+  id: "property",
+  [id]: "Symbol variable as property",
+};
+
+console.log(obj.id); // "property",
+console.log(obj[id]); // "Symbol variable as property"
+```
+
+## Mixins
+
+- It's like adding extra props/methods to prototype of any class.
+- Js does not allow multiple Inheritance. But then mixin can be a great alternative.
+
+```js
+let mixin = {
+  msg: "I'm form Mixin",
+};
+
+class Person {}
+class Teacher extends Person {}
+
+let obj = new Teacher();
+
+console.log(Teacher.prototype); // Person {...}
+
+Object.assign(Teacher.prototype, mixin); // add mixin to teacher
+console.log(Teacher.prototype); // Person {msg: "...." , ...}
 ```

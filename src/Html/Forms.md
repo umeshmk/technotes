@@ -19,6 +19,22 @@
 </label>
 ```
 
+### Form Element
+
+```js
+// Get Form
+let f = document.forms.myForm; // <form name="myForm">
+let f = document.forms[0];
+
+// Get Form Element
+f.elements.myElement;
+f.elements.myElements[0]; // can be an array collection too like all radio buttons with same name
+f.elements.myElement.value;
+
+// Backreference
+myElement.form; // form element is returned
+```
+
 ## Send Data
 
 **Validation before sending**
@@ -43,34 +59,76 @@
 - `multipart/form-data` - use if files are attached
 - `text/plain` - never use
 
+### 1. With `<form>` & Submit button
+
 ```html
 <!-- HTML -->
-<form action="foo.php" method="post" enctype="multipart/form-data"></form>
+<form action="foo.php" method="post" enctype="multipart/form-data">
+  <!-- input fields -->
+  <input type="submit" value="submit" />
+</form>
+```
 
-<!-- AJAX -->
+### 2. With `<form>` & Js
+
+```html
+<!-- HTML -->
+<form action="foo.php" method="post" enctype="multipart/form-data" id="formId">
+  <!-- input fields -->
+</form>
+
 <script>
-  // FormData is write-only object  - Values can be changed but not retrieved
-  let data = new FormData();
-  data.append("username", "umesh");
-  data.append("file", someFile);
-  axios({
-    url: "....",
-    method: "post",
-    data: data,
-    headers: {
-      "content-type": "multipart/form-data",
-    },
-  }).then();
+  let fd = new FormData(formId); // pass form as parameter
+  fetch(url, {
+    method: "POST",
+    body: fd,
+  });
 </script>
+```
+
+### 3. With Js only (no `<form>`)
+
+```js
+// FormData is write-only object  - Values can be changed but not retrieved
+let fd = new FormData();
+fd.append("username", "umesh");
+fd.append("file", someFile);
+axios({
+  url: "....",
+  method: "post",
+  data: fd,
+  headers: {
+    "content-type": "multipart/form-data",
+  },
+}).then();
 ```
 
 :::danger Content-type
 
 1. `FormData` uses the same format used by `enctype="multipart/form-data"` - [MDN](https://developer.mozilla.org/en-US/docs/Web/API/FormData)
 2. Axios deletes the `content-type` if data is `FormData` - [Github](https://github.com/axios/axios/blob/503418718f669fcc674719fd862b355605d7b41f/lib/adapters/xhr.js#L15-L17)
-   :::
 
-## Inputs
+:::
+
+### FormData Methods
+
+```js
+let fd = new FormData();
+
+// methods
+fd.append(name, value); // allows multiple call for same name (radiobox)
+fd.set(name, value); // same as append but only the latest value is considered. old ones with same names are ignored
+fd.append(name, blob, filename);
+fd.get(name);
+fd.delete(name);
+fd.has(name);
+```
+
+### Sending Images
+
+- We can send images as blobs (using canvas to draw image). But sending as a part of `<input type="file">` in FormData is better.
+
+## Form Inputs
 
 [JsFiddle](https://jsfiddle.net/h2Lf4vud/1/)
 

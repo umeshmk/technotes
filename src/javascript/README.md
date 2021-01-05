@@ -4,11 +4,11 @@
 >
 > Practice on `JsFiddle`
 >
-> Resource - https://javascript.info/
+> Resource - <https://javascript.info/>
 >
-> Detailed Book - http://eloquentjavascript.net/index.html
+> Detailed Book - <http://eloquentjavascript.net/index.html>
 >
-> Detailed Book - https://exploringjs.com/es6/index.html
+> Detailed Book - <https://exploringjs.com/es6/index.html>
 
 ```html
 <script src="path/to/foo.js"></script>
@@ -158,13 +158,13 @@ var = "<div>Hello <span>" + name + "</span></div>";
 
 // new way
 var = `
-	<div>
-		Hello
-		<span>
-			${name}
-		</span>
-	</div>
-	`;
+ <div>
+  Hello
+  <span>
+   ${name}
+  </span>
+ </div>
+ `;
 ```
 
 ### Methods
@@ -521,7 +521,17 @@ var p = {
   barArrow: () => {
     return this; // this = window object
   },
+  barMix: function() {
+    let arrow = () => {
+      return this; // lexical scoping - takes this from outer context = p object
+    };
+    return arrow();
+  },
 };
+
+console.log(p.bar()); // p object
+console.log(p.barArrow()); // window object
+console.log(p.barMix()); // p object
 ```
 
 **In Event handlers**
@@ -622,8 +632,15 @@ const x = a => {...};
 ## Prototype
 
 :::tip Use Classes
-Better to use Classes. But remember class is just a syntactic sugar for inherent prototype. Class gets converted to prototype. Check babel repl for es2015.
+Better to use Classes. But remember class is just a syntactic sugar for inherent prototype(with some minor differences for better). Class gets converted to prototype. Check babel repl for es2015.
 :::
+
+- All objects has hidden prototype property `{{ Prototype }}`.
+- Value - either `someObj` or `null`
+- `Object` has it's prototype `Object.prototype`. But `Object.prototype` has no prototype ie `null`.
+- Access using
+  - `obj.__proto__` - old get/set method with no issues
+  - `Object.getPrototypeOf` & `Object.setPrototypeOf` - modern way get/set method
 
 ```js
 function Parent() {
@@ -639,6 +656,29 @@ Child.prototype = new Parent();
 
 let co = new Child(2, 5);
 alert(co.add()); // 7
+```
+
+### for...in
+
+```js
+let person = {
+  name: "umesh",
+};
+
+let teacher = {
+  subject: "javascript",
+  __proto__: person,
+};
+
+console.log(Object.keys(teacher)); // ["subject"]
+
+// shows both own & inherited
+for (let prop in teacher) console.log(prop); // subject, name
+for (let prop in teacher) {
+  if (Object.hasOwnProperty(teacher)) {
+    console.log(prop); // subject
+  }
+}
 ```
 
 ## Functions
@@ -722,41 +762,69 @@ alert(co.add()); // 7
   power(2, 3); // 8
   ```
 
-## Timing
+## Modules - Import/Export
 
-- **Timeout**
+- Modules always `use-strict` automatically
+- Always use bundler like Webpack & not directly in browser.
 
-  ```js
-  var t = setTimeout(foo(), milliseconds);
-  clearTimeout(t);
-  ```
+### In Browser
 
-- **Interval**
+- Can run in browser but the convention is to use Webpack to bundle all modules into one(or few) js files.
+- **Defer** - Module Scripts are always deferred.
 
-  ```js
-  var t = setInterval(foo(), milliseconds);
-  clearInterval(t);
-  ```
+```html
+<!-- use localhost -->
+<script type="module">
+  // console.log(this); // this is always undefined
+</script>
 
-## Cookies
+<script type="module" src="foo.js"></script>
+```
 
-- Small text file
-- Ex:
+### Multiple Imports
 
-  ```js
-  // Create - new one is created. Old one is not replaced.
-  document.cookie = 'name="foo"; expire="....."';
-  // Read
-  var c = document.cookie;
-  ```
+- If same file is imported in different files then it's imported & evaluated only once. Then same copy is given to other files.
+- It helps in initial configuration
 
-## AJAX
+```js
+// common.js
+export let common = { name: "umesh" };
 
-- Asynchronous javascript and XML
-- create - `var xhttp = new XMLHttpRequest();`
-- AVOID THIS. - USE AXIOS.
+// import1.js
+import { common } from "./common.js";
+console.log("From import-1:", common.name);
+common.name = "newName";
 
-## Import/Export
+// import2.js
+import { common } from "./common.js";
+console.log("From import-2:", common.name); // newName
+
+// index.js
+import "./import1";
+import "./import2";
+```
+
+### Official Standard
+
+```js
+// Foo.js
+export let bar = () => {};
+export { bar as barrr };
+
+// Main.js
+import { bar } from "./Foo.js"; // only bar - name must be same  // helps in tree-shaking
+import { bar as barrr } from "./Foo.js"; // just rename
+import * as Foo from "./Foo.js"; // all
+Foo.bar();
+
+// default (only one per file)
+export default class Foo {....}; // classname Foo is optional
+import Bar from "./Foo"; // directly without {..}
+```
+
+### CommonJs
+
+- Used for Nodejs but now it's old.
 
 ```js
 // FooJs.js
@@ -784,16 +852,16 @@ foo.B();
   }
   sum(1,2); //3
 
-      		//n variables
-      		function sum(...numbers){
-      			alert (numbers);
-      		}
-      		sum(1,2,3,4,5); // [1,2,3,4,5] args are converted to a single array
+        //n variables
+        function sum(...numbers){
+         alert (numbers);
+        }
+        sum(1,2,3,4,5); // [1,2,3,4,5] args are converted to a single array
 
-      		//NOTE
-      		function sum(...numbers , wrong);
-      		function sum(right, againRight, ...numbers);
-      	```
+        //NOTE
+        function sum(...numbers , wrong);
+        function sum(right, againRight, ...numbers);
+       ```
 
   ````
 

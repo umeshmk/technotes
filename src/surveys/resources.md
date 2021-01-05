@@ -13,6 +13,7 @@ _(Stick to few and Official ones)_
 - [JsBin](https://jsbin.com)
 - [Repl.it](https://repl.it/)
 - [Stackblitz](https://stackblitz.com/)
+- [plnkr.co](https://plnkr.co/)
 - Babel [Repl](https://babeljs.io/en/repl)
 
 ## HTML/CSS/JS
@@ -21,6 +22,7 @@ _(Stick to few and Official ones)_
   - [MDN Html Reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
   - [htmldog](https://www.htmldog.com/references/html/)
   - [htmlreference.io](https://htmlreference.io/)
+  - [html.spec.whatwg.org](https://html.spec.whatwg.org/)
 - [MDN Web Docs](https://developer.mozilla.org/en-US/)
 - [W3schools](https://www.w3schools.com/)
 - [javascripting.com (Js Libraries)](https://www.javascripting.com/)
@@ -113,6 +115,7 @@ _(Stick to few and Official ones)_
 ## Cheatsheets
 
 - [devhints.io](https://devhints.io/)
+- [lecoupa/awesome-cheatsheets](https://lecoupa.github.io/awesome-cheatsheets/)
 
 ## Jobs
 

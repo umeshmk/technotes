@@ -96,25 +96,37 @@ Microsoft, IIS = case-insensitive
     - _sessionStorage_ - data lost when browser is closed
   - IndexedDB - complete database with options for text, images, videos & almost anything
   - Cache Api (normally with _Webworkers_)
-- In web storage - data stored is separated for each domain
 
 ### Web Storage Api
 
+- More storage than cookie.
+- Unlike cookie the web storage is not sent to server.
+- Separate storage based on `protocol/domain/port`
+
 ```js
+let ls = localStorage;
+// let ss = sessionStorage; // same methods as local
+
 // way 1
-localStorage.foo = "bar"; // set
-localStorage.foo; // get
+ls.foo = "bar"; // set
+ls.foo; // get
 // way 2
-localStorage.setItem("name", "umesh");
-localStorage.getItem("name"); // umesh
+ls.setItem("name", "umesh");
+ls.getItem("name");
 
 // remove
-localStorage.removeItem("name");
+ls.removeItem("name");
+ls.clear(); // all clear
+
+// others
+ls.key(index);
+ls.length; // total items
 ```
 
 ### IndexedDB (TODO)
 
-- TODO
+- TODO - Learn when needed.
+- [jakearchibald/idb](https://github.com/jakearchibald/idb)
 
 ## Web Workers
 
