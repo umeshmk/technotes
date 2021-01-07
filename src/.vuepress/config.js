@@ -49,6 +49,10 @@ module.exports = {
         text: "Surveys",
         link: "/surveys/",
       },
+      {
+        text: "Resources",
+        link: "/resources/",
+      },
     ],
     sidebarDepth: 2,
     sidebar: sidebar,

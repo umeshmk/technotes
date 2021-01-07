@@ -124,7 +124,8 @@ module.exports = {
       },
     ],
     "/tools/": ["vite.md", "snowpack.md"],
-    "/surveys/": ["", "resources.md", "github.md"],
+    "/surveys/": ["", "github.md"],
+    "/resources/": [""],
     "/oop/": [""],
   },
 };

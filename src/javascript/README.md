@@ -1,88 +1,93 @@
 # Javascript
 
-> Ecmascript 2015 = ES6
->
-> Practice on `JsFiddle`
->
-> Resource - <https://javascript.info/>
->
-> Detailed Book - <http://eloquentjavascript.net/index.html>
->
-> Detailed Book - <https://exploringjs.com/es6/index.html>
-
 ```html
 <script src="path/to/foo.js"></script>
+
+<!-- defer - Runs after html is loaded - order is maintained -->
+<script defer src="foo.js"></script>
+
+<!-- async - Runs immediately - order is not maintained -->
+<script async src="foo.js"></script>
+
+<script>
+  // Statement
+  var x, y, z;
+  var foo = "hello";
+  z = x + y;
+</script>
 ```
 
-## Output
+## Console
+
+- [MDN - Console](https://developer.mozilla.org/en-US/docs/Web/API/console)
 
 ```js
-// alert
-window.alert("hello");
-
-// innerhtml
-el.innerHTML("<p>hello</p>");
-
-// console
 console.log("hello");
-
-//document
-document.write("hello");
-```
-
-## Statement
-
-- Starts with **keywords** like - `var, return, function, for, if....etc`
-
-```js
-var x, y, z;
-var foo = "hello";
-z = x + y;
 ```
 
 ## Syntax
 
-| Syntax             |                                                                                                                                |
-| ------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
-| **Literals**       | `"hello", 23`                                                                                                                  |
-| **Variable**       | Undefined : `var foo;` &nbsp; / &nbsp; `var bar=undefined;` </br> Defined: `var foo=23;` &nbsp; / &nbsp; `var foo="undefined"` |
-| **Identifiers**    | `foo / _foo / $foo (3foo is wrong)`                                                                                            |
-| **case-sensitive** | `Var, VAR is wrong` ( only `var` )                                                                                             |
-| **Operators**      | `+ - / * %`                                                                                                                    |
-| **Comments**       | `// hello`                                                                                                                     |
-| **Expression**     | `'foo' + 'bar'`                                                                                                                |
-| **cameCase**       | `myVariable` </br> `myFirstFunction()`                                                                                         |
-| **Concatenate**    | `"hello" + name`                                                                                                               |
+```js
+"hello", 23 // Literals
+
+// variable
+var foo, bar=undefined; // Undefined
+var foo=23, foo="undefined" //Defined
+
+
+foo / _foo / $foo  // Identifiers
+Var, VAR is wrong // case-sensitive
++ - / * % // Operators
+
+'foo' + 'bar'  // Expression
+myVariable, myFirstFunction() // camelCase
+"hello" + name; // Concatenate
+```
 
 ## Operators
 
-| Arithmatic                                       | Assignment                                        | Tyoeof                                            |
-| ------------------------------------------------ | ------------------------------------------------- | ------------------------------------------------- |
-| `+ - * / %` </br> Increament/Decrement : `-- ++` | `= -= +=` </br> Equals : `a += n` --> `a = a + b` | typeof : `typeof` </br> instanceof : `instanceof` |
+```js
+// Arithmatic
+// -----------
++  -  *  /  %
+--  ++ // Increament/Decrement
 
-### Comparison
+// Assignment
+// -----------
+=  -=  +=
+a += b
+a = a + b
 
-- Equals/Not To (value): `==` / `!=`
-- Equals/Not To (value & type) : `===` / `!==`
-- Greater/Lesser than : `<`/`>`
-- Greater/Lesser Or Equal To than : `<=` / `>=`
-- Ternary : `(cond) ? true : false`
+// Tyoeof
+// -----------
+typeof foo // typeof
+b instanceof Bar // instanceof of Class Bar
 
-### Logical
+// Comparison
+// -----------
+==  != // (value)
+===  !== // (value & type)
+<   >   <=   >=
+(cond) ? true : false // Ternary
 
-- And : `&&`
-- Or : `||`
-- Not : `!`
+// Logical
+// -----------
+&& // And
+|| // Or
+! // Not
 
-### Bitwise
-
-- And : `&`
-- Or : `|`
-- Not : `~`
-- Xor : `^`
-- Shift left/right : `<<` / `>>`
+// Bitwise
+// -----------
+& // And
+| // Or
+~ // Not
+^ // Xor
+<<   >> // Shift left/right
+```
 
 ## Arithmatics Precedence
+
+[MDN - Operator_Precedence](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence#Table)
 
 | Precedence | Operator                                | Info                                   |
 | ---------- | --------------------------------------- | -------------------------------------- |
@@ -97,41 +102,46 @@ z = x + y;
 | 12         | `<< >>`                                 |                                        |
 | 11         | `<= >= < >` </br>`in` </br>`instanceof` |                                        |
 | 10         | `== === != !==`                         |                                        |
-| 9 - 4      | `& ^ | ....` </br> `&& || ?:....`       | Bitwise </br> Logical                  |
-| 3          | `= += -= ....`                          | Assignment                             |
+| 9 - 4      | `& ^ |` </br> `&& || ?:`                | Bitwise </br> Logical                  |
+| 3          | `= += -=`                               | Assignment                             |
 
 ## Datatypes
 
 1. **Primitive** : `string / boolean / number / undefined`
 2. **Complex** : `Object / Function`
 
-| Datatypes                   |                                             |
-| --------------------------- | ------------------------------------------- |
-| String                      | `"foo" / "I'm bar"`                         |
-| Number                      | `23 / 2.3 / 2e3=2000`                       |
-| Boolean                     | `true/false` </br> `1/0` </br> `foo == bar` |
-| Object                      | `{ name:"bar", age:23 }`                    |
-| Array ( _Object_ )          | `[2,3,4]` / `["foo", "bar"]`                |
-| Undefined ( _Undefined_ )   | `var foo;` </br> `var foo = undefined`      |
-| Empty ( _String_ )          | `""`                                        |
-| Null ( _Object_ ) [ Bug ? ] |                                             |
-| NaN ( Number )              | `foo = 100/"one"`                           |
+```js
+// -------- Use typeof ---------
 
-| Compare                                        | Result               |
-| ---------------------------------------------- | -------------------- |
-| `null == undefined` </br> `null === undefined` | `true` </br> `false` |
-|                                                |                      |
+// String
+""
+"foo"
 
-## Functions
+// Number
+23  2.3  2e3=2000
+foo = 100/"one" // NaN
+Infinity
 
-- **Invoke** means calling a function.
-- _Types of invoking_
-  1. Normal invoke
-  2. Event invoke
-  3. Self invoke
-- Syntax :
-  - Define : `function foo (parameters...) {...}`
-  - Invoke : `foo (arguments...);`
+// BigInt
+100n
+548884565654n
+
+// Boolean
+true  false  1  0
+
+// Object
+{ x:5 }
+[2, 4] // Array
+null //  Null
+
+// Undefined
+var foo;
+var foo = undefined
+
+// Function
+function name(params) {}
+() => {};
+```
 
 ## Events
 
@@ -154,15 +164,12 @@ z = x + y;
 
 ```js
 // old way
-var = "<div>Hello <span>" + name + "</span></div>";
+var = "<div>Hello " + name + "</div>";
 
 // new way
 var = `
  <div>
-  Hello
-  <span>
-   ${name}
-  </span>
+  Hello ${name}
  </div>
  `;
 ```
@@ -210,43 +217,32 @@ s.split(","); // ["a", "b", "c"]
 
 ### String Api
 
-```js
-// startsWith(), endsWith(), includes(), repeat()
+- **startsWith() / endsWith() / includes() / repeat()**
 
-let s = "Red Rising";
-// old way
-if (s.indexOf("Blue") == -1) {
-  //
-}
-// new way
-if (!s.include("Blue")) {
-  //
-}
+```js
+(foo.indexOf("Blue") == -1 ) // old way
+(!foo.include("Blue") // new way
 //similarly
-s.startsWith("R"); //true
-s.endsWith("R"); //false`
+s.startsWith("R");
+s.endsWith("R");
 ```
 
 ## Numbers
 
-- No _int, float, short, long_
+- No `int, float, short, long`
 - only 64-bit floating point.
 - Good precision over 15-digits
 
-Ex:
-
 ```js
+// automatic type conversion
 var x = "100",
   y = 10;
 x / y; // 10
 x * y; // 1000
 x - y; // 90
 x + y; // "10010"
-```
 
-**NaN**
-
-```js
+// **NaN**
 var a = 100 / "one";
 isNaN(a); // true
 ```
@@ -254,19 +250,13 @@ isNaN(a); // true
 **Methods**
 
 ```js
-// To String
-n.toString();
-
 var n = 9.656;
-
+n.toString(); // To String
 n.toFixed(2); // 9.66
 n.toFixed(4); // 9.6600
 n.toPrecision(2); // 9.7
-```
 
-**Methods - Variables to Numbers**
-
-```js
+// **Methods - Variables to Numbers**
 Number("10.33"); // 10.33
 parseFloat("10.33"); // 10.33
 parseInt("10.33"); // 10
@@ -279,19 +269,26 @@ Use Lodash because it's mostly optimized for fast run time than inbuilt
 :::
 
 - Object with keys as numbers - `0, 1, 2 .... n`
-- Define : `var foo = ["foo", "bar"];`
-- Access : `foo[1]`
-- Alter : `foo[1] = "bazzz"`
+
+```js
+var foo = ["foo", "bar"]; // Define
+typeof foo; // Object
+foo[1]; // get
+foo[1] = "bazzz"; // set
+```
 
 **Props & Methods :**
 
-```js
-a.length;
+- [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
 
+```js
 // To String
 // a = ["a", "b"];
 a.toString(); // a, b
 a.join("*"); // a*b
+
+// length
+a.length;
 
 // add/remove
 a.pop(); // remove last
@@ -304,6 +301,7 @@ a[a.length] = "c"; // add at last
 a.splice(start, itemsToRemove, "add-1", "add-2");
 a.splice(0, 1); // removes 1st
 a.splice(3, 0, "newfoo", "newBar"); // adds without removing at position 3
+
 // get index of first matched
 a.indexOf("foo");
 a.lastIndexOf("foo");
@@ -361,9 +359,7 @@ Math.max(5, 4, 8, 12, 35, 45); // 45
 
 - **FALSE** - `false` , `undefined` , `0` , `-0` , `""` , `null` , `NaN`
 
-## Comparison & Logical Operators
-
-- String to Numbers
+### Automatic Type conversion
 
 ```js
 if("")   // 0
@@ -400,21 +396,52 @@ switch(n){
 
 ```
 
-### For / For in / while / do while
+### For-in vs For-of
+
+- `for in` - Enumerable properties
+- `for of` - Iterable properties
 
 ```js
-for(var i = 0; i <5 ; i++>) { ......}
+// Normal loop
+for (var i = 0; i < 5; i++) {}
 
-for(value in arr){......}     // Never ever use  this
+// For Object
+// -------------
+let foo = {
+  x: 3,
+  y: 6,
+};
 
-while(cond) {......}
-do{......}while(cond) {......}
+for (v in foo) {
+  console.log(v); // x / y
+}
+for (v of foo) {
+  console.log(v); // error not iterable
+}
 
-break;          // stops loop
-continue;       // stops 1 iteration in loop
+// For Array
+// -------------
+let foo = [3, 5];
+
+for (v in foo) {
+  console.log(v); // 0 / 1
+}
+for (v of foo) {
+  console.log(v); // 3 / 5
+}
 ```
 
-## Try-Catch
+### while / do while
+
+```js
+while (cond) {}
+do {} while (cond);
+
+break; // stops loop
+continue; // stops 1 iteration in loop
+```
+
+## Try-Catch-Finally-Throw
 
 ```js
 try {
@@ -436,45 +463,11 @@ Example :
 
 ```
 
-## Scope
+## Hoisting(only var)
 
-**Local**
-
-```js
-function foo() {
-  var x;
-  // use x
-}
-```
-
-**Global**
-
-```js
-var x;
-function foo() {
-  // use x
-  var y;
-}
-// use x
-// NO y
-```
-
-**Automatically Global - without `var` keyword**
-
-```js
-function foo() {
-  x = 32;
-  // use x
-  // var x;     // x is local if redeclared
-}
-// use x
-```
-
-## Hoisting
-
-- Move variable to top o script scope
+- Move variable to top of script scope
+- Only `var` NOT `let/const`
 - First _Intialize_ & then _use_. Can _Declare_ anytime
-- Only `var` NOT `let` or `const`
 - Only **declarations** are hoisted (not initialization values)
 
 ```js
@@ -490,30 +483,27 @@ var x; // x is local now
 
 ## Strict
 
-- AVOID it. Not much useful.
+- It allows modern js features to be used instead of legacy code
+- Modules always use strict automatically. No manual edit needed.
 
 ## This
 
 - Based on location where it is used
 
-**Alone**
-
 ```js
-var foo = this; // this = window object
-```
+// Alone
+// ---------------
+let foo = this; // this = window object
 
-**In Function**
-
-```js
+// In Function
+// ---------------
 function foo() {
   return this; // owner of function ie 'Window'
 }
-```
 
-**In method**
-
-```js
-var p = {
+// In method
+// ---------------
+let p = {
   foo: 23,
   bar: function() {
     return this; // this = owner of function = p object
@@ -537,30 +527,61 @@ console.log(p.barMix()); // p object
 **In Event handlers**
 
 ```html
-// this = [object HTMLButtonElement]
+<!-- this = [object HTMLButtonElement] -->
 <button onclick="alert(this);">
   click
 </button>
 ```
 
-## Let/Const
+## Let/Const & Scope
 
-**let and const are block level only ie inside curly braces { .... }**
+- **`let` and `const` are block level only ie inside curly braces `{ .... }`**
+
+### Scope
 
 ```js
-var x = 10;
-{
-  let x = 5;
+// Local
+// ----------
+function foo() {
+  let x;
+  // use x
 }
-alert(x); // 10
+
+// Global
+// ----------
+let x;
+function foo() {
+  // use x
+  let y;
+}
+// use x
+// NO y
 ```
 
-**Const cannot be reassign as `let` but are mutable.**
+**Global vs Local**
+
+```js
+// Ex 1
+let x = 10;
+{
+  console.log("Inside :", x); // 10
+}
+console.log("Outside :", x); // 10
+
+// Ex 2
+let x = 10;
+{
+  console.log("Inside :", x); // Error - cannot use before initializing
+  let x = 5;
+}
+```
+
+**Const cannot be reassign as `let` but is mutable.**
 
 ```js
 let x = 2;
-x = 22; // Allowed
 const y = 2;
+x = 22; // Allowed
 y = 22; // NOT Allowed
 
 // But Mutable
@@ -569,7 +590,7 @@ a = ["world"]; // gives error. Is not assignable.
 a.push("world"); // works correctly. Is mutable.
 ```
 
-**Reference** and NOT **value**
+### Reference vs Value
 
 ```js
 // primitives
@@ -578,15 +599,15 @@ PI = 3.15; // Not allowed
 
 // objects
 const obj = { foo: 23, bar: 44 };
+obj = { foo: 2113, bar: 144 }; // redefine - NOT allowed
 obj.foo = 11; // alter
 obj.newFoo = 6767; // add
-obj = { foo: 2113, bar: 144 }; // redefine - NOT allowed
 
 // array
 const arr = [23, 44];
+arr = [2113, 144]; // redefine - NOT allowed
 arr[0] = 11; // alter
 arr.push(6767); // add
-arr = [2113, 144]; // redefine - NOT allowed
 ```
 
 ## Comman Mistakes
@@ -594,8 +615,8 @@ arr = [2113, 144]; // redefine - NOT allowed
 - Loose comparison
 
   ```js
-  var x = 10;
-  var y = "10";
+  let x = 10;
+  let y = "10";
   if(x == y) // true
   if(x === y) // false
   ```
@@ -603,31 +624,23 @@ arr = [2113, 144]; // redefine - NOT allowed
 - Float precision
 
   ```js
-  var x = 0.1,
+  let x = 0.1,
     y = 0.2;
-  var z = x + y; // NOT = 0.3
-  var z = (x * 10 + y * 10) / 10; // = 0.3
+  let z = x + y; // NOT = 0.3
+  let z = (x * 10 + y * 10) / 10; // = 0.3
   ```
 
 - Performance - avoid calculating again and again
 
   ```js
-  var l = arr.length;
-  for(var i =0 ; i < arr.length; i++){...}    // slow
-  for(var i =0 ; i < l; i++){...}   // faster
+  let l = arr.length;
+  for(let i =0 ; i < arr.length; i++){...}    // slow
+  for(let i =0 ; i < l; i++){...}   // faster
 
   // DOM reuse (performance)
-  var x = document.getElementById("foo");
+  let x = document.getElementById("foo");
   x.innerHTML("...."); // X IS REUSED avoiding repeated DOM access.
   ```
-
-## Arrow Functions
-
-```js
-//  ES6 functions
-const x = (a.b) => {...};
-const x = a => {...};
-```
 
 ## Prototype
 
@@ -635,12 +648,22 @@ const x = a => {...};
 Better to use Classes. But remember class is just a syntactic sugar for inherent prototype(with some minor differences for better). Class gets converted to prototype. Check babel repl for es2015.
 :::
 
-- All objects has hidden prototype property `{{ Prototype }}`.
-- Value - either `someObj` or `null`
+- All objects has hidden prototype property.
+- Value = `someObj` or `null`
 - `Object` has it's prototype `Object.prototype`. But `Object.prototype` has no prototype ie `null`.
-- Access using
-  - `obj.__proto__` - old get/set method with no issues
-  - `Object.getPrototypeOf` & `Object.setPrototypeOf` - modern way get/set method
+
+**Access using**
+
+```js
+// old get/set method with no issues
+obj.__proto__;
+
+// modern way get/set method
+Object.getPrototypeOf;
+Object.setPrototypeOf;
+```
+
+**Ex:**
 
 ```js
 function Parent() {
@@ -652,7 +675,7 @@ function Child(a, b) {
   this.a = a;
   this.b = b;
 }
-Child.prototype = new Parent();
+Child.prototype = new Parent(); // Child constructor is used not object of Child
 
 let co = new Child(2, 5);
 alert(co.add()); // 7
@@ -673,8 +696,9 @@ let teacher = {
 console.log(Object.keys(teacher)); // ["subject"]
 
 // shows both own & inherited
-for (let prop in teacher) console.log(prop); // subject, name
 for (let prop in teacher) {
+  console.log(prop); // subject, name
+
   if (Object.hasOwnProperty(teacher)) {
     console.log(prop); // subject
   }
@@ -683,84 +707,93 @@ for (let prop in teacher) {
 
 ## Functions
 
-- Create
-
-  ```js
-  // way 1 - named
-  function foo(){...};
-
-  // way 2 - anonymous
-  var foo = function(){...};
-
-  // way 3 - self-invoking
-  (function(){...})();
-  ```
+### Basics
 
 - Hoisting is allowed.
-- Num of args - `arguments[i]`
-- **this** in (Function vs Arrow)
+- Num of args - `arguments[i]` - Not in arrow functions - _(Use rest/spread operator)_
+- **Types of invoking (calling)**
+  1. _Normal invoke_
+  2. _Event invoke_
+  3. _Self invoke_
 
-  ```js
-  // Function
-  // owner of foo() = window
-  var foo = function() {
-    return this;
-  };
-  foo(); // this = window object
-  `<button onclick="foo();"> </button>`; // this = button object
+```js
+function foo(a, b) {
+  console.log(arguments.length); // 2
+  for (a of arguments) {
+    console.log(a); // 4 / 5
+  }
+}
+foo(4, 5);
+```
 
-  // Arrow
-  // owner of foo() = window
-  var foo = () => {
-    return this;
-  };
-  foo(); // this = window object
-  `<button onclick="foo();"> </button>`; // this = window object
-  ```
+**Create**
+
+```js
+// way 1 - named
+function foo(){...};
+
+// way 2 - anonymous
+let foo = function(){...};
+
+// way 3 - self-invoking
+(function(){...})();
+```
+
+### Arrow Functions
+
+```js
+//  ES6 functions
+const x = (a.b) => {...};
+const x = a => {...};
+
+const x = a => "This is single line return.";
+```
 
 ## Closures
 
+- A function which returns a function.
 - Solves counter dilemma.
-- Example 1 :
 
-  ```js
-  var add = (function {
-    var c =0;   // c is private
-    return () => {
-      return c += 1;
-    }
-  })();
+**Example 1 :**
 
-  add();  // 1
-  add();  // 2
-  ```
+```js
+let add = (function() {
+  let c = 0; // c is private member
+  return () => {
+    return (c += 1);
+  };
+})();
 
-- Example 2 :
+console.log(add()); // 1
+console.log(add()); // 2
+```
 
-  ```js
-  function multiplier(m) {
-    return (n) => {
-      return n * m;
-    };
-  }
-  let twice = multiplier(2);
-  let thrice = multiplier(3);
-  console.log(twice(5)); // 10
-  console.log(thrice(5)); // 15
-  ```
+**Example 2 :**
+
+```js
+function multiplier(m) {
+  return (n) => {
+    return n * m;
+  };
+}
+let twice = multiplier(2);
+let thrice = multiplier(3);
+console.log(twice(5)); // 10
+console.log(thrice(5)); // 15
+```
 
 ## Recursion
 
 - Function code calls itself.
 - Recusion is **SLOWER** than **For loop**
 
-  ```js
-  function power(n, pow) {
-    if (pow == 0) return 1;
-    return n * power(n, pow - 1);
-  }
-  power(2, 3); // 8
-  ```
+```js
+function power(n, pow) {
+  if (pow == 0) return 1;
+  return n * power(n, pow - 1);
+}
+power(2, 3); // 8
+```
 
 ## Modules - Import/Export
 
@@ -843,36 +876,22 @@ foo.B();
 
 ## Rest and Spread operators
 
-- `rest` defining a function for _n_ numbers of args
-
-  ````js
-  //2 variables
-  function sum (a,b){
-  return a + b;
-  }
-  sum(1,2); //3
-
-        //n variables
-        function sum(...numbers){
-         alert (numbers);
-        }
-        sum(1,2,3,4,5); // [1,2,3,4,5] args are converted to a single array
-
-        //NOTE
-        function sum(...numbers , wrong);
-        function sum(right, againRight, ...numbers);
-       ```
-
-  ````
-
-- `spread` calling a function for _fixed_ number of args
+- Both rest & spread uses same syntax - three dots `...`
 
 ```js
-function sum(a, b) {
-  return a + b;
+// Rest : args -> array
+// -----------------------
+function foo(p1, ...params) {
+  console.log(params); // an array - [3, 5, 8]
 }
-sum(1, 2); //3
+foo(2, 3, 5, 8);
 
-arr = [1, 2];
-sum(...arr); //3
+// Spread : array -> args
+// -----------------------
+let params = [2, 3, 5, 8];
+console.log(1, ...params); // list of args - 1 2 3 5 8
+
+//NOTE - must be last argument
+function foo(...numbers, x); // wrong
+function foo(x, y, ...numbers); // right
 ```
