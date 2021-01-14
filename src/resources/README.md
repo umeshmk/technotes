@@ -15,6 +15,9 @@ _(Stick to few and Official ones)_
 - [Stackblitz](https://stackblitz.com/)
 - [plnkr.co](https://plnkr.co/)
 - Babel [Repl](https://babeljs.io/en/repl)
+- Css
+  - [PostCssPreset](https://preset-env.cssdb.org/playground)
+  - [Sass](https://www.sassmeister.com/)
 
 ## HTML/CSS/JS
 
@@ -35,9 +38,10 @@ _(Stick to few and Official ones)_
   - [codrops/css_reference](https://tympanus.net/codrops/css_reference/)
   - [flexbox-cheatsheet](https://darekkay.com/dev/flexbox-cheatsheet.html)
   - [cssreference.io](https://cssreference.io/)
+- PostCss
+  - [postcss-preset-env - Stage 0/1/2/3 ](https://preset-env.cssdb.org/features)
 - Bootstrap
 - Tailwindcss
-- [cssdb.org](https://cssdb.org/)
 - [AllThingsSmitty/css-protips](https://github.com/AllThingsSmitty/css-protips)
 - _Helpers_
   - [cssarrowplease.com](https://cssarrowplease.com/)
@@ -58,6 +62,8 @@ _(Stick to few and Official ones)_
 - [getify/You-Dont-Know-JS](https://github.com/getify/You-Dont-Know-JS)
 - [exploringjs.com](https://exploringjs.com/)
 - [javascript30.com](https://javascript30.com/)
+- **Standard**
+  - [kangax.github.io/compat-table/es2016plus/](https://kangax.github.io/compat-table/es2016plus/)
 
 ## Typesript
 
@@ -70,7 +76,6 @@ _(Stick to few and Official ones)_
 - [enaqx/awesome-react](https://github.com/enaqx/awesome-react)
 - [brillout/awesome-react-components](https://github.com/brillout/awesome-react-components)
 - [React Basics - Youtube](https://www.youtube.com/playlist?list=PLe30vg_FG4OSw8SIcLVci-jB_-W1ZkLYp)
-- [Mosh-2018-Youtube](https://www.youtube.com/watch?v=Ke90Tje7VS0)
 
 ## Package Management
 

@@ -97,8 +97,9 @@ module.exports = {
       "",
       "Layout.md",
       "css3.md",
-      // "Tailwind-cheetsheet.md",
+      "postcss.md",
       "sass.md",
+      // "Tailwind-cheetsheet.md",
       "Tailwind-core.md",
     ],
     "/javascript/": [
@@ -123,9 +124,10 @@ module.exports = {
         children: ["Json.md", "Jquery.md"],
       },
     ],
-    "/tools/": ["vite.md", "snowpack.md"],
+    "/tools/": ["webpack.md", "webpack-guide.md", "vite.md", "snowpack.md"],
     "/surveys/": ["", "github.md"],
     "/resources/": [""],
     "/oop/": [""],
+    // "/webpack/": ["", "concepts.md"],
   },
 };

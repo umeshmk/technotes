@@ -43,7 +43,8 @@
   // ==> Prettier & Eslint Fixex<==
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.codeActionsOnSave": {
-    "source.fixAll": true
+    "source.fixAll": false,
+    "source.fixAll.eslint": true
   },
   "eslint.alwaysShowStatus": true,
 

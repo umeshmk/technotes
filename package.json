@@ -16,7 +16,7 @@
   "license": "MIT",
   "devDependencies": {
     "nodemon": "^2.0.6",
-    "vuepress": "^1.5.3"
+    "vuepress": "^1.8.0"
   },
   "author": "<umeshk149@gmail.com>"
 }

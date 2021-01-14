@@ -10,16 +10,16 @@
 export default {
   data() {
     return {
-      msg: "Hello this is <demo-component>",
       topic: {
-        Documentation: "/documentation/vuepress",
-        Windows10: "/windows10/windows10",
-        "Visual Studio Code": "/visual-studio-code/vscode",
-        Terminal: "/terminal/Zsh",
-        Html: "/html",
         Javascript: "/javascript",
         "Object Oriented Programming": "/oop",
-        Tools: "/tools/vite",
+        Html: "/html",
+        Css: "/css/",
+        Terminal: "/terminal/Zsh",
+        "Visual Studio Code": "/visual-studio-code/vscode",
+        Documentation: "/documentation/vuepress",
+        Windows10: "/windows10/windows10",
+        "Tools (Webpack)": "/tools/webpack",
         Miscellaneous: "/miscellaneous/Git",
         "Laravel 6 (deprecated)": "/laravel/v6/1-GettingStarted",
         "Php (deprecated)": "/php",

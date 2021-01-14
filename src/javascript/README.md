@@ -1,20 +1,27 @@
 # Javascript
 
 ```html
+<!-- In <body> end -->
+
 <script src="path/to/foo.js"></script>
+
+<script>
+  // code
+</script>
+
+<!-- In <head> -->
 
 <!-- defer - Runs after html is loaded - order is maintained -->
 <script defer src="foo.js"></script>
-
 <!-- async - Runs immediately - order is not maintained -->
 <script async src="foo.js"></script>
 
-<script>
-  // Statement
-  var x, y, z;
-  var foo = "hello";
-  z = x + y;
-</script>
+<!-- prefetch/preload - Only to download  &  cache js/css not to run/apply -->
+<!-- Advantage  -  No DOM blocking -->
+<!-- prefetch -  downloads in idle time by browser (maybe needed in future) -->
+<!-- preload  -  downloads asap (needed on same page in future) -->
+<link rel="prefetch" href="foo.js" />
+<link rel="preload" href="foo.js" />
 ```
 
 ## Console
@@ -894,4 +901,11 @@ console.log(1, ...params); // list of args - 1 2 3 5 8
 //NOTE - must be last argument
 function foo(...numbers, x); // wrong
 function foo(x, y, ...numbers); // right
+```
+
+**ES2018 - For Objects**
+
+```js
+let foo = { x: 2 };
+let bar = { ...foo, y: 3 }; // { x:2, y: 3 }
 ```
