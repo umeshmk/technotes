@@ -369,3 +369,26 @@ plugins: [
   }),
 ],
 ```
+
+## Css Modules (css-loader)
+
+```js
+module: {
+  rules: [
+    {
+      test: /\.css$/i,
+      use: [
+        {
+          loader: "css-loader",
+          options: {
+            modules: {
+              localIdentName: "[path][name]__[local]--[hash:base64:5]",  //classname --> .src-component-App-module__app--wcVYh {color:red}
+            },
+          },
+        }
+      ],
+    },
+  ],
+},
+
+```

@@ -279,20 +279,28 @@ $-margin: 10px;
 
 ```scss
 // Gives 2 classes
-// .error { padding }
-// .error--danger {  padding, color }
-.error {
+.myblock {
   padding: 10px;
-  &--danger {
-    @extend .error;
-    // @extend .error, .msg; // for multiple classes
+
+  &__myelement {
+    @extend .myblock;
+    // @extend .myblock, .error, .msg; // for multiple classes
     color: red;
   }
 }
 
+// Compiled
+.myblock,
+.myblock__myelement {
+  padding: 10px;
+}
+.myblock__myelement {
+  color: red;
+}
+
 // But Why ?
-// -- To use -- <div class="error--danger">
-// -- instead of --  <div class="error error--danger">
+// <div class="myblock ">               // apply - padding
+// <div class="myblock__myelement ">    // apply - padding, color
 ```
 
 ### %placeholder (snippets)

@@ -2,14 +2,25 @@
 
 > Cascading style sheet
 
+:::tip Modern Css - How we can use ?
+
+1. **Inline** `<div style={} >`
+2. **Basic** `.css`
+3. **Sass** `.scss`
+4. **Css-in-js** `.js` _(Styled components, Glamorous, Radium, Emotion )_
+5. [**Css Modules**](https://github.com/css-modules/css-modules) `App.module.css` _(Webpack's css-loader)_
+6. **Css Modules + Sass** `App.module.scss` **[Best IMO]**
+
+:::
+
 ## INTRODUCTION
 
 - File ext is `.css`
 - Syntax:
 
 ```css
-/* This is a
-comment */
+// This single line comment is not allowed
+/* This comment is allowed */
 
 /**** HOW TO ADD CSS ****/
 <link rel="stylesheet" type="text/css" href="/path/file.css">   /* EXTERNAL */
@@ -179,7 +190,7 @@ div { width: 20px;
 - May overlap other content elements without changing its width/height.
 
 ```js
-
+// Avoid - Border is good enough
 outline-style: solid | dashed | dotted | double;
              :groove|ridge|inset| outset ;
              :none|hidden ;
@@ -211,13 +222,14 @@ white-space: normal | nowrap | pre | pre-line | pre-wrap;
 - **Font**
 
 ```css
-/* Generic font family are {
+/*
+Generic font family are :
     SERIF           => For printing     [Garamond, Times, Times new roman, Georgia, New York]
     SANS-SERIF      => For online       [Arial, Geneva, Helvetica, Verdana]
     MONOSPACE       => For coding       [Courier, Lucida console, Monaco]
     FANTASY         => For accenting    [Copperplate, Impact, Keno, Desdemona]
     SCRIPT          => For accenting    [Comic sans ms, Lucida handwriting]
-    } */
+*/
 
 font-family : Arial;
             : "Times new roman";
