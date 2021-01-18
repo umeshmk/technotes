@@ -356,6 +356,72 @@ foo(x);
 console.log(x); // harry - changed
 ```
 
+## This
+
+- Based on location where it is used
+
+```js
+// Alone
+// ---------------
+let foo = this; // this = window object
+
+// In Function
+// ---------------
+function foo() {
+  return this; // owner of function ie 'Window'
+}
+
+// In method
+// ---------------
+let p = {
+  foo: 23,
+  bar: function() {
+    return this; // this = owner of function = p object
+  },
+  barArrow: () => {
+    return this; // this = window object
+  },
+  barMix: function() {
+    let arrow = () => {
+      return this; // lexical scoping - takes this from outer context = p object
+    };
+    return arrow();
+  },
+};
+
+console.log(p.bar()); // p object
+console.log(p.barArrow()); // window object
+console.log(p.barMix()); // p object
+```
+
+**In Event handlers**
+
+```html
+<!-- this = [object HTMLButtonElement] -->
+<button onclick="alert(this);">
+  click
+</button>
+```
+
+### bind()
+
+- We use this `bind()` to bind `this` to the funtion context.
+
+```js
+let foo = function() {
+  console.log(this);
+};
+let user = {
+  x: 10,
+};
+
+let newFoo = foo.bind(user);
+// foo = foo.bind(user); // we can redefine with same name
+
+newFoo(); // this = user
+foo(); // this = window
+```
+
 ## Dynamic Properties/Methods
 
 - Add/remove/access dyanmically.

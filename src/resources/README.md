@@ -73,8 +73,8 @@ _(Stick to few and Official ones)_
 
 ## React
 
-- [enaqx/awesome-react](https://github.com/enaqx/awesome-react)
-- [brillout/awesome-react-components](https://github.com/brillout/awesome-react-components)
+- [/react/awesome-react](/react/awesome-react)
+- [/react/awesome-react-components](/react/awesome-react-components)
 - [React Basics - Youtube](https://www.youtube.com/playlist?list=PLe30vg_FG4OSw8SIcLVci-jB_-W1ZkLYp)
 
 ## Package Management

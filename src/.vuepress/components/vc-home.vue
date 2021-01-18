@@ -11,6 +11,7 @@ export default {
   data() {
     return {
       topic: {
+        React: "/react",
         Javascript: "/javascript",
         "Object Oriented Programming": "/oop",
         Html: "/html",
@@ -23,7 +24,6 @@ export default {
         Miscellaneous: "/miscellaneous/Git",
         "Laravel 6 (deprecated)": "/laravel/v6/1-GettingStarted",
         "Php (deprecated)": "/php",
-        // Surveys: "/surveys",
       },
     };
   },

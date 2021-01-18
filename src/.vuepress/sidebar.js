@@ -130,6 +130,6 @@ module.exports = {
     "/surveys/": ["", "github.md"],
     "/resources/": [""],
     "/oop/": [""],
-    // "/webpack/": ["", "concepts.md"],
+    "/react/": ["", "awesome-react.md", "awesome-react-components.md"],
   },
 };
