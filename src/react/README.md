@@ -3,18 +3,18 @@
 [roadmap.sh/react](https://roadmap.sh/react)
 
 - Add extensions
-  - Vscode (provides **snippets** for es7, react, redux, components, etc)
+  - Vscode
   - Chrome
-- JSX is optional. Use Babel Repl.
+- JSX is optional but better. Use Babel Repl.
 
 ## v17
 
 - No new feature but made easier to upgrade in future.
 - **Event Delegation**
-  - Click event on `<button onclick={handler}>` is actually attached to `document` or `root`
-  - `< v17` - all events are attached to `document`
-  - `> v17` - all events are attached to `root`
-- New JSX Transform - Use JSX without importing React. No syntax change.
+  - Events on any elements are actually attached to `document` or `root` instead of that element.
+  - `< v17` - attached to `document` (new way)
+  - `> v17` - attached to `root`
+- New JSX Transform - Use JSX without importing React. No change in syntax.
 
 ```js
 // JSX

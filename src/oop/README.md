@@ -73,47 +73,90 @@ console.log(obj.area());
 
 ### Inheritance
 
-- Teacher Object instance can access Person class properties & methods.
-- No code duplication.
+- Child instance can access Parent's shared props/methods.
+- Share code. No code duplication.
 
-**Example - using constructor**
+#### ObjectLiteral
+
+- **Cons:**
+  - No constructor so no parameters.
+  - We mostly use constructor in production.
 
 ```js
-function Person(name) {
-  this.name = name;
-}
-function Teacher(name, subject) {
-  Person.call(name);
-  this.subject = subject;
-}
-let aTeacherObj = new Teacher("snape", "Dark arts");
-aTeacherObj.name; // snape
+let parent = { x: 10 };
+let child = Object.create(parent, { y: 20 });
 ```
 
-**Example - using constructor with prototype method**
+#### Constructors (Child/Parent)
+
+**Two ways to inherit**
 
 ```js
-function Person(name) {
-  this.name = name;
+Child.prototype = new Parent();
+Child.prototype = Object.create(Parent.prototype);
+```
+
+**How to pass data from Child to Parent ?** - use `Parent.call(this, parameters)`
+
+```js
+function Parent() {
+  this.p = 10;
 }
-Person.prototype.greetProt = () => {
-  return "Hello from prototype";
-};
-function Teacher(name, subject) {
-  Person.call(this, name); // don't forget to pass "this" as first parameter
-  this.subject = subject;
+function Child() {
+  this.c = 20;
 }
 
-// add Person's prototype  as a prototype for Teacher
-Teacher.prototype = Object.create(Person.prototype);
-Teacher.prototype.constructor = Teacher; // change constructor
+Child.prototype = new Parent(); // inherit
+
+let obj = new Child();
+
+c(obj.p, obj.c); // 10, 20
+c(obj instanceof Child); // true
+c(obj instanceof Parent); // true
+c(Object.getPrototypeOf(obj)); // Parent {p: 10}
+```
+
+#### Constructor + `Object.create()`
+
+**This 2 objects has all Properties/Methods to inherit:**
+
+1. `this` - use `Parent.call(this)`
+2. `Parent.prototype` - use `Object.create()`
+
+```js
+// Define parent
+function Parent(x) {
+  this.x = x;
+}
+Parent.prototype.pi = 3.14;
+
+// Define child
+function Child(x, y) {
+  Parent.call(this, x);
+  this.y = y;
+}
+
+// Add prototype
+// Child.prototype = Parent.prototype; // wrong - don't pass ref directly.
+Child.prototype = Object.create(Parent.prototype); //right - a new object with prototype from Parent
+// console.log(Child.prototype.constructor); // f Parent(x) { this.x = x;}
+Child.prototype.constructor = Child; // Override from Parent to Child
 
 // create obj
-let aTeacherObj = new Teacher("sanpe", "dark arts");
-aTeacherObj.greetProt();
+let o = new Child(10, 20);
+
+console.log(o instanceof Child); // true
+console.log(o instanceof Parent); // true
+
+console.log(Object.getPrototypeOf(o)); // Parent
+console.log(Object.keys(o)); // ["x", "y"]
+
+for (i in o) {
+  console.log(i); // x , y , constructor , pi
+}
 ```
 
-**Example - using Class**
+#### Using Class
 
 ```js
 // Parent

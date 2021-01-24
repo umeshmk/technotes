@@ -11,8 +11,8 @@ _(Stick to few and Official ones)_
 - [Codepen](https://codepen.io/)
 - [JsFiddle](https://jsfiddle.net/)
 - [JsBin](https://jsbin.com)
-- [Repl.it](https://repl.it/)
 - [Stackblitz](https://stackblitz.com/)
+- [Repl.it](https://repl.it/)
 - [plnkr.co](https://plnkr.co/)
 - Babel [Repl](https://babeljs.io/en/repl)
 - Css
@@ -64,6 +64,8 @@ _(Stick to few and Official ones)_
 - [javascript30.com](https://javascript30.com/)
 - **Standard**
   - [kangax.github.io/compat-table/es2016plus/](https://kangax.github.io/compat-table/es2016plus/)
+  - [github.com/tc39](https://github.com/tc39)
+- [jsbench.me](https://jsbench.me/)
 
 ## Typesript
 
@@ -144,6 +146,13 @@ _(Stick to few and Official ones)_
 - [polyfill.io](https://polyfill.io/v3/)
 - [Modernizr](https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-Browser-Polyfills)
 
+## Regular Expression
+
+- [regexr.com](https://regexr.com/)
+- [regex101.com - Practice with explanation](https://regex101.com/)
+- [MDN Cheatsheet](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Cheatsheet)
+- [extendsclass.com/regex-tester](https://extendsclass.com/regex-tester.html)
+
 ## Others
 
 - [github.com/h5bp](https://github.com/h5bp)
@@ -156,3 +165,4 @@ _(Stick to few and Official ones)_
 - [developers.google.com/web](https://developers.google.com/web)
 - [web.dev](https://web.dev/)
 - [3rd party Api - programmableweb](https://www.programmableweb.com/category/all/apis)
+- [imgur.com](https://imgur.com/upload)
