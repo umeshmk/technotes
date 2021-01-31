@@ -1,5 +1,3 @@
-<vc-img url="https://i.imgur.com/xLi27XF.png" size="xl" />
-
 # Javascript
 
 - JavaScript/Ecmasript is a standard.
@@ -16,16 +14,22 @@
 
 **"use strict"**
 
-- Always "use strict". Helps understand, optimize & avoid old JavaScript pitfalls.
-- Modules always use strict automatically.
+_Always "use strict". Helps understand, optimize & avoid old JavaScript pitfalls._
 
 **Object.getOwnPropertyNames(obj)**
 
 - One of the most useful property. Lists both enumerable & non-enumerable properties for obj.
 - This will help know if something is own property or inherited.
 - Try - `Object.getOwnPropertyNames(this)` this is window object gave me 963 properties of browser.
+- Also `Object.keys(obj)`
 
 :::
+
+## Prototype Model
+
+<!-- Edit this image on draw.io -->
+<!-- https://pastebin.com/jnvNLjaQ -->
+<vc-img url="https://i.imgur.com/xLi27XF.png" size="xl" />
 
 ## `<script>`
 
@@ -101,13 +105,45 @@ foo = 23; // assignment
 let foo = 23; // declare & assignment
 
 c(2 == "2"); // true - Loose comparison - NEVER USE
-a(2 === "2"); // false - Strict comparison
+c(2 === "2"); // false - Strict comparison
 ```
 
-## Data-Type
+#### `"use strict"`
 
-1. **Primitive** - Immutable value.
-2. **Non-primitive** - Mutable value.
+- Always `"use strict"`. Helps understand, optimize & avoid old JavaScript pitfalls.
+- Modules always use strict automatically.
+- Strict and non-strict modes can coexist.
+- Both syntax & runtime are affected.
+- Scope - Either whole script or a function.
+
+```js
+function foo() {
+  "use strict";
+  c(this);
+}
+
+let f1 = foo.bind(this);
+let f2 = foo.bind({ x: 2 });
+
+foo(); // undefined
+f1(); // window
+f2(); // {x: 2}
+```
+
+## Values & Types
+
+- [MDN - Data_structures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures)
+- [MDN - Equality_comparisons_and_sameness](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness)
+
+**Values**
+
+1. _Primitive_ - Immutable value - _(passed by Value)_
+2. _Object_ - Mutable value - _(passed by Reference)_
+
+**Types** - There are total 9 types in javascript
+
+1. _Primitive_ - `undefined, null, string, number, boolean, symbol, bigint`
+2. _Non-primitive_ - `object, function`
 
 ```js
 // Primitive
@@ -124,6 +160,24 @@ typeof {}; // object
 typeof []; // object (array is object)
 typeof (() => {}); // function (all functions are objects. But all objects are not functions.)
 ```
+
+**Separate values** - Two `object, function, symbol` - are never same.
+
+```js
+c(Symbol("id") === Symbol("id")); // false
+c((() => {}) === (() => {})); // false
+c({} === {}); // false
+
+// But - weird numbers (rarely useful)
+c(NaN === NaN); // false (anything comapred to NaN is always false)
+c(0 === -0); // true
+```
+
+:::danger Object.is()
+Not much useful. Use `===` instead.
+:::
+
+## Runtime
 
 :::tip Everthing is Object in JSEngine (runtime)
 
@@ -200,27 +254,6 @@ c(Object.prototype.__proto__); // null
 It's like driving a car. Not creating a one.
 
 :::
-
-## Data-Values
-
-```js
-// Value is same
-c(undefined === undefined); // true
-c(null === null); // true
-c(true === true); // true
-c(2 === 2); // true
-c("hi" === "hi"); // true
-c(BigInt(2) === BigInt(2)); // true
-
-// Value is not same.
-c(Symbol("id") === Symbol("id")); // false
-c((() => {}) === (() => {})); // false
-c({} === {}); // false
-
-// weird numbers
-c(NaN === NaN); // false (anything comapred to NaN is always false)
-c(0 === -0); // true
-```
 
 ## Operator & Precedence
 
@@ -301,13 +334,12 @@ document.addEventListener("click", callback);
 ```js
 false , undefined , 0 , -0 , "" , null , NaN // always false
 
-// To number
-if("foo")  // NaN
-if(2 < "12")   // true
-c(3 - '2') // 1
+// string -> number (- * / etc)
+c(3 - '2')    // 1
+c(2 < "12")   // true
 
-// to string
-c(3 + '2') // 32 (concat not add)
+// number -> string ( + is concat)
+c(3 + '2')    // 32 (concat not add)
 
 // This is not automatic type conversion. Both are strings.
 if("2" < "12")   // false -- "2" is greater than "1"
@@ -316,6 +348,11 @@ if("2" < "12")   // false -- "2" is greater than "1"
 ## Let/Const & Scope
 
 - **`let` and `const` are block level only ie inside curly braces `{ .... }`**
+- **Scope**
+  - It's an object just like global window object.
+  - But there is no way to access this object. Only javascript engine can access it.
+  - Garbage collector will not destroy this object if it's properties are still referenced by someone.(Closures working.)
+  - It forms _scope chain_ just like prototypes chain
 
 ### Scope
 
@@ -667,170 +704,217 @@ break; // stops loop
 continue; // stops 1 iteration in loop
 ```
 
-## Try / Catch / Finally / Throw
+## Objects vs Functions
+
+**Object**
+
+- A collection of _Property_ - `{ key: value }`
+- Types of objects
+  1. _Literal_ - `{...}`
+  2. _Function_ - _Just a literal with some built-in properties like `name, arguments, etc` makes it callable._
+  3. _Regex_
+
+**Root Object & Root Function**
 
 ```js
-try {
-  if( x=="" ) { throw "x is empty"; }
-  if( x < 5 ) { throw "Too low value"; }
-  if( isNaN(x) ) { throw "Not a number"; }
-} catch (err) {
-  // err.name
-  // err.message
-  console.log(err);
-}finally{...}
+// Root object
+// ---- Object (function) & Object.prototype (literal) are 2 different objects
+let rootObj = Object.prototype;
+c(rootObj); // {constructor: ƒ, __defineGetter__: ƒ, __defineSetter__: ƒ, hasOwnProperty: ƒ, __lookupGetter__: ƒ, …}
+c(rootObj.__proto__); // null (no parent)
 
+// Root function (child of Root object)
+// ---- Function (function) & Function.prototype (literal) are 2 different objects
+let rootFunc = Function.prototype;
+c(rootFunc); //  ƒ () { [native code] }
+c(rootFunc.__proto__); // Root object
 
-Example :
-// Range  error
-// Reference error
-// Syntax error
-// Type error
-
+// "Object" is a function and so a child of Root function
+c(Object.__proto__); // Root function
 ```
 
 ## Prototype
 
-- Everything is object. Check [#data-type](#data-type).
-  - This includes `constructors, instances`
-- All objects has a prototype.
-- What is prototype ? Just another object.
+_Yes it can be done in multiple ways. We can go round & round & round or simply follow popular conventions._
 
-```js
-let anotherObj = {};
-let obj = {
-  __proto__: anotherObj,
-};
-```
+:::danger Old Inheritance Convention
+**`__proto__` will be deprecated.**
 
-- `[[Prototype]]` is internal property & the real **prototype chain**.
-- `__proto__` - Get/Set `[[Prototype]]` (_WE WILL REFER AS `__proto__` ONLY_)
-- `prototype` has nothing to do with prototype chain it's just normal object.
+- _Literal -> literal_ - **`childObj.__proto__ = parentObj`**
+- _Constructor -> Constructor_ (**Extend**) - **`Child.prototype.__proto__ = Parent.prototype`**
 
-* Both `constructor` & `instance` are objects too. (constructor & function are synonymns)
-* Only difference is object who's prototype is `f () { [native code] }` is a constructor.
-
-:::tip From creator of React (Dan Abramov)
-
-- He don't use classes a lot.
-- And rarely use prototype directly.
+* _Get_ - **`obj.__proto__`**
+* _Set_ - **`obj.__proto__ = obj2`**
 
 :::
 
-- **Constructor** has
-  - `__proto__`
-  - `prototype`
-- **Instances** has
+:::tip Modern Inheritance Convention
 
-  - `__proto__` - refs to it's Parent Constructor's `prototype`
+- _Literal -> literal_ - **`childObj = Object.create(parentObj)`**
+- _Constructor -> instance_ - **`new Foo()`**
+- _Constructor -> Constructor_ (_Extend_)
+  - **`Parent.call(this, args)`**
+  - **`Child.prototype = Object.create(Parent.prototype)`**
+  - **`Child.prototype = Child`**
 
-- **Internal Property**
-  - `[[Prototype]]` [inherited props]
-    - Value can be `someObj` or `null`
-- **External Property**
-  - `__proto__`
-    - Get/Set for `[[Prototype]]`
-    - Created by browsers. Not js Standard.
-    - _Who has this ?_ - `Constructors` & `instances`
-  - `prototype` [it's own props]
-    - _Who has this ?_ - `Constructors`
+* _Get_ - **`Object.getPrototypeOf(obj)`**
+* _Set_ - **`Object.setPrototypeOf(obj)`**
 
-* Since Everthing is object, a CHILD & PARENT are also objects internally.
+- **Use Classes** - Modern & easier syntactic sugar for inheritance.
 
-Let's ca
+:::
 
-**Object's properties**
+:::warning Avoid deep inheritance
+Never go more than 1 - 2 levels of inheritance. It will create problems.
+:::
 
-- `Object.create()` - only to set modern (2012)
+_Word `proto` means nearest ancestor._
 
-  - `Object.getPrototypeOf` & `Object.setPrototypeOf` is modern way to get/set.
+**What is ?**
 
-1. `prototype` - Property of Constructor only.(A **.template** can be a better word.)
-   - All instances can access this data (unless overriding)
-   - - `{constructor: Foo(), __proto__: Object}`
+- `__proto__` - Get/Set for internal property `[[Prototype]]` (_WE WILL REFER AS `__proto__` ONLY_)
+- `prototype` - Just a normal property of object.
 
-**Access using**
+**Why this naming convention ?**
 
-```js
-// old get/set method for foo.prototype (with no issues)
-obj.__proto__;
+- `__proto__` - By creators of browsers. _Can't change._
+- `prototype` - By creators of javascript. Used in built-in constructors like `Object, Array, etc`. _(User constructors can have any name but then it's convention & we must follow.)_
 
-// Modern way (best way) refer MDN
-Object.create();
+**What is it's value ?**
 
-// modern way get/set method
-Object.getPrototypeOf;
-Object.setPrototypeOf;
+- `__proto__` - object or null _(Other values are discarded by js)_
+- `prototype` - anything _(convention is object or null since `__proto__` will discard other values)_
 
-// -----------------------------------
+**Who has ?**
 
-c(String.prototype); // String {"", constructor: ƒ, anchor: ƒ, big: ƒ, blink: ƒ, …}
-c(Symbol.prototype); // Symbol {Symbol(Symbol.toStringTag): "Symbol", constructor: ƒ, toString: ƒ, valueOf: ƒ, …}
-c(Number.prototype); // Number {0, constructor: ƒ, toExponential: ƒ, toFixed: ƒ, toPrecision: ƒ, …}
-c(BigInt.prototype); // BigInt {Symbol(Symbol.toStringTag): "BigInt", constructor: ƒ, toLocaleString: ƒ, toString: ƒ, valueOf: ƒ}
-```
+- `__proto__` - All objects _(compulsory)_
+- `prototype` - Only Constructors. _(Conventions. Any object can have it. But literals don't make sense.)_
 
-**Create obj with prototype is nothing but [/oop/#inheritance](/oop/#inheritance)**
+**Who can set ?**
+
+- `__proto__` - user or JavaScript. (default is javascript)
+- `prototype` - user
+
+**Who is child, parent ?**
+
+- _parent_ - Constructors. _(Conventions. Any object can have `prototype` and be parent.)_
+- _child_ - Constructors & Instances. _(Conventions. All objects are children of rootObj directly/indirectly.)_
+
+**Behaviour ?**
+
+- `__proto__` - inherited behaviour
+- `prototype` - Constructor's own behaviour.
+
+**See Examples - [/oop/#inheritance](/oop/#inheritance)**
 
 ## Functions
 
-### Basics
-
 - Hoisting is allowed.
-- Num of args - `arguments[i]` - Not in arrow functions - _(Use rest/spread operator)_
 - **Types of invoking (calling)**
   1. _Normal invoke_
   2. _Event invoke_
   3. _Self invoke_
 
-```js
-function foo(a, b) {
-  console.log(arguments.length); // 2
-  for (a of arguments) {
-    console.log(a); // 4 / 5
-  }
-}
-foo(4, 5);
-```
-
 **Create**
 
 ```js
-// way 1 - named
-function foo(){...};
+function foo(){...}; // named
+let foo = function(){...}; // Anonymous - stored in variable
 
-// way 2 - anonymous
-let foo = function(){...};
+(function(){...})(); // self-invoking
 
-// way 3 - self-invoking
-(function(){...})();
+function foo(a, b = 23) {...} // b has a default value
 ```
 
-### Arrow Functions
+**Object.getOwnPropertyNames()**
+
+```js
+// ["length", "name", "arguments", "caller", "constructor", "apply", "bind", "call", "toString"]
+c(Object.getOwnPropertyNames(Function.prototype));
+
+// ["length", "name", "prototype"]
+c(Object.getOwnPropertyNames(Function));
+
+// ["length", "name", "arguments", "caller", "prototype"]
+c(Object.getOwnPropertyNames(function() {}));
+
+// ["length", "name"]
+c(Object.getOwnPropertyNames(() => {}));
+```
+
+### Arrows Functions
 
 - No access to `this, arguments, super, new.target`
 
 ```js
 //  ES6 functions
-const x = (a.b) => {...};
+const x = () => {...};
 const x = a => {...};
+const x = (a.b) => {...};
 
-const x = a => "This is single line return.";
+const x = a => "single line return.";
 ```
 
-### Default value
+## Function vs Constructor
+
+- Both are one and the same.
+- Difference is in conventions which developers developed for themselves.
+- _Constructor_ - Create set of objects with similar behaviour. _(First letter is capital)_
+- _Function_ - Create single functionality ie take input give output.
+
+**function**
+
+- Do single task.
 
 ```js
-// b has a default value
-function foo(a, b = 23) {
-  //code
+function sayHi(name) {
+  return "hi" + name;
 }
+sayHi("umesh");
+```
+
+**constructor**
+
+- Create set of objects.
+
+```js
+function Person(name) {
+  this.name = name;
+  this.sayHi = function() {
+    return "hi " + this.name;
+  };
+}
+let p1 = new Person("p1");
+let p2 = new Person("p2");
 ```
 
 ## Closures
 
+- It closes a variable from outer scope. And any function inside the scope can use this variable.
 - A function which returns a function.
 - Solves counter dilemma.
+- It a combination of 2 objects - `scope` & `function`
+- Use it only if it's necessary. It will hamper performance.
+
+### Lexical scope
+
+- AKA Lexical Environment
+- Even if function `innerFoo()` is called from outer scope, the value of `x` depends on the scope where the function is defined ie. inside `foo()`.
+
+```js
+let x = "outer";
+
+function foo() {
+  let x = "inner";
+  return function() {
+    c(x);
+  };
+}
+
+let innerFoo = foo();
+
+innerFoo(); // inner;
+```
 
 **Example 1 :**
 
@@ -860,6 +944,37 @@ console.log(twice(5)); // 10
 console.log(thrice(5)); // 15
 ```
 
+## Destructuring
+
+```js
+let [a, b] = [1, 2]; // array destructuring
+let { a, b } = { a: 1, b: 2 }; // object destructuring
+```
+
+## Try / Catch / Finally / Throw
+
+_Not allowed in async code.(Except `throw`)_
+
+```js
+try {
+  if( x=="" ) { throw "x is empty"; }
+  if( x < 5 ) { throw "Too low value"; }
+  if( isNaN(x) ) { throw "Not a number"; }
+} catch (err) {
+  // err.name
+  // err.message
+  console.log(err);
+}finally{...}
+
+
+Example :
+// Range  error
+// Reference error
+// Syntax error
+// Type error
+
+```
+
 ## Recursion
 
 - Function code calls itself.
@@ -875,10 +990,11 @@ power(2, 3); // 8
 
 ## Modules - Import/Export
 
-- Modules always `use-strict` automatically
+- Modules always use `strict` mode automatically
+- `defer` is automatically applied.
 - Always use bundler like Webpack & not directly in browser.
 
-### In Browser
+#### In Browser
 
 - Can run in browser but the convention is to use Webpack to bundle all modules into one(or few) js files.
 - **Defer** - Module Scripts are always deferred.
@@ -892,10 +1008,34 @@ power(2, 3); // 8
 <script type="module" src="foo.js"></script>
 ```
 
-### Multiple Imports
+#### Official Standard
 
-- If same file is imported in different files then it's imported & evaluated only once. Then same copy is given to other files.
-- It helps in initial configuration
+```js
+// Export
+export let bar = () => {};
+export { foo, bar };
+export { bar as barrr };
+export default { count: 0 };
+export default class Foo {....}; // classname Foo is optional
+
+// Import
+import _ from "Lodash"; // FOr default exports
+import { bar } from "./Foo.js"; // only bar - name must be same  // helps in tree-shaking
+import { bar as barrr } from "./Foo.js"; // just rename
+import * as Foo from "./Foo.js"; // all (like a namespace)
+
+// Dynamic import
+import("./module.js").then((mod) => {
+  c(mod.foo);
+});
+```
+
+#### Multiple Imports
+
+- Modules are executed only once.
+- If same file is imported in different files then it's imported & evaluated only once. Then same copy/instance is given to other files.
+- It helps in initial configuration.
+- It must be an object. Other values are READONLY.
 
 ```js
 // common.js
@@ -915,66 +1055,62 @@ import "./import1";
 import "./import2";
 ```
 
-### Official Standard
+#### Module Aggregation
+
+- Collect sub-modules to form one single module.
 
 ```js
-// Foo.js
-export let bar = () => {};
-export { bar as barrr };
+// animals.js =  cat.js + dog.js
+export Cat from './cat.js`
+export Dog from './dog.js`
 
-// Main.js
-import { bar } from "./Foo.js"; // only bar - name must be same  // helps in tree-shaking
-import { bar as barrr } from "./Foo.js"; // just rename
-import * as Foo from "./Foo.js"; // all
-Foo.bar();
+//main.js
+import {Cat, Dog} from "./animals.js"
 
-// default (only one per file)
-export default class Foo {....}; // classname Foo is optional
-import Bar from "./Foo"; // directly without {..}
 ```
 
-### CommonJs
+#### CommonJs
 
-- Used for Nodejs but now it's old.
+- Used for Nodejs but now it's old. Use offcial modules.
 
 ```js
-// FooJs.js
-function A(){......};
-function B(){......};
-module.exports = {
-  A,
-  B
-}
-
-// main.js
-const foo = require("./FooJs");
-foo.A();
-foo.B();
+module.exports = {}; // export
+const foo = require("./FooJs"); // import
 ```
+
+:::tip V8's Recommendations
+
+- _Use `.mjs` for modules._
+- But tools like Typescript may never support it.
+
+_Using `_module.js, _foo.js, _bar.js` could be better._
+:::
 
 ## Rest and Spread operators
 
 - Both rest & spread uses same syntax - three dots `...`
 
+**Rest : `args -> array`**
+
 ```js
-// Rest : args -> array
-// -----------------------
 function foo(p1, ...params) {
-  console.log(params); // an array - [3, 5, 8]
+  c(params); // an array - [3, 5, 8]
 }
 foo(2, 3, 5, 8);
+```
 
-// Spread : array -> args
-// -----------------------
+**Spread : `array -> args`**
+
+```js
 let params = [2, 3, 5, 8];
-console.log(1, ...params); // list of args - 1 2 3 5 8
+c(1, ...params); // list of args - (1, 2, 3, 5, 8)
 
 //NOTE - must be last argument
 function foo(...numbers, x); // wrong
 function foo(x, y, ...numbers); // right
 ```
 
-**ES2018 - For Objects**
+**Shallow copy**
 
 ```js
 let foo = { x: 2 };
@@ -1041,3 +1177,38 @@ for (value of s) {
 // array --> set
 new Set([2, 3, 3, 4]); // [2,3,4] - unique values
 ```
+
+## Symbol
+
+- A symbol is unique identifier.
+- It's always accessed using variable.
+- Hidden/Skipped by - `for in`, `Object.keys` but not by cloning `(Object.assign(dest, [src1, src2...]))`
+
+```js
+// Description is obtional
+let id = Symbol("This is description & has no side-effects on anything.");
+let id = Symbol();
+id.description; // read description
+
+c(Symbol("id") === Symbol("id")); // false - Symbols are always unique
+
+// To use variable as property name we use symbols.
+// This avoids conflict with other properties of same name
+let id = Symbol();
+
+let obj = {
+  id: "property",
+  [id]: "Symbol variable as property",
+};
+
+c(obj.id); // "property",
+c(obj[id]); // "Symbol variable as property"
+```
+
+## Classes
+
+- todo
+
+## Composition
+
+- todo

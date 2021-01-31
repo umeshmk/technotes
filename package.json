@@ -18,5 +18,6 @@
     "nodemon": "^2.0.6",
     "vuepress": "^1.8.0"
   },
-  "author": "<umeshk149@gmail.com>"
+  "author": "<umeshk149@gmail.com>",
+  "dependencies": {}
 }

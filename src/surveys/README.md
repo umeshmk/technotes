@@ -1,5 +1,29 @@
 # Surveys
 
+:::tip Languages
+https://medium.com/better-programming/modern-languages-suck-ad21cbc8a57c
+:::
+
+## Best resources
+
+- [_State Of Css/Js_](https://2020.stateofjs.com/en-US/features/)
+- _Openbase.io_
+- _Google Trends_
+- _Stack Overflow_
+- _Job Postings_
+- _Github Stars_
+- _w3techs.com_
+- _Hackr.io (Best resources for learning)_
+- _Product Hunt_
+- _Slant.co_
+
+**Others :**
+
+- [MDN-Web-DNA-Report-2019.pdf](https://mdn-web-dna.s3-us-west-2.amazonaws.com/MDN-Web-DNA-Report-2019.pdf)
+- [the-benchmarker/web-frameworks](github.com/the-benchmarker/web-frameworks)
+- [hired.com/state-of-software-engineers](hired.com/state-of-software-engineers)
+- [Database paradigm](https://youtu.be/W2Z7fbCLSTw)
+
 :::tip Resources
 
 - [hotframeworks.com](http://hotframeworks.com/)
@@ -17,14 +41,19 @@
 
 :::danger NpmTrends Comparisons
 
-**Js Frameworks**
+**Javascript**
 
-- [react/awesome-react](/react/awesome-react)
-- [angular-vs-react-vs-vue](https://www.npmtrends.com/angular-vs-react-vs-vue)
+- [All related to react/awesome-react](/react/awesome-react)
+- [Frontend Frameworks](https://www.npmtrends.com/angular-vs-react-vs-vue-vs-svelte)
+- [Data Layer](https://www.npmtrends.com/graphql-vs-apollo-client-vs-vuex-vs-xstate-vs-redux-vs-mobx-vs-relay-runtime)
+- [Backend Frameworks](https://www.npmtrends.com/next-vs-express-vs-fastify-vs-nuxt-vs-@nestjs/core-vs-strapi-vs-koa-vs-gatsby-vs-hapi)
+- [Build Tools](https://www.npmtrends.com/esbuild-vs-snowpack-vs-webpack-vs-parcel-vs-rollup-vs-gulp-vs-browserify-vs-grunt)
+- [Mobile/Desktop Frameworks](https://www.npmtrends.com/electron-vs-@capacitor/core-vs-react-native-vs-quasar-framework-vs-@ionic/core-vs-nw-vs-cordova)
+- [Other library & tools](https://www.npmtrends.com/axios-vs-lodash-vs-moment-vs-date-fns-vs-rxjs-vs-underscore-vs-dayjs-vs-immer-vs-ramda-vs-luxon)
 
 **CSS**
 
-- [styled-components-vs-tailwindcss-vs-sass](https://www.npmtrends.com/styled-components-vs-tailwindcss-vs-sass)
+- [Styled-components-vs-tailwindcss-vs-sass](https://www.npmtrends.com/styled-components-vs-tailwindcss-vs-sass)
 - [Css Frameworks](https://www.npmtrends.com/tailwindcss-vs-bootstrap-vs-materialize-css-vs-material-design-lite-vs-bulma-vs-foundation-sites-vs-semantic-ui-vs-skeleton-css-vs-purecss-vs-uikit)
 - [sanitize-vs-normalize-vs-reset-vs-normalize-scss](https://www.npmtrends.com/sanitize.css-vs-normalize.css-vs-reset-css-vs-normalize-scss-vs-modern-normalize)
 - [postcss/node-sass/sass/stylus/less/jss](https://www.npmtrends.com/postcss-vs-node-sass-vs-sass-vs-stylus-vs-less-vs-jss)
@@ -33,34 +62,12 @@
 
 **Others**
 
-- [Webpack & Others](https://www.npmtrends.com/webpack-vs-parcel-vs-gulp-vs-rollup-vs-browserify-vs-grunt)
 - [rxjs-vs-react-vs-typescript](https://www.npmtrends.com/rxjs-vs-react-vs-typescript)
 - [Json Validation](https://www.npmtrends.com/joi-vs-ajv-vs-yup-vs-express-validator-vs-validator-vs-validate.js)
 - [ORM-Object relational mapping](https://www.npmtrends.com/mongodb-vs-mongoose-vs-sequelize-vs-typeorm-vs-knex-vs-pg-vs-bookshelf-vs-graphql)
 - [StyleGuide-Prettier/Airbnb/Google/Standards](https://www.npmtrends.com/eslint-config-airbnb-base-vs-eslint-config-airbnb-vs-prettier-vs-standard-vs-eslint-config-google-vs-eslint-config-standard)
 
 :::
-
-## Best resources
-
-- _Openbase.io_
-- _Google Trends_
-- _State Of Css/Js_
-- _Stack Overflow_
-- _Job Postings_
-- _Github Stars_
-- _w3techs.com_
-- _Hackr.io (Best resources for learning)_
-- _Product Hunt_
-- _Slant.co_
-
-**Others :**
-
-- Stackshare.io
-- [MDN-Web-DNA-Report-2019.pdf](https://mdn-web-dna.s3-us-west-2.amazonaws.com/MDN-Web-DNA-Report-2019.pdf)
-- [the-benchmarker/web-frameworks](github.com/the-benchmarker/web-frameworks)
-- [hired.com/state-of-software-engineers](hired.com/state-of-software-engineers)
-- [Database paradigm](https://youtu.be/W2Z7fbCLSTw)
 
 ## Frontend survey (ashleynolan)
 
@@ -381,56 +388,3 @@
   5. Atomic design
   6. Css modules
   7. Jamstack
-
-## JavaScript
-
-**> Fundamentals**
-
-- Basic syntax
-- Variables
-- Arrays, objects
-- Events
-- Functions
-- Loops, conditions
-
-**> Modules**
-
-- ES6 module, Typescript
-- Parcel, Webpack & Babel
-- Export & Export default
-
-**> Classes**
-
-- Structure of class
-- Constructors
-- Methods/property
-- Instantiation
-- Extend classes
-
-**> Arrow functions, lexical 'this'**
-
-**> Promises/Async request**
-
-- Create/receive promise
-- then() , catch()
-- Async/Await
-- Fetch api
-
-**> Destructuring**
-
-**> Components concept**
-
-- Nested components
-- State managers redux,veux
-
-**> Spread operator ( … )**
-
-**> High order array functions**
-
-- forEach()
-- map()
-- filter()
-
-**> Functional programming**
-
-**> Prototype**

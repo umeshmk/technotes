@@ -53,16 +53,19 @@ setInterval(foo, 200);
     - `try...catch` - not allowed in async code.
     - `then()/catch()/finally()` is the async equivalent to `try/catch/finally` in sync
     - `throw new Error("An error occurred")` - allowed.
-- `resolve(value)/reject(error)` - takes 0 or 1 arg
-- `state:` property
+- `resolve(data)/reject(data)` - takes 0 or 1 arg
+- **`state:`** _property_
   - possible state = `pending/fulfilled/rejected`
   - `pending` - working
   - Resolved - work done promise object is returned;
-    - `fulfilled` - From `resolve(value)` - use `then(value)`
-    - `rejected` - From `reject(error)` - use `catch(error)`
-- `result:` property
+    - `fulfilled` - From `resolve(data)` - use `then(data)`
+    - `rejected` - From `reject(data)` - use `catch(data)`
+- **`result:`** _property_
   - `undefined` - if state is `pending`
-  - `value/error` based on state `fulfilled`/`rejected`
+  - `data` passed by `resolve(data) / reject(data)`
+- **Static methods**
+  - `Promise.resolve().then()`
+  - `Promise.reject().then()`
 
 ### Promise Constructor
 

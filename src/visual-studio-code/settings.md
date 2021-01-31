@@ -55,7 +55,10 @@
     "editor.quickSuggestions": {
       "strings": true
     }
-  }
+  },
+
+  // ==> Bracket Pair Colorizer (for Github Light Theme) <==
+  "bracket-pair-colorizer-2.colors": ["Red", "#333", "Blue"]
 }
 ```
 

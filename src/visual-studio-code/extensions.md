@@ -39,7 +39,7 @@ Add in **.vscode/extensions.json** or **.code-workspace**
   "esbenp.prettier-vscode",
   "christian-kohler.path-intellisense",
   "coenraads.bracket-pair-colorizer-2",
-  "oderwat.indent-rainbow",
+  "oderwat.indent-rainbow", // not needed
   "mikestead.dotenv",
   "austenc.laravel-blade-spacer"
 ]

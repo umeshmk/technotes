@@ -1176,11 +1176,11 @@ _Internationalization / L10n / localization / translation_
 
 ### Test
 
-> [NpmTrends](https://www.npmtrends.com/chai-enzyme-vs-react-unit-vs-redux-ava-vs-redux-test-recorder-vs-unexpected-react-vs-jest-cli-vs-enzyme-vs-react-testing-library-vs-react-hooks-testing-library-vs-majestic)
+> [NpmTrends](https://www.npmtrends.com/chai-enzyme-vs-react-unit-vs-redux-ava-vs-unexpected-react-vs-jest-cli-vs-enzyme-vs-react-hooks-testing-library-vs-majestic-vs-@testing-library/react)
 
 - [jest](https://github.com/facebook/jest) - Delightful JavaScript Testing Framework
+- [@testing-library/react](https://github.com/testing-library/react-testing-library) - Simple and complete React DOM testing utilities
 - [enzyme](https://github.com/airbnb/enzyme) - JavaScript Testing utilities for React
-- [react-testing-library](https://github.com/testing-library/react-testing-library) - Simple and complete React DOM testing utilities
 - [react-hooks-testing-library](https://github.com/mpeyper/react-hooks-testing-library) - React hooks testing utilities that encourage good testing practices
 - [majestic](https://github.com/Raathigesh/majestic) - Zero config GUI for Jest
 - Avoid

@@ -1,42 +1,58 @@
 # Object Oriented Programming
 
-<!-- > source - [Programming with Mosh](https://www.youtube.com/watch?v=PFmuCDHHpwk) -->
+:::danger GoodBye OOP
+Source - [Medium](https://medium.com/@cscalfani/goodbye-object-oriented-programming-a59cda4c0e53)
+:::
+
+:::danger OOP - The Trillion Dollar Disaster ?
+_Source_ : [Famous Medium article](https://medium.com/better-programming/object-oriented-programming-the-trillion-dollar-disaster-92a4b666c7c7) - Read other articles too.
+
+- _In Real World, You do not inherit “behaviors” from your parents, you develop your own behaviors. And you’re unable to “override” your parents’ behaviors._
+- _Fundamental error - Objects bind functions and data structures together in indivisible units._
+- **Design Patterns** - _OOP Guidelines like SOLID principle, dependency injection, design patterns, and others are just bandaids created to fill shortcomings of OOP._
+- _GoLang - Some modern programming languages avoid inheritance altogether._
+
+<vc-img url="https://miro.medium.com/max/1050/1*_xDSrTC0F2lke6OYtkRm8g.png" size="lg"></vc-img>
+
+**Functional languages**
+
+- _Elixir, Elm, F#, scala, clojure_
+- _With the right guidance and linting, JavaScript can be a good functional language._
+  :::
+
+:::tip Always Use - Classes ? Constructors ? Factory Functions ?
+
+- React says NO to classes
+- Airbnb style says YES. [#classes--constructors](https://github.com/airbnb/javascript/blob/master/README.md#classes--constructors)
+
+_**Learn both. Since they do the same things.**_
+
+**Composition over Inheritance** - Many developers prefer this over both Prototype/Classes Inheritance.
+:::
 
 :::tip Types of Programming
+
+_JavaScript is multi-paradigms._
 
 1. Procedural
 2. OOP
 3. Functional
 
+- _JavaScript OOP is not like Java's OOP. There are Differences._
+- JavaScript is **Prototypical OOP & Classless**
+
 :::
-
-**Property & Methods**
-
-```js
-{
-  property: "value",
-  method: () => {},
-};
-
-obj.constructor // gives constructor for object
-```
 
 ## OOP Principles
 
 ### Encapsulation
 
-- Method `add()` no parameters are needed to pass. Instead `this` is used.
-- Data `x,y` is bundled with method `add()`
+- Binding data & methods (acting on data) together into single entity.
+- _Eg: A Car has data(petrol, kms) & method(mileage) which will use data to calculate._
+- _Total encapsulation_ - Make date private. We can use _closures or get/set_.
 
 ```js
-// Procedural
-let x = 10;
-let y = 20;
-function add(x, y) {
-  return x + y;
-}
-
-// OOP
+// private or not is a different issue. -
 let obj = {
   x: 10,
   y: 20,
@@ -46,228 +62,168 @@ let obj = {
 };
 ```
 
+---
+
 ### Abstraction
 
-- Using local variables as Private members (not Private property/method of object).
-- User just pass the radius.
-- User has no idea about `pi` and `formula`
-- User has no access to `pi`
+- **Concept**
+  - Hides the implementation details from the user.
+  - We cannot create any instance. It's child must do it.
+  - Abstract methods - methods without body.
+  - _But javascript OOP is not java OOP._
 
-```js
-function Circle(radius) {
-  let pi = 3.14; // scope is private to this function only;
-  let formula = (r) => {
-    return pi * r * r;
-  };
-  this.radius = radius;
-  this.area = () => {
-    return formula(this.radius);
-  };
-}
-let obj = new Circle(5);
-console.log(obj.pi); // error
-console.log(obj.formula()); // error
-console.log(obj.radius);
-console.log(obj.area());
-```
+* stackoverflow
+  - [Best advice - Just don't use it.](https://stackoverflow.com/a/7477488)
+  - [_Abstract classes don't play a big role in JavaScript_](https://stackoverflow.com/a/15306051)
+    - **In Java** - We use abstract classes to acheive
+      1. _Polymorphism_
+      2. _Code sharing(inheritance)_
+    - **In JavaScript** - Neither are a problems.
+
+---
 
 ### Inheritance
 
-- Child instance can access Parent's shared props/methods.
+- See [javascript/#prototype](http://localhost:8080/javascript/#prototype)
 - Share code. No code duplication.
 
-#### ObjectLiteral
-
-- **Cons:**
-  - No constructor so no parameters.
-  - We mostly use constructor in production.
+#### # Object Literal _(not a convention. Use constructors.)_
 
 ```js
 let parent = { x: 10 };
 let child = Object.create(parent, { y: 20 });
 ```
 
-#### Constructors (Child/Parent)
+#### # Constructors
 
-**Two ways to inherit**
+1. **Constructor -> Instance**
 
 ```js
-Child.prototype = new Parent();
-Child.prototype = Object.create(Parent.prototype);
+obj = new Parent();
 ```
 
-**How to pass data from Child to Parent ?** - use `Parent.call(this, parameters)`
+2. **Constructor -> Constructor -> Instance** - _(Extend)_
 
 ```js
-function Parent() {
-  this.p = 10;
-}
-function Child() {
-  this.c = 20;
-}
-
-Child.prototype = new Parent(); // inherit
-
-let obj = new Child();
-
-c(obj.p, obj.c); // 10, 20
-c(obj instanceof Child); // true
-c(obj instanceof Parent); // true
-c(Object.getPrototypeOf(obj)); // Parent {p: 10}
-```
-
-#### Constructor + `Object.create()`
-
-**This 2 objects has all Properties/Methods to inherit:**
-
-1. `this` - use `Parent.call(this)`
-2. `Parent.prototype` - use `Object.create()`
-
-```js
-// Define parent
 function Parent(x) {
   this.x = x;
 }
-Parent.prototype.pi = 3.14;
+Parent.prototype.sayHi = () => "Hi";
 
-// Define child
 function Child(x, y) {
-  Parent.call(this, x);
+  Parent.call(this, x); // Run & Inherit
   this.y = y;
 }
 
-// Add prototype
-// Child.prototype = Parent.prototype; // wrong - don't pass ref directly.
-Child.prototype = Object.create(Parent.prototype); //right - a new object with prototype from Parent
-// console.log(Child.prototype.constructor); // f Parent(x) { this.x = x;}
-Child.prototype.constructor = Child; // Override from Parent to Child
+// Child.prototype = Parent.prototype; // wrong - Overriding is not possible
+Child.prototype = Object.create(Parent.prototype); // new object { constructor: Parent(), __proto__: Parent.prototype }
+Child.prototype.constructor = Child; // Override - { constructor: Child(), __proto__: Parent.prototype }
 
-// create obj
 let o = new Child(10, 20);
 
-console.log(o instanceof Child); // true
-console.log(o instanceof Parent); // true
+c(o instanceof Child); // true
+c(o instanceof Parent); // true
 
-console.log(Object.getPrototypeOf(o)); // Parent
-console.log(Object.keys(o)); // ["x", "y"]
-
-for (i in o) {
-  console.log(i); // x , y , constructor , pi
-}
+c(Object.getPrototypeOf(o)); // Parent
 ```
 
 #### Using Class
 
 ```js
-// Parent
-class Person {
-  constructor(name) {
-    this.name = name;
+class Parent {
+  constructor(x) {
+    this.x = x;
   }
-  greet(){
-      return "Hi " + this.name;
+  sayHi() {
+    return "hi";
   }
 }
 
-// Child
-class Teacher extends Person {
-  constructor(name, subject) {
-    super(name);
-    this.subject = subject;
+class Child extends Parent {
+  constructor(x, y) {
+    super(x);
+    this.y = y;
   }
 }
-let aTeacherObj = new Teacher("snape", "css );
-aTeacherObj.greet();
+let obj = new Child(3, 4);
 ```
+
+---
 
 ### Polymorphism
 
-- Polymorphism means methods with **Same name** but **different implementation logic**
-  1. **Dynamic (Overriding)(runtime)** - Subclass method overrides superclass method
-  2. **Static (Overloading)(compiletime)** - A class with n methods with same name but different arguments
-- **MDN** - "The fancy word for the ability of multiple object types to implement the same functionality is polymorphism."
-- In example `greet()` method is in different forms for each class but name is same ie. `greet()`
+**MDN** - "The fancy word for the ability of multiple object types to implement the same functionality is polymorphism."
+
+[JavaScript is a dynamic language with **duck typing**. Polymorphism is not an issue. ](https://stackoverflow.com/a/15306051)
 
 ```js
-// Parent - Person
-class Person {
-  constructor(name) {
-    this.name = name;
-  }
-  greet() {
-    return "Hi";
-  }
-}
-// Child - Teacher
-class Teacher extends Person {
-  constructor(name) {
-    super(name);
-  }
-  greet() {
-    // super.greet(); // parent can be accessed if needed
+let student = {
+  greet: function() {
+    return "Hello";
+  },
+};
+
+let teacher = {
+  greet: function() {
     return "Good Morning";
-  }
-}
+  },
+};
 
-// objects
-let person = new Person("foo");
-let teacher = new Teacher("bar");
+c(student.greet());
+c(teacher.greet());
+```
 
-person.greet(); // Hi
-teacher.greet(); // Good Morning
+**Concept**
+
+- Polymorphism - Objects with **Same name methods** but **different logic**
+  1. **Dynamic (Overriding)(runtime)** - Subclass method overrides superclass method
+  2. **Static (Overloading)(compiletime)** - A class with n methods with same name but different arguments
+
+_Polymorphism allows us to change program behavior at runtime._
+
+```js
+// Overriding
+let person = {
+  prototype: {},
+};
+person.prototype.greet = () => "Hello.";
+
+let student = {};
+student.prototype = Object.create(person.prototype);
+student.prototype.greet = () => "Hello student.";
+
+let teacher = {};
+teacher.prototype = Object.create(person.prototype);
+teacher.prototype.greet = () => "Good morning.";
+
+c(student.num());
+c(teacher.num());
 ```
 
 ## Instanceof
 
+**`obj instanceof Constructor`**
+
+- Will get `Constructor.prototype`
+- Then check the prototype chain of `obj` for ref to `Constructor.prototype`
+- Return true/false (if found anywhere in the chain)
+
 ```js
 let a = [2, 3];
 
-console.log(a instanceof Array); // true
-console.log(a instanceof Object); // true
-```
-
-- Helpful in Polymorphism.
-
-```js
-// Parent - Person
-class Person {
-  constructor(name) {
-    this.name = name;
-  }
-  greet() {
-    return "Hi";
-  }
-}
-// Child - Teacher
-class Teacher extends Person {
-  constructor(name) {
-    super(name);
-  }
-  greet() {
-    return "Good Morning";
-  }
-}
-
-// objects
-let person = new Person("foo");
-let teacher = new Teacher("bar");
-
-console.log(person instanceof Person); // true
-console.log(teacher instanceof Person); // true
-console.log(person instanceof Teacher); // false
-console.log(teacher instanceof Teacher); // true
+c(a instanceof Array); // true
+c(a instanceof Object); // true
 ```
 
 ## Creating Objects
 
-### Object Literals
+#### Object
 
-- **Pros**
-  - Use - if there is just 1 or very few instances needed.
-  - Quickest
-  - Best for json data sharing
-- **Cons**
-  - Duplication
+```js
+let obj = new Object();
+```
+
+#### Object Literals
 
 ```js
 let obj = {
@@ -279,78 +235,48 @@ let obj = {
 };
 ```
 
-### Factory Function
+#### Factory Function
 
 ```js
-function foo() {
+function Foo(x, y) {
   return {
-    x: 3,
-    y: 4,
-    add: () => {
+    x,
+    y,
+    add: function() {
       return this.x + this.y;
     },
   };
 }
-let obj = foo(); // just call don't use 'new'
+
+let o = Foo(2, 3); // just call don't use 'new'
 ```
 
-### Constructor
+#### Constructor
 
 ```js
 // first letter is capital
-function Foo() {
-  this.x = 3;
-  this.y = 4;
+function Foo(x, y) {
+  this.x = x;
+  this.y = y;
   this.add = () => {
     return this.x + this.y;
   };
 }
-let obj = new Foo();
+let obj = new Foo(2, 3);
 ```
 
-**Constructor with prototype methods**
-
-```js
-// add() gets stored in prototype. Not actual object.
-function Foo() {
-  this.x = 3;
-  this.y = 4;
-}
-Foo.prototype.add = () => {
-  return this.x + this.y;
-};
-let obj = new Foo();
-```
-
-### Classes
-
-- **Pros**
-  - Use - if there multiple instances needed.
-  - No duplication
-  - Modern Syntax is Good
-- **Cons**
-  - Time consuming for small implementations
+#### Classes
 
 ```js
 class Foo {
   constructor(x) {
     this.x = x;
   }
+  num() {
+    return this.x;
+  }
 }
 let obj = new Foo(5);
-```
-
-### Object
-
-- Same as Object literal. `{}` get converted internally to `new Object()`
-
-```js
-// way 1
-let obj = new Object();
-
-// way 2
-let objA = new A();
-let objB = Object.create(objA); // A is the prototype for B. (Also Inheritance without using classes.)
 ```
 
 ## Passed by reference
@@ -363,40 +289,45 @@ Objects are **Mutable** because they are always addressed by **reference**.
 
 ```js
 // passed by value - number/string/boolean/symbol/undefined/null
-let x = 10;
-let y = x;
-x = 20;
-
-console.log(x); // 20
-console.log(y); // 10
-
-// passed by reference - object/array/functions
+// passed by reference - objects (array,functions,etc)
 let x = { n: 10 };
 let y = x;
 x.n = 20;
 
-console.log(x); // {n:20}
-console.log(y); // {n:20}
+console.log(x, y); // {n:20} {n:20}
 ```
 
-> **Example**
+## Copy Object
+
+1. _Reference Copy_
+2. _Shallow Copy_ - (Top level properties are copied. For Nested objects, ref is copied)
+   - _Spread operator_
+   - _Assign_ - `Object.assign ({}, obj)`
+3. _Deep Copy_
+   - _Lodash_
+   - _Json_ - `JSON.parse(JSON.stringify(obj))` (undefined, symbols, methods are skipped)
+
+_Note : Methods can't be copied reliably in javascript. So share them._
 
 ```js
-// passed by value - number/string/boolean/symbol/undefined/null
-let x = "jack";
-function foo(value) {
-  value.name = "harry";
-}
-foo(x);
-console.log(x); // jack - unchanged
+let foo = {
+  x: 3,
+  y: {
+    z: 4,
+  },
+};
 
-// passed by reference - object/array/functions
-let x = { name: "jack" };
-function foo(ref) {
-  ref.name = "harry";
-}
-foo(x);
-console.log(x); // harry - changed
+// shallow copy
+let bar = {
+  a: 10,
+  ...foo,
+};
+c(bar); // {a: 10, x: 3, y: {…}}
+c(foo.y === bar.y); // true - ref to same object
+
+// deep copy
+let deep = JSON.parse(JSON.stringify(foo));
+c(foo.y === deep.y); // false
 ```
 
 ## This
@@ -404,37 +335,35 @@ console.log(x); // harry - changed
 - Based on location where it is used
 
 ```js
-// Alone
-// ---------------
-let foo = this; // this = window object
+c(this); // this = window object
 
-// In Function
-// ---------------
 function foo() {
-  return this; // owner of function ie 'Window'
+  c(this); // owner of function ie 'Window'
 }
+```
 
-// In method
-// ---------------
+**In method**
+
+```js
 let p = {
   foo: 23,
   bar: function() {
-    return this; // this = owner of function = p object
+    c(this); // this = owner of function = p object
   },
   barArrow: () => {
-    return this; // this = window object
+    c(this); // this = window object
   },
   barMix: function() {
     let arrow = () => {
-      return this; // lexical scoping - takes this from outer context = p object
+      c(this); // lexical scoping - takes this from outer context = p object
     };
     return arrow();
   },
 };
 
-console.log(p.bar()); // p object
-console.log(p.barArrow()); // window object
-console.log(p.barMix()); // p object
+p.bar(); // p object
+p.barArrow(); // window object
+p.barMix(); // p object
 ```
 
 **In Event handlers**
@@ -446,90 +375,80 @@ console.log(p.barMix()); // p object
 </button>
 ```
 
-### bind()
+#### bind()
 
 - We use this `bind()` to bind `this` to the funtion context.
 
 ```js
 let foo = function() {
-  console.log(this);
+  c(this);
 };
-let user = {
+let myThis = {
   x: 10,
 };
 
-let newFoo = foo.bind(user);
-// foo = foo.bind(user); // we can redefine with same name
+let newFoo = foo.bind(myThis);
 
-newFoo(); // this = user
-foo(); // this = window
+newFoo(); // myThis
+foo(); // window
 ```
 
-## Dynamic Properties/Methods
+## Property
 
-- Add/remove/access dyanmically.
-- Both current & new property/method is possible.
-
-### Add/remove
+- **_Types of Property_**
+  1. _Data property_ - has value
+  2. _Accessor property_ - has no value but `get/set`
 
 ```js
+// Both enumerable & non-enumerable props
+Object.getOwnPropertyNames(obj);
+
+// Enumerable props
+for (let x in obj);
+
+Object.keys(obj); // all keys
+Object.values(obj); // all values
+```
+
+- **_Property Attributes_**
+  - Data & Accessor property has some Attributes used internally by JSEngine. Eg: `[[Prototype]]`
+  - _Data property_ - `[[Value]], [[Enumerable]], [[Writable]], [[Configurable]]`
+  - _Accessor property_ - `[[Get]], [[Set]], [[Enumerable]], [[Configurable]]`
+
+```js
+// get flags
+Object.getOwnPropertyDescriptor(obj, propName); // {value: , writable: true, enumerable: true, configurable: true, }
+
+// change flags
+Object.defineProperty(obj, propName, { value: "foo", enumerable: false }); // If flags are absent then all flags = false.
+```
+
+#### Add, Delete property
+
+```js
+// add
 obj.newProp = "value";
-obj.["newProp"] = "value";
-obj.[someVariable] = "value"; // dynamic property name
+obj.["new-prop"] = "value";
+
+// dynamic key
+let obj = {
+  [someVariable]: 'umesh'
+}
+obj[someVariable];
 
 // delete
 delete obj.newProp;
 ```
 
-### Access
+## Property - Get/Set
 
-```js
-// Access
-for (let x in obj) {
-  console.log(x); // keyname (both props & methods )
-  console.log(obj[x]); // keyvalue
-  if (typeof x !== "function") {
-    console.log(x); // keyname (only props & no methods )
-  }
-}
+- _Accessor property_
+  - Has no `value` but `get/set` methods.
+  - This methods are accessed just like a property without parenthesis `()`
+  - `set()` allows only **one parameter**.
+- _Property Attributes_ - `[[Get]], [[Set]], [[Enumerable]], [[Configurable]]`
 
-// access using Object
-Object.keys(obj); // all keys
-Object.values(obj); // all values
-
-// access to check key
-if("key" in obj) // "key" is present in obj
-```
-
-## Property Flags
-
-- **Each property has 3 Types of hidden flags (default value is always `true` for all 3 flags)**
-  - `writable` - value can be changed
-  - `enumerable` - property can be counted in loop
-  - `configurable` - property can be deleted or modified
-
-```js
-// show property flags
-let description = Object.getOwnPropertyDescriptor(obj, propName);
-console.log(description); // {value: , writable: true, enumerable: true, configurable: true, }
-
-// change flags
-Object.defineProperty(obj, propName, descriptionObj);
-Object.defineProperty(user, name, { value: "umesh" }); // If flags are absent then all flags = false.
-
-Object.defineProperties(obj, {propName: description, ....}); // Multiple properties
-```
-
-## Setters/Getters
-
-- **Property Types**
-  - _Data property_ - has `value`
-  - _Accessor property_ - has no `value` but `get/set`
-    - Methods that are accessed like a property without parenthesis `()`
-    - It has no `writable` property flag but `get()` & `set()` functions
-    - `set()` allows only one parameter.
-
-### Using Object Literal
+#### Using Object Literal
 
 - **Two ways**
   1. Using keywords `get/set` inside literal object.
@@ -557,7 +476,7 @@ obj.user = "Foo Bar"; // set
 console.log(obj.user); // get
 ```
 
-### Using Constructor - Property
+#### Using Constructor - Property
 
 - **One way**
   1. Not possible - Using keywords `get/set` inside Constructor.
@@ -581,10 +500,31 @@ function Foo(name) {
 
 let obj = new Foo("Harry");
 obj.user = "Potter"; // set
-console.log(obj.user); // get - Potter
+c(obj.user); // get - Potter
 ```
 
-### Using Construtor - Methods
+#### Using Class
+
+```js
+class Foo {
+  constructor(name) {
+    this.name = name;
+  }
+
+  get user() {
+    return this.name;
+  }
+  set user(name) {
+    this.name = name;
+  }
+}
+
+let obj = new Foo("Umesh");
+obj.user = "Harry"; // set
+c(obj.user); // get
+```
+
+#### Using keywords
 
 :::danger Not a get/set Syntax
 This is not an example of get/set Syntax. It just uses keywords `getXxxx()` / `setXxxx()`.
@@ -608,70 +548,52 @@ obj.getName();
 obj.setName("Harry");
 ```
 
-### Using Class
-
-```js
-class Foo {
-  constructor(name) {
-    this.name = name;
-  }
-
-  get user() {
-    return this.name;
-  }
-  set user(name) {
-    this.name = name;
-  }
-}
-
-let c = new Foo("Umesh");
-c.user = "Harry"; // set
-console.log(c.user); // get
-```
-
 ## Private/Protected
 
 - **Private** - `#propName` (almost a js standard now. Visible only inside class.) (No Inheritance for child class.)
 - **Protected** - `_propName` (a convention but not official. It is assecible from anywhere outside. But `_` reminds us not to use outside class.)
 
-### In Constructor
+#### In Constructor
 
 ```js
 function Foo() {
-  let pri = "umesh"; // private member (not property)
-
-  this.myPrivate = () => {
-    return pri;
-  };
+  let x = 3; // private member (not property)
+  this.num = () => x;
 }
 
-let obj = new Foo();
+let o = new Foo();
 
-console.log(obj.myPrivate()); // umesh
-console.log(obj.pri); // undefined
-obj.pri = "something"; // is creating property and not private member
+c(o.num()); // 3
+o.x = 55; // is creating property and not private member
 ```
 
-### In Class
+#### In Class
 
 ```js
 class Foo {
-  let pri = "Hmmm...why I'm not allowed ?"; // unlike constructor above "let/const" is not allowed
-  #myPrivate = "Hmmm...secret"; // private
-  myPrivate = "Hmmm...no secret"; // allowed & public
+  //  let x = 3; // error can't use let/const inside class
+  x = 3; // public
+  _y = 5; // public (protected as convention)
+  #z = 4; // private
 
-  // constructor if needed
-
-  #myPrivateMethod() {
-    // code
+  num() {
+    return this.#priNum();
   }
-  myPrivateMethod() {
-    return this.#myPrivate; // accessed using "this"
+
+  #priNum() {
+    return this.x + this._y + this.#z;
   }
 }
 
-let obj = new Foo();
-console.log(obj.myPrivateMethod());
+let o = new Foo();
+c(o); // Foo {x: 3, _y: 5, #priNum: ƒ, #z: 4}
+
+c(o.x); // 3
+c(o._y); // 5
+c(o.z); // undefined
+// c(o.#z); // error
+
+c(o.num()); // 12
 ```
 
 ## Method Chaining
@@ -700,70 +622,28 @@ user.one().two();
 - They are just utility/helper methods relevant to class
 - They can be accessed using classname only and not class instances/objects
 - `this` keyword is never used inside static methods
-- eg: `Object.keys()`
+- eg: `Object.keys(), Object.values(), etc`
 
 ```js
-class Square {
-  constructor(side) {
-    this.side = side;
+class Foo {
+  x = 3;
+  static num() {
+    return this.x;
   }
-  static compare(s1, s2) {
-    return s1 > s2 ? "First is bigger" : "Second is bigger";
+  static square(x) {
+    return x ** 2;
   }
 }
 
-let s1 = new Square(5);
-let s2 = new Square(7);
-Square.compare(s1, s2); // classname is used not object
-```
-
-## Destructuring
-
-```js
-let obj = { name: "umesh", age: 27 };
-
-// without destructuring
-var name = obj.name;
-var age = obj.age;
-
-// with destructuring
-let { name, age } = obj;
-```
-
-## Symbol
-
-- A symbol is unique identifier.
-- It's always accessed using variable.
-- Hidden/Skipped by - `for in`, `Object.keys` but not by cloning `(Object.assign(dest, [src1, src2...]))`
-
-```js
-// Description is obtional
-let id = Symbol("This is description & has no side-effects on anything.");
-let id = Symbol();
-id.description; // read description
-
-// Symbold are always unique
-let x = Symbol("hello");
-let y = Symbol("hello");
-console.log(x === y); // false
-
-// To use variable as property name we use symbols.
-// This avoids conflict with other properties of same name
-let id = Symbol();
-
-let obj = {
-  id: "property",
-  [id]: "Symbol variable as property",
-};
-
-console.log(obj.id); // "property",
-console.log(obj[id]); // "Symbol variable as property"
+c(Foo.x); // undefined
+c(Foo.num()); // undefined - (we can't use "this" in static)
+c(Foo.square(10)); // 100
 ```
 
 ## Mixins
 
 - It's like adding extra props/methods to prototype of any class.
-- Js does not allow multiple Inheritance. But then mixin can be a great alternative.
+- Js does not allow **multiple Inheritance**. But then mixin can be a great alternative.
 
 ```js
 let mixin = {
