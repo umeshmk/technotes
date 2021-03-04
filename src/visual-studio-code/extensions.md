@@ -64,7 +64,7 @@ Add in **.vscode/extensions.json** or **.code-workspace**
 
 ```json
 // Git
-["eamodio.gitlens", "donjayamanne.githistory"]
+["mhutchie.git-graphs", "eamodio.gitlens", "donjayamanne.githistory"]
 ```
 
 ## MARKDOWN
@@ -110,7 +110,15 @@ Add in **.vscode/extensions.json** or **.code-workspace**
 
 ```json
 // css
-["bradlc.vscode-tailwindcss", "sysoev.language-stylus"]
+[
+  "kamikillerto.vscode-colorize", // colors
+  "joy-yu.css-snippets", // works with nested css too where emmet fails
+  "ashhitch.vs-code-css-comments", // just type comment
+  "stylelint.vscode-stylelint", // .stylelintrc.json - https://github.com/stylelint/stylelint-config-standard
+  "csstools.postcss", // syntax highlighting for latest css
+  "bradlc.vscode-tailwindcss",
+  "sysoev.language-stylus"
+]
 ```
 
 ## JS
@@ -128,7 +136,7 @@ Add in **.vscode/extensions.json** or **.code-workspace**
 [
   "VisualStudioExptTeam.vscodeintellicode",
   "dbaeumer.vscode-eslint",
-  "xabikos.JavaScriptSnippets",
+  // "xabikos.JavaScriptSnippets", // React snippets is better.
   "msjsdiag.debugger-for-chrome"
   "octref.vetur",
   "dsznajder.es7-react-js-snippets",

@@ -713,6 +713,7 @@ continue; // stops 1 iteration in loop
   1. _Literal_ - `{...}`
   2. _Function_ - _Just a literal with some built-in properties like `name, arguments, etc` makes it callable._
   3. _Regex_
+  4. _JSX_
 
 **Root Object & Root Function**
 

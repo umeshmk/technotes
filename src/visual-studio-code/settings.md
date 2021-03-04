@@ -9,7 +9,7 @@
   // ==> Editor Basics <==
   "window.zoomLevel": 1,
   "editor.fontLigatures": true,
-  "editor.fontFamily": "'JetBrains Mono Light','Source Code Pro', 'Cascadia Code', Consolas, 'Courier New', monospace",
+  "editor.fontFamily": "'JetBrains Mono','Source Code Pro', 'Cascadia Code', Consolas, 'Courier New', monospace",
   "editor.fontSize": 15,
   "editor.suggestSelection": "first",
   "editor.snippetSuggestions": "top",

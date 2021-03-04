@@ -53,6 +53,10 @@ module.exports = {
         text: "Resources",
         link: "/resources/",
       },
+      {
+        text: "Github",
+        link: "https://github.com/umeshmk",
+      },
     ],
     sidebarDepth: 2,
     sidebar: sidebar,

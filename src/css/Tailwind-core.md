@@ -1,10 +1,8 @@
 # TailwindCss (core)
 
 :::danger Creator's Twitter Confession
-
-Don't ever use `@apply bg-red-100;` in `.css` files.
-
-Use only in `class="bg-red-100"`
+[Twitter](https://twitter.com/adamwathan/status/1226511611592085504?lang=en)
+Don't ever use `@apply bg-red-100;` in `.css` files. use only in `class="bg-red-100"`
 :::
 
 ## Utility First

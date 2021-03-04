@@ -1,5 +1,24 @@
 # Sass/Scss
 
+:::danger Do you need it ?
+
+_What is most needed from Sass ? Alternatives_
+
+- Parials Imports (~ `postcss-import` or directly in js file or simple css `@import`)
+- SingleLine Comments (~ `postcss-scss` parser)
+- Nesting (~ preset - nesting)
+- Variables (~ preset - custom properties)
+  - Never use sass variables - why? Because each ReactComponents has it's own css & will need to import partial `_variables.scss`.
+  - Instead custom properties are globally available
+- Special Functions (~ Css standards - `calc(), env(), var(), min(), or max()` )
+- Mixins (mostly for prefixes) (~ preset - autoprefixer)
+
+_React/Vue Components - we can simply use css modules with **scoped css classes**._
+
+**Sass + Autoprefixer + purgecss is best combination.**
+
+:::
+
 > Syntactically Awesome Stylesheets
 >
 > - [Reference](http://sass-lang.com/documentation/file.SASS_REFERENCE.html>)
@@ -36,9 +55,10 @@ padding: {
 
 ## Special Functions
 
-```scss
-// calc(), env(), var(), min(), or max() - TODO just search if they are css standards or not
+- Css standards - `calc(), env(), var(), min(), or max()`
+- We can use Interpolation in it.
 
+```scss
 // url()
 $foo: "path/to" ;
 url("#{$foo}/image.jpg");   // url("path/to/image.jpg")
@@ -343,7 +363,7 @@ div p {
 @keyframes;
 ```
 
-## @if / else / each / for / while
+## @if / else / each / for / while - (Avoid)
 
 ```scss
 $dark-theme: true !default;

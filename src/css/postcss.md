@@ -1,5 +1,28 @@
 # PostCss
 
+:::tip Postcss-Preset-Env
+_PostCss preset env has a number of plugins. But the most useful IMO are :_
+
+- **Stage 3**
+  - custom properties
+  - font variant
+  - gap properties
+  - media query ranges
+- **Stage 2**
+  - double position gradients (conic gradients)
+  - :focus-within pseudo-class
+  - alpha hex colors
+  - :not pseudo-class
+- **Stage 1**
+  - :blank empty-value pseudo-class
+  - custom media queries
+  - custom selectors
+  - nesting rules
+- **Stage 0**
+  - custom environment variables
+
+:::
+
 [postcss/postcss](https://github.com/postcss/postcss)
 
 - **Install**
@@ -30,7 +53,7 @@ module.exports = {
 
 ```txt
 # FutureCss/Fallbacks
-extend - 20m
+
 postcss-preset-env(includes autoprefixer)(use .browserslistrc) - 3m
   - autoprefixer - 10m
   - postcss-font-variant - 3.3m
@@ -51,6 +74,7 @@ postcss-nested - 0.8m
 postcss-modules - 0.7m
 postcss-sorting - 0.6m
 Precss - 95k
+postcss-extend - 20m
 postcss-assets - 16k
 
 # syntax

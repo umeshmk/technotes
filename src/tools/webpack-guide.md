@@ -202,7 +202,7 @@ module.exports = (env) => {
   console.log(env.production);  // true
 
   return{
-    mode: (env.production):'production':'development'
+    mode: (env.production)? 'production':'development'
     entry:"./src/index.js"
   };
 };
@@ -338,6 +338,10 @@ module.exports = merge(common, {
 - TODO
 
 ## Advanced Entry (Extract js/css)
+
+- **Useful** - Even all _scoped css_ can be extracted in 1 single main.css file.
+- To minify add [css-minimizer-webpack-plugin](https://webpack.js.org/plugins/css-minimizer-webpack-plugin/)
+  - It uses cssnano internally.
 
 ```js
 // plugin

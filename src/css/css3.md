@@ -137,6 +137,16 @@ align-self : { flex-start|flex-end|center|stretch|baseline};        /*overrides 
 
 ## MEDIA QUERIES
 
+_Always add at the end of css file._
+
+#### Breakpoints range (widths)
+
+- `320px — 480px`: _Mobile devices_
+- `481px — 768px`: _iPads, Tablets_
+- `769px — 1024px`: _Small screens, laptops_
+- `1025px — 1200px`: _Desktops, large screens_
+- `1201px and more` :  _Extra large screens, TV_
+
 ```js
 /* TYPES */
 - all       - screen
