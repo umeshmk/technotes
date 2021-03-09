@@ -69,5 +69,6 @@ module.exports = {
 
   // deployment on github pages
   dest: "./docs",
-  base: "/technotes/",
+  base: "/technotes/", // production (works in dev too)
+  // base: "/", // development
 };
