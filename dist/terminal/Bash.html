@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Bash | TechNotes</title>
+    <meta name="generator" content="VuePress 1.8.0">
+    
+    <meta name="description" content="This Are My Notes">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    
+    <link rel="preload" href="/assets/css/0.styles.3fe018e7.css" as="style"><link rel="preload" href="/assets/js/app.8b3c4856.js" as="script"><link rel="preload" href="/assets/js/2.2979c302.js" as="script"><link rel="preload" href="/assets/js/104.4d426ef0.js" as="script"><link rel="prefetch" href="/assets/js/10.5866e61d.js"><link rel="prefetch" href="/assets/js/100.86048f75.js"><link rel="prefetch" href="/assets/js/101.bc3ac587.js"><link rel="prefetch" href="/assets/js/102.253c0f55.js"><link rel="prefetch" href="/assets/js/103.48ad35e3.js"><link rel="prefetch" href="/assets/js/105.6fecf32a.js"><link rel="prefetch" href="/assets/js/106.a0bd7490.js"><link rel="prefetch" href="/assets/js/107.4b5b6026.js"><link rel="prefetch" href="/assets/js/108.78bc28b9.js"><link rel="prefetch" href="/assets/js/109.7519b4bf.js"><link rel="prefetch" href="/assets/js/11.c58fe308.js"><link rel="prefetch" href="/assets/js/110.28d584c2.js"><link rel="prefetch" href="/assets/js/111.b040db35.js"><link rel="prefetch" href="/assets/js/112.79581112.js"><link rel="prefetch" href="/assets/js/113.2999cd3a.js"><link rel="prefetch" href="/assets/js/114.8126de1b.js"><link rel="prefetch" href="/assets/js/115.88105cb4.js"><link rel="prefetch" href="/assets/js/116.19663a7f.js"><link rel="prefetch" href="/assets/js/117.0dc8ae31.js"><link rel="prefetch" href="/assets/js/118.c6f5489e.js"><link rel="prefetch" href="/assets/js/12.56c6ed94.js"><link rel="prefetch" href="/assets/js/13.da084160.js"><link rel="prefetch" href="/assets/js/14.c9533aa0.js"><link rel="prefetch" href="/assets/js/15.41deb6e5.js"><link rel="prefetch" href="/assets/js/16.64307d03.js"><link rel="prefetch" href="/assets/js/17.8f088b78.js"><link rel="prefetch" href="/assets/js/18.90267d1a.js"><link rel="prefetch" href="/assets/js/19.bc067427.js"><link rel="prefetch" href="/assets/js/20.6e6abb1d.js"><link rel="prefetch" href="/assets/js/21.a5cb4ed9.js"><link rel="prefetch" href="/assets/js/22.378ea376.js"><link rel="prefetch" href="/assets/js/23.7948aea6.js"><link rel="prefetch" href="/assets/js/24.51d5506a.js"><link rel="prefetch" href="/assets/js/25.51f8e0ec.js"><link rel="prefetch" href="/assets/js/26.bd8be612.js"><link rel="prefetch" href="/assets/js/27.78c09c0e.js"><link rel="prefetch" href="/assets/js/28.b6f24c71.js"><link rel="prefetch" href="/assets/js/29.2b244820.js"><link rel="prefetch" href="/assets/js/3.ed2ef2c7.js"><link rel="prefetch" href="/assets/js/30.33cd27e0.js"><link rel="prefetch" href="/assets/js/31.529c7d2a.js"><link rel="prefetch" href="/assets/js/32.f3dec8ab.js"><link rel="prefetch" href="/assets/js/33.25f5ff62.js"><link rel="prefetch" href="/assets/js/34.1077ae4d.js"><link rel="prefetch" href="/assets/js/35.7d136c03.js"><link rel="prefetch" href="/assets/js/36.e88bfce5.js"><link rel="prefetch" href="/assets/js/37.39b5e586.js"><link rel="prefetch" href="/assets/js/38.5efbb80b.js"><link rel="prefetch" href="/assets/js/39.c5f0e388.js"><link rel="prefetch" href="/assets/js/4.a7ab2a4a.js"><link rel="prefetch" href="/assets/js/40.59709cb4.js"><link rel="prefetch" href="/assets/js/41.261557f5.js"><link rel="prefetch" href="/assets/js/42.27e3510f.js"><link rel="prefetch" href="/assets/js/43.f90d4b6f.js"><link rel="prefetch" href="/assets/js/44.2358822c.js"><link rel="prefetch" href="/assets/js/45.ae5f5462.js"><link rel="prefetch" href="/assets/js/46.6c34a79a.js"><link rel="prefetch" href="/assets/js/47.0ee1a109.js"><link rel="prefetch" href="/assets/js/48.be87fb40.js"><link rel="prefetch" href="/assets/js/49.177468d1.js"><link rel="prefetch" href="/assets/js/5.ecc03933.js"><link rel="prefetch" href="/assets/js/50.0fb39585.js"><link rel="prefetch" href="/assets/js/51.8538a242.js"><link rel="prefetch" href="/assets/js/52.33fb8417.js"><link rel="prefetch" href="/assets/js/53.5df79e51.js"><link rel="prefetch" href="/assets/js/54.aaeb0563.js"><link rel="prefetch" href="/assets/js/55.2d231bc2.js"><link rel="prefetch" href="/assets/js/56.e6727434.js"><link rel="prefetch" href="/assets/js/57.1cd89c78.js"><link rel="prefetch" href="/assets/js/58.acced2c8.js"><link rel="prefetch" href="/assets/js/59.c4b78fcd.js"><link rel="prefetch" href="/assets/js/6.debca471.js"><link rel="prefetch" href="/assets/js/60.b4d49616.js"><link rel="prefetch" href="/assets/js/61.f0d84cfb.js"><link rel="prefetch" href="/assets/js/62.f130a3f0.js"><link rel="prefetch" href="/assets/js/63.15cf5758.js"><link rel="prefetch" href="/assets/js/64.0fb8a0fb.js"><link rel="prefetch" href="/assets/js/65.2c920ab0.js"><link rel="prefetch" href="/assets/js/66.d087a39e.js"><link rel="prefetch" href="/assets/js/67.803e1fde.js"><link rel="prefetch" href="/assets/js/68.8e5032b5.js"><link rel="prefetch" href="/assets/js/69.213932a4.js"><link rel="prefetch" href="/assets/js/7.ab2cde39.js"><link rel="prefetch" href="/assets/js/70.7aeed53f.js"><link rel="prefetch" href="/assets/js/71.9ab3dca0.js"><link rel="prefetch" href="/assets/js/72.5cba5a4d.js"><link rel="prefetch" href="/assets/js/73.0bfa3c06.js"><link rel="prefetch" href="/assets/js/74.27b62f95.js"><link rel="prefetch" href="/assets/js/75.f0259983.js"><link rel="prefetch" href="/assets/js/76.c5594162.js"><link rel="prefetch" href="/assets/js/77.5c8f4feb.js"><link rel="prefetch" href="/assets/js/78.794fb25f.js"><link rel="prefetch" href="/assets/js/79.67768da7.js"><link rel="prefetch" href="/assets/js/8.18bc17a6.js"><link rel="prefetch" href="/assets/js/80.7c99bf28.js"><link rel="prefetch" href="/assets/js/81.c25a2e1f.js"><link rel="prefetch" href="/assets/js/82.b5ad8ba7.js"><link rel="prefetch" href="/assets/js/83.4e86845d.js"><link rel="prefetch" href="/assets/js/84.683b6629.js"><link rel="prefetch" href="/assets/js/85.def392ed.js"><link rel="prefetch" href="/assets/js/86.774c70f1.js"><link rel="prefetch" href="/assets/js/87.eb6f676a.js"><link rel="prefetch" href="/assets/js/88.71f01d6e.js"><link rel="prefetch" href="/assets/js/89.9c7251e9.js"><link rel="prefetch" href="/assets/js/9.84445d1a.js"><link rel="prefetch" href="/assets/js/90.7a41265a.js"><link rel="prefetch" href="/assets/js/91.e3dded02.js"><link rel="prefetch" href="/assets/js/92.8d5adf74.js"><link rel="prefetch" href="/assets/js/93.2194cbea.js"><link rel="prefetch" href="/assets/js/94.9fb3f0ad.js"><link rel="prefetch" href="/assets/js/95.8f0e803a.js"><link rel="prefetch" href="/assets/js/96.3deeae33.js"><link rel="prefetch" href="/assets/js/97.d29718f9.js"><link rel="prefetch" href="/assets/js/98.e57f6500.js"><link rel="prefetch" href="/assets/js/99.4a63eba3.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.3fe018e7.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">TechNotes</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/documentation/vuepress.html" class="nav-link">
+  Documentation
+</a></div><div class="nav-item"><a href="/keyboard-shortcuts/" class="nav-link">
+  Keyboard-shortcuts
+</a></div><div class="nav-item"><a href="/surveys/" class="nav-link">
+  Surveys
+</a></div><div class="nav-item"><a href="/resources/" class="nav-link">
+  Resources
+</a></div><div class="nav-item"><a href="https://github.com/umeshmk" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/documentation/vuepress.html" class="nav-link">
+  Documentation
+</a></div><div class="nav-item"><a href="/keyboard-shortcuts/" class="nav-link">
+  Keyboard-shortcuts
+</a></div><div class="nav-item"><a href="/surveys/" class="nav-link">
+  Surveys
+</a></div><div class="nav-item"><a href="/resources/" class="nav-link">
+  Resources
+</a></div><div class="nav-item"><a href="https://github.com/umeshmk" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/terminal/Zsh.html" class="sidebar-link">Zsh</a></li><li><a href="/terminal/Bash.html" aria-current="page" class="active sidebar-link">Bash</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/terminal/Bash.html#basics" class="sidebar-link">Basics</a></li><li class="sidebar-sub-header"><a href="/terminal/Bash.html#file-permissions" class="sidebar-link">File permissions</a></li><li class="sidebar-sub-header"><a href="/terminal/Bash.html#users-groups" class="sidebar-link">Users, groups</a></li><li class="sidebar-sub-header"><a href="/terminal/Bash.html#aliases-functions" class="sidebar-link">Aliases, functions</a></li><li class="sidebar-sub-header"><a href="/terminal/Bash.html#storage" class="sidebar-link">Storage</a></li><li class="sidebar-sub-header"><a href="/terminal/Bash.html#system" class="sidebar-link">System</a></li></ul></li><li><a href="/terminal/Bash-script.html" class="sidebar-link">Bash scripting</a></li><li><a href="/terminal/WindowsTerminal.html" class="sidebar-link">Windows Terminal (settings.json)</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="bash"><a href="#bash" class="header-anchor">#</a> Bash</h1> <blockquote><p>Bash is a shell. A shell is a program that runs on top of kernel.</p> <p>Zsh &amp; Fish are better alternatives.</p> <p><a href="https://www.gnu.org/software/bash/manual/bash.html" target="_blank" rel="noopener noreferrer">Gnu.org<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p><a href="https://github.com/Idnan/bash-guide" target="_blank" rel="noopener noreferrer">Idnan/bash-guide<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p>Book - &quot;The Linux command line&quot; by William Shotts</p> <p>Joe Collins - Youtube channel</p> <p><a href="http://linuxcommand.org/tlcl.php" target="_blank" rel="noopener noreferrer">http://linuxcommand.org/tlcl.php<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p><a href="http://ss64.com/bash" target="_blank" rel="noopener noreferrer">http://ss64.com/bash<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p></blockquote> <h2 id="basics"><a href="#basics" class="header-anchor">#</a> Basics</h2> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token comment"># --------- Basics -----------</span>
+ctrl+c
+<span class="token operator">&lt;</span>cmd<span class="token operator">&gt;</span> -h
+<span class="token operator">&lt;</span>cmd<span class="token operator">&gt;</span> --help
+<span class="token function">man</span> <span class="token operator">&lt;</span>cmd<span class="token operator">&gt;</span>                                   <span class="token comment"># manual</span>
+<span class="token function">which</span> <span class="token operator">&lt;</span>cmd<span class="token operator">&gt;</span>
+whatis <span class="token operator">&lt;</span>cmd<span class="token operator">&gt;</span>
+<span class="token function">whereis</span> <span class="token operator">&lt;</span>cmd<span class="token operator">&gt;</span>                               <span class="token comment"># where</span>
+<span class="token function">whoami</span>                                      <span class="token comment"># user logged in</span>
+<span class="token function">history</span>
+<span class="token function">clear</span>                                       <span class="token comment"># no scrolling up (But ctrl+L allows scrolling up)</span>
+<span class="token function">env</span>
+<span class="token function">watch</span> <span class="token operator">&lt;</span>cmd<span class="token operator">&gt;</span>                                 <span class="token comment"># reruns cmd every 2 secs</span>
+<span class="token function">watch</span> <span class="token function">free</span> -h
+<span class="token function">jobs</span>
+<span class="token builtin class-name">exit</span>
+<span class="token function">shutdown</span>                                    <span class="token comment"># shut down</span>
+
+
+<span class="token function">curl</span> <span class="token operator">&lt;</span>url<span class="token operator">&gt;</span>                                  <span class="token comment"># curl</span>
+<span class="token function">wget</span> <span class="token operator">&lt;</span>url<span class="token operator">&gt;</span>                                  <span class="token comment"># wget</span>
+
+
+<span class="token builtin class-name">export</span> <span class="token assign-left variable">FOO</span><span class="token operator">=</span><span class="token string">&quot;bar&quot;</span>                            <span class="token comment"># env variable (session only) add in .bashrc if needed everytime</span>
+</code></pre></div><h1 id="files-folders"><a href="#files-folders" class="header-anchor">#</a> Files/Folders</h1> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token comment"># --------- Files/Folders -----------</span>
+<span class="token function">ls</span>
+<span class="token function">df</span>                                          <span class="token comment"># disk space</span>
+tree
+<span class="token builtin class-name">pwd</span>
+<span class="token builtin class-name">cd</span>
+<span class="token function">pushd</span> / <span class="token function">popd</span>
+<span class="token function">mc</span>                                          <span class="token comment"># midnight commander file manager in terminal</span>
+<span class="token function">file</span> <span class="token operator">&lt;</span>filename<span class="token operator">&gt;</span>                             <span class="token comment"># file info</span>
+<span class="token function">stat</span> <span class="token operator">&lt;</span>filename<span class="token operator">&gt;</span>                             <span class="token comment"># file more info</span>
+<span class="token function">find</span>                                        <span class="token comment"># avoid use locate</span>
+<span class="token function">locate</span> <span class="token operator">&lt;</span>filename<span class="token operator">&gt;</span>                           <span class="token comment"># uses database</span>
+<span class="token function">sudo</span> updatedb                               <span class="token comment"># update database for locate</span>
+<span class="token function">grep</span> <span class="token string">&quot;text&quot;</span> /foo/*.txt                      <span class="token comment"># Very powerful for search</span>
+
+<span class="token function">mkdir</span> <span class="token operator">&lt;</span>foldername<span class="token operator">&gt;</span>
+<span class="token function">touch</span> <span class="token operator">&lt;</span>filename<span class="token operator">&gt;</span>
+<span class="token function">cp</span> <span class="token operator">&lt;</span>src file<span class="token operator">&gt;</span> <span class="token operator">&lt;</span>dest file<span class="token operator">&gt;</span>
+<span class="token function">mv</span> <span class="token operator">&lt;</span>src file<span class="token operator">&gt;</span> <span class="token operator">&lt;</span>dest ffile<span class="token operator">&gt;</span>
+<span class="token function">rm</span> <span class="token operator">&lt;</span>file<span class="token operator">&gt;</span>
+<span class="token function">rm</span> -rf <span class="token operator">&lt;</span>folder<span class="token operator">&gt;</span>
+<span class="token function">rmdir</span> <span class="token punctuation">\</span>*                                    <span class="token comment"># removes only empty dir</span>
+
+
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;hello&quot;</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;New file&quot;</span> <span class="token operator">&gt;</span> <span class="token operator">&lt;</span>filename<span class="token operator">&gt;</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;append to file&quot;</span> <span class="token operator">&gt;&gt;</span> <span class="token operator">&lt;</span>filename<span class="token operator">&gt;</span>
+<span class="token function">cat</span> file1 file2 file3
+<span class="token function">cat</span> <span class="token operator">&lt;</span>filename<span class="token operator">&gt;</span>                              <span class="token comment"># shows text</span>
+<span class="token function">cat</span> <span class="token operator">&gt;</span> <span class="token operator">&lt;</span>filename<span class="token operator">&gt;</span>                            <span class="token comment"># erase &amp; add text</span>
+<span class="token function">cat</span> <span class="token operator">&gt;&gt;</span> <span class="token operator">&lt;</span>filename<span class="token operator">&gt;</span>                           <span class="token comment"># append text</span>
+<span class="token function">less</span> <span class="token operator">&lt;</span>filename<span class="token operator">&gt;</span>                             <span class="token comment"># easy navigation on long file</span>
+<span class="token function">nano</span> <span class="token operator">&lt;</span>filename<span class="token operator">&gt;</span>
+
+<span class="token function">zip</span> <span class="token operator">&lt;</span>dest.zip<span class="token operator">&gt;</span> <span class="token operator">&lt;</span>file<span class="token operator"><span class="token file-descriptor important">1</span>&gt;</span><span class="token operator">&lt;</span>file<span class="token operator"><span class="token file-descriptor important">2</span>&gt;</span><span class="token operator">&lt;</span>file<span class="token operator"><span class="token file-descriptor important">3</span>&gt;</span>
+<span class="token function">unzip</span> <span class="token operator">&lt;</span>file.zip<span class="token operator">&gt;</span>
+
+<span class="token comment"># -------Redirection ( | ) ---------</span>
+<span class="token comment"># o/p from one to other</span>
+<span class="token function">history</span> <span class="token operator">|</span> <span class="token function">less</span>
+
+
+</code></pre></div><h2 id="file-permissions"><a href="#file-permissions" class="header-anchor">#</a> File permissions</h2> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token comment"># --------- File permissions -----------</span>
+
+<span class="token comment"># 1+3+3+3 = 10 dashes</span>
+-rwxr-xr-x
+
+<span class="token comment"># Types</span>
+-<span class="token operator">|</span>---------                                  <span class="token comment"># [File]</span>
+d<span class="token operator">|</span>---------                                  <span class="token comment"># [Directory](A special type of file)</span>
+l<span class="token operator">|</span>---------                                  <span class="token comment"># [Link]</span>
+
+<span class="token comment"># [read=4 write=2 execute=1]</span>
+rwx <span class="token operator">=</span> <span class="token number">4</span>+2+1 <span class="token operator">=</span> <span class="token number">7</span>
+r-x <span class="token operator">=</span> <span class="token number">5</span>
+r-- <span class="token operator">=</span> <span class="token number">4</span>
+--x <span class="token operator">=</span> <span class="token number">1</span>
+--- <span class="token operator">=</span> <span class="token number">0</span>
+-rwxr-xr-x                                   <span class="token comment"># eg: 755 for file</span>
+
+
+<span class="token comment"># CHange permissions</span>
+<span class="token comment"># Users 4 Types - Root, User, Groups, World</span>
+<span class="token comment"># Root always has all permissions</span>
+<span class="token function">chown</span> user:group <span class="token operator">&lt;</span>file/folder<span class="token operator">&gt;</span>               <span class="token comment"># Change ownership</span>
+<span class="token function">chmod</span> <span class="token number">700</span> <span class="token operator">&lt;</span>filename<span class="token operator">&gt;</span>                         <span class="token comment"># [user=7 group=0 world=0](root user has all permissions)</span>
+<span class="token function">chmod</span> +x <span class="token operator">&lt;</span>filename<span class="token operator">&gt;</span>                          <span class="token comment"># [adds execute to all users]</span>
+<span class="token function">chmod</span> -x <span class="token operator">&lt;</span>filename<span class="token operator">&gt;</span>                          <span class="token comment"># [removes execute to all users]</span>
+
+<span class="token comment"># Note :</span>
+<span class="token comment"># Folder is visible only if it has execute permissions</span>
+<span class="token comment"># 644 (for files) = 755 (for folders)</span>
+
+</code></pre></div><h2 id="users-groups"><a href="#users-groups" class="header-anchor">#</a> Users, groups</h2> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token comment"># Users</span>
+/etc/passwd                                <span class="token comment"># default userid=1000</span>
+<span class="token function">su</span> - <span class="token operator">&lt;</span>user<span class="token operator">&gt;</span>
+
+<span class="token comment"># Admin rights</span>
+<span class="token function">useradd</span>                                    <span class="token comment"># avoid</span>
+adduser <span class="token operator">&lt;</span>user<span class="token operator">&gt;</span> adm
+adduser <span class="token operator">&lt;</span>user<span class="token operator">&gt;</span> <span class="token function">sudo</span>
+
+<span class="token function">groups</span>                                     <span class="token comment"># groups user is part of</span>
+<span class="token function">passwd</span> <span class="token operator">&lt;</span>user<span class="token operator">&gt;</span>                              <span class="token comment"># reset password</span>
+<span class="token function">passwd</span> -l <span class="token operator">&lt;</span>user<span class="token operator">&gt;</span>                           <span class="token comment"># lock account</span>
+<span class="token function">passwd</span> -u <span class="token operator">&lt;</span>user<span class="token operator">&gt;</span>                           <span class="token comment"># unlock account</span>
+<span class="token function">userdel</span> -f <span class="token operator">&lt;</span>user<span class="token operator">&gt;</span>                          <span class="token comment"># delete account with all files</span>
+
+</code></pre></div><h2 id="aliases-functions"><a href="#aliases-functions" class="header-anchor">#</a> Aliases, functions</h2> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token comment"># Aliases - see .aliases file</span>
+ <span class="token builtin class-name">.</span> <span class="token operator">&lt;</span>filename<span class="token operator">&gt;</span> - dot is <span class="token function">add</span> to <span class="token builtin class-name">source</span> after editing <span class="token punctuation">(</span>bashrc<span class="token punctuation">)</span>
+
+<span class="token comment"># Functions (add in script or .bashrc)</span>
+<span class="token function-name function">update</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+   <span class="token function">sudo</span> <span class="token function">apt</span> update
+   <span class="token function">sudo</span> <span class="token function">apt</span> upgrade
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="storage"><a href="#storage" class="header-anchor">#</a> Storage</h2> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token comment"># Everything in linux is files.</span>
+<span class="token comment"># Devices, Folder are files too</span>
+/dev                                  <span class="token comment"># has all devices</span>
+/etc/fstab
+
+lsblk                                 <span class="token comment"># list disks blocks</span>
+blkid                                 <span class="token comment"># list block ids</span>
+lscpu, lspci                          <span class="token comment"># other cmds</span>
+<span class="token function">df</span> -h                                 <span class="token comment"># list all disks</span>
+
+<span class="token function">dd</span> <span class="token assign-left variable">if</span><span class="token operator">=</span>/dev/zero                       <span class="token comment"># if/of = input/output file</span>
+   <span class="token assign-left variable">of</span><span class="token operator">=</span>/dev/sdX                        <span class="token comment"># bs = block size</span>
+   <span class="token assign-left variable">bs</span><span class="token operator">=</span>1024k                           <span class="token comment"># count = required size to wipe out</span>
+   <span class="token assign-left variable">count</span><span class="token operator">=</span><span class="token number">2048</span> <span class="token function">sync</span>                    <span class="token comment"># bs*count = 1024k * 2048 = 2gb</span>
+
+<span class="token function">fdisk</span> /dev/sdX
+<span class="token function">mkfs</span> -t ext4 /dev/sdc1                <span class="token comment"># format = make filesystem</span>
+<span class="token function">mount</span> /dev/sdb1 /mnt
+<span class="token function">umount</span> /mnt <span class="token punctuation">(</span>OR<span class="token punctuation">)</span> /dev/sdb1
+</code></pre></div><h2 id="system"><a href="#system" class="header-anchor">#</a> System</h2> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token function">free</span> -h
+<span class="token function">top</span>
+<span class="token function">htop</span>
+<span class="token function">ps</span>
+<span class="token function">killall</span> firefox
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/terminal/Zsh.html" class="prev">
+        Zsh
+      </a></span> <span class="next"><a href="/terminal/Bash-script.html">
+        Bash scripting
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.8b3c4856.js" defer></script><script src="/assets/js/2.2979c302.js" defer></script><script src="/assets/js/104.4d426ef0.js" defer></script>
+  </body>
+</html>

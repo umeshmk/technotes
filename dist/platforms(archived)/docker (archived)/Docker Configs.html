@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Docker Configs | TechNotes</title>
+    <meta name="generator" content="VuePress 1.8.0">
+    
+    <meta name="description" content="This Are My Notes">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    
+    <link rel="preload" href="/assets/css/0.styles.3fe018e7.css" as="style"><link rel="preload" href="/assets/js/app.8b3c4856.js" as="script"><link rel="preload" href="/assets/js/2.2979c302.js" as="script"><link rel="preload" href="/assets/js/85.def392ed.js" as="script"><link rel="prefetch" href="/assets/js/10.5866e61d.js"><link rel="prefetch" href="/assets/js/100.86048f75.js"><link rel="prefetch" href="/assets/js/101.bc3ac587.js"><link rel="prefetch" href="/assets/js/102.253c0f55.js"><link rel="prefetch" href="/assets/js/103.48ad35e3.js"><link rel="prefetch" href="/assets/js/104.4d426ef0.js"><link rel="prefetch" href="/assets/js/105.6fecf32a.js"><link rel="prefetch" href="/assets/js/106.a0bd7490.js"><link rel="prefetch" href="/assets/js/107.4b5b6026.js"><link rel="prefetch" href="/assets/js/108.78bc28b9.js"><link rel="prefetch" href="/assets/js/109.7519b4bf.js"><link rel="prefetch" href="/assets/js/11.c58fe308.js"><link rel="prefetch" href="/assets/js/110.28d584c2.js"><link rel="prefetch" href="/assets/js/111.b040db35.js"><link rel="prefetch" href="/assets/js/112.79581112.js"><link rel="prefetch" href="/assets/js/113.2999cd3a.js"><link rel="prefetch" href="/assets/js/114.8126de1b.js"><link rel="prefetch" href="/assets/js/115.88105cb4.js"><link rel="prefetch" href="/assets/js/116.19663a7f.js"><link rel="prefetch" href="/assets/js/117.0dc8ae31.js"><link rel="prefetch" href="/assets/js/118.c6f5489e.js"><link rel="prefetch" href="/assets/js/12.56c6ed94.js"><link rel="prefetch" href="/assets/js/13.da084160.js"><link rel="prefetch" href="/assets/js/14.c9533aa0.js"><link rel="prefetch" href="/assets/js/15.41deb6e5.js"><link rel="prefetch" href="/assets/js/16.64307d03.js"><link rel="prefetch" href="/assets/js/17.8f088b78.js"><link rel="prefetch" href="/assets/js/18.90267d1a.js"><link rel="prefetch" href="/assets/js/19.bc067427.js"><link rel="prefetch" href="/assets/js/20.6e6abb1d.js"><link rel="prefetch" href="/assets/js/21.a5cb4ed9.js"><link rel="prefetch" href="/assets/js/22.378ea376.js"><link rel="prefetch" href="/assets/js/23.7948aea6.js"><link rel="prefetch" href="/assets/js/24.51d5506a.js"><link rel="prefetch" href="/assets/js/25.51f8e0ec.js"><link rel="prefetch" href="/assets/js/26.bd8be612.js"><link rel="prefetch" href="/assets/js/27.78c09c0e.js"><link rel="prefetch" href="/assets/js/28.b6f24c71.js"><link rel="prefetch" href="/assets/js/29.2b244820.js"><link rel="prefetch" href="/assets/js/3.ed2ef2c7.js"><link rel="prefetch" href="/assets/js/30.33cd27e0.js"><link rel="prefetch" href="/assets/js/31.529c7d2a.js"><link rel="prefetch" href="/assets/js/32.f3dec8ab.js"><link rel="prefetch" href="/assets/js/33.25f5ff62.js"><link rel="prefetch" href="/assets/js/34.1077ae4d.js"><link rel="prefetch" href="/assets/js/35.7d136c03.js"><link rel="prefetch" href="/assets/js/36.e88bfce5.js"><link rel="prefetch" href="/assets/js/37.39b5e586.js"><link rel="prefetch" href="/assets/js/38.5efbb80b.js"><link rel="prefetch" href="/assets/js/39.c5f0e388.js"><link rel="prefetch" href="/assets/js/4.a7ab2a4a.js"><link rel="prefetch" href="/assets/js/40.59709cb4.js"><link rel="prefetch" href="/assets/js/41.261557f5.js"><link rel="prefetch" href="/assets/js/42.27e3510f.js"><link rel="prefetch" href="/assets/js/43.f90d4b6f.js"><link rel="prefetch" href="/assets/js/44.2358822c.js"><link rel="prefetch" href="/assets/js/45.ae5f5462.js"><link rel="prefetch" href="/assets/js/46.6c34a79a.js"><link rel="prefetch" href="/assets/js/47.0ee1a109.js"><link rel="prefetch" href="/assets/js/48.be87fb40.js"><link rel="prefetch" href="/assets/js/49.177468d1.js"><link rel="prefetch" href="/assets/js/5.ecc03933.js"><link rel="prefetch" href="/assets/js/50.0fb39585.js"><link rel="prefetch" href="/assets/js/51.8538a242.js"><link rel="prefetch" href="/assets/js/52.33fb8417.js"><link rel="prefetch" href="/assets/js/53.5df79e51.js"><link rel="prefetch" href="/assets/js/54.aaeb0563.js"><link rel="prefetch" href="/assets/js/55.2d231bc2.js"><link rel="prefetch" href="/assets/js/56.e6727434.js"><link rel="prefetch" href="/assets/js/57.1cd89c78.js"><link rel="prefetch" href="/assets/js/58.acced2c8.js"><link rel="prefetch" href="/assets/js/59.c4b78fcd.js"><link rel="prefetch" href="/assets/js/6.debca471.js"><link rel="prefetch" href="/assets/js/60.b4d49616.js"><link rel="prefetch" href="/assets/js/61.f0d84cfb.js"><link rel="prefetch" href="/assets/js/62.f130a3f0.js"><link rel="prefetch" href="/assets/js/63.15cf5758.js"><link rel="prefetch" href="/assets/js/64.0fb8a0fb.js"><link rel="prefetch" href="/assets/js/65.2c920ab0.js"><link rel="prefetch" href="/assets/js/66.d087a39e.js"><link rel="prefetch" href="/assets/js/67.803e1fde.js"><link rel="prefetch" href="/assets/js/68.8e5032b5.js"><link rel="prefetch" href="/assets/js/69.213932a4.js"><link rel="prefetch" href="/assets/js/7.ab2cde39.js"><link rel="prefetch" href="/assets/js/70.7aeed53f.js"><link rel="prefetch" href="/assets/js/71.9ab3dca0.js"><link rel="prefetch" href="/assets/js/72.5cba5a4d.js"><link rel="prefetch" href="/assets/js/73.0bfa3c06.js"><link rel="prefetch" href="/assets/js/74.27b62f95.js"><link rel="prefetch" href="/assets/js/75.f0259983.js"><link rel="prefetch" href="/assets/js/76.c5594162.js"><link rel="prefetch" href="/assets/js/77.5c8f4feb.js"><link rel="prefetch" href="/assets/js/78.794fb25f.js"><link rel="prefetch" href="/assets/js/79.67768da7.js"><link rel="prefetch" href="/assets/js/8.18bc17a6.js"><link rel="prefetch" href="/assets/js/80.7c99bf28.js"><link rel="prefetch" href="/assets/js/81.c25a2e1f.js"><link rel="prefetch" href="/assets/js/82.b5ad8ba7.js"><link rel="prefetch" href="/assets/js/83.4e86845d.js"><link rel="prefetch" href="/assets/js/84.683b6629.js"><link rel="prefetch" href="/assets/js/86.774c70f1.js"><link rel="prefetch" href="/assets/js/87.eb6f676a.js"><link rel="prefetch" href="/assets/js/88.71f01d6e.js"><link rel="prefetch" href="/assets/js/89.9c7251e9.js"><link rel="prefetch" href="/assets/js/9.84445d1a.js"><link rel="prefetch" href="/assets/js/90.7a41265a.js"><link rel="prefetch" href="/assets/js/91.e3dded02.js"><link rel="prefetch" href="/assets/js/92.8d5adf74.js"><link rel="prefetch" href="/assets/js/93.2194cbea.js"><link rel="prefetch" href="/assets/js/94.9fb3f0ad.js"><link rel="prefetch" href="/assets/js/95.8f0e803a.js"><link rel="prefetch" href="/assets/js/96.3deeae33.js"><link rel="prefetch" href="/assets/js/97.d29718f9.js"><link rel="prefetch" href="/assets/js/98.e57f6500.js"><link rel="prefetch" href="/assets/js/99.4a63eba3.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.3fe018e7.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">TechNotes</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/documentation/vuepress.html" class="nav-link">
+  Documentation
+</a></div><div class="nav-item"><a href="/keyboard-shortcuts/" class="nav-link">
+  Keyboard-shortcuts
+</a></div><div class="nav-item"><a href="/surveys/" class="nav-link">
+  Surveys
+</a></div><div class="nav-item"><a href="/resources/" class="nav-link">
+  Resources
+</a></div><div class="nav-item"><a href="https://github.com/umeshmk" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/documentation/vuepress.html" class="nav-link">
+  Documentation
+</a></div><div class="nav-item"><a href="/keyboard-shortcuts/" class="nav-link">
+  Keyboard-shortcuts
+</a></div><div class="nav-item"><a href="/surveys/" class="nav-link">
+  Surveys
+</a></div><div class="nav-item"><a href="/resources/" class="nav-link">
+  Resources
+</a></div><div class="nav-item"><a href="https://github.com/umeshmk" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <!----> </aside> <main class="page"> <div class="content__default"><h1 id="docker-configs"><a href="#docker-configs" class="header-anchor">#</a> Docker Configs</h1> <p>https://docs.docker.com/engine/swarm/configs/</p> <ul><li>used by swarm services only not standalone containers</li> <li>store config files outside of service image, containers</li> <li>mounted directly in container filesystem</li> <li>added/removed anytime from service</li> <li>services can share a config</li> <li>can use with env and labels</li></ul> <h4 id="how-to-manage"><a href="#how-to-manage" class="header-anchor">#</a> How to manage?</h4> <ul><li>add config to swarm</li> <li>docker sends to manager over TLS</li> <li>stored in raft log which is encrypted</li> <li>raft log is replicated on all managers</li> <li>give access to service for this configs</li> <li>config is mounted as a file in container (default path is &quot;/<config-name>&quot;)</config-name></li> <li>node can access config
+<ul><li>only if manager not others</li> <li>if running task has been granted access
+<ul><li>if task is stopped then configs are unmounted from task container, and flushed from node memory</li></ul></li></ul></li></ul> <h4 id="simple-example"><a href="#simple-example" class="header-anchor">#</a> simple example</h4> <div class="language- extra-class"><pre><code>echo &quot;a simple config file&quot; | docker config create &lt;configname&gt;
+docker service create --name redis --config &lt;configname&gt; redis:alpine
+# get task container's id
+docker ps --filter name=redis -q 		// 5c2d54f2d5
+# check and read config which is mounted inside container at &quot;/&lt;configname&gt;&quot;
+docker exec $(docker ps --filter name=redis -q) ls -l /myconfig
+docker exec $(docker ps --filter name=redis -q) cat /myconfig 
+// o/p: a simple config file 
+# list &amp; remove
+docker config ls
+docker config rm &lt;my-config&gt;
+</code></pre></div><h4 id="advanced-example-nginx"><a href="#advanced-example-nginx" class="header-anchor">#</a> advanced example - nginx</h4> <p>https://docs.docker.com/engine/swarm/configs/#advanced-example-use-configs-with-a-nginx-service</p> <p>step 1 -&gt; create certificates
+- use LetsEncrypt <code>certbot</code>
+- use <code>.key</code> &amp; <code>.crt</code>
+- save as docker <code>secrets</code> (must be less than 500kb)</p> <div class="language- extra-class"><pre><code>	docker secret create &lt;secret-name&gt; &lt;secret-file&gt;
+</code></pre></div><p>step 2 -&gt; create configs
+- save &quot;site.conf&quot; in docker config command</p> <div class="language- extra-class"><pre><code>	docker config create &lt;config-name&gt; &lt;config-file&gt;		
+		
+- `site.conf` 
+	
+	server {
+	    listen                443 ssl;
+	    server_name           localhost;
+	    ssl_certificate       /run/secrets/site.crt;
+	    ssl_certificate_key   /run/secrets/site.key;
+
+	    location / {
+	        root   /usr/share/nginx/html;
+	        index  index.html index.htm;
+	    }
+	}
+</code></pre></div><p>step 3 -&gt; create service</p> <div class="language- extra-class"><pre><code>	docker service create \ 
+	--secret &lt;secret.crt&gt; \
+	--secret &lt;secret.key&gt; \
+	--config source=&lt;config-name&gt;,target=/etc/nginx/conf.d/site.conf \
+	--publish 3000:443 \
+	&lt;image&gt; \
+	sh -c &quot;exec nginx -g 'daemon off;'&quot;
+</code></pre></div><p>step 4  -&gt; inside container check 3 files</p> <div class="language- extra-class"><pre><code>	/run/secrets/site.key		
+	/run/secrets/site.crt 
+	/etc/nginx/conf.d/site.conf		
+</code></pre></div><p>step 5 -&gt; Rotate config from host
+- make some changes in site.conf a `<config-file>``
+- new site-v2.conf
+- create new docker config using old site.conf</config-file></p> <div class="language- extra-class"><pre><code>	 docker config create site-v2.conf site.conf
+	 docker config create &lt;config-name-v2&gt; &lt;config-name-v1&gt;
+
+- update	 	
+
+	docker service update \
+		--config-rm &lt;oldfile&gt;
+		--config-add source=&lt;newfile&gt;,target=&lt;path/to/oldfile&gt; \
+		&lt;service-name&gt;
+</code></pre></div><h1 id="cheatsheet"><a href="#cheatsheet" class="header-anchor">#</a> Cheatsheet</h1> <div class="language- extra-class"><pre><code>	docker config create &lt;config-name&gt; &lt;file&gt;	
+	docker config create &lt;config-name-v2&gt; &lt;config-name-v1&gt;	
+			#Usage eg:
+			# docker service create --config &lt;config-name&gt; &lt;image&gt;
+	
+	docker config ls					# list all configs
+	docker config rm &lt;configname&gt;		# remove config
+
+	docker secret create &lt;secret-name&gt; &lt;secret-file&gt;		
+			#Usage eg:
+			# docker service create \
+			#   --secret &lt;secret-name&gt; 
+			#	--config source=&lt;config-name&gt;,target=&lt;path/to/hostconfig&gt; \			
+			#	&lt;image&gt; 
+</code></pre></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">12/7/2020, 10:42:46 PM</span></div></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.8b3c4856.js" defer></script><script src="/assets/js/2.2979c302.js" defer></script><script src="/assets/js/85.def392ed.js" defer></script>
+  </body>
+</html>

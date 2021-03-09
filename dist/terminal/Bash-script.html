@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Bash scripting | TechNotes</title>
+    <meta name="generator" content="VuePress 1.8.0">
+    
+    <meta name="description" content="This Are My Notes">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    
+    <link rel="preload" href="/assets/css/0.styles.3fe018e7.css" as="style"><link rel="preload" href="/assets/js/app.8b3c4856.js" as="script"><link rel="preload" href="/assets/js/2.2979c302.js" as="script"><link rel="preload" href="/assets/js/103.48ad35e3.js" as="script"><link rel="prefetch" href="/assets/js/10.5866e61d.js"><link rel="prefetch" href="/assets/js/100.86048f75.js"><link rel="prefetch" href="/assets/js/101.bc3ac587.js"><link rel="prefetch" href="/assets/js/102.253c0f55.js"><link rel="prefetch" href="/assets/js/104.4d426ef0.js"><link rel="prefetch" href="/assets/js/105.6fecf32a.js"><link rel="prefetch" href="/assets/js/106.a0bd7490.js"><link rel="prefetch" href="/assets/js/107.4b5b6026.js"><link rel="prefetch" href="/assets/js/108.78bc28b9.js"><link rel="prefetch" href="/assets/js/109.7519b4bf.js"><link rel="prefetch" href="/assets/js/11.c58fe308.js"><link rel="prefetch" href="/assets/js/110.28d584c2.js"><link rel="prefetch" href="/assets/js/111.b040db35.js"><link rel="prefetch" href="/assets/js/112.79581112.js"><link rel="prefetch" href="/assets/js/113.2999cd3a.js"><link rel="prefetch" href="/assets/js/114.8126de1b.js"><link rel="prefetch" href="/assets/js/115.88105cb4.js"><link rel="prefetch" href="/assets/js/116.19663a7f.js"><link rel="prefetch" href="/assets/js/117.0dc8ae31.js"><link rel="prefetch" href="/assets/js/118.c6f5489e.js"><link rel="prefetch" href="/assets/js/12.56c6ed94.js"><link rel="prefetch" href="/assets/js/13.da084160.js"><link rel="prefetch" href="/assets/js/14.c9533aa0.js"><link rel="prefetch" href="/assets/js/15.41deb6e5.js"><link rel="prefetch" href="/assets/js/16.64307d03.js"><link rel="prefetch" href="/assets/js/17.8f088b78.js"><link rel="prefetch" href="/assets/js/18.90267d1a.js"><link rel="prefetch" href="/assets/js/19.bc067427.js"><link rel="prefetch" href="/assets/js/20.6e6abb1d.js"><link rel="prefetch" href="/assets/js/21.a5cb4ed9.js"><link rel="prefetch" href="/assets/js/22.378ea376.js"><link rel="prefetch" href="/assets/js/23.7948aea6.js"><link rel="prefetch" href="/assets/js/24.51d5506a.js"><link rel="prefetch" href="/assets/js/25.51f8e0ec.js"><link rel="prefetch" href="/assets/js/26.bd8be612.js"><link rel="prefetch" href="/assets/js/27.78c09c0e.js"><link rel="prefetch" href="/assets/js/28.b6f24c71.js"><link rel="prefetch" href="/assets/js/29.2b244820.js"><link rel="prefetch" href="/assets/js/3.ed2ef2c7.js"><link rel="prefetch" href="/assets/js/30.33cd27e0.js"><link rel="prefetch" href="/assets/js/31.529c7d2a.js"><link rel="prefetch" href="/assets/js/32.f3dec8ab.js"><link rel="prefetch" href="/assets/js/33.25f5ff62.js"><link rel="prefetch" href="/assets/js/34.1077ae4d.js"><link rel="prefetch" href="/assets/js/35.7d136c03.js"><link rel="prefetch" href="/assets/js/36.e88bfce5.js"><link rel="prefetch" href="/assets/js/37.39b5e586.js"><link rel="prefetch" href="/assets/js/38.5efbb80b.js"><link rel="prefetch" href="/assets/js/39.c5f0e388.js"><link rel="prefetch" href="/assets/js/4.a7ab2a4a.js"><link rel="prefetch" href="/assets/js/40.59709cb4.js"><link rel="prefetch" href="/assets/js/41.261557f5.js"><link rel="prefetch" href="/assets/js/42.27e3510f.js"><link rel="prefetch" href="/assets/js/43.f90d4b6f.js"><link rel="prefetch" href="/assets/js/44.2358822c.js"><link rel="prefetch" href="/assets/js/45.ae5f5462.js"><link rel="prefetch" href="/assets/js/46.6c34a79a.js"><link rel="prefetch" href="/assets/js/47.0ee1a109.js"><link rel="prefetch" href="/assets/js/48.be87fb40.js"><link rel="prefetch" href="/assets/js/49.177468d1.js"><link rel="prefetch" href="/assets/js/5.ecc03933.js"><link rel="prefetch" href="/assets/js/50.0fb39585.js"><link rel="prefetch" href="/assets/js/51.8538a242.js"><link rel="prefetch" href="/assets/js/52.33fb8417.js"><link rel="prefetch" href="/assets/js/53.5df79e51.js"><link rel="prefetch" href="/assets/js/54.aaeb0563.js"><link rel="prefetch" href="/assets/js/55.2d231bc2.js"><link rel="prefetch" href="/assets/js/56.e6727434.js"><link rel="prefetch" href="/assets/js/57.1cd89c78.js"><link rel="prefetch" href="/assets/js/58.acced2c8.js"><link rel="prefetch" href="/assets/js/59.c4b78fcd.js"><link rel="prefetch" href="/assets/js/6.debca471.js"><link rel="prefetch" href="/assets/js/60.b4d49616.js"><link rel="prefetch" href="/assets/js/61.f0d84cfb.js"><link rel="prefetch" href="/assets/js/62.f130a3f0.js"><link rel="prefetch" href="/assets/js/63.15cf5758.js"><link rel="prefetch" href="/assets/js/64.0fb8a0fb.js"><link rel="prefetch" href="/assets/js/65.2c920ab0.js"><link rel="prefetch" href="/assets/js/66.d087a39e.js"><link rel="prefetch" href="/assets/js/67.803e1fde.js"><link rel="prefetch" href="/assets/js/68.8e5032b5.js"><link rel="prefetch" href="/assets/js/69.213932a4.js"><link rel="prefetch" href="/assets/js/7.ab2cde39.js"><link rel="prefetch" href="/assets/js/70.7aeed53f.js"><link rel="prefetch" href="/assets/js/71.9ab3dca0.js"><link rel="prefetch" href="/assets/js/72.5cba5a4d.js"><link rel="prefetch" href="/assets/js/73.0bfa3c06.js"><link rel="prefetch" href="/assets/js/74.27b62f95.js"><link rel="prefetch" href="/assets/js/75.f0259983.js"><link rel="prefetch" href="/assets/js/76.c5594162.js"><link rel="prefetch" href="/assets/js/77.5c8f4feb.js"><link rel="prefetch" href="/assets/js/78.794fb25f.js"><link rel="prefetch" href="/assets/js/79.67768da7.js"><link rel="prefetch" href="/assets/js/8.18bc17a6.js"><link rel="prefetch" href="/assets/js/80.7c99bf28.js"><link rel="prefetch" href="/assets/js/81.c25a2e1f.js"><link rel="prefetch" href="/assets/js/82.b5ad8ba7.js"><link rel="prefetch" href="/assets/js/83.4e86845d.js"><link rel="prefetch" href="/assets/js/84.683b6629.js"><link rel="prefetch" href="/assets/js/85.def392ed.js"><link rel="prefetch" href="/assets/js/86.774c70f1.js"><link rel="prefetch" href="/assets/js/87.eb6f676a.js"><link rel="prefetch" href="/assets/js/88.71f01d6e.js"><link rel="prefetch" href="/assets/js/89.9c7251e9.js"><link rel="prefetch" href="/assets/js/9.84445d1a.js"><link rel="prefetch" href="/assets/js/90.7a41265a.js"><link rel="prefetch" href="/assets/js/91.e3dded02.js"><link rel="prefetch" href="/assets/js/92.8d5adf74.js"><link rel="prefetch" href="/assets/js/93.2194cbea.js"><link rel="prefetch" href="/assets/js/94.9fb3f0ad.js"><link rel="prefetch" href="/assets/js/95.8f0e803a.js"><link rel="prefetch" href="/assets/js/96.3deeae33.js"><link rel="prefetch" href="/assets/js/97.d29718f9.js"><link rel="prefetch" href="/assets/js/98.e57f6500.js"><link rel="prefetch" href="/assets/js/99.4a63eba3.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.3fe018e7.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">TechNotes</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/documentation/vuepress.html" class="nav-link">
+  Documentation
+</a></div><div class="nav-item"><a href="/keyboard-shortcuts/" class="nav-link">
+  Keyboard-shortcuts
+</a></div><div class="nav-item"><a href="/surveys/" class="nav-link">
+  Surveys
+</a></div><div class="nav-item"><a href="/resources/" class="nav-link">
+  Resources
+</a></div><div class="nav-item"><a href="https://github.com/umeshmk" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/documentation/vuepress.html" class="nav-link">
+  Documentation
+</a></div><div class="nav-item"><a href="/keyboard-shortcuts/" class="nav-link">
+  Keyboard-shortcuts
+</a></div><div class="nav-item"><a href="/surveys/" class="nav-link">
+  Surveys
+</a></div><div class="nav-item"><a href="/resources/" class="nav-link">
+  Resources
+</a></div><div class="nav-item"><a href="https://github.com/umeshmk" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/terminal/Zsh.html" class="sidebar-link">Zsh</a></li><li><a href="/terminal/Bash.html" class="sidebar-link">Bash</a></li><li><a href="/terminal/Bash-script.html" aria-current="page" class="active sidebar-link">Bash scripting</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/terminal/Bash-script.html#multiline" class="sidebar-link">Multiline</a></li><li class="sidebar-sub-header"><a href="/terminal/Bash-script.html#standards-i-o-stdin-stdop-stderr" class="sidebar-link">Standards I/O : stdin , stdop, stderr</a></li><li class="sidebar-sub-header"><a href="/terminal/Bash-script.html#variables" class="sidebar-link">Variables</a></li><li class="sidebar-sub-header"><a href="/terminal/Bash-script.html#arguments" class="sidebar-link">Arguments</a></li><li class="sidebar-sub-header"><a href="/terminal/Bash-script.html#if" class="sidebar-link">IF</a></li><li class="sidebar-sub-header"><a href="/terminal/Bash-script.html#functions" class="sidebar-link">FUNCTIONS</a></li><li class="sidebar-sub-header"><a href="/terminal/Bash-script.html#for" class="sidebar-link">FOR</a></li><li class="sidebar-sub-header"><a href="/terminal/Bash-script.html#interactive" class="sidebar-link">INTERACTIVE</a></li></ul></li><li><a href="/terminal/WindowsTerminal.html" class="sidebar-link">Windows Terminal (settings.json)</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="bash-scripting"><a href="#bash-scripting" class="header-anchor">#</a> Bash scripting</h1> <blockquote><p>Bash scripting</p> <p><code>.sh</code> is unix. <code>.bash</code> is Linux. Unix is core for Linux.</p> <p><code>first.sh</code> or <code>first</code> (extension is optional)</p> <p>Must have execute permissions.</p></blockquote> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token shebang important">#!/bin/bash                           # called as &quot;sha-bang&quot; at the start</span>
+<span class="token comment">#!/usr/bin/env bash</span>
+
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;Lets start scripting&quot;</span>
+<span class="token builtin class-name">echo</span> <span class="token environment constant">$PATH</span>
+<span class="token builtin class-name">set</span> <span class="token environment constant">$PATH</span><span class="token operator">=</span><span class="token environment constant">$HOME</span>/bin:<span class="token environment constant">$PATH</span>
+
+</code></pre></div><h2 id="multiline"><a href="#multiline" class="header-anchor">#</a> Multiline</h2> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token comment"># -------Multiline----------------</span>
+<span class="token function">sudo</span> <span class="token function">apt</span> <span class="token function">install</span> <span class="token function">git</span> <span class="token punctuation">\</span>
+                 nginx <span class="token punctuation">\</span>
+                 <span class="token function">nano</span>
+
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;hello&quot;</span> <span class="token operator">&amp;&amp;</span> <span class="token builtin class-name">echo</span> <span class="token string">&quot;world&quot;</span>
+<span class="token builtin class-name">test</span> -f <span class="token string">&quot;~/.bashrc&quot;</span> <span class="token punctuation">\</span>
+     <span class="token operator">&amp;&amp;</span> <span class="token builtin class-name">echo</span> <span class="token string">&quot;File exist&quot;</span> <span class="token punctuation">\</span>
+     <span class="token operator">||</span> <span class="token builtin class-name">echo</span> <span class="token string">&quot;File not found&quot;</span>
+
+
+</code></pre></div><h2 id="standards-i-o-stdin-stdop-stderr"><a href="#standards-i-o-stdin-stdop-stderr" class="header-anchor">#</a> Standards I/O : stdin , stdop, stderr</h2> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token comment"># -------Standards I/O : stdin , stdop, stderr----------------</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;Hello&quot;</span> <span class="token operator">&gt;</span> /dev/null              <span class="token comment"># Send to trashcan. Hides output</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;Hello&quot;</span> <span class="token operator">&gt;</span> /dev/null <span class="token operator"><span class="token file-descriptor important">2</span>&gt;</span><span class="token file-descriptor important">&amp;1</span>         <span class="token comment"># Even errors are trashed</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;Hello&quot;</span> <span class="token operator">&gt;</span> /dev/null <span class="token operator">&gt;</span><span class="token file-descriptor important">&amp;2</span>          <span class="token comment"># Shows errors</span>
+
+
+</code></pre></div><h2 id="variables"><a href="#variables" class="header-anchor">#</a> Variables</h2> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token comment"># -------Variables:----------</span>
+<span class="token function">env</span>                                   <span class="token comment"># shows all variables</span>
+<span class="token assign-left variable">a</span><span class="token operator">=</span>b                                   <span class="token comment"># set variables</span>
+<span class="token builtin class-name">unset</span> a                               <span class="token comment"># unset variables</span>
+<span class="token builtin class-name">alias</span> <span class="token assign-left variable">a</span><span class="token operator">=</span><span class="token string">&quot;echo'hi'&quot;</span>                    <span class="token comment"># shortcut for cmds</span>
+<span class="token builtin class-name">echo</span> <span class="token variable">$a</span>
+
+
+</code></pre></div><h2 id="arguments"><a href="#arguments" class="header-anchor">#</a> Arguments</h2> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token comment"># --------Arguments-----------</span>
+<span class="token variable">$@</span>                                    <span class="token comment"># special variable to list arguments</span>
+<span class="token variable">$?</span>                                    <span class="token comment"># exit code</span>
+<span class="token variable">$0</span>                                    <span class="token comment"># cmd itself</span>
+<span class="token variable">$1</span>, <span class="token variable">$2</span>, <span class="token variable">$3</span>                            <span class="token comment"># cmd arguments</span>
+
+
+</code></pre></div><h2 id="if"><a href="#if" class="header-anchor">#</a> IF</h2> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token comment"># --------IF :----------</span>
+<span class="token comment"># example</span>
+<span class="token function">which</span> <span class="token function">ifconfig</span> <span class="token operator">&gt;</span> /dev/null            <span class="token comment"># checks for file</span>
+<span class="token keyword">if</span> <span class="token punctuation">[</span> <span class="token string">&quot;<span class="token variable">$?</span>&quot;</span> <span class="token operator">!=</span> <span class="token string">&quot;0&quot;</span> <span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token keyword">then</span>              <span class="token comment"># checks exit code for which cmd</span>
+   <span class="token builtin class-name">echo</span> <span class="token string">&quot;Error-ifconfig not found.&quot;</span>
+   <span class="token builtin class-name">exit</span> <span class="token number">1</span>                             <span class="token comment"># Stops script</span>
+<span class="token keyword">fi</span>
+
+<span class="token comment"># example</span>
+<span class="token keyword">if</span> <span class="token punctuation">[</span><span class="token variable">$1</span> <span class="token operator">==</span> <span class="token string">&quot;--clean&quot;</span> <span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token keyword">then</span>           <span class="token comment"># check arguments</span>
+  <span class="token builtin class-name">echo</span> <span class="token string">&quot;cleaning&quot;</span>
+  clean                               <span class="token comment"># runs clean() function</span>
+<span class="token keyword">fi</span>
+
+<span class="token comment"># example</span>
+<span class="token keyword">if</span> <span class="token punctuation">[</span>-n <span class="token string">&quot;<span class="token variable">$1</span>&quot;</span><span class="token punctuation">]</span> <span class="token punctuation">;</span> <span class="token keyword">then</span>
+  <span class="token builtin class-name">echo</span> <span class="token string">&quot;invalid arguments&quot;</span>
+  <span class="token builtin class-name">exit</span> <span class="token number">1</span>
+<span class="token keyword">fi</span>
+
+
+</code></pre></div><h2 id="functions"><a href="#functions" class="header-anchor">#</a> FUNCTIONS</h2> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token comment"># --------FUNCTIONS :----------</span>
+<span class="token builtin class-name">set</span> -e                                  <span class="token comment"># exit script if errors. exit code is not needed --optional</span>
+<span class="token function-name function">myfunc</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token builtin class-name">local</span> <span class="token assign-left variable">FOO</span><span class="token operator">=</span><span class="token string">&quot;bar&quot;</span>                       <span class="token comment"># Local variable</span>
+  <span class="token builtin class-name">echo</span> FOO
+  <span class="token builtin class-name">return</span>                                <span class="token comment"># end function --optional</span>
+  <span class="token builtin class-name">exit</span> <span class="token number">1</span>                                <span class="token comment"># end script --optional</span>
+  <span class="token builtin class-name">exit</span>                                  <span class="token comment"># default = 0</span>
+<span class="token punctuation">}</span>
+
+<span class="token function-name function">update</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token builtin class-name">echo</span> <span class="token string">&quot;Updating system&quot;</span>
+    <span class="token function">sudo</span> <span class="token function">apt</span> update
+    <span class="token function">sudo</span> <span class="token function">apt</span> upgrade -yy
+<span class="token punctuation">}</span>
+<span class="token function-name function">clean</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token builtin class-name">echo</span> <span class="token string">&quot;Cleaning system&quot;</span>
+    <span class="token function">sudo</span> <span class="token function">apt</span> autoremove -yy
+    <span class="token function">sudo</span> <span class="token function">apt</span> autoclean
+<span class="token punctuation">}</span>
+<span class="token function-name function">addText</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+<span class="token function">cat</span> <span class="token operator">&lt;&lt;</span> <span class="token string">_EOF_<span class="token bash punctuation">                             <span class="token comment"># HERE DOCS - send text to cat cmd</span></span>
+            THIS IS MY TEXT
+            BYE.
+_EOF_</span>
+<span class="token punctuation">}</span>
+
+
+</code></pre></div><h2 id="for"><a href="#for" class="header-anchor">#</a> FOR</h2> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token comment"># --------FOR :----------</span>
+<span class="token keyword">for</span> <span class="token for-or-select variable">FILE</span> <span class="token keyword">in</span> ./<span class="token punctuation">\</span>*.deb                     <span class="token comment"># FILE is a variable like $i=0</span>
+    <span class="token keyword">do</span>
+    <span class="token function">sudo</span> gdebi -n <span class="token string">&quot;<span class="token variable">$FILE</span>&quot;</span>
+<span class="token keyword">done</span>
+
+<span class="token keyword">for</span> <span class="token for-or-select variable">A</span> <span class="token keyword">in</span> <span class="token variable">$@</span>                              <span class="token comment"># loop arguments</span>
+    <span class="token keyword">do</span>
+    <span class="token builtin class-name">echo</span> <span class="token string">&quot;Hi&quot;</span>
+<span class="token keyword">done</span>
+
+
+</code></pre></div><h2 id="interactive"><a href="#interactive" class="header-anchor">#</a> INTERACTIVE</h2> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token comment"># --------INTERACTIVE :----------</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;Enter [y/n]&quot;</span>
+<span class="token builtin class-name">read</span> -n <span class="token number">1</span> -s choice                      <span class="token comment"># saves in choice variable</span>
+<span class="token keyword">if</span> <span class="token punctuation">[</span><span class="token string">&quot;<span class="token variable">$choice</span>&quot;</span> <span class="token operator">==</span> <span class="token string">&quot;y&quot;</span><span class="token punctuation">]</span> <span class="token punctuation">;</span> <span class="token keyword">then</span>
+    <span class="token builtin class-name">echo</span> <span class="token string">&quot;pressed y&quot;</span>
+<span class="token keyword">else</span>
+    <span class="token builtin class-name">exit</span> <span class="token number">1</span>
+<span class="token keyword">fi</span>
+
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;enter choice&quot;</span>
+<span class="token builtin class-name">read</span> -n <span class="token number">1</span> -s choice
+<span class="token keyword">case</span> <span class="token variable">$choice</span> <span class="token keyword">in</span> <span class="token punctuation">\</span>
+         <span class="token number">1</span><span class="token punctuation">)</span> myfunc<span class="token punctuation">;</span><span class="token punctuation">;</span>  <span class="token punctuation">\</span>
+         <span class="token number">2</span><span class="token punctuation">)</span> <span class="token builtin class-name">echo</span> <span class="token string">&quot;hello&quot;</span><span class="token punctuation">;</span><span class="token punctuation">;</span>  <span class="token punctuation">\</span>
+         <span class="token number">3</span><span class="token punctuation">)</span> <span class="token function">clear</span><span class="token punctuation">;</span> <span class="token builtin class-name">echo</span><span class="token string">&quot;hello&quot;</span><span class="token punctuation">;</span><span class="token punctuation">;</span>  <span class="token punctuation">\</span>
+         <span class="token number">0</span><span class="token punctuation">)</span> <span class="token builtin class-name">exit</span><span class="token punctuation">;</span><span class="token punctuation">;</span> <span class="token punctuation">\</span>
+         *<span class="token punctuation">)</span> <span class="token builtin class-name">echo</span> <span class="token string">&quot;invalid choice&quot;</span>
+<span class="token keyword">esac</span>
+
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/terminal/Bash.html" class="prev">
+        Bash
+      </a></span> <span class="next"><a href="/terminal/WindowsTerminal.html">
+        Windows Terminal (settings.json)
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.8b3c4856.js" defer></script><script src="/assets/js/2.2979c302.js" defer></script><script src="/assets/js/103.48ad35e3.js" defer></script>
+  </body>
+</html>

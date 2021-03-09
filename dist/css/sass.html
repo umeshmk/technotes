@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Sass/Scss | TechNotes</title>
+    <meta name="generator" content="VuePress 1.8.0">
+    
+    <meta name="description" content="This Are My Notes">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    
+    <link rel="preload" href="/assets/css/0.styles.3fe018e7.css" as="style"><link rel="preload" href="/assets/js/app.8b3c4856.js" as="script"><link rel="preload" href="/assets/js/2.2979c302.js" as="script"><link rel="preload" href="/assets/js/20.6e6abb1d.js" as="script"><link rel="prefetch" href="/assets/js/10.5866e61d.js"><link rel="prefetch" href="/assets/js/100.86048f75.js"><link rel="prefetch" href="/assets/js/101.bc3ac587.js"><link rel="prefetch" href="/assets/js/102.253c0f55.js"><link rel="prefetch" href="/assets/js/103.48ad35e3.js"><link rel="prefetch" href="/assets/js/104.4d426ef0.js"><link rel="prefetch" href="/assets/js/105.6fecf32a.js"><link rel="prefetch" href="/assets/js/106.a0bd7490.js"><link rel="prefetch" href="/assets/js/107.4b5b6026.js"><link rel="prefetch" href="/assets/js/108.78bc28b9.js"><link rel="prefetch" href="/assets/js/109.7519b4bf.js"><link rel="prefetch" href="/assets/js/11.c58fe308.js"><link rel="prefetch" href="/assets/js/110.28d584c2.js"><link rel="prefetch" href="/assets/js/111.b040db35.js"><link rel="prefetch" href="/assets/js/112.79581112.js"><link rel="prefetch" href="/assets/js/113.2999cd3a.js"><link rel="prefetch" href="/assets/js/114.8126de1b.js"><link rel="prefetch" href="/assets/js/115.88105cb4.js"><link rel="prefetch" href="/assets/js/116.19663a7f.js"><link rel="prefetch" href="/assets/js/117.0dc8ae31.js"><link rel="prefetch" href="/assets/js/118.c6f5489e.js"><link rel="prefetch" href="/assets/js/12.56c6ed94.js"><link rel="prefetch" href="/assets/js/13.da084160.js"><link rel="prefetch" href="/assets/js/14.c9533aa0.js"><link rel="prefetch" href="/assets/js/15.41deb6e5.js"><link rel="prefetch" href="/assets/js/16.64307d03.js"><link rel="prefetch" href="/assets/js/17.8f088b78.js"><link rel="prefetch" href="/assets/js/18.90267d1a.js"><link rel="prefetch" href="/assets/js/19.bc067427.js"><link rel="prefetch" href="/assets/js/21.a5cb4ed9.js"><link rel="prefetch" href="/assets/js/22.378ea376.js"><link rel="prefetch" href="/assets/js/23.7948aea6.js"><link rel="prefetch" href="/assets/js/24.51d5506a.js"><link rel="prefetch" href="/assets/js/25.51f8e0ec.js"><link rel="prefetch" href="/assets/js/26.bd8be612.js"><link rel="prefetch" href="/assets/js/27.78c09c0e.js"><link rel="prefetch" href="/assets/js/28.b6f24c71.js"><link rel="prefetch" href="/assets/js/29.2b244820.js"><link rel="prefetch" href="/assets/js/3.ed2ef2c7.js"><link rel="prefetch" href="/assets/js/30.33cd27e0.js"><link rel="prefetch" href="/assets/js/31.529c7d2a.js"><link rel="prefetch" href="/assets/js/32.f3dec8ab.js"><link rel="prefetch" href="/assets/js/33.25f5ff62.js"><link rel="prefetch" href="/assets/js/34.1077ae4d.js"><link rel="prefetch" href="/assets/js/35.7d136c03.js"><link rel="prefetch" href="/assets/js/36.e88bfce5.js"><link rel="prefetch" href="/assets/js/37.39b5e586.js"><link rel="prefetch" href="/assets/js/38.5efbb80b.js"><link rel="prefetch" href="/assets/js/39.c5f0e388.js"><link rel="prefetch" href="/assets/js/4.a7ab2a4a.js"><link rel="prefetch" href="/assets/js/40.59709cb4.js"><link rel="prefetch" href="/assets/js/41.261557f5.js"><link rel="prefetch" href="/assets/js/42.27e3510f.js"><link rel="prefetch" href="/assets/js/43.f90d4b6f.js"><link rel="prefetch" href="/assets/js/44.2358822c.js"><link rel="prefetch" href="/assets/js/45.ae5f5462.js"><link rel="prefetch" href="/assets/js/46.6c34a79a.js"><link rel="prefetch" href="/assets/js/47.0ee1a109.js"><link rel="prefetch" href="/assets/js/48.be87fb40.js"><link rel="prefetch" href="/assets/js/49.177468d1.js"><link rel="prefetch" href="/assets/js/5.ecc03933.js"><link rel="prefetch" href="/assets/js/50.0fb39585.js"><link rel="prefetch" href="/assets/js/51.8538a242.js"><link rel="prefetch" href="/assets/js/52.33fb8417.js"><link rel="prefetch" href="/assets/js/53.5df79e51.js"><link rel="prefetch" href="/assets/js/54.aaeb0563.js"><link rel="prefetch" href="/assets/js/55.2d231bc2.js"><link rel="prefetch" href="/assets/js/56.e6727434.js"><link rel="prefetch" href="/assets/js/57.1cd89c78.js"><link rel="prefetch" href="/assets/js/58.acced2c8.js"><link rel="prefetch" href="/assets/js/59.c4b78fcd.js"><link rel="prefetch" href="/assets/js/6.debca471.js"><link rel="prefetch" href="/assets/js/60.b4d49616.js"><link rel="prefetch" href="/assets/js/61.f0d84cfb.js"><link rel="prefetch" href="/assets/js/62.f130a3f0.js"><link rel="prefetch" href="/assets/js/63.15cf5758.js"><link rel="prefetch" href="/assets/js/64.0fb8a0fb.js"><link rel="prefetch" href="/assets/js/65.2c920ab0.js"><link rel="prefetch" href="/assets/js/66.d087a39e.js"><link rel="prefetch" href="/assets/js/67.803e1fde.js"><link rel="prefetch" href="/assets/js/68.8e5032b5.js"><link rel="prefetch" href="/assets/js/69.213932a4.js"><link rel="prefetch" href="/assets/js/7.ab2cde39.js"><link rel="prefetch" href="/assets/js/70.7aeed53f.js"><link rel="prefetch" href="/assets/js/71.9ab3dca0.js"><link rel="prefetch" href="/assets/js/72.5cba5a4d.js"><link rel="prefetch" href="/assets/js/73.0bfa3c06.js"><link rel="prefetch" href="/assets/js/74.27b62f95.js"><link rel="prefetch" href="/assets/js/75.f0259983.js"><link rel="prefetch" href="/assets/js/76.c5594162.js"><link rel="prefetch" href="/assets/js/77.5c8f4feb.js"><link rel="prefetch" href="/assets/js/78.794fb25f.js"><link rel="prefetch" href="/assets/js/79.67768da7.js"><link rel="prefetch" href="/assets/js/8.18bc17a6.js"><link rel="prefetch" href="/assets/js/80.7c99bf28.js"><link rel="prefetch" href="/assets/js/81.c25a2e1f.js"><link rel="prefetch" href="/assets/js/82.b5ad8ba7.js"><link rel="prefetch" href="/assets/js/83.4e86845d.js"><link rel="prefetch" href="/assets/js/84.683b6629.js"><link rel="prefetch" href="/assets/js/85.def392ed.js"><link rel="prefetch" href="/assets/js/86.774c70f1.js"><link rel="prefetch" href="/assets/js/87.eb6f676a.js"><link rel="prefetch" href="/assets/js/88.71f01d6e.js"><link rel="prefetch" href="/assets/js/89.9c7251e9.js"><link rel="prefetch" href="/assets/js/9.84445d1a.js"><link rel="prefetch" href="/assets/js/90.7a41265a.js"><link rel="prefetch" href="/assets/js/91.e3dded02.js"><link rel="prefetch" href="/assets/js/92.8d5adf74.js"><link rel="prefetch" href="/assets/js/93.2194cbea.js"><link rel="prefetch" href="/assets/js/94.9fb3f0ad.js"><link rel="prefetch" href="/assets/js/95.8f0e803a.js"><link rel="prefetch" href="/assets/js/96.3deeae33.js"><link rel="prefetch" href="/assets/js/97.d29718f9.js"><link rel="prefetch" href="/assets/js/98.e57f6500.js"><link rel="prefetch" href="/assets/js/99.4a63eba3.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.3fe018e7.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">TechNotes</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/documentation/vuepress.html" class="nav-link">
+  Documentation
+</a></div><div class="nav-item"><a href="/keyboard-shortcuts/" class="nav-link">
+  Keyboard-shortcuts
+</a></div><div class="nav-item"><a href="/surveys/" class="nav-link">
+  Surveys
+</a></div><div class="nav-item"><a href="/resources/" class="nav-link">
+  Resources
+</a></div><div class="nav-item"><a href="https://github.com/umeshmk" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/documentation/vuepress.html" class="nav-link">
+  Documentation
+</a></div><div class="nav-item"><a href="/keyboard-shortcuts/" class="nav-link">
+  Keyboard-shortcuts
+</a></div><div class="nav-item"><a href="/surveys/" class="nav-link">
+  Surveys
+</a></div><div class="nav-item"><a href="/resources/" class="nav-link">
+  Resources
+</a></div><div class="nav-item"><a href="https://github.com/umeshmk" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/css/" aria-current="page" class="sidebar-link">CSS</a></li><li><a href="/css/Layout.html" class="sidebar-link">LAYOUT</a></li><li><a href="/css/css3.html" class="sidebar-link">CSS-3</a></li><li><a href="/css/styled-components.html" class="sidebar-link">Styled Components</a></li><li><a href="/css/css-modules.html" class="sidebar-link">Css Modules</a></li><li><a href="/css/postcss.html" class="sidebar-link">PostCss</a></li><li><a href="/css/sass.html" aria-current="page" class="active sidebar-link">Sass/Scss</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/css/sass.html#comments" class="sidebar-link">Comments</a></li><li class="sidebar-sub-header"><a href="/css/sass.html#property-shortcut" class="sidebar-link">Property shortcut</a></li><li class="sidebar-sub-header"><a href="/css/sass.html#special-functions" class="sidebar-link">Special Functions</a></li><li class="sidebar-sub-header"><a href="/css/sass.html#variables" class="sidebar-link">Variables</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/css/sass.html#css-vs-sass-variables" class="sidebar-link">Css vs Sass variables</a></li><li class="sidebar-sub-header"><a href="/css/sass.html#interpolation" class="sidebar-link">Interpolation</a></li></ul></li><li class="sidebar-sub-header"><a href="/css/sass.html#nesting" class="sidebar-link">Nesting</a></li><li class="sidebar-sub-header"><a href="/css/sass.html#use-modules" class="sidebar-link">@use - Modules</a></li><li class="sidebar-sub-header"><a href="/css/sass.html#forward" class="sidebar-link">@forward</a></li><li class="sidebar-sub-header"><a href="/css/sass.html#mixins" class="sidebar-link">Mixins</a></li><li class="sidebar-sub-header"><a href="/css/sass.html#extend-bem-placeholder" class="sidebar-link">@extend (BEM) &amp; %placeholder</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/css/sass.html#placeholder-snippets" class="sidebar-link">%placeholder (snippets)</a></li></ul></li><li class="sidebar-sub-header"><a href="/css/sass.html#operators" class="sidebar-link">Operators</a></li><li class="sidebar-sub-header"><a href="/css/sass.html#in-css-standards-todo" class="sidebar-link">@ in Css Standards (TODO)</a></li><li class="sidebar-sub-header"><a href="/css/sass.html#if-else-each-for-while-avoid" class="sidebar-link">@if / else / each / for / while - (Avoid)</a></li></ul></li><li><a href="/css/methodology.html" class="sidebar-link">Methodology</a></li><li><a href="/css/Tailwind-core.html" class="sidebar-link">TailwindCss (core)</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="sass-scss"><a href="#sass-scss" class="header-anchor">#</a> Sass/Scss</h1> <div class="custom-block danger"><p class="custom-block-title">Do you need it ?</p> <p><em>What is most needed from Sass ? Alternatives</em></p> <ul><li>Parials Imports (~ <code>postcss-import</code> or directly in js file or simple css <code>@import</code>)</li> <li>SingleLine Comments (~ <code>postcss-scss</code> parser)</li> <li>Nesting (~ preset - nesting)</li> <li>Variables (~ preset - custom properties)
+<ul><li>Never use sass variables - why? Because each ReactComponents has it's own css &amp; will need to import partial <code>_variables.scss</code>.</li> <li>Instead custom properties are globally available</li></ul></li> <li>Special Functions (~ Css standards - <code>calc(), env(), var(), min(), or max()</code> )</li> <li>Mixins (mostly for prefixes) (~ preset - autoprefixer)</li></ul> <p><em>React/Vue Components - we can simply use css modules with <strong>scoped css classes</strong>.</em></p> <p><strong>Sass + Autoprefixer + purgecss is best combination.</strong></p></div> <blockquote><p>Syntactically Awesome Stylesheets</p> <ul><li><a href="http://sass-lang.com/documentation/file.SASS_REFERENCE.html%3E" target="_blank" rel="noopener noreferrer">Reference<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li> <li><a href="https://www.sassmeister.com/" target="_blank" rel="noopener noreferrer">Playground<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></blockquote> <ul><li>Use <code>.scss</code> not <code>.sass</code></li> <li>Any valid css is valid scss.</li></ul> <p><strong>Install</strong></p> <ol><li><code>sass-loader</code> (7m) (<strong>BEST</strong>) - For webpack - Needs either <code>node-sass</code> or <code>sass</code>(<em>recommended</em>)</li> <li><code>sass</code> (2m) - Pure js created using <code>dart sass</code></li> <li><code>node-sass</code> (4m) - wrapper around <code>libsass</code> (Both are <em>maintained but deprecated</em>)</li></ol> <h2 id="comments"><a href="#comments" class="header-anchor">#</a> Comments</h2> <div class="language-scss extra-class"><pre class="language-scss"><code><span class="token comment">// Single line comment are NOT passed to css files</span>
+
+<span class="token comment">/* Multi-line comment is
+passed to css files (not in minified) */</span>
+
+<span class="token comment">/*! added in minified css */</span>
+</code></pre></div><h2 id="property-shortcut"><a href="#property-shortcut" class="header-anchor">#</a> Property shortcut</h2> <div class="language-scss extra-class"><pre class="language-scss"><code><span class="token selector">padding: </span><span class="token punctuation">{</span>
+  <span class="token property">bottom</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span> <span class="token comment">// padding-bottom: 0</span>
+  <span class="token property">left</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span> <span class="token comment">// padding-left: 0</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="special-functions"><a href="#special-functions" class="header-anchor">#</a> Special Functions</h2> <ul><li>Css standards - <code>calc(), env(), var(), min(), or max()</code></li> <li>We can use Interpolation in it.</li></ul> <div class="language-scss extra-class"><pre class="language-scss"><code><span class="token comment">// url()</span>
+<span class="token property"><span class="token variable">$foo</span></span><span class="token punctuation">:</span> <span class="token string">&quot;path/to&quot;</span> <span class="token punctuation">;</span>
+<span class="token url">url</span><span class="token punctuation">(</span><span class="token string">&quot;#{$foo}/image.jpg&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>   <span class="token comment">// url(&quot;path/to/image.jpg&quot;)</span>
+<span class="token url">url</span><span class="token punctuation">(</span><span class="token variable">$foo</span> <span class="token operator">+</span> <span class="token string">&quot;/image.jpg&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>   <span class="token comment">// url(&quot;path/to/image.jpg&quot;)</span>
+
+<span class="token comment">// calc()</span>
+<span class="token property"><span class="token variable">$width</span></span> <span class="token punctuation">:</span> 500px<span class="token punctuation">;</span>
+<span class="token function">calc</span><span class="token punctuation">(</span>50% <span class="token operator">-</span> #<span class="token punctuation">{</span><span class="token variable">$width</span> <span class="token operator">/</span> 2<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// calc(50% - 900px);</span>
+
+<span class="token comment">// max()/min()</span>
+<span class="token property"><span class="token variable">$padding</span></span><span class="token punctuation">:</span> 12px<span class="token punctuation">;</span>
+<span class="token function">max</span><span class="token punctuation">(</span><span class="token variable">#{$padding}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>           <span class="token comment">// max(12px)</span>
+<span class="token function">max</span><span class="token punctuation">(</span><span class="token variable">$padding</span><span class="token punctuation">,</span> 20px<span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token comment">// 20px</span>
+
+</code></pre></div><h2 id="variables"><a href="#variables" class="header-anchor">#</a> Variables</h2> <ul><li>In Css - <strong>Custom Properties</strong> - JavaScript has access</li> <li>In Sass - <strong>Variables</strong> - JavaScript has no access since it's compiled to normal css values</li></ul> <div class="language-scss extra-class"><pre class="language-scss"><code><span class="token comment">// --foo - Css Custom property</span>
+<span class="token comment">// $foo - sass variable</span>
+<span class="token property"><span class="token variable">$r</span></span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>
+<span class="token selector">:root </span><span class="token punctuation">{</span>
+  <span class="token property">--foo</span><span class="token punctuation">:</span> <span class="token variable">$r</span><span class="token punctuation">;</span> <span class="token comment">// --foo: $r (sass has no effect)</span>
+  <span class="token property">--foo</span><span class="token punctuation">:</span> <span class="token variable">#{$r}</span><span class="token punctuation">;</span> <span class="token comment">// --foo: red</span>
+<span class="token punctuation">}</span>
+<span class="token selector">body </span><span class="token punctuation">{</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--foo<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// underscore == hyphen</span>
+<span class="token variable">$primary-color</span> === <span class="token variable">$primary_color</span><span class="token punctuation">;</span>
+
+<span class="token comment">// Private Members - (variable, mixins, funtions) - can be used in same module only</span>
+<span class="token comment">// start with underscore/hyphen (both are same too)</span>
+<span class="token variable">$-color</span> === <span class="token variable">$_color</span>
+</code></pre></div><h3 id="css-vs-sass-variables"><a href="#css-vs-sass-variables" class="header-anchor">#</a> Css vs Sass variables</h3> <div class="language-scss extra-class"><pre class="language-scss"><code><span class="token comment">// Scope - Local/Global</span>
+<span class="token comment">// -- css var - Hoisting (limited to same/inner scopes only. Never outer scope.)</span>
+<span class="token comment">// -- sass var - No Hoisting</span>
+<span class="token comment">// ------ use `!global` flag to make it global scope from local scope</span>
+
+<span class="token comment">// sass ex</span>
+<span class="token property"><span class="token variable">$a</span></span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>
+<span class="token selector">.foo </span><span class="token punctuation">{</span>
+  <span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token variable">$a</span><span class="token punctuation">;</span> <span class="token comment">// red</span>
+  <span class="token property"><span class="token variable">$a</span></span><span class="token punctuation">:</span> green<span class="token punctuation">;</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> <span class="token variable">$a</span><span class="token punctuation">;</span> <span class="token comment">// green</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.bar </span><span class="token punctuation">{</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> <span class="token variable">$a</span><span class="token punctuation">;</span> <span class="token comment">// red</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// css ex</span>
+<span class="token selector">:root </span><span class="token punctuation">{</span>
+  <span class="token property">--a</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.foo </span><span class="token punctuation">{</span>
+  <span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--a<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">/*green*/</span>
+  <span class="token property">--a</span><span class="token punctuation">:</span> green<span class="token punctuation">;</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--a<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">/*green*/</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.bar </span><span class="token punctuation">{</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--a<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">/*red*/</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="interpolation"><a href="#interpolation" class="header-anchor">#</a> Interpolation</h3> <div class="language-scss extra-class"><pre class="language-scss"><code><span class="token comment">// INTERPOLATION - Mostly useful in strings (not much needed)</span>
+<span class="token property"><span class="token variable">$name</span></span><span class="token punctuation">:</span> <span class="token string">&quot;alert-success&quot;</span><span class="token punctuation">;</span>
+<span class="token property"><span class="token variable">$bor</span></span><span class="token punctuation">:</span> <span class="token string">&quot;border&quot;</span><span class="token punctuation">;</span>
+<span class="token comment">// .alert-success</span>
+<span class="token selector">.<span class="token variable">#{$name}</span> </span><span class="token punctuation">{</span>
+  <span class="token property"><span class="token variable">#{$bor}</span>-color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="nesting"><a href="#nesting" class="header-anchor">#</a> Nesting</h2> <div class="language-scss extra-class"><pre class="language-scss"><code><span class="token comment">// Too much nesting is bad practice</span>
+<span class="token selector">nav </span><span class="token punctuation">{</span>
+  <span class="token selector">ul </span><span class="token punctuation">{</span>
+    <span class="token property">margin</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token selector">li </span><span class="token punctuation">{</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> blue<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// &amp; - parent selector</span>
+<span class="token selector">.foo </span><span class="token punctuation">{</span>
+  <span class="token selector"><span class="token parent important">&amp;</span>:hover </span><span class="token punctuation">{</span>
+    <span class="token comment">// .foo:hover{ }</span>
+  <span class="token punctuation">}</span>
+  <span class="token selector">:hover </span><span class="token punctuation">{</span>
+    <span class="token comment">// .foo :hover{ } - space is added before :</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment">// BEM can be used but only if &amp; = class,id,tag</span>
+  <span class="token selector"><span class="token parent important">&amp;</span>__bar </span><span class="token punctuation">{</span>
+    <span class="token comment">// .foo__bar</span>
+  <span class="token punctuation">}</span>
+  <span class="token selector"><span class="token parent important">&amp;</span>--bar </span><span class="token punctuation">{</span>
+    <span class="token comment">// .foo--bar</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="use-modules"><a href="#use-modules" class="header-anchor">#</a> @use - Modules</h2> <ul><li>Use <code>@use</code> - since <code>@import</code> is <em>deprecated</em></li> <li>Module is a <code>.scss</code> file</li> <li><strong>Loading Members</strong> - <strong>Variables, Functions, Mixins</strong> from other modules.
+<ul><li>Added only once irrespective of how many times its called.</li></ul></li></ul> <div class="language-scss extra-class"><pre class="language-scss"><code><span class="token keyword">@use</span> <span class="token string">&quot;mymodule&quot;</span><span class="token punctuation">;</span> <span class="token comment">// loads mymodule.(scss|sass|css)</span>
+
+<span class="token comment">//  partials/_variables.scss</span>
+<span class="token keyword">@use</span> <span class="token string">'partials/variables'</span><span class="token punctuation">;</span> <span class="token comment">// namespace=variables - eg: mixin is used as &quot;@include variables.mymixin&quot;</span>
+<span class="token keyword">@use</span> <span class="token string">'partials/variables'</span> <span class="token module-modifier keyword">as</span> foo<span class="token punctuation">;</span> <span class="token comment">//  namespace=foo - eg: mixin is used as &quot;@include foo.mymixin&quot;</span>
+<span class="token keyword">@use</span> <span class="token string">'partials/variables'</span> <span class="token module-modifier keyword">as</span> *<span class="token punctuation">;</span> <span class="token comment">//  no namespace - eg: mixin is used directly &quot;@include mymixin&quot;</span>
+
+<span class="token comment">// Namespace EX</span>
+<span class="token comment">// --&gt; _mymodule.scss</span>
+<span class="token keyword">@mixin</span> <span class="token selector">rounded </span><span class="token punctuation">{</span>
+  <span class="token property">border-radius</span><span class="token punctuation">:</span> <span class="token variable">$radius</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// --&gt; index.scss</span>
+<span class="token keyword">@use</span> <span class="token string">&quot;mymodule&quot;</span><span class="token punctuation">;</span>
+<span class="token selector">.box </span><span class="token punctuation">{</span>
+  <span class="token keyword">@include</span> mymodule.rounded<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// Add all modules in a folder</span>
+<span class="token comment">// collection/_index.scss</span>
+<span class="token keyword">@use</span> <span class="token string">&quot;foo&quot;</span><span class="token punctuation">;</span> <span class="token comment">// collection/_foo.scss</span>
+<span class="token keyword">@use</span> <span class="token string">&quot;bar&quot;</span><span class="token punctuation">;</span> <span class="token comment">// collection/_bar.scss</span>
+<span class="token comment">// main.scss</span>
+<span class="token keyword">@use</span> <span class="token string">&quot;collection&quot;</span><span class="token punctuation">;</span> <span class="token comment">// _index.scss added automatically</span>
+</code></pre></div><p><strong>Configuration (Default variable)</strong> - <em>Not recommended</em></p> <div class="language-scss extra-class"><pre class="language-scss"><code><span class="token comment">// Default (Not recommended)</span>
+<span class="token comment">// --------------------------</span>
+<span class="token comment">// _mymodule.scss</span>
+<span class="token property"><span class="token variable">$color</span></span><span class="token punctuation">:</span> red <span class="token statement keyword">!default</span><span class="token punctuation">;</span> <span class="token comment">// default keyword is a must</span>
+<span class="token property"><span class="token variable">$margin</span></span><span class="token punctuation">:</span> 10px <span class="token statement keyword">!default</span><span class="token punctuation">;</span>
+
+<span class="token comment">// index,scss</span>
+<span class="token keyword">@use</span> <span class="token string">'mymodule'</span> <span class="token module-modifier keyword">with</span> <span class="token punctuation">(</span>
+  <span class="token property"><span class="token variable">$color</span></span><span class="token punctuation">:</span> green<span class="token punctuation">;</span>  <span class="token comment">// $color is replaced but $margin is still default</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// Mixins Maps (Better)</span>
+<span class="token comment">// --------------------------</span>
+<span class="token comment">// _mymodule.scss</span>
+<span class="token property"><span class="token variable">$-color</span></span><span class="token punctuation">:</span> red <span class="token punctuation">;</span> <span class="token comment">// no default but private variables</span>
+<span class="token property"><span class="token variable">$-margin</span></span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span>
+<span class="token keyword">@mixin</span> <span class="token function">config</span><span class="token punctuation">(</span><span class="token property"><span class="token variable">$color</span></span><span class="token punctuation">:</span><span class="token null keyword">null</span><span class="token punctuation">,</span> <span class="token property"><span class="token variable">$margin</span></span><span class="token punctuation">:</span><span class="token null keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token keyword">@if</span> <span class="token selector"><span class="token variable">$color</span></span><span class="token punctuation">{</span>
+    <span class="token property"><span class="token variable">$-color</span></span><span class="token punctuation">:</span> <span class="token variable">$color</span> !global<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">@if</span> <span class="token selector"><span class="token variable">$margin</span></span><span class="token punctuation">{</span>
+    <span class="token property"><span class="token variable">$-margin</span></span><span class="token punctuation">:</span> <span class="token variable">$margin</span> !global<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">@mixin</span> <span class="token selector">style </span><span class="token punctuation">{</span>
+  <span class="token selector">body</span><span class="token punctuation">{</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> <span class="token variable">$-color</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// index.scss</span>
+<span class="token keyword">@use</span> <span class="token string">&quot;mymodule&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">@include</span> mymodule.<span class="token function">config</span><span class="token punctuation">(</span>
+  <span class="token property"><span class="token variable">$color</span></span><span class="token punctuation">:</span> blue<span class="token punctuation">;</span>                 <span class="token comment">// $-color is changed but $-margin is still default</span>
+<span class="token punctuation">)</span>
+<span class="token keyword">@include</span> mymodule.style<span class="token punctuation">;</span>
+
+</code></pre></div><h2 id="forward"><a href="#forward" class="header-anchor">#</a> @forward</h2> <div class="language-scss extra-class"><pre class="language-scss"><code><span class="token comment">// _bottom.scss</span>
+<span class="token keyword">@mixin</span> <span class="token selector">mymix </span><span class="token punctuation">{</span>
+  .foo<span class="token punctuation">{</span>...<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// _middle.scss</span>
+<span class="token keyword">@forward</span> <span class="token string">&quot;bottom&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">@forward</span> <span class="token string">&quot;bottom&quot;</span> <span class="token module-modifier keyword">as</span> myprefix-* <span class="token punctuation">;</span>  <span class="token comment">// we can use prefix (optional)</span>
+<span class="token keyword">@include</span> bottom.mymix<span class="token punctuation">;</span> <span class="token comment">// error - no namespace</span>
+<span class="token keyword">@include</span> mymix<span class="token punctuation">;</span>        <span class="token comment">// error - no mixin found</span>
+
+<span class="token comment">// index.scss</span>
+<span class="token keyword">@use</span> <span class="token string">&quot;middle&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">@include</span> middle.mymix<span class="token punctuation">;</span> <span class="token comment">// works - middle.myprefix-mymix (if prefix is used)</span>
+</code></pre></div><h2 id="mixins"><a href="#mixins" class="header-anchor">#</a> Mixins</h2> <ul><li>Use <strong>Autoprefixer</strong> instead for vendor prefixes.</li></ul> <div class="language-scss extra-class"><pre class="language-scss"><code><span class="token comment">// EX - with any number of parameters</span>
+<span class="token keyword">@mixin</span> <span class="token function">border-radius</span><span class="token punctuation">(</span><span class="token variable">$radius</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token property">-webkit-border-radius</span><span class="token punctuation">:</span> <span class="token variable">$radius</span><span class="token punctuation">;</span>
+  <span class="token property">border-radius</span><span class="token punctuation">:</span> <span class="token variable">$radius</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.box </span><span class="token punctuation">{</span>
+  <span class="token keyword">@include</span> <span class="token function">border-radius</span><span class="token punctuation">(</span>10px<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// EX - without parameters (it's better to use @extend)</span>
+<span class="token keyword">@mixin</span> <span class="token selector">vars </span><span class="token punctuation">{</span>
+  .foo<span class="token punctuation">{</span>...<span class="token punctuation">}</span>     <span class="token comment">// can add selectors too</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">@include</span> vars<span class="token punctuation">;</span>  <span class="token comment">// can add outside {} too based on content</span>
+
+</code></pre></div><h2 id="extend-bem-placeholder"><a href="#extend-bem-placeholder" class="header-anchor">#</a> @extend (BEM) &amp; %placeholder</h2> <ul><li>Useful for <strong>BEM Methodology</strong></li></ul> <div class="language-scss extra-class"><pre class="language-scss"><code><span class="token comment">// Gives 2 classes</span>
+<span class="token selector">.myblock </span><span class="token punctuation">{</span>
+  <span class="token property">padding</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span>
+
+  <span class="token selector"><span class="token parent important">&amp;</span>__myelement </span><span class="token punctuation">{</span>
+    <span class="token keyword">@extend</span> .myblock<span class="token punctuation">;</span>
+    <span class="token comment">// @extend .myblock, .error, .msg; // for multiple classes</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// Compiled</span>
+<span class="token selector">.myblock,
+.myblock__myelement </span><span class="token punctuation">{</span>
+  <span class="token property">padding</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.myblock__myelement </span><span class="token punctuation">{</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// But Why ?</span>
+<span class="token comment">// &lt;div class=&quot;myblock &quot;&gt;               // apply - padding</span>
+<span class="token comment">// &lt;div class=&quot;myblock__myelement &quot;&gt;    // apply - padding, color</span>
+</code></pre></div><h3 id="placeholder-snippets"><a href="#placeholder-snippets" class="header-anchor">#</a> %placeholder (snippets)</h3> <ul><li>It's a class but starts with <code>%foo</code> instead of <code>.foo</code></li></ul> <div class="language-scss extra-class"><pre class="language-scss"><code><span class="token comment">// %snip will not be added to final css if it's not extended.</span>
+<span class="token selector"><span class="token placeholder">%snip</span> </span><span class="token punctuation">{</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>
+  .foo <span class="token punctuation">{</span>...<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.abc </span><span class="token punctuation">{</span>
+  <span class="token keyword">@extend</span> <span class="token placeholder selector">%snip</span><span class="token punctuation">;</span> <span class="token comment">// add at top for ease</span>
+  <span class="token property">padding</span><span class="token punctuation">:</span> 5px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.xyz </span><span class="token punctuation">{</span>
+  <span class="token keyword">@extend</span> <span class="token placeholder selector">%snip</span><span class="token punctuation">;</span>
+  <span class="token property">border</span><span class="token punctuation">:</span> 2px solid red<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="operators"><a href="#operators" class="header-anchor">#</a> Operators</h2> <div class="language-scss extra-class"><pre class="language-scss"><code><span class="token comment">// operators allowed -&gt;   + - * / %</span>
+<span class="token selector">div p </span><span class="token punctuation">{</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> 600px <span class="token operator">/</span> 960px <span class="token operator">*</span> 100%<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="in-css-standards-todo"><a href="#in-css-standards-todo" class="header-anchor">#</a> @ in Css Standards (TODO)</h2> <div class="language-scss extra-class"><pre class="language-scss"><code>@namespace<span class="token punctuation">;</span>
+@font-face<span class="token punctuation">;</span>
+@counter-style<span class="token punctuation">;</span>
+@supports<span class="token punctuation">;</span>
+@media<span class="token punctuation">;</span>
+@keyframes<span class="token punctuation">;</span>
+</code></pre></div><h2 id="if-else-each-for-while-avoid"><a href="#if-else-each-for-while-avoid" class="header-anchor">#</a> @if / else / each / for / while - (Avoid)</h2> <div class="language-scss extra-class"><pre class="language-scss"><code><span class="token property"><span class="token variable">$dark-theme</span></span><span class="token punctuation">:</span> <span class="token boolean">true</span> <span class="token statement keyword">!default</span><span class="token punctuation">;</span>
+<span class="token property"><span class="token variable">$color</span></span><span class="token punctuation">:</span> #f8bbd0<span class="token punctuation">;</span>
+
+<span class="token keyword">@if</span> <span class="token selector"><span class="token variable">$dark-theme</span> </span><span class="token punctuation">{</span>
+  <span class="token property"><span class="token variable">$color</span></span><span class="token punctuation">:</span> <span class="token function">darken</span><span class="token punctuation">(</span><span class="token variable">$color</span><span class="token punctuation">,</span> 60%<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token comment">// new vars are not allowed</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.button </span><span class="token punctuation">{</span>
+  <span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token variable">$color</span><span class="token punctuation">;</span> <span class="token comment">// #750c30</span>
+<span class="token punctuation">}</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">3/4/2021, 12:16:07 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/css/postcss.html" class="prev">
+        PostCss
+      </a></span> <span class="next"><a href="/css/methodology.html">
+        Methodology
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.8b3c4856.js" defer></script><script src="/assets/js/2.2979c302.js" defer></script><script src="/assets/js/20.6e6abb1d.js" defer></script>
+  </body>
+</html>

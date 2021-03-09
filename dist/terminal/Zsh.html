@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Zsh | TechNotes</title>
+    <meta name="generator" content="VuePress 1.8.0">
+    
+    <meta name="description" content="This Are My Notes">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    
+    <link rel="preload" href="/assets/css/0.styles.3fe018e7.css" as="style"><link rel="preload" href="/assets/js/app.8b3c4856.js" as="script"><link rel="preload" href="/assets/js/2.2979c302.js" as="script"><link rel="preload" href="/assets/js/106.a0bd7490.js" as="script"><link rel="prefetch" href="/assets/js/10.5866e61d.js"><link rel="prefetch" href="/assets/js/100.86048f75.js"><link rel="prefetch" href="/assets/js/101.bc3ac587.js"><link rel="prefetch" href="/assets/js/102.253c0f55.js"><link rel="prefetch" href="/assets/js/103.48ad35e3.js"><link rel="prefetch" href="/assets/js/104.4d426ef0.js"><link rel="prefetch" href="/assets/js/105.6fecf32a.js"><link rel="prefetch" href="/assets/js/107.4b5b6026.js"><link rel="prefetch" href="/assets/js/108.78bc28b9.js"><link rel="prefetch" href="/assets/js/109.7519b4bf.js"><link rel="prefetch" href="/assets/js/11.c58fe308.js"><link rel="prefetch" href="/assets/js/110.28d584c2.js"><link rel="prefetch" href="/assets/js/111.b040db35.js"><link rel="prefetch" href="/assets/js/112.79581112.js"><link rel="prefetch" href="/assets/js/113.2999cd3a.js"><link rel="prefetch" href="/assets/js/114.8126de1b.js"><link rel="prefetch" href="/assets/js/115.88105cb4.js"><link rel="prefetch" href="/assets/js/116.19663a7f.js"><link rel="prefetch" href="/assets/js/117.0dc8ae31.js"><link rel="prefetch" href="/assets/js/118.c6f5489e.js"><link rel="prefetch" href="/assets/js/12.56c6ed94.js"><link rel="prefetch" href="/assets/js/13.da084160.js"><link rel="prefetch" href="/assets/js/14.c9533aa0.js"><link rel="prefetch" href="/assets/js/15.41deb6e5.js"><link rel="prefetch" href="/assets/js/16.64307d03.js"><link rel="prefetch" href="/assets/js/17.8f088b78.js"><link rel="prefetch" href="/assets/js/18.90267d1a.js"><link rel="prefetch" href="/assets/js/19.bc067427.js"><link rel="prefetch" href="/assets/js/20.6e6abb1d.js"><link rel="prefetch" href="/assets/js/21.a5cb4ed9.js"><link rel="prefetch" href="/assets/js/22.378ea376.js"><link rel="prefetch" href="/assets/js/23.7948aea6.js"><link rel="prefetch" href="/assets/js/24.51d5506a.js"><link rel="prefetch" href="/assets/js/25.51f8e0ec.js"><link rel="prefetch" href="/assets/js/26.bd8be612.js"><link rel="prefetch" href="/assets/js/27.78c09c0e.js"><link rel="prefetch" href="/assets/js/28.b6f24c71.js"><link rel="prefetch" href="/assets/js/29.2b244820.js"><link rel="prefetch" href="/assets/js/3.ed2ef2c7.js"><link rel="prefetch" href="/assets/js/30.33cd27e0.js"><link rel="prefetch" href="/assets/js/31.529c7d2a.js"><link rel="prefetch" href="/assets/js/32.f3dec8ab.js"><link rel="prefetch" href="/assets/js/33.25f5ff62.js"><link rel="prefetch" href="/assets/js/34.1077ae4d.js"><link rel="prefetch" href="/assets/js/35.7d136c03.js"><link rel="prefetch" href="/assets/js/36.e88bfce5.js"><link rel="prefetch" href="/assets/js/37.39b5e586.js"><link rel="prefetch" href="/assets/js/38.5efbb80b.js"><link rel="prefetch" href="/assets/js/39.c5f0e388.js"><link rel="prefetch" href="/assets/js/4.a7ab2a4a.js"><link rel="prefetch" href="/assets/js/40.59709cb4.js"><link rel="prefetch" href="/assets/js/41.261557f5.js"><link rel="prefetch" href="/assets/js/42.27e3510f.js"><link rel="prefetch" href="/assets/js/43.f90d4b6f.js"><link rel="prefetch" href="/assets/js/44.2358822c.js"><link rel="prefetch" href="/assets/js/45.ae5f5462.js"><link rel="prefetch" href="/assets/js/46.6c34a79a.js"><link rel="prefetch" href="/assets/js/47.0ee1a109.js"><link rel="prefetch" href="/assets/js/48.be87fb40.js"><link rel="prefetch" href="/assets/js/49.177468d1.js"><link rel="prefetch" href="/assets/js/5.ecc03933.js"><link rel="prefetch" href="/assets/js/50.0fb39585.js"><link rel="prefetch" href="/assets/js/51.8538a242.js"><link rel="prefetch" href="/assets/js/52.33fb8417.js"><link rel="prefetch" href="/assets/js/53.5df79e51.js"><link rel="prefetch" href="/assets/js/54.aaeb0563.js"><link rel="prefetch" href="/assets/js/55.2d231bc2.js"><link rel="prefetch" href="/assets/js/56.e6727434.js"><link rel="prefetch" href="/assets/js/57.1cd89c78.js"><link rel="prefetch" href="/assets/js/58.acced2c8.js"><link rel="prefetch" href="/assets/js/59.c4b78fcd.js"><link rel="prefetch" href="/assets/js/6.debca471.js"><link rel="prefetch" href="/assets/js/60.b4d49616.js"><link rel="prefetch" href="/assets/js/61.f0d84cfb.js"><link rel="prefetch" href="/assets/js/62.f130a3f0.js"><link rel="prefetch" href="/assets/js/63.15cf5758.js"><link rel="prefetch" href="/assets/js/64.0fb8a0fb.js"><link rel="prefetch" href="/assets/js/65.2c920ab0.js"><link rel="prefetch" href="/assets/js/66.d087a39e.js"><link rel="prefetch" href="/assets/js/67.803e1fde.js"><link rel="prefetch" href="/assets/js/68.8e5032b5.js"><link rel="prefetch" href="/assets/js/69.213932a4.js"><link rel="prefetch" href="/assets/js/7.ab2cde39.js"><link rel="prefetch" href="/assets/js/70.7aeed53f.js"><link rel="prefetch" href="/assets/js/71.9ab3dca0.js"><link rel="prefetch" href="/assets/js/72.5cba5a4d.js"><link rel="prefetch" href="/assets/js/73.0bfa3c06.js"><link rel="prefetch" href="/assets/js/74.27b62f95.js"><link rel="prefetch" href="/assets/js/75.f0259983.js"><link rel="prefetch" href="/assets/js/76.c5594162.js"><link rel="prefetch" href="/assets/js/77.5c8f4feb.js"><link rel="prefetch" href="/assets/js/78.794fb25f.js"><link rel="prefetch" href="/assets/js/79.67768da7.js"><link rel="prefetch" href="/assets/js/8.18bc17a6.js"><link rel="prefetch" href="/assets/js/80.7c99bf28.js"><link rel="prefetch" href="/assets/js/81.c25a2e1f.js"><link rel="prefetch" href="/assets/js/82.b5ad8ba7.js"><link rel="prefetch" href="/assets/js/83.4e86845d.js"><link rel="prefetch" href="/assets/js/84.683b6629.js"><link rel="prefetch" href="/assets/js/85.def392ed.js"><link rel="prefetch" href="/assets/js/86.774c70f1.js"><link rel="prefetch" href="/assets/js/87.eb6f676a.js"><link rel="prefetch" href="/assets/js/88.71f01d6e.js"><link rel="prefetch" href="/assets/js/89.9c7251e9.js"><link rel="prefetch" href="/assets/js/9.84445d1a.js"><link rel="prefetch" href="/assets/js/90.7a41265a.js"><link rel="prefetch" href="/assets/js/91.e3dded02.js"><link rel="prefetch" href="/assets/js/92.8d5adf74.js"><link rel="prefetch" href="/assets/js/93.2194cbea.js"><link rel="prefetch" href="/assets/js/94.9fb3f0ad.js"><link rel="prefetch" href="/assets/js/95.8f0e803a.js"><link rel="prefetch" href="/assets/js/96.3deeae33.js"><link rel="prefetch" href="/assets/js/97.d29718f9.js"><link rel="prefetch" href="/assets/js/98.e57f6500.js"><link rel="prefetch" href="/assets/js/99.4a63eba3.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.3fe018e7.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">TechNotes</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/documentation/vuepress.html" class="nav-link">
+  Documentation
+</a></div><div class="nav-item"><a href="/keyboard-shortcuts/" class="nav-link">
+  Keyboard-shortcuts
+</a></div><div class="nav-item"><a href="/surveys/" class="nav-link">
+  Surveys
+</a></div><div class="nav-item"><a href="/resources/" class="nav-link">
+  Resources
+</a></div><div class="nav-item"><a href="https://github.com/umeshmk" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/documentation/vuepress.html" class="nav-link">
+  Documentation
+</a></div><div class="nav-item"><a href="/keyboard-shortcuts/" class="nav-link">
+  Keyboard-shortcuts
+</a></div><div class="nav-item"><a href="/surveys/" class="nav-link">
+  Surveys
+</a></div><div class="nav-item"><a href="/resources/" class="nav-link">
+  Resources
+</a></div><div class="nav-item"><a href="https://github.com/umeshmk" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/terminal/Zsh.html" aria-current="page" class="active sidebar-link">Zsh</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/terminal/Zsh.html#guides" class="sidebar-link">Guides</a></li><li class="sidebar-sub-header"><a href="/terminal/Zsh.html#themes" class="sidebar-link">Themes</a></li><li class="sidebar-sub-header"><a href="/terminal/Zsh.html#zsh-startup-files" class="sidebar-link">zsh startup files</a></li><li class="sidebar-sub-header"><a href="/terminal/Zsh.html#zshrc" class="sidebar-link">.zshrc</a></li><li class="sidebar-sub-header"><a href="/terminal/Zsh.html#aliases" class="sidebar-link">.aliases</a></li></ul></li><li><a href="/terminal/Bash.html" class="sidebar-link">Bash</a></li><li><a href="/terminal/Bash-script.html" class="sidebar-link">Bash scripting</a></li><li><a href="/terminal/WindowsTerminal.html" class="sidebar-link">Windows Terminal (settings.json)</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="zsh"><a href="#zsh" class="header-anchor">#</a> Zsh</h1> <blockquote><p>A very powerful shell when combined with framework like OhMyZsh</p> <p><a href="https://www.zsh.org" target="_blank" rel="noopener noreferrer">https://www.zsh.org<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p>Shell - <code>zsh</code></p> <p>Config - <code>~/.zshrc</code></p> <p>Community framework - <code>ohmyzsh</code></p></blockquote> <h2 id="guides"><a href="#guides" class="header-anchor">#</a> Guides</h2> <ul><li><a href="http://www.bash2zsh.com/zsh_refcard/refcard.pdf" target="_blank" rel="noopener noreferrer">Reference card<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li> <li><a href="https://grml.org/zsh/zsh-lovers.html" target="_blank" rel="noopener noreferrer">https://grml.org/zsh/zsh-lovers.html<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li> <li><a href="https://github.com/mathiasbynens/dotfiles" target="_blank" rel="noopener noreferrer">DotFiles<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li> <li><a href="https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH" target="_blank" rel="noopener noreferrer">Install zsh <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li> <li>Install zsh on GitBash
+<ul><li>Extract <a href="https://packages.msys2.org/package/zsh?repo=msys&amp;variant=x86_64" target="_blank" rel="noopener noreferrer">zsh package<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>) to <code>C:\Program Files\Git</code></li> <li><div class="language-sh extra-class"><pre class="language-sh"><code><span class="token comment"># Launch Zsh (Add this in .bashrc)</span>
+  <span class="token keyword">if</span> <span class="token punctuation">[</span> -t <span class="token number">1</span> <span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token keyword">then</span>
+    <span class="token builtin class-name">exec</span> <span class="token function">zsh</span>
+  <span class="token keyword">fi</span>
+</code></pre></div></li></ul></li> <li><a href="https://github.com/ohmyzsh/ohmyzsh" target="_blank" rel="noopener noreferrer">Install ohmyzsh <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li> <li><a href="https://github.com/ohmyzsh/ohmyzsh/blob/master/lib/key-bindings.zsh" target="_blank" rel="noopener noreferrer">Keybindings <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li> <li>Plugins
+<ul><li>Add this
+<ul><li><a href="https://github.com/zsh-users/zsh-autosuggestions" target="_blank" rel="noopener noreferrer">zsh-autosuggest<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li> <li><a href="https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md" target="_blank" rel="noopener noreferrer">zsh-syntax-highlighting<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li> <li><a href="https://github.com/unixorn/awesome-zsh-plugins" target="_blank" rel="noopener noreferrer">unixorn/awesome-zsh-plugins<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li> <li><a href="https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins" target="_blank" rel="noopener noreferrer">ohmyzsh<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li></ul> <h2 id="themes"><a href="#themes" class="header-anchor">#</a> Themes</h2> <ul><li><strong>Prompt</strong> <ul><li><a href="https://github.com/ohmyzsh/ohmyzsh/wiki/Themes" target="_blank" rel="noopener noreferrer">OhMyZsh Themes<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> <ul><li><a href="https://ibb.co/J7Bqw2C" target="_blank" rel="noopener noreferrer">My Good ones <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li> <li><code>robbyrussell, agnoster, af-magic, apple, arrow, bureau, refined, terminalparty</code></li></ul></li> <li><a href="https://github.com/romkatv/powerlevel10k" target="_blank" rel="noopener noreferrer">Powerlevel10k theme<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> <ul><li><code>powerlevel10k/powerlevel10k</code></li> <li>It includes oh-my-zsh themes too.</li> <li><code>p10k configure</code> - Cmd for Config style</li> <li>Font - <code>MesloLGS NF</code> (font with icons from NerdFonts)</li></ul></li></ul></li> <li><strong>Terminal</strong> <ul><li>Macos - <a href="https://github.com/lysyi3m/macos-terminal-themes" target="_blank" rel="noopener noreferrer">Macos-terminal-themes<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li> <li>Windows - <a href="https://terminalsplash.com/" target="_blank" rel="noopener noreferrer">Terminalsplash<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li> <li>Linux - <a href="https://mayccoll.github.io/Gogh/" target="_blank" rel="noopener noreferrer">Gogh<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li></ul> <h2 id="zsh-startup-files"><a href="#zsh-startup-files" class="header-anchor">#</a> zsh startup files</h2> <ul><li><code>.zshenv</code></li> <li><code>.zprofile</code></li> <li><code>.zshrc</code></li> <li><code>.zlogin</code></li></ul> <h2 id="zshrc"><a href="#zshrc" class="header-anchor">#</a> .zshrc</h2> <div class="language-zshrc extra-class"><pre class="language-text"><code>
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r &quot;${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh&quot; ]]; then
+  source &quot;${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh&quot;
+fi
+
+
+# wsl ubuntu - $HOME is /home/umesh
+# Git Bash   - $HOME is /c/Users/umesh
+export PATH=$HOME/bin:/usr/local/bin:$PATH
+# export ZSH=&quot;/home/umesh/.oh-my-zsh&quot;
+export ZSH=&quot;$HOME/.oh-my-zsh&quot;
+
+# robbyrussell, agnoster, af-magic, apple, arrow, bureau, refined, terminalparty
+ZSH_THEME=&quot;powerlevel10k/powerlevel10k&quot;
+
+# Completion.
+# CASE_SENSITIVE=&quot;true&quot;
+# HYPHEN_INSENSITIVE=&quot;true&quot;  # Case-sensitive completion must be off. _ and - will be interchangeable.
+
+# History timestamps
+# &quot;mm/dd/yyyy&quot;|&quot;dd.mm.yyyy&quot;|&quot;yyyy-mm-dd&quot; or set using strftime
+HIST_STAMPS=&quot;dd.mm.yyyy&quot;
+
+# Add wisely, as too many plugins slow down shell startup.
+# Note - zsh-syntax-highlighting - always last
+plugins=(
+    z
+    sudo
+    zsh-autosuggestions
+    zsh-syntax-highlighting
+)
+
+source $ZSH/oh-my-zsh.sh
+source ~/.aliases
+
+# User configuration
+# export MANPATH=&quot;/usr/local/man:$MANPATH&quot;
+# export LANG=en_US.UTF-8
+
+
+# ---Key Bindings---
+bindkey '^H' backward-kill-word
+
+
+# Powerlevel10K
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+
+
+# function acp() {
+#   git add .
+#   git commit -m &quot;$1&quot;
+#   git push
+```
+</code></pre></div><h2 id="aliases"><a href="#aliases" class="header-anchor">#</a> .aliases</h2> <div class="language-aliases extra-class"><pre class="language-text"><code>#-------------------
+# ---My Alias---
+#-------------------
+# alias [flag] [custom-alias]=&quot;[command]&quot;
+
+alias ..=&quot;cd ..&quot;
+alias ...=&quot;cd ../..&quot;
+alias ....=&quot;cd ../../..&quot;
+alias .....=&quot;cd ../../../..&quot;
+alias ~=&quot;cd ~&quot; 
+
+# Basics
+alias install='sudo apt install'
+alias update='sudo apt update'
+alias remove=&quot;sudo apt-get remove --purge&quot;
+alias src=&quot;source ~/.zshrc || source ~/.bashrc &quot;
+alias l='ls -lah'
+alias ls='ls --color=tty'
+alias lsa='ls -a'
+alias c=&quot;code&quot;
+alias cl=&quot;clear&quot;
+alias d=&quot;dirs&quot;
+alias history=&quot;omz_history &quot;        # zsh
+alias zshrc='vim ~/.zshrc'          # zsh
+alias bashrc='vim ~/.bashrc'
+alias md='mkdir -p'
+alias rd=rmdir
+alias _='sudo '
+# alias z='_z 2&gt;&amp;1'     #zsh
+
+
+# ---default app for extensions---
+# alias -s [file-extension]=[name-of-app]
+# alias -s html=&quot;code&quot;
+
+# ----Global---
+# alias -g [custom-alias]=&quot;[Command]&quot;
+alias G=&quot;| grep&quot;
+alias L=&quot;| less&quot;
+# alias -g GG=&quot;google.com&quot;
+
+# ---Git---
+alias g=&quot;git&quot;
+alias g=git
+alias ga='git add'
+alias gaa='git add --all'
+alias gb='git branch'
+alias gc='git commit'
+alias gcmsg='git commit -m'
+alias gco='git checkout'
+alias gcb='git checkout -b'
+alias gcm='git checkout $(git_main_branch)'
+alias gcf='git config --list'
+alias gcl='git clone '
+alias gd='git diff'
+alias gf='git fetch'
+alias gl='git pull'
+alias ggsup='git branch --set-upstream-to=origin/$(git_current_branch)'
+alias ghp='git help'
+alias glg='git log --stat'
+alias glum='git pull upstream $(git_main_branch)'
+alias gm='git merge'
+alias gma='git merge --abort'
+alias gmt='git mergetool'
+alias gp='git push'
+alias gr='git remote'
+alias grb='git rebase'
+alias gst='git status'
+alias gs='git stash'
+alias gsw='git switch'
+alias gt='git tag'
+alias gtv='git tag | sort -V'
+
+# ---npm---
+alias ni=&quot;npm install&quot;;
+alias nrs=&quot;npm run start -s --&quot;;
+alias nrb=&quot;npm run build -s --&quot;;
+alias nrd=&quot;npm run dev -s --&quot;;
+alias nrt=&quot;npm run test -s --&quot;;
+alias nrtw=&quot;npm run test:watch -s --&quot;;
+alias nrv=&quot;npm run validate -s --&quot;;
+alias rmn=&quot;rm -rf node_modules&quot;;
+alias nflush=&quot;rm -rf node_modules &amp;&amp; npm i&quot;;
+alias nreset=&quot;rm -rf node_modules &amp;&amp; rm package-lock.json &amp;&amp; npm i&quot;;
+
+# ---Yarn---
+alias yar=&quot;yarn run&quot;; # lists all the scripts we have available
+alias yab=&quot;yarn build&quot;; # build dist directory for each package
+alias yal=&quot;yarn lint:fix&quot;; # format source and auto-fix eslint issues
+alias yac=&quot;yarn commit&quot;; # open a Q&amp;A prompt to help construct valid commit messages
+alias yas=&quot;yarn start&quot;;
+alias yasb=&quot;yarn storybook:start&quot;; # start storybook
+alias yat=&quot;yarn test&quot;; # run the unit tests*
+alias yatw=&quot;yarn test:watch&quot;; #run the unit tests for files changed on save
+
+# ---others---
+alias topten=&quot;history | sort -rn | head&quot;
+alias myip=&quot;curl http://ipecho.net/plain; echo&quot;
+alias dirs='dirs -v | head -10'
+alias usage='du -h -d1'
+alias runp=&quot;lsof -i &quot;
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><!----> <span class="next"><a href="/terminal/Bash.html">
+        Bash
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.8b3c4856.js" defer></script><script src="/assets/js/2.2979c302.js" defer></script><script src="/assets/js/106.a0bd7490.js" defer></script>
+  </body>
+</html>
