@@ -1,7 +1,7 @@
 module.exports = {
   sidebar: {
     "/documentation/": ["vuepress.md", "markdown.md", "it-basics.md"],
-    "/windows10/": ["windows10.md", "wsl.md"],
+    "/windows10/": ["Windows10.md", "Wsl.md"],
     "/visual-studio-code/": [
       "vscode.md",
       "get-started.md",
