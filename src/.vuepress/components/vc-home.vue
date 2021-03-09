@@ -1,15 +1,17 @@
 <template>
   <div class="topics">
-    <a class="" v-for="(url, title) in topic" :href="url">
+    <a class="" v-for="(url, title) in topic" :href="base + url">
       <h1>{{ title }}</h1>
     </a>
   </div>
 </template>
 
 <script>
+import { base } from "../config";
 export default {
   data() {
     return {
+      base: base,
       topic: {
         React: "/react",
         Javascript: "/javascript",
