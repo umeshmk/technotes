@@ -309,7 +309,10 @@
 - **Exclude some URI**
   - In `VerifyCsrfToken` => `$except`
 - **x-csrf-token** (Ajax requests)
-  - _Add_ => `<meta name="csrf-token" content="{{ csrf_token() }}">`
+  - _Add_ =>
+  ```php
+  <meta name="csrf-token" content="{{ csrf_token() }}">
+  ```
   - _Axios HTTP Library_
     - Default library by laravel
     - `csrf` is applied to all ajax request in `resources/js/bootstrap.js`
@@ -946,7 +949,9 @@
     ```
 
   - _Comment_
-    - `{{-- This is a comment. Not shown in rendered html code --}}`
+    ```php
+    {{-- This is a comment. Not shown in rendered html code --}}
+    ```
   - _Php code_
     - `@php ……….. @endphp`
 
@@ -1024,7 +1029,10 @@
 - **Version / Cache Busting**
   - Appends a _hash_ to filename
   - `mix.js (……..) . version()`
-  - usage : `<script src = ‘ {{ mix (“js/app.js”) }} ‘ >`
+  - usage :
+  ```php
+  <script src = ‘ {{ mix (“js/app.js”) }} ‘ >
+  ```
   - Only in production. Not use in development.
     ```js
     if (mix.inProduction()) {

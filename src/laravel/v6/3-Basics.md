@@ -123,7 +123,10 @@
 - **Exclude some URI**
   - In `VerifyCsrfToken` => `$except`
 - **x-csrf-token** (Ajax requests)
-  - _Add_ => `<meta name="csrf-token" content="{{ csrf_token() }}">`
+  - _Add_ =>
+  ```php
+  <meta name="csrf-token" content="{{ csrf_token() }}">
+  ```
   - _Axios HTTP Library_
     - Default library by laravel
     - `csrf` is applied to all ajax request in `resources/js/bootstrap.js`

@@ -5,41 +5,45 @@
 - **Introduction**
 
   - _Layout Master_ (`layouts/app.blade.php`)
-    ```php
+
+```php
     @yield (‘title’)                # define
     @section (“sidebar”)
     ……..
     @show                           # both define & yield section
-    ```
-  - _Extending layout_ (`child.blade.php`)
+```
 
-    ```php
-    @extends (‘layouts.app’)
+- _Extending layout_ (`child.blade.php`)
 
-    @section (‘title’, “This is title”)
+```php
+  @extends (‘layouts.app’)
 
-    @section (‘title’) …….………. @endsection
+  @section (‘title’, “This is title”)
 
-    @section (“sidebar”)
-      @parent
-      <p> Appended after parent’s content </p>
-    @endsection
-    ```
+  @section (‘title’) …….………. @endsection
 
-    - _Usage_ : `return view (“child’);`
+  @section (“sidebar”)
+    @parent
+    <p> Appended after parent’s content </p>
+  @endsection
+```
+
+- _Usage_ : `return view (“child’);`
 
 - **Components & slots**
 
   - _Component_ (`alert.blade.php`)
-    ```php
+
+```php
     <div class=”alert” >
       <h1> {{ $msg }} </h1>
       {{ $slot }}
     </div>
-    ```
-  - _Usage_
+```
 
-    ```php
+- _Usage_
+
+```php
     @component (‘alert’)
       @slot ('msg')
         # code
@@ -48,39 +52,46 @@
     @endcomponent
 
     @component (“alert”, [‘foo’ => ‘bar’])    # Pass data directly
-    ```
+```
 
-  - _Aliasing_
-    - `views/components/alert.blade.php`
-      ```php
+- _Aliasing_
+  - `views/components/alert.blade.php`
+
+```php
       # AppServiceProvider
       boot()	 {
        	Blade::component (“componets.alert” , “alert”);
         }
-      ```
+```
+
     - _Usage_
       - `@alert ... @endalert`
 
 - **Display data**
-  ```php
+
+```php
   {{ $name }}                  # variable
   {{ time() }}                 # Function / method
   {!! $name !!}                # Unescaped data
-  ```
-  - _Unrendered_ (Vue / React js variables)
-    ```php
+```
+
+- _Unrendered_ (Vue / React js variables)
+
+```php
     @{{ name }}
     # OR
     @verbatim
     	<p> {{ name }} </p>
     @endverbatim
-    ```
-  - _JSON_
-    - `<script> var a = @json ($array); </script>`
+```
+
+- _JSON_
+  - `<script> var a = @json ($array); </script>`
 - **Control structures**
 
   - _IF_
-    ```php
+
+```php
     @if (condition)
     …….
     @elseif (condition)
@@ -88,14 +99,18 @@
     @else
     …...
     @endif
-    ```
-  - _Auth_
-    ```php
+```
+
+- _Auth_
+
+```php
     @auth …….… @endauth               # also @auth (“guardname”)
     @guest …….... @endguest           # also @guest (“admin”)
-    ```
-  - _Switch_
-    ```php
+```
+
+- _Switch_
+
+```php
     @switch ($i)
     	@case(1)
     		………
@@ -105,10 +120,11 @@
     	@default
     		………
     @endswitch
-    ```
-  - _Loop_
+```
 
-    ```php
+- _Loop_
+
+```php
     @for ($a = 1; $a < 6; $a++)
     @foreach ($users as $user)
     @while (condition)
@@ -120,40 +136,51 @@
          ->last
          ->index
          ->parent->first
-    ```
+```
 
-  - _Comment_
-    - `{{-- This is a comment. Not shown in rendered html code --}}`
-  - _Php code_
-    - `@php ……….. @endphp`
+- _Comment_
+
+```php
+  {{-- This is a comment. Not shown in rendered html code --}}
+```
+
+- _Php code_
+
+  - `@php ……….. @endphp`
 
 - **Forms**
   - `@csrf`
   - `@method (“put”);`
 - **Include partial views**
+
   - `@include (“partials.profile”, [“foo” => “bar”])`
   - _Aliasing_
-    ```php
+
+```php
     # AppServiceProvider
     boot()  {
     	Blade::include (“partials.profile”, “profile”);
     }
-    ```
+```
+
     - _Usage_ : `@profile([“foo” => “bar”])`
+
 - **Stacks**
   - `@stack (“script”)`
   - _Usage_ :
     - `@push (“script”) .... @endpush`
 - **Extend Blade**
-  ```php
+
+```php
   # AppServiceProvider
   boot() {
     Blade::directive (“datetime”, function ($t) {
       return “ <?php echo $t->format (“m/d/y H:i “);
     });
   }
-  ```
-  - _Usage_ : `@datetime ($time)`
+```
+
+- _Usage_ : `@datetime ($time)`
 
 ## # LOCALIZATION
 
@@ -162,11 +189,14 @@
 ## # FRONTEND SCAFFHOLDING
 
 - **Package.json** (_axios laravel-mix lodash sass vue_)
-  ```bash
+
+```bash
   npm install
   npm run dev
           watch
-  ```
+
+```
+
 - Laravel Mix configs in `Webpack.mix.js`
 - **Add UI (Bootstrap, Vue, React)**
   - add package - `composer require laravel/ui --dev`
@@ -182,15 +212,15 @@
 
 - Mix make Webpack easier using `Webpack.mix.js`
 
-  ```js
+```js
   mix.js (“resources/js/app.js”, “public/js”)
      .sass (“resources/css/app.scss”, “public/css”)
-  ```
+```
 
-  ```sh
+```sh
   npm install
   npm run {dev | production | watch | watch-poll}
-  ```
+```
 
 - **Working with scss**
 
@@ -200,11 +230,11 @@
     - absolute url(unchanged) - `url(/path/to/foo)` or `url(http://path.co/to/foo)`
     - Stop rewriting
 
-      ```js
-      mix.sass("resource/foo", "public/foo").options({
-        processCssUrls: false
-      });
-      ```
+```js
+mix.sass("resource/foo", "public/foo").options({
+  processCssUrls: false,
+});
+```
 
 - **Working with js**
   - _Vendor extraction_
@@ -214,18 +244,20 @@
 - **Copy** - `mix.copy("fromfoo", "Tobar")`
 - **CopyDir** - `mix.copyDirectory("fromfoo", "Tobar")`
 
-- **Version / Cache Busting**
-
+* **Version / Cache Busting**
   - Appends a _hash_ to filename
   - In webpack - `mix.js("resource/js/app.js", "public/js").version()`
-  - In Html - `<script src = " {{ mix (“js/app.js”) }} " >`
+  - In Html -
+  ```html
+  <script src = " {{ mix (“js/app.js”) }} " >
+  ```
   - Only in production. Not use in development.
 
-    ```js
-    if (mix.inProduction()) {
-      mix.version();
-    }
-    ```
+```js
+if (mix.inProduction()) {
+  mix.version();
+}
+```
 
 - **BrowserSync**
   - Reload site on changes to resources
