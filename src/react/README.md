@@ -1,5 +1,7 @@
 # React
 
+<vc-img url="https://i.imgur.com/lSeQFDs.png" size=""/>
+
 :::tip Helpful
 
 - [roadmap.sh/react](https://roadmap.sh/react)
@@ -265,6 +267,8 @@ change(){
 
 ### Handling Events
 
+- [Supported Events](https://reactjs.org/docs/events.html#supported-events)
+
 <vc-table>
 <template v-slot:cola>
 
@@ -279,16 +283,20 @@ change(){
 ```jsx
 // jsx
 <div onClick={handleClick}></div>
+// use "onClickCapture" if using capture
 ```
 
 </template>
 </vc-table>
 
 ```js
-// event 'e' is a Synthetic event
+// event 'e' is a Synthetic event - cross browser wrapper for native events
+// same interface as browser specific events
 function handleClick(e) {
   // return false; // won't work
   e.preventDefault(); // work
+
+  // e.nativeEvent; // native browser event (rarely needed)
 }
 ```
 
@@ -844,4 +852,341 @@ render(){
 }
 ```
 
-- Portal can be anywhere in DOM tree. **But it's position is same in React tree**. So we can use events bubbled from portal to Parent
+- Portal can be anywhere in DOM tree. **But it's position is same in React tree**. So we can use events bubbled from portal to Parent. (Remember this events are not html events but SyntheticEvents used by react & so it works correctly.)
+
+### Profiler
+
+- Statistics for component like how many time component renders.
+- Refer to reference for more.
+
+```jsx
+// App.js
+return (
+  <div>
+    <Profiler id="header" onRender={callback}>
+      <Header />
+    </Profiler>
+    <Profiler id="main" onRender={callback}>
+      <Main />
+    </Profiler>
+  </div>
+);
+```
+
+### Reconciliation
+
+- Checks for - Element Type, attributes & childrens (and keys)
+- Re-render means calling `render()` not mount/unmount component
+- After Re-render React will check for any difference in previous and new React tree. Then update DOM only for changed element.
+- Check reference for more
+- **ReactFiber** is the new reconciliation engine in React 16.
+
+### Refs and DOM
+
+- Refs is used to access
+  1. DOM Nodes
+  2. React Class Elements (Note - Cannot access functional components because it does not have instances)
+  3. Inside React Function Elements (must use `forwardRef`)
+- When to use ? - focus, select, animations, 3rd party DOM libraries, etc
+- `React.createRef` is latest and `callback ref` is older way to implement Refs.
+- Don't overuse Refs.
+
+```jsx
+class Foo extends React.Component {
+  constructor(props) {
+    super(props);
+    this.myRef = React.createRef(); // access using "this.myRef.current"
+  }
+  render() {
+    return <div ref={this.myRef}>Helloworld</div>;
+    // return <MyText ref={this.myRef}>Helloworld</MyText>; // incase of class component
+  }
+}
+```
+
+### Render Props
+
+> Maybe it's replaced by Hooks ?
+
+- Sharing code between components using prop who's value is a function.
+  - Code is nothing but behavior that we need to share (portable)
+- Used by `react-router, downshift, formik`
+
+_Components which share same behavior_
+
+<vc-table>
+<template v-slot:cola>
+
+```jsx
+// Foo
+<>
+  <div>This is Foo</div>
+  <div>{this.props.data}</div>
+</>
+```
+
+</template>
+<template v-slot:colb>
+
+```jsx
+// Bar
+<>
+  <div>This is Bar</div>
+  <div>{this.props.data}</div>
+</>
+```
+
+</template>
+</vc-table>
+
+_Behaviour - reusable_
+
+```jsx
+class Behaviour extends React.Component {
+  // code
+  // some state.data  eg mouse position
+  doSomething() {
+    // manipulate state.data on some event eg onMouseMove
+  }
+  render() {
+    return (
+      <>
+        <div>This is shared behavior</div>
+        {this.props.render(this.state.data)}
+      </>
+    );
+  }
+}
+```
+
+_Use Behaviour_
+
+```jsx
+// App
+// Note - we can use any name instead of "render="
+<>
+  <div>This is app. </div>
+  <Behaviour render={(data) => <Foo data={data}>} />
+  <Behaviour render={(data) => <Bar data={data}>} />
+</>
+```
+
+### StrictMode
+
+- In development only
+- Identifies errors
+- No UI just like fragment
+
+```jsx
+<React.StrictMode>
+  <App />
+</React.StrictMode>
+```
+
+## Hooks
+
+- Hooks are just functions.
+- Hooks don't work in Class.
+
+:::danger Why Hooks ?
+**Reusing Logic (Leads to wrapper hell)**
+
+- HOC
+- Render Props
+
+**Huge Components**
+
+- Similar things in different places like subscribe/unsubscribe in `componentDidMount/componentWillUnMount`
+
+**Classes are confusing**
+
+- Hooks allows us to use all react features without class
+
+**Mixins are bad**
+
+**State Management Libraries**
+
+- Makes component reuse difficult
+
+:::
+
+### Rules of Hooks
+
+- Linter will implement the rules.
+- React depends on order of the Hook calls in a component
+- Rules
+  1. Don't call hooks inside - loop, conditions & nested functions.
+  2. Call from - Function Component & Custom Hooks
+
+### useState
+
+- In class `this.setState({foo:3, bar:4})` - states are merged. But in hooks its replaced.
+
+```jsx
+import React, { useState } from "react";
+
+function Foo(props) {
+  // intialValue can be object, string, number, array etc
+  // returns a value & function to update value
+  const [value, setValue] = useState(initialValue);
+  const [state2, setState2] = useState(initialValue2); // can use multiple times
+
+  // set next value
+  setValue(nextValue);
+
+  // set next value - using prev value
+  setValue((prev) => {
+    // calculate next value using prev
+    //
+    // return next value
+    // If object, we can also merge other values {...prevValues, nextValue}
+  });
+
+  // if next === prev then no re-render takes place
+}
+```
+
+### useEffect
+
+- Used in - Data fetching, subscription, DOM changes, etc
+- Called after every render like (but after DOM is updated) - `componentDidMount, componentDidUpdate & componentWillUnMount`
+- Most of the effects are Asynchronous. But for some synchronous effect like measure layout we have a `useLayoutEffect`
+- 2 Types
+  - Needs cleanUp (to avoid memory leak) - eg: subscription
+  - No cleanUp - eg: Logging, data fetching, DOM changes
+
+```jsx
+function Foo(props) {
+  // we can use multiple effects. They maintain the same order as written.
+  useEffect(() => {
+    // This inner function is different everytime render is performed.
+    // Because in js each function is separate when created.
+    // ()=>{} === ()=>{} // false
+    // Helps maintain the correct state
+
+    return () => {
+      // clean up function called after every render. This helps to avoid bugs
+    };
+    // re-run if atleast 1 value is changed after render. COmpare prev & current render.
+    // pass empty [] to run effect only once after mounting
+  }, [foo, bar]);
+}
+```
+
+### useContext
+
+- If context changes then react will re-render
+
+```jsx
+import MyContext from "./path/MyContext";
+
+function Foo(props) {
+  // value passed depends on <MyContext.Provider value="..."> ancestor
+  const myValue = useContext(MyContext);
+}
+```
+
+### useReducer
+
+- An alternative to `useState` if state is complex & state updates are adhoc
+- It's similar to Redux
+
+```jsx
+const initialState = {
+  /*.....*/
+};
+
+// optional
+// function initFunc(initialArgs) {
+//   return {
+//     /*.....*/
+//   };
+// }
+
+function Foo(props) {
+  const [state, dispatch] = useReducer(reducer, initialState);
+
+  // optional
+  // const [state, dispatch] = useReducer(reducer, initialArgs, initFunc);
+}
+
+// reducer is a function
+// (preState, action) => nextState
+function reducer(prevState, action) {
+  switch (action.type) {
+    case "FOO":
+      // calculate
+      return { ...prevState, newFoo };
+    case "BAR":
+      // calculate
+      return { ...prevState, newBar };
+
+    // optional
+    case "RESET":
+      return initFunc(action.payload);
+
+    default:
+      throw new Error("Invalid action type");
+  }
+}
+```
+
+### useCallback/useMemo
+
+- Used for Optimization - Cache & avoid heavy calculations on every render based on dependencies.
+
+```jsx
+// useCallback(func, deps) === useMemo(() => func, deps )
+
+// returns callback
+const memoizedCallback = useCallback(() => {
+  // This function is a memoization function
+  // It will cache the value until dependencies changes
+}, [input]);
+
+// returns value
+const memoizedValue = useMemo(() => /*somethingHeavy(a, b);*/, [a, b]);
+```
+
+### useRef
+
+- Used to store an immutable object.
+- But it's `obj.current` can be mutated on render.
+- A change in `obj.current` won't trigger re-render
+
+```jsx
+// create
+//   - initialValue is .current
+const inputEl = useRef(initialValue) // initialValue can be null or some value.
+
+// add
+<input ref={inputEl} type="text" />
+
+// use
+inputEl.current.focus()
+```
+
+### Building your own hooks
+
+```jsx
+function Foo(props) {
+  // call useMyCustomHook() with any arg value which can be state/prop too.
+}
+
+function useMyCustomHook(value) {
+  // use react builtin hooks
+  // can be state or effect or anything
+  //
+  // value is optional
+  //
+  // return any state values or anything else needed
+}
+```
+
+### Hooks FAQ
+
+- Adoption strategy
+  - No hook for `componentDidCatch`
+  - Redux and React-router supports hooks
+- From classes to hooks
+  - `useRef.current` is like property of some class INSTANCE.
