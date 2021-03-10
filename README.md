@@ -1,3 +1,5 @@
-My notes as short as possible.
+**My Web Development Notes as short as possible.**
 
-Created using Vuepress.
+[https://umeshmk.github.io/technotes/](https://umeshmk.github.io/technotes/)
+
+_Created using Vuepress._
