@@ -40,17 +40,6 @@ module.exports = {
           "Http.md",
         ],
       },
-      {
-        title: "Data structure & algorithm",
-        collapsable: false,
-        children: [
-          "dsa/Data structures.md",
-          "dsa/Algorithms.md",
-          "dsa/Big O.md",
-          "dsa/Cracking the coding interview.md",
-        ],
-        initialOpenGroupIndex: -1,
-      },
     ],
     "/laravel/v6/": [
       {
@@ -132,5 +121,14 @@ module.exports = {
     "/resources/": [""],
     "/oop/": [""],
     "/react/": ["", "awesome-react.md", "awesome-react-components.md"],
+    "/design-patterns/": ["", "solid.md"],
+    "/datastructures-&-algorithms/": [
+      "",
+      "resources.md",
+      "dsa/Data structures.md",
+      "dsa/Algorithms.md",
+      "dsa/Big O.md",
+      "dsa/Cracking the coding interview.md",
+    ],
   },
 };

@@ -116,6 +116,7 @@ _(Stick to few and Official ones)_
 
 ## Design
 
+- [principles.design](https://principles.design/)
 - [goabstract/Awesome-Design-Tools](https://github.com/goabstract/Awesome-Design-Tools)
 - [gztchan/awesome-design](https://github.com/gztchan/awesome-design)
 
@@ -129,6 +130,8 @@ _(Stick to few and Official ones)_
 - [lukasz-madon/awesome-remote-job](https://github.com/lukasz-madon/awesome-remote-job#readme)
 - Resume
   - [posquit0/Awesome-CV](https://github.com/posquit0/Awesome-CV)
+  - [deedy/Deedy-Resume](https://github.com/deedy/Deedy-Resume)
+  - [Youtube](https://www.youtube.com/watch?v=aKjsy-b00QM)
 
 ## Placeholder
 

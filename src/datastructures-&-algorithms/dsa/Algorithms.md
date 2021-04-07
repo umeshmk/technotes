@@ -4,16 +4,17 @@
 
 ## Top 10 Algorithms
 
-src - https://www.youtube.com/watch?v=r1MXwyiGi_U
+src - [Youtube](https://www.youtube.com/watch?v=r1MXwyiGi_U)
 
 1. Depth first search
 2. Breadth first search
-3. Match Brackets
+3. Match Brackets/Parentheses
 4. Hashtables
 5. Variables/pointers manipulations
+   - Ex - find longest palindrome substring in a string
    - Quicksort & Mergesort are faster than Bubblesort
 6. Reverse Linked list
-7. Sort
+7. Sorting algorithms
 8. Recursion (Rarely used in production because its a stack which has limits of iterations. Not sure.)
 9. Custom Datastructures (Classes, OOPs)
 10. Binary Search

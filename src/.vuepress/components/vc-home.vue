@@ -23,6 +23,8 @@ export default {
         Documentation: "documentation/vuepress.html",
         Windows10: "windows10/windows10.html",
         "Tools (Webpack)": "tools/webpack.html",
+        "Datastructures & Algorithms": "datastructures-&-algorithms",
+        "Design Patterns": "design-patterns",
         Miscellaneous: "miscellaneous/Git.html",
         "Laravel 6 (deprecated)": "laravel/v6/1-GettingStarted.html",
         "Php (deprecated)": "php",
