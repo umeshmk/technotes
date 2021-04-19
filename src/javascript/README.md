@@ -756,7 +756,7 @@ _Yes it can be done in multiple ways. We can go round & round & round or simply 
 - _Constructor -> Constructor_ (_Extend_)
   - **`Parent.call(this, args)`**
   - **`Child.prototype = Object.create(Parent.prototype)`**
-  - **`Child.prototype = Child`**
+  - **`Child.prototype.constructor = Child`**
 
 * _Get_ - **`Object.getPrototypeOf(obj)`**
 * _Set_ - **`Object.setPrototypeOf(obj)`**

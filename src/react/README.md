@@ -778,7 +778,7 @@ class Bar extends React.Component {
 </template>
 </vc-table>
 
-We can reduce the repeation of logic using HOC
+We can reduce the repeation of logic (`componentDidMount()` method) using HOC
 
 ```jsx
 // HOC - returns a new component
@@ -848,7 +848,7 @@ const BarWithSubscription = subscription(Bar, "data/bar");
 // child = element, string, fragment - (anything that renders)
 // DOMElement = Any html element regardless of location
 render(){
-  return ReactDOM.creatPortal(child, DOMElement);
+  return ReactDOM.createPortal(child, DOMElement);
 }
 ```
 

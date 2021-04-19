@@ -127,6 +127,7 @@ module.exports = {
       "resources.md",
       "dsa/Data structures.md",
       "dsa/Algorithms.md",
+      "dsa/examples.md",
       "dsa/Big O.md",
       "dsa/Cracking the coding interview.md",
     ],
