@@ -9,6 +9,7 @@
 - Snippets
   - [_ES7 React/Redux/GraphQL/React-Native snippets_](https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets) - _Recommended_
   - [JavaScript (ES6) code snippets](https://marketplace.visualstudio.com/items?itemName=xabikos.JavaScriptSnippets) - _Not Recommended_.
+- Fetch data - use [tannerlinsley/react-query](https://github.com/tannerlinsley/react-query)
 
 :::
 

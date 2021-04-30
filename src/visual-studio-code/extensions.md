@@ -34,6 +34,7 @@ Add in **.vscode/extensions.json** or **.code-workspace**
 ```json
 // All
 [
+  "usernamehw.errorlens",
   "GitHub.github-vscode-theme",
   "vscode-icons-team.vscode-icons",
   "esbenp.prettier-vscode",

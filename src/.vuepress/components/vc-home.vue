@@ -13,6 +13,7 @@ export default {
     return {
       base,
       topic: {
+        Typescript: "typescript",
         React: "react",
         Javascript: "javascript",
         "Object Oriented Programming": "oop",

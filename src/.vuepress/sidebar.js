@@ -120,6 +120,14 @@ module.exports = {
     "/surveys/": ["", "github.md"],
     "/resources/": [""],
     "/oop/": [""],
+    "/typescript/": [
+      "",
+      "narrowing.md",
+      "function.md",
+      "object.md",
+      "type-manipulation.md",
+      "class.md",
+    ],
     "/react/": ["", "awesome-react.md", "awesome-react-components.md"],
     "/design-patterns/": ["", "solid.md"],
     "/datastructures-&-algorithms/": [
