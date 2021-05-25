@@ -1,21 +1,15 @@
 # Sass/Scss
 
-:::danger Do you need it ?
+:::tip Most useful
 
-_What is most needed from Sass ? Alternatives_
-
-- Parials Imports (~ `postcss-import` or directly in js file or simple css `@import`)
-- SingleLine Comments (~ `postcss-scss` parser)
-- Nesting (~ preset - nesting)
-- Variables (~ preset - custom properties)
-  - Never use sass variables - why? Because each ReactComponents has it's own css & will need to import partial `_variables.scss`.
-  - Instead custom properties are globally available
-- Special Functions (~ Css standards - `calc(), env(), var(), min(), or max()` )
-- Mixins (mostly for prefixes) (~ preset - autoprefixer)
+- React [recommends](https://create-react-app.dev/docs/adding-a-sass-stylesheet) to avoid sharing same class in different components. Instead share components directly.
+- Parial Imports
+- Nesting
+- Avoid Variables. Instead use custom properties.
+- Special Functions (Use Css standards - `calc(), env(), var(), min(), or max()`)
+- Mixins (mostly for prefixes) (use autoprefixer)
 
 _React/Vue Components - we can simply use css modules with **scoped css classes**._
-
-**Sass + Autoprefixer + purgecss is best combination.**
 
 :::
 

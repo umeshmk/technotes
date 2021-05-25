@@ -18,10 +18,14 @@ _Always "use strict". Helps understand, optimize & avoid old JavaScript pitfalls
 
 **Object.getOwnPropertyNames(obj)**
 
-- One of the most useful property. Lists both enumerable & non-enumerable properties for obj.
-- This will help know if something is own property or inherited.
-- Try - `Object.getOwnPropertyNames(this)` this is window object gave me 963 properties of browser.
-- Also `Object.keys(obj)`
+- Lists both enumerable & non-enumerable properties for obj.
+- Help us know if its own property or inherited.
+
+```js
+function foo() {}
+console.log(foo); // foo() {}
+console.log(Object.getOwnPropertyNames(foo)); // ["length", "name", "arguments", "caller", "prototype"]
+```
 
 :::
 
@@ -30,6 +34,22 @@ _Always "use strict". Helps understand, optimize & avoid old JavaScript pitfalls
 <!-- Edit this image on draw.io -->
 <!-- https://pastebin.com/jnvNLjaQ -->
 <vc-img url="https://i.imgur.com/xLi27XF.png" size="xl" />
+
+## Execution Context
+
+- Everytime we run javascript code a `global` execution context is created by the js engine.
+- This `global` context has various features like `window` object in browser. Similarly other features in nodejs.
+- This context consists of 2 phases.
+
+1. **Memory allocation**
+   - _Variables_ - gets value as `undefined`.
+   - _Functions_ - store the defination of that function
+2. **Code execution (synchronously and single thread)**
+   - _Variables_ - gets value as assigned in the code
+   - _Functions_ - If invoked will create another `local` execution context.
+
+- `global` & all `local` contexts are loaded in a `callstack`. Each new context will have it's previous context variables & functions in it's scope. It is called `scope chain`
+- When the execution context is done running it gets destroyed.
 
 ## `<script>`
 

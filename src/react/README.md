@@ -5,7 +5,8 @@
 :::tip Helpful
 
 - [roadmap.sh/react](https://roadmap.sh/react)
-- Create react app from Scratch - Check [react-refresh-app](https://github.com/umeshmk/react-refresh-app) repo in my Github.
+- [Full React Course 2020 - FreeCodeCamp (youtube)](https://www.youtube.com/watch?v=4UZrsTqkcW4)
+- Use `Create-react-app` with typescript _( also Check my [react-refresh-app](https://github.com/umeshmk/react-refresh-app) repo in my Github.)_
 - Snippets
   - [_ES7 React/Redux/GraphQL/React-Native snippets_](https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets) - _Recommended_
   - [JavaScript (ES6) code snippets](https://marketplace.visualstudio.com/items?itemName=xabikos.JavaScriptSnippets) - _Not Recommended_.
@@ -19,16 +20,6 @@
   - Vscode
   - Chrome
 - JSX is optional but better. Use Babel Repl.
-
-:::danger TypeScript & React
-https://medium.com/better-programming/modern-languages-suck-ad21cbc8a57c
-
-_There’s a conflict between programming paradigms — TypeScript is OOP-first, while React is functional-first.
-React expects its props (i.e. function arguments) to be immutable, while TypeScript has no proper built-in support for immutable data structures._
-
-_The only real benefit that TypeScript provides over JavaScript for React development is not having to worry about PropTypes._
-
-:::
 
 ## v17
 

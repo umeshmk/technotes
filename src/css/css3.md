@@ -1,5 +1,44 @@
 # CSS-3
 
+## GRID
+
+```scss
+// ----------- GRID CONTAINER -------------
+display: grid | (inline-grid);
+
+// gap | grid-gap
+gap: 10px 20px;
+row-gap: 10px;
+column-gap: 20px;
+
+// Template
+// Better use : repeat(4, 1fr) === auto auto auto auto
+grid-template-columns: 10px auto 100px 50px;
+grid-template-rows: 10px auto 100px 50px;
+
+// horizontal alignment (needs width)
+justify-content: normal | center | start | end | space-evenly | space-between |
+  space-around;
+
+// vertical alignment (needs height)
+align-content: normal | center | start | end | space-evenly | space-between |
+  space-around;
+
+// ----------- GRID ITEMS -------------
+
+//GridLine - based on column-lines | row-lines
+grid-column: 1 / 3 OR 1 / span 2; // both are equal
+grid-column-start: 1; // start line 1
+grid-column-end: 3; // end on line 3
+
+grid-row: 1 / 3 OR 1 / span 2; // both are equal
+grid-row-start: 1; // start line 1
+grid-row-end: 3; // end on line 3
+
+// grid-area(shorthand): grid-row-start grid-column-start grid-row-end grid-column-end;
+grid-area: 1 / 2 / 5 / 6;
+```
+
 ## BORDER RADIUS
 
 ```js

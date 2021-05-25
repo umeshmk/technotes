@@ -12,7 +12,7 @@
   "editor.fontFamily": "'JetBrains Mono','Source Code Pro', 'Cascadia Code', Consolas, 'Courier New', monospace",
   "editor.fontSize": 15,
   "editor.suggestSelection": "first",
-  "editor.snippetSuggestions": "top",
+  "editor.snippetSuggestions": "inline",
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "editor.formatOnSave": true,
   "editor.cursorStyle": "block",
@@ -40,6 +40,11 @@
     "**/dist": true
   },
 
+  // ==> Emmet React<==
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact" // provides html in jsx
+  },
+
   // ==> Prettier & Eslint Fixex<==
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.codeActionsOnSave": {
@@ -49,6 +54,7 @@
   "eslint.alwaysShowStatus": true,
 
   // ==> Markdown <==
+  "errorLens.excludePatterns": ["**/*.md"],
   "markdown-preview-enhanced.previewTheme": "github-light.css",
   "[markdown]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",

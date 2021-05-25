@@ -128,7 +128,13 @@ module.exports = {
       "type-manipulation.md",
       "class.md",
     ],
-    "/react/": ["", "awesome-react.md", "awesome-react-components.md"],
+    "/react/": [
+      "",
+      // "libraries.md",
+      "redux.md",
+      "awesome-react.md",
+      "awesome-react-components.md",
+    ],
     "/design-patterns/": ["", "solid.md"],
     "/datastructures-&-algorithms/": [
       "",
