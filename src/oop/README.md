@@ -1,12 +1,10 @@
 # Object Oriented Programming
 
-:::danger GoodBye OOP
-Source - [Medium](https://medium.com/@cscalfani/goodbye-object-oriented-programming-a59cda4c0e53)
-:::
-
 :::danger OOP - The Trillion Dollar Disaster ?
-_Source_ : [Famous Medium article](https://medium.com/better-programming/object-oriented-programming-the-trillion-dollar-disaster-92a4b666c7c7) - Read other articles too.
 
+- _Source_
+  - [Famous Medium article](https://medium.com/better-programming/object-oriented-programming-the-trillion-dollar-disaster-92a4b666c7c7) - Read other articles too.
+  - [Medium](https://medium.com/@cscalfani/goodbye-object-oriented-programming-a59cda4c0e53)
 - _In Real World, You do not inherit “behaviors” from your parents, you develop your own behaviors. And you’re unable to “override” your parents’ behaviors._
 - _Fundamental error - Objects bind functions and data structures together in indivisible units._
 - **Design Patterns** - _OOP Guidelines like SOLID principle, dependency injection, design patterns, and others are just bandaids created to fill shortcomings of OOP._
@@ -19,16 +17,6 @@ _Source_ : [Famous Medium article](https://medium.com/better-programming/object-
 - _Elixir, Elm, F#, scala, clojure_
 - _With the right guidance and linting, JavaScript can be a good functional language._
   :::
-
-:::tip Always Use - Classes ? Constructors ? Factory Functions ?
-
-- React says NO to classes
-- Airbnb style says YES. [#classes--constructors](https://github.com/airbnb/javascript/blob/master/README.md#classes--constructors)
-
-_**Learn both. Since they do the same things.**_
-
-**Composition over Inheritance** - Many developers prefer this over both Prototype/Classes Inheritance.
-:::
 
 :::tip Types of Programming
 

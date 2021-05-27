@@ -127,6 +127,7 @@ module.exports = {
       "object.md",
       "type-manipulation.md",
       "class.md",
+      // "react.md",
     ],
     "/react/": [
       "",

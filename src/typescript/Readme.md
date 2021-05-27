@@ -6,11 +6,13 @@
 
 - [Reference](https://www.typescriptlang.org/docs/handbook/utility-types.html)
 - [typescriptlang.org](https://www.typescriptlang.org/docs/handbook/intro.html)
-- Typescript + React
-  - [Microsoft/TypeScript-React-Conversion-Guide#typescript-react-conversion-guide](https://github.com/Microsoft/TypeScript-React-Conversion-Guide#typescript-react-conversion-guide)
-  - [sitepoint.com/react-with-typescript-best-practices/](https://www.sitepoint.com/react-with-typescript-best-practices/)
+- **Typescript + React**
+  - [reactjs.org/docs/static-type-checking](https://reactjs.org/docs/static-type-checking.html#typescript)
+  - [github.com/piotrwitek/react-redux-typescript-guide](https://github.com/piotrwitek/react-redux-typescript-guide)
   - [github.com/typescript-cheatsheets/react](https://github.com/typescript-cheatsheets/react)
+  - [sitepoint.com/react-with-typescript-best-practices/](https://www.sitepoint.com/react-with-typescript-best-practices/)
   - Youtube - [React+Typescript app example](https://www.youtube.com/watch?v=sfmL6bGbiN8)
+  - (Archived) [Microsoft/TypeScript-React-Conversion-Guide](https://github.com/Microsoft/TypeScript-React-Conversion-Guide#typescript-react-conversion-guide)
 
 :::
 
@@ -213,7 +215,9 @@ type UserInterface = {
 </template>
 </vc-table>
 
-### Type casting/assertion/conversion
+### Type casting/assertion
+
+- Type assertion is not same as casting.
 
 ```ts
 // --- ex
@@ -227,6 +231,15 @@ let pageNumber = (page as unknown) as number;
 // --- ex
 const x = "hello" as number; // error
 const x = ("hello" as unknown) as number; // works
+```
+
+```ts
+// assertion means here code temporarily lies to compiler
+// that {} is of type IUser since it will be set soon
+const [user, setUser] = React.useState<IUser>({} as IUser);
+
+// later...
+setUser(newUser);
 ```
 
 ### null/undefined`
