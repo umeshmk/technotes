@@ -15,6 +15,7 @@ export default {
       topic: {
         Typescript: "typescript",
         React: "react",
+        GraphQL: "graphql",
         Javascript: "javascript",
         "Object Oriented Programming": "oop",
         Html: "html",

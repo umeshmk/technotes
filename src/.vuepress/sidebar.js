@@ -146,5 +146,6 @@ module.exports = {
       "dsa/Big O.md",
       "dsa/Cracking the coding interview.md",
     ],
+    "/graphql/": [""],
   },
 };
