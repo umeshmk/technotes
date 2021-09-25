@@ -147,5 +147,6 @@ module.exports = {
       "dsa/Cracking the coding interview.md",
     ],
     "/graphql/": [""],
+    "/testing/": ["", "cypress.md"],
   },
 };

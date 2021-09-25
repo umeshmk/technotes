@@ -17,6 +17,7 @@ export default {
         React: "react",
         GraphQL: "graphql",
         Javascript: "javascript",
+        Testing: "testing",
         "Object Oriented Programming": "oop",
         Html: "html",
         Css: "css",

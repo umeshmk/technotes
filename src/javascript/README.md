@@ -408,7 +408,7 @@ c("Outside :", x); // Outside : 10
 // Ex 2
 let x = 10;
 {
-  c("Inside :", x); // Error - cannot use before initializing
+  c("Inside :", x); // Error - cannot use before initializing - (No hoisting for let/const)
   let x = 5;
 }
 ```
@@ -462,8 +462,9 @@ function Foo() {
 }
 
 // let/const are not hoisted
-c(Foo()); // error
-let f = function Foo() {
+c(f()); // no access before initialization
+c(foo()); // not defined
+let f = function foo() {
   return 3;
 };
 ```

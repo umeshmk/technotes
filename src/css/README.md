@@ -9,7 +9,7 @@
 3. **Sass** `.scss`
 4. **Css-in-js** `.js` _(Styled components, Glamorous, Radium, Emotion )_
 5. [**Css Modules**](https://github.com/css-modules/css-modules) `App.module.css` _(Webpack's css-loader)_
-6. **Css Modules + Sass** `App.module.scss` **[Best IMO]**
+6. **Css Modules + Sass** `App.module.scss`
 
 :::
 
@@ -38,6 +38,7 @@ rgba( red, blue, green, alpha )         /* RGBA */
     Black is #000000
     White is #ffffff
     #ab34cd == #AB34CD
+    #12345678 - where last 78 stands for opacity
 ```
 
 ## UNITS
