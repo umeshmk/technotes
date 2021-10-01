@@ -1,16 +1,34 @@
 # Redux
 
-## Typescript
+[redux](https://redux.js.org/) <br/>
+[redux-toolkit](https://redux-toolkit.js.org/) <br/>
+[react-redux](https://react-redux.js.org/) <br/>
 
-- Strongly recommended
-- _Typescript + redux-toolkit_
-  - [Typescript](https://redux-toolkit.js.org/tutorials/typescript)
-  - [Usage-with-typescript](https://redux-toolkit.js.org/usage/usage-with-typescript)
+A _Global State Management_ library. It uses _"one way data flow"_ structure
+
+- **Predictable** - Same behaviour on client, server & native. Easy to test.
+- **Centralized** - State & logic both are Centralized
+- **Debuggable** - Allows "Time-travel debugging" using chrome extension
+- **Flexible** - Works with any UI & has addons like thunk, saga, etc
+- **Tiny** - Just 2kb (without RTK Query)
 
 :::tip When to use ?
 
 - _Context/hooks_ - Small to mid apps, forms
 - _Redux_ - Very large and Complex apps
+
+**TradeOffs**
+
+- Lot of Boilerplate & setup
+- Data fetching and caching is cumbersome.
+- Manual `extraReducers` boilerplate.
+- Manual Query Data Memoization is complex using Reselect. (Memoization means updating store only if data has changed.)
+
+**Data fetching and caching**
+
+- Avoid using Thunks if needed.
+- Libraries - `Apollo Client, React Query, Urql, and SWR`
+- See [comparison](https://react-query.tanstack.com/comparison)
 
 :::
 
@@ -19,86 +37,6 @@
 1. **Single source of truth** - Single global object as store
 2. **State is read-only** - Only action can change state
 3. **Changes are made with pure functions** - Reducers are pure functions
-
-## Redux Toolkit
-
-- [Redux Toolkit](https://github.com/reduxjs/redux-toolkit)
-  - It's an abstraction layer that wraps around redux core
-  - Includes - `redux, immer, redux-thunk, reselect`
-  - `react-redux` is not included
-
-```sh
-# Existing project
-npm install @reduxjs/toolkit
-
-# New project
-# template = @reduxjs/toolkit + react-redux
-yarn create react-app my-app --template redux
-yarn create react-app my-app --template redux-typescript
-```
-
-#### API
-
-- **`configureStore()`**
-  - A wrapper for redux `createStore`
-  - Automatically adds slice, middlewares, devtools, etc
-- **`createReducer()`**
-  - A function used instead of switch case
-  - Use `immer` behind the scenes
-- **`createAction()`**
-  - A function based on action string
-- **`createSlice()`**
-  - Accepts - reducer functions, name, intialState
-  - Generates - slice reducer, action creators
-- **`createAsyncThunk`**
-  - Accepts - action type, function(which returns promise)
-  - Generates - a thunk with 3 action types `pending/fulfilled/rejected`
-- **`createEntityAdapter`**
-  - Manage normalized data in store
-  - Generates - reusable reducers and selectors
-- **`createSelector`**
-  - A utility from `reselect`
-
-:::tip Redux needs immutable state
-
-Toolkit use `immer` internally which allows us to write mutable code.
-
-- `createSlice` & `createReducer` use immer internally
-
-:::
-
-## React-redux
-
-- [React-redux](https://react-redux.js.org/)
-- React binding for redux.
-- It uses hooks api. It is recommended instead of `connect()` api
-
-```js
-import { Provider } from "react-redux";
-import store from "./store";
-
-// wrap App in Provider
-<Provider store={store}>
-  <App />
-</Provider>;
-```
-
-```js
-// Get data from store in component
-import { useSelector, useDispatch } from "react-redux";
-import { increment, selectCount } from "./counterSlice";
-
-// use it like normal hooks
-const count = useSelector(selectCount);
-const dispatch = useDispatch(); // dipatch(increment())
-```
-
-#### Api
-
-- `<Provider store={store}>`
-- Hooks
-  - `useSelector(), useDispatch(), useStore()`
-  - `useActions()` - removed in v7.1
 
 ## Pure vs Impure function
 
@@ -140,10 +78,144 @@ function squareAll(list) {
 </template>
 </vc-table>
 
+## Typescript
+
+- Strongly recommended
+- _Typescript + redux-toolkit_
+  - [Typescript](https://redux-toolkit.js.org/tutorials/typescript)
+  - [Usage-with-typescript](https://redux-toolkit.js.org/usage/usage-with-typescript)
+
+```ts
+// app/store.ts
+import { configureStore } from "@reduxjs/toolkit";
+import counterReducer from "../features/counter/counterSlice";
+
+export const store = configureStore({
+  reducer: {
+    counter: counterReducer,
+  },
+});
+
+export type AppDispatch = typeof store.dispatch;
+export type RootState = ReturnType<typeof store.getState>;
+```
+
+```ts
+// app/hooks.ts
+import { TypedUseSelectorHook, useSelector, useDispatch } from "react-redux";
+import { RootState, AppDispatch } from "./store";
+
+export const useAppDispatch = () => useDispatch<AppDispatch>();
+export const useAppSelector: TypedUseSelectorHook<RootState> = useSelector;
+```
+
+```ts
+// features/Counter/counterSlice.ts
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { RootState } from "./../../app/store";
+
+interface State {
+  /*...*/
+}
+const initialState: State = {
+  /*...*/
+};
+
+const counterSlice = createSlice({
+  /*...*/
+  reducers:{
+    // action.payload is of type number
+    incrementBy: (state, action:PayloadAction<number>) => {
+      /*...*/
+    }
+})
+
+const selectCount = (state:RootState) => state.counter.value;
+```
+
+## Redux Toolkit
+
+- It's an abstraction layer that wraps around redux core
+- Includes - `redux, immer, redux-thunk, reselect`
+- `react-redux` is not included
+
+```sh
+# Existing project
+npm install @reduxjs/toolkit
+
+# New project
+# template = @reduxjs/toolkit + react-redux
+yarn create react-app my-app --template redux
+yarn create react-app my-app --template redux-typescript
+```
+
+#### API
+
+- **`configureStore()`**
+  - A wrapper for redux `createStore`
+  - Automatically adds slice, middlewares, devtools, etc
+- **`createReducer()`**
+  - A function used instead of switch case
+  - Use `immer` behind the scenes
+- **`createAction()`**
+  - A function based on action string
+- **`createSlice()`**
+  - Accepts - reducer functions, name, intialState
+  - Generates - slice reducer, action creators
+- **`createAsyncThunk`**
+  - Accepts - action type, function(which returns promise)
+  - Generates - a thunk with 3 action types `pending/fulfilled/rejected`
+- **`createEntityAdapter`**
+  - Manage [normalization](https://redux.js.org/tutorials/essentials/part-6-performance-normalization#normalizing-data)
+    - _"Normalization" means no duplication of data, and keeping items stored in a lookup table by item ID_
+    - _Normalized state shape usually looks like `{ids: [], entities: {}}`_
+  - Generates - reusable reducers and selectors
+- **`createSelector`**
+  - A utility from `reselect`
+  - Generates _memoized selectors_ that will only recalculate results when the inputs change ie caching.
+
+:::tip Redux needs immutable state
+
+Toolkit use `immer` internally which allows us to write mutable code.
+
+- `createSlice` & `createReducer` use immer internally
+
+:::
+
+## React-redux
+
+- React binding for redux.
+- It uses hooks api. It is recommended instead of `connect()` api
+
+```js
+import { Provider } from "react-redux";
+import store from "./store";
+
+// wrap App in Provider
+<Provider store={store}>
+  <App />
+</Provider>;
+```
+
+```js
+// Get data from store in component
+import { useSelector, useDispatch } from "react-redux";
+import { increment, selectCount } from "./counterSlice";
+
+// use it like normal hooks
+const count = useSelector(selectCount);
+const dispatch = useDispatch(); // dipatch(increment())
+```
+
+#### Api
+
+- `<Provider store={store}>`
+- Hooks
+  - `useSelector(), useDispatch(), useStore()`
+  - `useActions()` - removed in v7.1
+
 ## Redux
 
-- A state management libraries.
-- It uses _one way data flow_ structure
 - **Actions** are like events
 - **Reducers** are like event listeners
 - **Dispatch** is like trigger to events
@@ -297,6 +369,8 @@ const { A, B } = fooSlice.actions;
 
 ### Async Thunks
 
+> Note : Use **react-query** like library. Also redux/toolkit comes with RTK Query
+
 - Just a function with async logic.
 - Redux Toolkit automatically sets up a middleware `redux-thunk`
 - Thunk function always gets args `(dispatch, getState)`
@@ -317,7 +391,7 @@ const initialState = {
 }
 
 
-const fetchPosts = createAsyncThunk("posts/fetchPost", async () => {
+const fetchPosts = createAsyncThunk("posts/fetchPost", async (sendDataIfAny) => {
   // also use try/catch
   const response = await fetchPost("api/posts");
 
@@ -334,7 +408,7 @@ const postSlice = createSlice({
   name: "post",
   initialState,
   reducers: {
-    // code
+    /*...*/
   },
   extraReducers: {
     [fetchPosts.pending]:(state, action) => {
@@ -348,6 +422,15 @@ const postSlice = createSlice({
       state.status = "failed";
       state.error = action.error.message;
     }
+  },
+
+  // # Another way
+  extraReducers(builder){
+    builder
+    .addCase(fetchPost.pending, (state,action) => { /*..*/ })
+    .addCase(fetchPost.fulfilled, (state,action) => { /*..*/ })
+    .addCase(fetchPost.rejected, (state,action) => { /*..*/ })
+
   }
 
 })
@@ -370,4 +453,24 @@ const count = useSelector((state) => state.counter.value);
 
 ## Ecosystem
 
-[NpmTrends](https://www.npmtrends.com/@redux-offline/redux-offline-vs-connected-react-router-vs-immer-vs-normalizr-vs-redux-api-middleware-vs-redux-batched-actions-vs-redux-form-vs-redux-observable-vs-redux-saga-vs-redux-saga-test-plan-vs-redux-thunk-vs-redux-undo-vs-redux-watch-vs-reselect-vs-selectorator-vs-react-redux)
+[https://redux.js.org/introduction/ecosystem](https://redux.js.org/introduction/ecosystem)
+
+[NpmTrends](https://www.npmtrends.com/connected-react-router-vs-immer-vs-normalizr-vs-react-redux-vs-redux-actions-vs-redux-form-vs-redux-mock-store-vs-redux-persist-vs-redux-saga-vs-redux-thunk)
+
+**Only important and possibly useful list of ecosystem (other libraries are omitted) :**
+
+- _Library Integration and Bindings_ - `react-redux`
+- _Reducers_ - `redux-undo`
+- _Actions_ - `redux-actions`
+- _utility_ - `reselect, normalizr`
+- _Store_ - `redux-persist`
+- _Immutable_ - `immer`
+- _sideeffects_ - `redux-thunk, redux-saga, redux-observable`
+- _Middleware_ - `NONE`
+- _Entities and Collections_ - `NONE`
+- _Component State and Encapsulation_ - `NONE`
+- _Devtools_ - `redux DevTools chrome extension`
+- _Testing_ - `redux-mock-store`
+- _Routing_ - `connected-react-router`
+- _Forms_ - `redux-form`
+- _Higher-Level Abstractions_ - `NONE`

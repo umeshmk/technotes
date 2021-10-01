@@ -1,12 +1,27 @@
 # React
 
+- A javascript library not framework.
+- **Declarative views** - (Functional programming is Declarative)
+  - Easy syntax
+  - Good Debug
+- **Component based**
+  - Just javascript not templates (ie uses jsx)
+  - Encapsulated state,
+  - Easy to compose Complex UI
+  - Keep state & DOM separate
+- **Independent**
+  - Use with any techstack, Any plugins
+  - Works in - Browser, Nodejs(server side rendering), Mobile(ReactNative)
+  - Build tools is optional - Even simple `react` & `react-dom` are enough for website.
+
 <vc-img url="https://i.imgur.com/lSeQFDs.png" size=""/>
 
 :::tip Helpful
 
 - [roadmap.sh/react](https://roadmap.sh/react)
-- [Full React Course 2020 - FreeCodeCamp (youtube)](https://www.youtube.com/watch?v=4UZrsTqkcW4)
-- Use `Create-react-app` with typescript _( also Check my [react-refresh-app](https://github.com/umeshmk/react-refresh-app) repo in my Github.)_
+- Build Tools
+  - Use `Create-react-app` with typescript _( also Check my [react-refresh-app](https://github.com/umeshmk/react-refresh-app) repo in my Github.)_
+  - [vitejs.dev](https://vitejs.dev/)
 - Snippets
   - [_ES7 React/Redux/GraphQL/React-Native snippets_](https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets) - _Recommended_
   - [JavaScript (ES6) code snippets](https://marketplace.visualstudio.com/items?itemName=xabikos.JavaScriptSnippets) - _Not Recommended_.
@@ -31,22 +46,76 @@
   - `< v17` - `document.addEventListener`
 - New JSX Transform - Use JSX without importing React. No change in syntax.
 
+## Create-react-app
+
+> Also try [Vite](https://vitejs.dev/)
+
+- Integrated toolchain by Facebook
+- Uses
+  - Babel - compiler for jsx, es
+  - Webpack - bundler
+- No config needed.
+- Why ? Adv - Scaling, liveediting, prod/dev env, preprocessors, 3rd-party npm libraries
+- Recommended toolchain
+  - SPA - create-react-app
+  - SSR - Next.js
+  - Static - Next.js & Gatsby
+
 ## Main Concepts
 
 **_We have 2 trees_**
 
-1. **React tree** (react elements)
-2. **DOM tree** (html elements)
+1. **React tree** (react elements - virtualDOM)
+2. **DOM tree** (html elements - BrowserDOM)
 
 ### JSX
 
-- JSX is extended js.
-- JSX return an object.
+- JSX is extended js. (an xml like syntax)
+- Syntactic sugar for `React.createElement()`
+- It is optional.
+- Compilation - Babel converts JSX to react elements objects
+- **Markup & logic** stays together in a **loosely coupled** unit aka component.
+- **JSX is an expression too** - can be returned from anywhere like `if, for, variables, arguments, function, etc`
 - CamelCase
   - `class` --> `className`
   - `onclick` --> `onClick`
   - `tabindex` --> `tabIndex`
-- Except `data-foo={bar}` which is same as html
+  - Except `aria-label` & `data-foo={bar}` which is same as html
+- Dot Notation - `<Fpp.A>` , `<Fpp.B>` etc can used for related react components.
+  - Export from same module once `export default Foo;`
+
+```jsx
+// passing multiple props using spread operator
+let data = { name: "umesh", age: "31" };
+return <Person {...data} />;
+
+// also
+let { foo, ...everythingElse } = props;
+return <Person {...everythingElse} />;
+```
+
+```js
+// First letter is capital
+<foo> // html element
+<Foo> // react component
+
+// Prevents Injection attacks - Prevents xss cross-site attacks
+// All VALUES are Escaped before render.
+<div> html is unescaped </div>
+<div> value is {escaped} </div>
+
+// Ignored by { }
+// Boolean, null, undefined
+
+ // childrens here can be accessed using "props.children" in Foo component
+<Foo>
+  /** any childrens*/
+</Foo>
+
+// Only react objects. Can't use any other objects
+<div>{new Date().toLocaleString()}</div> // works
+<div>{new Date()}</div> // gives error
+```
 
 <vc-table>
 <template v-slot:cola>
@@ -109,28 +178,37 @@ React.createElement(
 
 ### Rendering Elements
 
-- ReactDOM does the job of rendering react elements on DOM
-- **React elements are immutable.** So we can't update but create a new one using `ReactDOM.render()`.
-- React will
-  - _JSX --> React objects_
-- ReactDOM will
-  - _React objects --> Render --> Paint to BrowserDOM_
-  - Compare the new & old renders
-  - Update the BrowserDOM with only the changed elements.
-    - **Why ? - Because BrowserDOM API is slower than JavaScript objects.**
+- **React element is an immutable object.**
+  - We can't update but create a new react element for each render.
+  - React element object creation is faster than creating BrowserDOM element objects.
+- Babel will
+  - _JSX --> React Syntax_
+- React Core will
+  - _React Syntax --> Immutable React objects (VirtualDOM)_
+- ReactDOM will (Render)
+  - _VirtualDOM --> Reconciliation slgorithm (old vs new VirtualDOM) --> Change only what's needed in BrowserDOM_
 
 ```js
 ReactDOM.render(<div>Hello, {name}</div>, document.getElementById("root"));
+ReactDOM.render(<App />, document.getElementById("root"));
 ```
 
 ### Components and Props
 
+- All react components must be **Pure Functions**
+  - It will never modify arguments inputs
+  - Same output for same input
+  - React _state_ does not violate this rule
 - Components are functions which takes `props` and return react element.
+  - It can be a `class` too.
 - We can use `return ( )` to avoid semicolons.
 - Identify JSX as a
   - Component - `<Header></Header>`(First letter is capital)
   - Html element - `<header></header>`
 - **`props` are read-only** which means `props.foo = "bar"` will give error
+- Create extra new components if
+  - Component is Complex
+  - Component parts are Reused many times
 
 <vc-table>
 <template v-slot:cola>
@@ -175,10 +253,15 @@ class Welcome extends React.Component {
 
 ### State & Lifecycle
 
-- State is _private & controlled_ by component itself.
-- Function components can't have state property because it doesn't create instances. (We can use Hooks though.)
+- State is
+  - similar to Props
+  - _private & controlled_ by component itself.
+- Function components can't have `this.state` property because it doesn't create instances. (We can use Hooks though.)
 - We need class component instance to add properties & methods like state, Lifecycle, etc.
 - All `render()` calls will use single instance.
+- Update state correctly
+  - Use `setState` to change. Never mutate directly
+  - State updates maybe Asynchronous
 
 ```jsx
 class Welcome extends React.Component {
@@ -215,10 +298,24 @@ class Welcome extends React.Component {
 }
 ```
 
+**`setState` is merged.**
+
+```js
+constructor(){
+  this.state = {name: 'umesh', surname:'kadam'}
+}
+change(){
+  // internally surname will be merged with name
+  this.setState({
+    surname: 'kadammm'
+  })
+}
+```
+
 :::danger Asynchronous
 
 - Sometimes `setState()` **Maybe** Asynchronous.
-- It may update a batch of multiple `setState` together making it Asynchronous.
+- For Performance, react may update a batch of multiple `setState` together making it Asynchronous.
 - In JavaScript async code runs only after the end of current script.
 
 ```js
@@ -244,23 +341,16 @@ do(){
 
 :::
 
-**`setState` is merged.**
-
-```js
-constructor(){
-  this.state = {name: 'umesh', surname:'kadam'}
-}
-change(){
-  // internally surname will be merged with name
-  this.setState({
-    surname: 'kadammm'
-  })
-}
-```
-
 ### Handling Events
 
 - [Supported Events](https://reactjs.org/docs/events.html#supported-events)
+- Synthetic Events
+  - Based on standard from W3C SPEC
+  - Cross browser compatible
+  - Works NOT SAME as native browser events. There is some difference
+- No need to call `addEvebtListener`
+- In `class` we need to bind methods `this.handleClick = this.handleClick.bind(this);` if we call without parentheses like `<div onClick={this.handleClick} >`
+  - No binding needed if we use arrow function - `<div onClick={() => this.handleClick();} >`. (NOT RECOMMENDED)
 
 <vc-table>
 <template v-slot:cola>
@@ -355,6 +445,9 @@ _Passing arguments to event handlers(class)_
 
 ### Conditional Rendering
 
+- To avoid rendering a component conditionally we can `return null;`.
+  - But Lifecycle methods will still run.
+
 ```jsx
 // way 1 - return JSX
 function Foo(props) {
@@ -391,6 +484,8 @@ return (
 ### Lists & Keys
 
 - `key` always comes inside `map()`
+- `key` must be unique among siblings. Not globally.
+- `key` does not get passed to component. Pass it as props with another name.
 
 ```jsx
 function List(props) {
@@ -405,7 +500,11 @@ function List(props) {
 ### Forms
 
 - Use formik or [react-hook-form](https://react-hook-form.com/)
-- `<input type="file">` value is read-only. Uncontrolled component.
+- `input, select, textarea` have some internal state which is different from component state.
+- Controlled Component
+  - When we submit form, we use `e.preventDefault()` and then start handling form data manually instead of default browser behavior of visiting new page on submit.
+  - Such components always uses react state only.
+- `<input type="file">` value is read-only. Uncontrolled component. Can be uploaded or managed using `FileAPI`
 
 ```jsx
 class Input extends React.Component {
@@ -478,6 +577,8 @@ _Select_
 ### Composition vs Inheritance
 
 - Use Composition instead of inheritance
+- **Specialization** - it is way of using composition to create specialized components.
+  - eg: `<Button>` is generic, while `<DarkButton>` & `<LightButton>` are specific
 
 <vc-table>
 <template v-slot:cola>
@@ -518,11 +619,16 @@ return (
 ### Thinking in react
 
 - Start with DataModel(json) & Design Mockups.
-- Divide design Mockup into small components
-- SIngle responsibility for components.
-- Build Static version using props only. (don't use state at all)
-- Identify the minimal state needed.
-  - Values can be derived from other states/props to keep it minimum
+- Step 1: Break The UI Into A Component Hierarchy
+  - Divide design Mockup into small components and define its heirarchy
+  - SIngle responsibility for components.
+- Step 2: Build A Static Version in React
+  - Using props only. (don't use state at all)
+- Step 3 - Identify the minimal but complete state needed for whole UI.
+- Step 4 - Identify which component state should live
+  - If it can be derived from props then do it. Don't create new state.
+- Step 5: Add Inverse Data Flow
+  - Simply pass `(x) => setFoo(x)` to child component as a prop.
 - Lifting State up to nearest common ancestor (only if states are shared between components.)
   - Using props we can pass - _primitives, function & react elements_
   - _Inverse data flow_ is nothing keeping state in parent & passing function to update that state to child components.
@@ -535,11 +641,14 @@ return (
 
 ### Code splitting
 
-- Code-splitting means having multiple bundles which are dynamically loaded during runtime.
+- Code-splitting - Split single bundle into multiple javascript files
+- Why ?
+  - For faster initial load
+  - load other files only if required during runtime
 
 **Option 1 - Dynamic imports**
 
-- Webpack will automatically split.(needs some configs)[works on my create-refresh-app]
+- Webpack will automatically split.(needs some configs)
 - Create-react-app is already configured.
 
 ```js
@@ -548,9 +657,15 @@ import('./foo).then((foo)=>{
 })
 ```
 
-**Option 1 - Lazy Loading (Best)**
+**Option 2 - Lazy Loading**
 
-- Route based code-splitting is good way to lazy load using `react-router-dom`.
+- Will load the component javascript file only when it is rendered first time by react.
+- Must be `export default` component
+- Render it inside `Suspense`
+- Use `ErrorBoundary` incase loading fails (like network error)
+- _Route based code-splitting_ is good way to lazy load using `react-router-dom`.
+  - Just put `<Switch>` inside `<Suspense>`
+- Note - Lazy loading and Suspense are not available in SSR.
 
 ```jsx
 // works both inside & outside function but keep outside to avoid rerendering
@@ -568,14 +683,20 @@ function App(props) {
 ### Context
 
 - Share data (eg: theme, language, user, data-cache, etc) globally to many components.
+- Why ? - If we use top-down waterfall model for data sharing then we have to keep passing props throung all intermediate components
+- `<ThemeContext.Provider value = {theme}`
+  - `.Provider` & `value` are always required. Can't use any other name than `value`
 - We can have nested Providers overriding other Providers.
 - See Examples - [https://reactjs.org/docs/context.html#examples](https://reactjs.org/docs/context.html#examples)
-- Cons
-  - Makes component reuse difficult
+- Cons/Caveats
+  - Makes component reuse difficult. Alternative is Component Composition (only for simple projects)
+  - Uses reference identity to determine when to re-render.
+    - If Provider's parent re-render - might create unintentional re-renders in consumers too.
 
 ```jsx
-// it's outside the function App
-const ThemeContext = React.createContext("light"); // light is default
+// it's outside the function App (mostly in separate file)
+// light is default (used only if the component using it has no matching Provider as it's Parent )
+const ThemeContext = React.createContext("light");
 
 function App() {
   // we can change value from light to dark
@@ -624,6 +745,9 @@ function Parent(props) {
 
 **Context.Consumer**
 
+- Updating Context from a Nested Component - Use a Button `'ToggleTheme'`
+  - But logic to change that theme should be globally like in `<App >` which uses Provider
+
 ```jsx
 // Using context value in functional component
 <ThemeContext.Consumer>
@@ -634,16 +758,23 @@ function Parent(props) {
 
 ### Error Boundaries
 
-- It is nothing but a component which will show fallback UI if error occurs else show `props.children`
+- It is a component
+- Will show fallback UI if javascript error occurs inside this component.
+- Can't use `try/catch` - since react is Declarative not imperative.
+- NOT useful for
+  - Asynchronous errors
+  - SSR
+  - Event handlers
 - Only class components can be error Boundaries
 - Most likely use it once and use anywhere
-- See reference for more.
+- IMO, Not muxh useful - See reference for more.
 
 ### Forwarding Refs
 
-- Useful for reusable libraries or leaf components like `FancyButton, MyTextInput`
-- Refs to DOM elements for actions like focus, animations,selection, etc
-- A component gets a refs and then forward it to it's DOM children
+- Usecase ? - when parent component wants ref to an html element (DOM node, not component) that is inside it's child component. Child will forward it from parent to html element. This way parent gets access.
+- `(props, ref)` - ref is not passed to functional components.
+  - To use it, pass component as arg to `forwardRef((props,ref) => {...})`
+- Ref are Used for focus, animations, selection, etc
 
 ```jsx
 // forward ref to child DOM element
@@ -660,7 +791,7 @@ return (
 );
 ```
 
-**Using Higher order components (HOC)**
+**Using Higher order components (HOC)** - (_AVOID HOC - USE HOOKS_)
 
 ```jsx
 // Define HOC
@@ -733,8 +864,12 @@ return (
 
 ### Higher Order Components
 
-- A Pattern - Allows to reuse component logic. (common in 3rd party libraries like Redux)
-- A function - It takes a component and returns a new modified component
+- AVOID - Use Hooks to share logic
+- Not a part of React, but a Pattern.
+- Allows to reuse common logic for various components. (common in 3rd party libraries like Redux's connect)
+- A function with
+  - Input - A component
+  - Output - Modified component
 
 Say we have this 2 components with similar logic but slightly different like urls
 
@@ -815,7 +950,7 @@ const BarWithSubscription = subscription(Bar, "data/bar");
 
 ### JSX in Depth
 
-- Refer to official reference
+- Refer to [/technotes/react/#jsx](/technotes/react/#jsx)
 
 ### Optimizing Performance
 
@@ -845,10 +980,11 @@ render(){
 }
 ```
 
-- Portal can be anywhere in DOM tree. **But it's position is same in React tree**. So we can use events bubbled from portal to Parent. (Remember this events are not html events but SyntheticEvents used by react & so it works correctly.)
+- Portal can be anywhere in DOM tree. **But it's position is same in React tree**. So we can use events bubbled from portal to Parent.
 
 ### Profiler
 
+- Check _react DevTools_.
 - Statistics for component like how many time component renders.
 - Refer to reference for more.
 
@@ -868,9 +1004,11 @@ return (
 
 ### Reconciliation
 
+- Uses react's diffing algorithm. It check each node in virtualDOM in breadth-first search pattern.
 - Checks for - Element Type, attributes & childrens (and keys)
 - Re-render means calling `render()` not mount/unmount component
 - After Re-render React will check for any difference in previous and new React tree. Then update DOM only for changed element.
+- Always use `key` attribute for list items. Never use array `index` or `Math.randow()`
 - Check reference for more
 - **ReactFiber** is the new reconciliation engine in React 16.
 
@@ -899,7 +1037,7 @@ class Foo extends React.Component {
 
 ### Render Props
 
-> Maybe it's replaced by Hooks ?
+> AVOID - Use Hooks
 
 - Sharing code between components using prop who's value is a function.
   - Code is nothing but behavior that we need to share (portable)
@@ -964,10 +1102,18 @@ _Use Behaviour_
 </>
 ```
 
+### Static type checking
+
+- Use Typescript or Flow.
+- Avoid PropTypes.
+
 ### StrictMode
 
 - In development only
 - Identifies errors
+  - Unsafe lifecycles
+  - Legacy API
+  - Deprecated API like `findDOMNode()`
 - No UI just like fragment
 
 ```jsx
@@ -976,10 +1122,28 @@ _Use Behaviour_
 </React.StrictMode>
 ```
 
+### Uncontrolled Components
+
+- Form data is handled by
+  - React component - Controlled (Recommended)
+  - Dom - Uncontrolled
+- Adv - Integrate react and non react code
+- `<input type="file">` value is read-only. Uncontrolled component.
+
+### Web components
+
+- React component - Sync virtualDOM & UI
+- Web component - Encapsulation for reuse
+  - **ShadowDOM** is a browser technology used for scoping variables and css in web components.
+- Mostly we use only react.
+- But, we can use both react & web inside each other, together.
+
 ## Hooks
 
 - Hooks are just functions.
 - Hooks don't work in Class.
+- Optional
+- No breaking changes
 
 :::danger Why Hooks ?
 **Reusing Logic (Leads to wrapper hell)**
@@ -994,6 +1158,7 @@ _Use Behaviour_
 **Classes are confusing**
 
 - Hooks allows us to use all react features without class
+- Bad for minifying, hot reload, etc
 
 **Mixins are bad**
 
@@ -1005,11 +1170,11 @@ _Use Behaviour_
 
 ### Rules of Hooks
 
-- Linter will implement the rules.
+- Linter will implement the rules - `eslint-plugin-react-hooks`
 - React depends on order of the Hook calls in a component
 - Rules
   1. Don't call hooks inside - loop, conditions & nested functions.
-  2. Call from - Function Component & Custom Hooks
+  2. Call from - Function Component & Custom Hooks. Not from regular functions
 
 ### useState
 
@@ -1023,6 +1188,9 @@ function Foo(props) {
   // returns a value & function to update value
   const [value, setValue] = useState(initialValue);
   const [state2, setState2] = useState(initialValue2); // can use multiple times
+
+  //createExpensiveObject() is only called once, Not called on subsequent render
+  const [value, setValue] = useState(() => createExpensiveObject(props.count));
 
   // set next value
   setValue(nextValue);
@@ -1041,27 +1209,43 @@ function Foo(props) {
 
 ### useEffect
 
-- Used in - Data fetching, subscription, DOM changes, etc
-- Called after every render like (but after DOM is updated) - `componentDidMount, componentDidUpdate & componentWillUnMount`
+- Allows us to write imperative code which is not possible in react's component which is purely a functional code.
+  - React component does not allow sideeffects like mutations, Async, timers, etc directly
+- Used for side-effects like Data fetching, subscription, DOM changes, etc
+- Called AFTER every render & defers running till BrowserDOM is painted.
+  - Lifecycles combined together - `componentDidMount, componentDidUpdate & componentWillUnMount`
 - Most of the effects are Asynchronous. But for some synchronous effect like measure layout we have a `useLayoutEffect`
 - 2 Types
   - Needs cleanUp (to avoid memory leak) - eg: subscription
   - No cleanUp - eg: Logging, data fetching, DOM changes
+- `useLayoutEffect()`
+  - Not deferred. That is, it runs before BrowserDOM is painted.
+  - Use only if `useEffect()` cause a problem
 
 ```jsx
 function Foo(props) {
   // we can use multiple effects. They maintain the same order as written.
+
   useEffect(() => {
     // This inner function is different everytime render is performed.
     // Because in js each function is separate when created.
     // ()=>{} === ()=>{} // false
-    // Helps maintain the correct state
+    // This Helps maintain the correct state on each render
 
+    // clean up function
+    // called after every render & unmount,
+    // called before running next useEffect()
+    // Eg: clear old eventhandlers we don't need multiple copies of event handlers
+    // Eg: unsubscribe()
     return () => {
-      // clean up function called after every render. This helps to avoid bugs
+      //...
     };
-    // re-run if atleast 1 value is changed after render. COmpare prev & current render.
-    // pass empty [] to run effect only once after mounting
+
+    // Dependencies
+    // - Run effect if atleast one dependency change
+    // - empty array - run effect Only once on mount. It mesns it's independent of any state, props.
+    // - setFoo - such functions won’t change on re-renders. It’s safe to omit.
+    // - "dispatch()" from useReducer - safe to omit.
   }, [foo, bar]);
 }
 ```
@@ -1127,6 +1311,7 @@ function reducer(prevState, action) {
 ### useCallback/useMemo
 
 - Used for Optimization - Cache & avoid heavy calculations on every render based on dependencies.
+- Use rarely and carefully
 
 ```jsx
 // useCallback(func, deps) === useMemo(() => func, deps )
@@ -1143,9 +1328,10 @@ const memoizedValue = useMemo(() => /*somethingHeavy(a, b);*/, [a, b]);
 
 ### useRef
 
-- Used to store an immutable object.
+- Used to store an object known as `ref`. Persist for lifetime of Component.
 - But it's `obj.current` can be mutated on render.
 - A change in `obj.current` won't trigger re-render
+- Can also be used to store previous state, props values. (save in `useEffect()`).
 
 ```jsx
 // create
@@ -1161,6 +1347,8 @@ inputEl.current.focus()
 
 ### Building your own hooks
 
+- Name starts with `use` like `useValidation()`
+
 ```jsx
 function Foo(props) {
   // call useMyCustomHook() with any arg value which can be state/prop too.
@@ -1172,14 +1360,26 @@ function useMyCustomHook(value) {
   //
   // value is optional
   //
-  // return any state values or anything else needed
+  // return any state values or anything else needed or just return nothing
 }
 ```
 
-### Hooks FAQ
+## Testing
 
-- Adoption strategy
-  - No hook for `componentDidCatch`
-  - Redux and React-router supports hooks
-- From classes to hooks
-  - `useRef.current` is like property of some class INSTANCE.
+### Testing Overview
+
+- 2 ways
+  - _Render component tree_ - just check output (_Jest , React-testing-library_)
+  - _Run Complete App_ - end-to-end Testing (_Cypress_)
+- Difference between _“unit” and “integration”_ tests ? - Can be blurry. Depends on team & product.
+- _Jest_ - A test runner which provides `jsdom` to access DOM
+- _React-testing-library_ - A set of helpers to test react components. Implementation details of component is not needed.
+- [Jest vs React-testing-library](https://stackoverflow.com/questions/66341449/testing-library-react-vs-jest)
+- _create-react-app_ has both Jest and React Testing Library
+
+## FAQs
+
+### Ajax
+
+- Use Axios or Fetch
+- We can use `catch()`. The comment is old one. Src - [stackoverflow](https://stackoverflow.com/questions/65985507/why-shouldnt-i-use-catch-to-handle-errors-in-react-useeffect-api-calls)

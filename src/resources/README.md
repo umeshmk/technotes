@@ -137,6 +137,7 @@ _(Stick to few and Official ones)_
 
 - [Mirage-FakeAPI](https://github.com/miragejs/miragejs)
 - [Json Placeholder](https://jsonplaceholder.typicode.com/)
+- [dummyjs.com](https://dummyjs.com/)
 - Images
   - [picsum.photos](https://picsum.photos/)
   - [unsplash.com](https://source.unsplash.com/)
