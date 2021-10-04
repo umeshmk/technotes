@@ -68,7 +68,7 @@ module.exports = {
   plugins: ["@vuepress/plugin-back-to-top", "@vuepress/plugin-medium-zoom"],
 
   // deployment on github pages
-  dest: "./docs",
+  dest: "./dist",
   base: "/technotes/", // production (works in dev too)
   // base: "/", // development
 };
