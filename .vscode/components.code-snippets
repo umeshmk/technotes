@@ -1,0 +1,14 @@
+{
+  "vc-table": {
+    "scope": "markdown",
+    "prefix": "vc-table",
+    "body": "<vc-table>\n<template v-slot:cola>\n\n```js\n```\n</template>\n<template v-slot:colb>\n\n```js\n```\n</template>\n</vc-table>",
+    "description": "vc-table"
+  },
+  "vc-img": {
+    "scope": "markdown",
+    "prefix": "vc-img",
+    "body": "<vc-img url='${1}' size='${2}'/>",
+    "description": "vc-table"
+  }
+}

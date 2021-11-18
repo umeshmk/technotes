@@ -4,9 +4,15 @@
 _(Stick to few and Official ones)_
 
 - [roadmap.sh](https://roadmap.sh/)
+- [sindresorhus/awesome](https://github.com/sindresorhus/awesome)
+- Resource Collections
+  - [devresourc.es](https://devresourc.es)
+  - [free-for.dev](https://free-for.dev)
+  - [javascripting.com (Js Libraries)](https://www.javascripting.com/)
 
 ## Playgrounds
 
+- [Typesript Playground](https://www.typescriptlang.org/play)
 - [Codesandbox.io](https://codesandbox.io)
 - [Codepen](https://codepen.io/)
 - [JsFiddle](https://jsfiddle.net/)
@@ -18,40 +24,6 @@ _(Stick to few and Official ones)_
 - Css
   - [PostCssPreset](https://preset-env.cssdb.org/playground)
   - [Sass](https://www.sassmeister.com/)
-
-## HTML/CSS/JS
-
-- Reference
-  - [MDN Html Reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
-  - [htmldog](https://www.htmldog.com/references/html/)
-  - [htmlreference.io](https://htmlreference.io/)
-  - [html.spec.whatwg.org](https://html.spec.whatwg.org/)
-- [MDN Web Docs](https://developer.mozilla.org/en-US/)
-- [W3schools](https://www.w3schools.com/)
-- [javascripting.com (Js Libraries)](https://www.javascripting.com/)
-
-## CSS
-
-- Reference
-  - [CssTricks](https://css-tricks.com/almanac/)
-  - [htmldog](https://www.htmldog.com/references/css/)
-  - [codrops/css_reference](https://tympanus.net/codrops/css_reference/)
-  - [flexbox-cheatsheet](https://darekkay.com/dev/flexbox-cheatsheet.html)
-  - [cssreference.io](https://cssreference.io/)
-- PostCss
-  - [postcss-preset-env - Stage 0/1/2/3 ](https://preset-env.cssdb.org/features)
-- Bootstrap
-- Tailwindcss
-- [AllThingsSmitty/css-protips](https://github.com/AllThingsSmitty/css-protips)
-- _Helpers_
-  - [cssarrowplease.com](https://cssarrowplease.com/)
-  - [mycolor.space](https://mycolor.space/)
-  - [coolbackgrounds.io](https://coolbackgrounds.io/)
-  - [Gradient](https://www.colorzilla.com/gradient-editor/)
-  - [css-gradient](https://www.css-gradient.com/)
-  - [cssgradient.io](https://cssgradient.io/)
-  - [cssfontstack.com (websafe fonts)](https://www.cssfontstack.com/)
-  - [neumorphism.io](https://neumorphism.io/#ba6f4f)
 
 ## JS
 
@@ -73,26 +45,36 @@ _(Stick to few and Official ones)_
 - [basarat/typescript-book](https://github.com/basarat/typescript-book)
 - [labs42io/clean-code-typescript](https://github.com/labs42io/clean-code-typescript)
 
-## React
+## HTML/CSS/JS
 
-- [/react/awesome-react](/react/awesome-react)
-- [/react/awesome-react-components](/react/awesome-react-components)
-- [React Basics - Youtube](https://www.youtube.com/playlist?list=PLe30vg_FG4OSw8SIcLVci-jB_-W1ZkLYp)
+- Reference
+  - [MDN Html Reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
+  - [htmldog](https://www.htmldog.com/references/html/)
+  - [htmlreference.io](https://htmlreference.io/)
+  - [html.spec.whatwg.org](https://html.spec.whatwg.org/)
+- [MDN Web Docs](https://developer.mozilla.org/en-US/)
+- [W3schools](https://www.w3schools.com/)
 
-## Package Management
+## CSS
 
-- [npmjs.com](https://www.npmjs.com/)
-- [webpack.js.org](https://webpack.js.org/)
-- [survivejs](https://github.com/survivejs)
-
-## Node
-
-- [sindresorhus/awesome-nodejs](https://github.com/sindresorhus/awesome-nodejs)
-- [Nodejs.org](https://nodejs.org/en/docs/)
-- [nodejs.dev](https://nodejs.dev/)
-- [NetNinja-Youtube](https://www.youtube.com/watch?v=w-7RQ46RgxU&list=PL4cUxeGkcC9gcy9lrvMJ75z9maRw4byYp&index=1)
-- [ehmicky/cross-platform-node-guide](https://github.com/ehmicky/cross-platform-node-guide)
-- [XOR-LIFE/node-production](https://github.com/XOR-LIFE/node-production)
+- [AllThingsSmitty/css-protips](https://github.com/AllThingsSmitty/css-protips)
+- Reference
+  - [CssTricks](https://css-tricks.com/almanac/)
+  - [htmldog](https://www.htmldog.com/references/css/)
+  - [codrops/css_reference](https://tympanus.net/codrops/css_reference/)
+  - [flexbox-cheatsheet](https://darekkay.com/dev/flexbox-cheatsheet.html)
+  - [cssreference.io](https://cssreference.io/)
+- PostCss
+  - [postcss-preset-env - Stage 0/1/2/3 ](https://preset-env.cssdb.org/features)
+- _Helpers_
+  - [cssarrowplease.com](https://cssarrowplease.com/)
+  - [mycolor.space](https://mycolor.space/)
+  - [coolbackgrounds.io](https://coolbackgrounds.io/)
+  - [Gradient](https://www.colorzilla.com/gradient-editor/)
+  - [css-gradient](https://www.css-gradient.com/)
+  - [cssgradient.io](https://cssgradient.io/)
+  - [cssfontstack.com (websafe fonts)](https://www.cssfontstack.com/)
+  - [neumorphism.io](https://neumorphism.io/#ba6f4f)
 
 ## Node Frameworks
 
@@ -103,8 +85,6 @@ _(Stick to few and Official ones)_
 ## Browser Tools
 
 - [chrome-devtools](https://developers.google.com/web/tools/chrome-devtools)
-- [BradTraversy - youtube](https://youtu.be/x4q86IjJFag)
-- [Erik - Youtube](https://www.youtube.com/watch?v=ucWpMZoB7Jg)
 
 ## Git
 
@@ -125,18 +105,15 @@ _(Stick to few and Official ones)_
 - [devhints.io](https://devhints.io/)
 - [lecoupa/awesome-cheatsheets](https://lecoupa.github.io/awesome-cheatsheets/)
 
-## Jobs
+## Api
 
-- [lukasz-madon/awesome-remote-job](https://github.com/lukasz-madon/awesome-remote-job#readme)
-- Resume
-  - [posquit0/Awesome-CV](https://github.com/posquit0/Awesome-CV)
-  - [deedy/Deedy-Resume](https://github.com/deedy/Deedy-Resume)
-  - [Youtube](https://www.youtube.com/watch?v=aKjsy-b00QM)
+- [rapidapi.com](https://rapidapi.com)
 
 ## Placeholder
 
 - [Mirage-FakeAPI](https://github.com/miragejs/miragejs)
 - [Json Placeholder](https://jsonplaceholder.typicode.com/)
+  - [typicode/json-server](https://github.com/typicode/json-server)
 - [dummyjs.com](https://dummyjs.com/)
 - Images
   - [picsum.photos](https://picsum.photos/)
@@ -171,7 +148,3 @@ _(Stick to few and Official ones)_
 - [web.dev](https://web.dev/)
 - [3rd party Api - programmableweb](https://www.programmableweb.com/category/all/apis)
 - [imgur.com](https://imgur.com/upload)
-
-## Articles
-
-- Medium

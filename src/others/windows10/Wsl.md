@@ -40,4 +40,4 @@ title: WSL2 - Windows subsystem for Linux
 
 ## Wsl - Ubuntu setup
 
-<<< @/src/windows10/wsl-setup.sh
+<<< @/src/others/windows10/wsl-setup.sh

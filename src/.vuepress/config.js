@@ -1,11 +1,11 @@
-const { description } = require("../../package");
-const { sidebar } = require("./sidebar");
+const {description} = require('../../package');
+const {sidebar} = require('./sidebar');
 
 module.exports = {
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#title
    */
-  title: "TechNotes",
+  title: 'TechNotes',
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#description
    */
@@ -17,12 +17,9 @@ module.exports = {
    * ref：https://v1.vuepress.vuejs.org/config/#head
    */
   head: [
-    ["meta", { name: "theme-color", content: "#3eaf7c" }],
-    ["meta", { name: "apple-mobile-web-app-capable", content: "yes" }],
-    [
-      "meta",
-      { name: "apple-mobile-web-app-status-bar-style", content: "black" },
-    ],
+    ['meta', {name: 'theme-color', content: '#3eaf7c'}],
+    ['meta', {name: 'apple-mobile-web-app-capable', content: 'yes'}],
+    ['meta', {name: 'apple-mobile-web-app-status-bar-style', content: 'black'}],
   ],
 
   /**
@@ -31,31 +28,27 @@ module.exports = {
    * ref：https://v1.vuepress.vuejs.org/theme/default-theme-config.html
    */
   themeConfig: {
-    repo: "",
+    repo: '',
     editLinks: false,
-    docsDir: "",
-    editLinkText: "",
-    lastUpdated: "Last Updated",
+    docsDir: '',
+    editLinkText: '',
+    lastUpdated: 'Last Updated',
     nav: [
       {
-        text: "Documentation",
-        link: "/documentation/vuepress",
+        text: 'Keyboard-shortcuts',
+        link: '/keyboard-shortcuts/',
       },
       {
-        text: "Keyboard-shortcuts",
-        link: "/keyboard-shortcuts/",
+        text: 'Surveys',
+        link: '/surveys/',
       },
       {
-        text: "Surveys",
-        link: "/surveys/",
+        text: 'Resources',
+        link: '/resources/',
       },
       {
-        text: "Resources",
-        link: "/resources/",
-      },
-      {
-        text: "Github",
-        link: "https://github.com/umeshmk",
+        text: 'Github',
+        link: 'https://github.com/umeshmk',
       },
     ],
     sidebarDepth: 2,
@@ -65,10 +58,10 @@ module.exports = {
   /**
    * Apply plugins，ref：https://v1.vuepress.vuejs.org/zh/plugin/
    */
-  plugins: ["@vuepress/plugin-back-to-top", "@vuepress/plugin-medium-zoom"],
+  plugins: ['@vuepress/plugin-back-to-top', '@vuepress/plugin-medium-zoom'],
 
   // deployment on github pages
-  dest: "./dist",
-  base: "/technotes/", // production (works in dev too)
+  dest: './dist',
+  base: '/technotes/', // production (works in dev too)
   // base: "/", // development
 };

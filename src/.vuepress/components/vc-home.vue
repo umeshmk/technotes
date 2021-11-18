@@ -7,30 +7,30 @@
 </template>
 
 <script>
-import { base } from "../config";
+import {base} from '../config';
 export default {
   data() {
     return {
       base,
       topic: {
-        Typescript: "typescript",
-        React: "react",
-        GraphQL: "graphql",
-        Javascript: "javascript",
-        Testing: "testing",
-        "Object Oriented Programming": "oop",
-        Html: "html",
-        Css: "css",
-        Terminal: "terminal/Zsh.html",
-        "Visual Studio Code": "visual-studio-code/vscode.html",
-        Documentation: "documentation/vuepress.html",
-        Windows10: "windows10/windows10.html",
-        "Tools (Webpack)": "tools/webpack.html",
-        "Datastructures & Algorithms": "datastructures-&-algorithms",
-        "Design Patterns": "design-patterns",
-        Miscellaneous: "miscellaneous/Git.html",
-        "Laravel 6 (deprecated)": "laravel/v6/1-GettingStarted.html",
-        "Php (deprecated)": "php",
+        Typescript: 'typescript',
+        React: 'react',
+        // GraphQL: 'others/graphql',
+        Javascript: 'javascript',
+        'Object Oriented Programming': 'oop',
+        'Html & Css': 'html/css/styled-components',
+        Testing: 'testing',
+        // Css: 'css/styled-components',
+        Terminal: 'terminal/Zsh.html',
+        'Visual Studio Code': 'visual-studio-code/vscode.html',
+        // Documentation: 'documentation/vuepress.html',
+        // Windows10: 'windows10/windows10.html',
+        'Tools (Webpack)': 'tools/webpack.html',
+        'Datastructures & Algorithms': 'datastructures-&-algorithms',
+        // 'Design Patterns': 'design-patterns',
+        Others: 'others/design-patterns',
+        // "Laravel 6 (deprecated)": "laravel/v6/1-GettingStarted.html",
+        // "Php (deprecated)": "php",
       },
     };
   },
