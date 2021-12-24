@@ -7,29 +7,29 @@
 - Note:
   - `typeof null` = object
   - `typeof []` = object
-  - `typeof 0, NaN, "", 0n, null, undefined` = false
+    <!-- - `typeof 0, NaN, "", 0n, null, undefined` = false -->
 
 ```ts
 function foo(x: number | string): string {
-  if (typeof x === "number") {
-    // number
+  if (typeof x === 'number') {
+    return x + 1; // number
   }
-  return x; // string
+  return 'hello' x; // string
 }
 ```
 
 ```ts
 function foo(x: string | string[] | null): string {
-  if (typeof x === "object" && x) {
+  if (typeof x === 'object' && x) {
     // string[]
   }
-  if (typeof x === "object") {
+  if (typeof x === 'object') {
     // string[] | null
   }
-  if (typeof x === "string") {
+  if (typeof x === 'string') {
     // string
   }
-  return x + "";
+  return x + '';
 }
 ```
 
@@ -42,7 +42,7 @@ if (foo == null) {
 }
 ```
 
-## instanceof`
+## instanceof
 
 ```ts
 function foo(x: string | Date) {
@@ -59,6 +59,6 @@ function foo(x: string | Date) {
 let foo: number | string;
 
 foo = 32;
-foo = "hi";
+foo = 'hi';
 foo = true; // error
 ```

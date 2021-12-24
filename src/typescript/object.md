@@ -12,12 +12,12 @@ function foo(x: {a: number; b: number}): number {
 }
 
 // way 2 - interface
-interface fooInterface {
+interface XInterface {
   a: number;
   b: number;
 }
 
-function foo(x: fooInterface) {
+function foo(x: XInterface) {
   // code
 }
 ```
@@ -28,12 +28,12 @@ function foo(x: fooInterface) {
 ```ts
 // way 3 - Type alias
 
-type fooType = {
+type xType = {
   a: number;
   b: number;
 };
 
-function foo(x: fooType) {
+function foo(x: xType) {
   // code
 }
 ```
@@ -81,7 +81,7 @@ interface B {
   y: number;
 }
 
-interface ComboInterface extends A, B {}
+interface Combo extends A, B {}
 ```
 
 </template>
@@ -97,7 +97,7 @@ interface B {
 // & = intersection
 // almost same as extends
 // difference is how error is handled
-type ComboType = A & B;
+type Combo = A & B;
 ```
 
 </template>

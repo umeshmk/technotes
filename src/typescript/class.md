@@ -22,8 +22,8 @@ class Foo {
 
 ```ts
 // constructor
-// - cant have return type since it's always instance
 class Foo extends Bar {
+  constructor(a: number): number; // error - cant have return type since it's always an instance
   constructor(a: number);
   constructor(a: string);
   constructor(a: number | string, b?: number) {
@@ -69,7 +69,7 @@ class Foo {
   // static
   static a = 6; // use Foo.a
   private static b = 6; // visibility can be used
-  private static b = 6; // error - private must precede static
+  private static c = 6; // error - private must precede static
 }
 ```
 

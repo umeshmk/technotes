@@ -1,17 +1,19 @@
 # More on Functions
 
+- My question on [Stackoverflow](https://stackoverflow.com/questions/70469713/functions-in-typescript)
+
 ## Function type expression
 
 ```ts
 // def - (param:type) => returnType;
 type callback = (x: string) => string;
 
-// function
+// as arg
 function foo(func: callback) {
   func('hello');
 }
 
-// arrow function
+// as arrow function
 const bar: callback = (str) => {
   return str;
 };
@@ -62,8 +64,12 @@ function foo<T>(x: T[]): T {
 foo([2, 4, 5]); // T = number
 foo(['a', 'b']); // T = string
 
-// Generic arrow function
-const fooo = <T>(x: T) => x;
+// arrow func (only type)
+type fooType = <T>(x: T) => T;
+
+// arrow func (def with type)
+// const foo2 = <T>(x: T) => x; // error since <T> is jsx
+const foo3 = <T>(x: T) => x; // no error - just add comma
 ```
 
 </template>

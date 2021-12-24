@@ -37,7 +37,7 @@ function foo<T>(x: T): T {
   return x;
 }
 
-// Non-generic functions - Derived from Root Generic
+// Create Non-generic functions - Derived from Root Generic
 // - new function with same implementation different types
 interface fooInterface<T> {
   (x: T): T;
@@ -140,7 +140,7 @@ type foo = {x: number; y: string};
 type fooX = foo['x']; // number
 type fooY = foo['y']; // string
 type fooXY = foo['x' | 'y']; // number | string
-type fooKey = foo[keyof foo]; // number | string
+type fooKey = foo[keyof foo]; // same as fooXY ie number | string
 ```
 
 ## Conditional types
@@ -149,43 +149,41 @@ type fooKey = foo[keyof foo]; // number | string
 
 ```ts
 // Ex
-interface yInterface {
-  y: number;
-}
-interface xInterface extends yInterface {}
+interface Y {}
+interface X extends Y {}
 
-type s = xInterface extends yInterface ? string : number; // string
-type n = RegExp extends yInterface ? string : number; // number
+type s = X extends Y ? string : number; // string
+type n = RegExp extends Y ? string : number; // number
 ```
 
 ```ts
 // Ex
 type c<T> = T extends {length: number} ? T : never;
 
-let xObj = {
+let obj = {
   length: 3,
 };
-let xArr = [3, 4, 5];
-let xStr = 'hello';
+let arr = [3, 4, 5];
+let str = 'hello';
 let empty = {};
 
-type c1 = c<typeof xObj>; // { length: number }
-type c2 = c<typeof xArr>; // number[]
-type c3 = c<typeof xStr>; // string
+type c1 = c<typeof obj>; // { length: number }
+type c2 = c<typeof arr>; // number[]
+type c3 = c<typeof str>; // string
 type c4 = c<typeof empty>; // never
 ```
 
 ## Mapped types
 
 ```ts
-type x = {
+type X = {
   [prop: string]: string | boolean;
 };
 
-let x1: x = {
+let x1: X = {
   name: 'umesh', // works
 };
-let x2: x = {
+let x2: X = {
   age: 2, // error,
 };
 ```
@@ -193,15 +191,15 @@ let x2: x = {
 ```ts
 // in keyof
 // modifier readonly is optional
-type x<T> = {
+type X<T> = {
   -readonly [prop in keyof T]: boolean;
 };
-type y = {
+type Y = {
   a: string;
   readonly b: number;
 };
 
-type xy = x<y>; // type xy = {a: boolean;b: boolean;}
+type XY = X<Y>; // type xy = {a: boolean;b: boolean;}
 ```
 
 ## Template Literals
@@ -211,7 +209,9 @@ type x = "world";
 type y = `Hello ${x}`; // `Hello world`
 
 type x = number | string;
-type y = `type is ${x}`; // `type is ${string}` | `type is ${number}`
+type y = `Hello ${x}`; // `Hello ${string}` | `Hello ${number}`
+const foo1:y = "Hello"; // error
+const foo2:y = "Hello "; // no error
 
 type x = number | string;
 type y = "a" | "b";
