@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Docker-Compose | TechNotes</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    
+    <meta name="description" content="This Are My Notes">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    
+    <link rel="preload" href="/technotes/assets/css/0.styles.9dcdc9ce.css" as="style"><link rel="preload" href="/technotes/assets/js/app.8104ebb8.js" as="script"><link rel="preload" href="/technotes/assets/js/2.caedfb41.js" as="script"><link rel="preload" href="/technotes/assets/js/82.b19a306b.js" as="script"><link rel="prefetch" href="/technotes/assets/js/10.cd6f20a6.js"><link rel="prefetch" href="/technotes/assets/js/100.279a9072.js"><link rel="prefetch" href="/technotes/assets/js/101.997cf7be.js"><link rel="prefetch" href="/technotes/assets/js/102.1b1d5ddd.js"><link rel="prefetch" href="/technotes/assets/js/103.392e394b.js"><link rel="prefetch" href="/technotes/assets/js/104.52362a08.js"><link rel="prefetch" href="/technotes/assets/js/105.1d61a10e.js"><link rel="prefetch" href="/technotes/assets/js/106.0ccbe98d.js"><link rel="prefetch" href="/technotes/assets/js/107.8a8891f6.js"><link rel="prefetch" href="/technotes/assets/js/108.f97b9fc5.js"><link rel="prefetch" href="/technotes/assets/js/109.53af78e7.js"><link rel="prefetch" href="/technotes/assets/js/11.e97b9008.js"><link rel="prefetch" href="/technotes/assets/js/110.eba8e4a8.js"><link rel="prefetch" href="/technotes/assets/js/111.5a6e159d.js"><link rel="prefetch" href="/technotes/assets/js/112.df01fa26.js"><link rel="prefetch" href="/technotes/assets/js/113.78ee7edc.js"><link rel="prefetch" href="/technotes/assets/js/114.897d8424.js"><link rel="prefetch" href="/technotes/assets/js/115.42a6b59a.js"><link rel="prefetch" href="/technotes/assets/js/116.b79d8561.js"><link rel="prefetch" href="/technotes/assets/js/117.c16fe2d1.js"><link rel="prefetch" href="/technotes/assets/js/118.1fcc3485.js"><link rel="prefetch" href="/technotes/assets/js/119.a33ada80.js"><link rel="prefetch" href="/technotes/assets/js/12.9a00424a.js"><link rel="prefetch" href="/technotes/assets/js/120.76f211de.js"><link rel="prefetch" href="/technotes/assets/js/121.629643ae.js"><link rel="prefetch" href="/technotes/assets/js/122.68f73485.js"><link rel="prefetch" href="/technotes/assets/js/123.33cd021c.js"><link rel="prefetch" href="/technotes/assets/js/124.a81a84a8.js"><link rel="prefetch" href="/technotes/assets/js/125.0e39b1db.js"><link rel="prefetch" href="/technotes/assets/js/13.b6f0f7ab.js"><link rel="prefetch" href="/technotes/assets/js/14.266a7a2b.js"><link rel="prefetch" href="/technotes/assets/js/15.b7921887.js"><link rel="prefetch" href="/technotes/assets/js/16.ccd43b1e.js"><link rel="prefetch" href="/technotes/assets/js/17.113da873.js"><link rel="prefetch" href="/technotes/assets/js/18.d1f04f6f.js"><link rel="prefetch" href="/technotes/assets/js/19.47367321.js"><link rel="prefetch" href="/technotes/assets/js/20.e00a6f18.js"><link rel="prefetch" href="/technotes/assets/js/21.e4cb8c08.js"><link rel="prefetch" href="/technotes/assets/js/22.f74bf51d.js"><link rel="prefetch" href="/technotes/assets/js/23.94d192f0.js"><link rel="prefetch" href="/technotes/assets/js/24.7fad591d.js"><link rel="prefetch" href="/technotes/assets/js/25.3a54ea06.js"><link rel="prefetch" href="/technotes/assets/js/26.da1e8bec.js"><link rel="prefetch" href="/technotes/assets/js/27.e68284e7.js"><link rel="prefetch" href="/technotes/assets/js/28.a558c139.js"><link rel="prefetch" href="/technotes/assets/js/29.88cbe547.js"><link rel="prefetch" href="/technotes/assets/js/3.2769445e.js"><link rel="prefetch" href="/technotes/assets/js/30.11d87982.js"><link rel="prefetch" href="/technotes/assets/js/31.aeead8e9.js"><link rel="prefetch" href="/technotes/assets/js/32.d445d1fb.js"><link rel="prefetch" href="/technotes/assets/js/33.ec5cbdf7.js"><link rel="prefetch" href="/technotes/assets/js/34.7f3302d4.js"><link rel="prefetch" href="/technotes/assets/js/35.1a7ce302.js"><link rel="prefetch" href="/technotes/assets/js/36.49bdadae.js"><link rel="prefetch" href="/technotes/assets/js/37.36821112.js"><link rel="prefetch" href="/technotes/assets/js/38.f65f4627.js"><link rel="prefetch" href="/technotes/assets/js/39.c1665451.js"><link rel="prefetch" href="/technotes/assets/js/4.0aec5cc0.js"><link rel="prefetch" href="/technotes/assets/js/40.3c1f0ace.js"><link rel="prefetch" href="/technotes/assets/js/41.76268252.js"><link rel="prefetch" href="/technotes/assets/js/42.61c3b5d8.js"><link rel="prefetch" href="/technotes/assets/js/43.eef10551.js"><link rel="prefetch" href="/technotes/assets/js/44.f0f4bc2e.js"><link rel="prefetch" href="/technotes/assets/js/45.bbeeb042.js"><link rel="prefetch" href="/technotes/assets/js/46.73946476.js"><link rel="prefetch" href="/technotes/assets/js/47.3af87d7d.js"><link rel="prefetch" href="/technotes/assets/js/48.23d60ecc.js"><link rel="prefetch" href="/technotes/assets/js/49.9dc90dc8.js"><link rel="prefetch" href="/technotes/assets/js/5.752af569.js"><link rel="prefetch" href="/technotes/assets/js/50.8e52a3eb.js"><link rel="prefetch" href="/technotes/assets/js/51.654e7405.js"><link rel="prefetch" href="/technotes/assets/js/52.623485d0.js"><link rel="prefetch" href="/technotes/assets/js/53.efb7ad6a.js"><link rel="prefetch" href="/technotes/assets/js/54.0ad2f7f1.js"><link rel="prefetch" href="/technotes/assets/js/55.8b668558.js"><link rel="prefetch" href="/technotes/assets/js/56.12f3f821.js"><link rel="prefetch" href="/technotes/assets/js/57.52e3406f.js"><link rel="prefetch" href="/technotes/assets/js/58.574ff9e6.js"><link rel="prefetch" href="/technotes/assets/js/59.9d1f123b.js"><link rel="prefetch" href="/technotes/assets/js/6.32abcfcb.js"><link rel="prefetch" href="/technotes/assets/js/60.e2f235f0.js"><link rel="prefetch" href="/technotes/assets/js/61.e68a5945.js"><link rel="prefetch" href="/technotes/assets/js/62.4dbf5f15.js"><link rel="prefetch" href="/technotes/assets/js/63.929030ce.js"><link rel="prefetch" href="/technotes/assets/js/64.efefc0a8.js"><link rel="prefetch" href="/technotes/assets/js/65.a47b956c.js"><link rel="prefetch" href="/technotes/assets/js/66.7a299204.js"><link rel="prefetch" href="/technotes/assets/js/67.646e793b.js"><link rel="prefetch" href="/technotes/assets/js/68.eb547408.js"><link rel="prefetch" href="/technotes/assets/js/69.fc412058.js"><link rel="prefetch" href="/technotes/assets/js/7.ac0d8c58.js"><link rel="prefetch" href="/technotes/assets/js/70.4002346f.js"><link rel="prefetch" href="/technotes/assets/js/71.3d1e2ed5.js"><link rel="prefetch" href="/technotes/assets/js/72.e8f672bc.js"><link rel="prefetch" href="/technotes/assets/js/73.7b335297.js"><link rel="prefetch" href="/technotes/assets/js/74.36b0ab27.js"><link rel="prefetch" href="/technotes/assets/js/75.cddd03f2.js"><link rel="prefetch" href="/technotes/assets/js/76.3a34f2da.js"><link rel="prefetch" href="/technotes/assets/js/77.64ad8010.js"><link rel="prefetch" href="/technotes/assets/js/78.5b13e2bb.js"><link rel="prefetch" href="/technotes/assets/js/79.b948bb44.js"><link rel="prefetch" href="/technotes/assets/js/8.be5ada8e.js"><link rel="prefetch" href="/technotes/assets/js/80.0fc474be.js"><link rel="prefetch" href="/technotes/assets/js/81.9d3cd6c8.js"><link rel="prefetch" href="/technotes/assets/js/83.754da28b.js"><link rel="prefetch" href="/technotes/assets/js/84.563f388d.js"><link rel="prefetch" href="/technotes/assets/js/85.0706c016.js"><link rel="prefetch" href="/technotes/assets/js/86.122423e8.js"><link rel="prefetch" href="/technotes/assets/js/87.ce8632e5.js"><link rel="prefetch" href="/technotes/assets/js/88.ed52ab7f.js"><link rel="prefetch" href="/technotes/assets/js/89.0877c3c1.js"><link rel="prefetch" href="/technotes/assets/js/9.31e82567.js"><link rel="prefetch" href="/technotes/assets/js/90.8da3219b.js"><link rel="prefetch" href="/technotes/assets/js/91.b474c785.js"><link rel="prefetch" href="/technotes/assets/js/92.ee6dcaed.js"><link rel="prefetch" href="/technotes/assets/js/93.4a4cb662.js"><link rel="prefetch" href="/technotes/assets/js/94.459bca48.js"><link rel="prefetch" href="/technotes/assets/js/95.b0c565c1.js"><link rel="prefetch" href="/technotes/assets/js/96.13f144f3.js"><link rel="prefetch" href="/technotes/assets/js/97.c82c345f.js"><link rel="prefetch" href="/technotes/assets/js/98.df4fb20c.js"><link rel="prefetch" href="/technotes/assets/js/99.4f6c206b.js">
+    <link rel="stylesheet" href="/technotes/assets/css/0.styles.9dcdc9ce.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/technotes/" class="home-link router-link-active"><!----> <span class="site-name">TechNotes</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/technotes/keyboard-shortcuts/" class="nav-link">
+  Keyboard-shortcuts
+</a></div><div class="nav-item"><a href="/technotes/surveys/" class="nav-link">
+  Surveys
+</a></div><div class="nav-item"><a href="/technotes/resources/" class="nav-link">
+  Resources
+</a></div><div class="nav-item"><a href="https://github.com/umeshmk" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/technotes/keyboard-shortcuts/" class="nav-link">
+  Keyboard-shortcuts
+</a></div><div class="nav-item"><a href="/technotes/surveys/" class="nav-link">
+  Surveys
+</a></div><div class="nav-item"><a href="/technotes/resources/" class="nav-link">
+  Resources
+</a></div><div class="nav-item"><a href="https://github.com/umeshmk" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <!----> </aside> <main class="page"> <div class="content__default"><h1 id="docker-compose"><a href="#docker-compose" class="header-anchor">#</a> Docker-Compose</h1> <ul><li><p>url</p> <ul><li><code>.yml</code>  https://docs.docker.com/compose</li> <li><code>Reference</code>  https://docs.docker.com/compose/compose-file</li> <li><code>Github</code>  https://github.com/docker/compose</li></ul></li> <li><p><em>3 steps</em></p> <ul><li><code>DockerFile</code>  app's environment (<em>eg: nginx/DockerFile</em>).</li> <li><code>YAML</code> services file (<em>docker-compose.yml</em>)</li> <li><code>Swarm stacks</code> or <code>docker-compose up</code></li></ul></li> <li><p><em>Feature</em></p> <ul><li>Multiple isolated environment on single host (<em>foldername as projectname</em>)</li> <li>preserve volume data when containers are created(<em>past data is not lost after restart</em>)</li> <li>recreate only modified container</li> <li>variables support in file (<em>${APPLICATION}</em>)</li></ul></li></ul> <h1 id="reference"><a href="#reference" class="header-anchor">#</a> Reference</h1> <p><code>https://docs.docker.com/compose/compose-file/</code></p> <ul><li><p><code>yml</code> or <code>.yaml</code> file defining services, networks, volumes</p></li> <li><p><em>CMD, EXPOSE, VOLUME, ENV</em> are not needed in yml</p></li> <li><p><em>${VARIABLE}</em>  using Environment variables</p></li> <li><p><em>./docker-compose.yml</em> default file path</p></li> <li><p><code>NOT SUPPORTED BY SWARM</code></p> <ul><li>[
+build
+cgroup_parent
+container_name
+devices
+depends_on
+dns
+dns_search
+tmpfs
+external_links
+links
+network_mode
+security_opt
+stop_signal
+sysctls
+userns_mode
+]</li></ul></li> <li><p><code>build</code>[<em>Ignored by swarm</em>]</p> <ul><li>path to build context</li> <li>swarm accepts only images</li> <li><code>CONTEXT</code></li> <li><code>DockerFile</code></li> <li><code>ARGS</code></li> <li><code>CACHE_FROM</code></li> <li><code>LABELS</code></li></ul></li> <li><p><code>cap_add</code> &amp; <code>cap_drop</code> [<em>Ignored by swarm</em>]</p></li> <li><p><code>command</code></p> <ul><li>override default command</li> <li><code>command: bundle exec thin -p 3000</code></li> <li><code>command: [&quot;bundle&quot;, &quot;exec&quot;, &quot;thin&quot;, &quot;-p&quot;, &quot;3000&quot;]</code></li></ul></li> <li><p><code>configs</code>[version 3.3]</p> <ul><li>cannot be writable.(because its mounted in temporary filesystem)</li> <li><em>short syntax</em> <ul><li>just name of <code>external</code> configs</li> <li>Already defined from <em>other stacks</em> or command <code>docker config create</code></li> <li>mounts at <code>/&lt;config_name&gt;</code> within container</li> <li>source name &amp; destination mountpoint are both set to config name</li> <li>eg:</li></ul> <div class="language-yml extra-class"><pre class="language-yml"><code>    <span class="token key atrule">version</span><span class="token punctuation">:</span> <span class="token string">&quot;3.3&quot;</span>
+    <span class="token key atrule">services</span><span class="token punctuation">:</span>
+        <span class="token key atrule">redis</span><span class="token punctuation">:</span>
+            <span class="token key atrule">image</span><span class="token punctuation">:</span> redis<span class="token punctuation">:</span>latest
+            <span class="token key atrule">deploy</span><span class="token punctuation">:</span>
+                replicas<span class="token punctuation">:</span><span class="token number">1</span>
+            <span class="token key atrule">configs</span><span class="token punctuation">:</span>
+                <span class="token punctuation">-</span> my_config
+                <span class="token punctuation">-</span> my_other_config
+    <span class="token key atrule">configs</span><span class="token punctuation">:</span>
+        <span class="token key atrule">my_config</span><span class="token punctuation">:</span>
+            <span class="token key atrule">file</span><span class="token punctuation">:</span> ./my_config.txt 
+        <span class="token key atrule">my_other_config</span><span class="token punctuation">:</span>
+            `external`<span class="token punctuation">:</span> <span class="token boolean important">true</span>        
+</code></pre></div></li> <li><em>Long syntax</em> <ul><li><code>source</code></li> <li><code>target</code></li> <li><code>uid</code> &amp; <code>pid</code> (linux only)</li> <li><code>mode</code> is permission. Format is octal notation. world readable code =<code>0444</code> <ul><li>writable bit is ignored.</li></ul></li> <li>eg: [cannot access <em>my_other_config</em> ]</li></ul> <div class="language-yml extra-class"><pre class="language-yml"><code>    <span class="token key atrule">version</span><span class="token punctuation">:</span> <span class="token string">&quot;3.3&quot;</span>
+    <span class="token key atrule">services</span><span class="token punctuation">:</span>
+        <span class="token key atrule">redis</span><span class="token punctuation">:</span>
+            <span class="token key atrule">image</span><span class="token punctuation">:</span> redis<span class="token punctuation">:</span>latest
+            <span class="token key atrule">deploy</span><span class="token punctuation">:</span>
+                <span class="token key atrule">replicas</span><span class="token punctuation">:</span> <span class="token number">1</span>
+            <span class="token key atrule">configs</span><span class="token punctuation">:</span>
+                <span class="token punctuation">-</span> <span class="token key atrule">source</span><span class="token punctuation">:</span> my_config
+                  <span class="token key atrule">target</span><span class="token punctuation">:</span> /redis_config
+                  <span class="token key atrule">uid</span><span class="token punctuation">:</span> <span class="token number">103</span>
+                  <span class="token key atrule">gid</span><span class="token punctuation">:</span> <span class="token number">103</span>
+                  <span class="token key atrule">mode</span><span class="token punctuation">:</span> <span class="token number">0440</span>
+    <span class="token key atrule">configs</span><span class="token punctuation">:</span>
+        <span class="token key atrule">my_config</span><span class="token punctuation">:</span> 
+            <span class="token key atrule">file</span><span class="token punctuation">:</span> ./my_config.txt 
+        <span class="token key atrule">my_other_config</span><span class="token punctuation">:</span>
+            <span class="token key atrule">external</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>    
+</code></pre></div></li></ul></li> <li><p><code>cgroup_parent</code>[<em>Ignored by swarm</em>]</p></li> <li><p><code>container_name</code>[<em>Ignored by swarm</em>]</p></li> <li><p><code>credential_spec</code>[version 3.3] [windows services only]</p></li> <li><p><code>deploy</code>  [version 3] [swarm only] [docker-compose up <em>is ignored</em>]</p> <ul><li>eg:</li></ul> <div class="language-yml extra-class"><pre class="language-yml"><code>    <span class="token key atrule">redis</span><span class="token punctuation">:</span>
+        <span class="token key atrule">image</span><span class="token punctuation">:</span> redis<span class="token punctuation">:</span>latest
+        <span class="token key atrule">deploy</span><span class="token punctuation">:</span>
+            <span class="token key atrule">replicas</span><span class="token punctuation">:</span> <span class="token number">6</span> 
+            <span class="token key atrule">update_config</span><span class="token punctuation">:</span>
+                <span class="token key atrule">parallelism</span><span class="token punctuation">:</span> <span class="token number">2</span> 
+                <span class="token key atrule">delay</span><span class="token punctuation">:</span> 10s
+            <span class="token key atrule">restart_policy</span><span class="token punctuation">:</span>
+                <span class="token key atrule">condition</span><span class="token punctuation">:</span> on<span class="token punctuation">-</span>failure
+</code></pre></div><ul><li><p><code>ENDPOINT_MODE</code></p> <ul><li>Methods of <em>service discovery</em> for external clients connecting to swarm</li> <li><code>endpoint_mode: vip</code> <ul><li>IS DEFAULT</li> <li>Docker gives service a virtual ip <em>(VIP)</em> as &quot;frontend&quot; for clients to reach on network</li> <li>Docker routes requests between client &amp; available worker node for service</li> <li>client do not know <em>number of nodes</em> or <em>IP</em> OR <em>PORTS</em></li></ul></li> <li><code>endpoint_mode: dnsrr</code> <ul><li>DNS <em>RoundRobin</em></li> <li>No single virtual IP</li> <li>Docker sets <em>dns entries</em> for service</li> <li>DNS query for service name returns a <em>list of IP addresses</em></li> <li>clients connect <em>directly to anyone IP</em></li> <li>useful if using our own <em>load balancer</em>] or <em>Hybrid windows &amp; Linux</em></li></ul></li></ul></li> <li><p><code>LABELS</code></p> <ul><li>For <em>services</em> only. Not for any <em>containers</em> <ul><li>eg:
+web:
+image: web
+deploy:
+labels:
+mylabel: &quot;any values&quot;</li></ul></li> <li>For <em>containers</em> only. Not for any <em>service</em> <ul><li>eg</li></ul> <div class="language-yml extra-class"><pre class="language-yml"><code>    <span class="token key atrule">web</span><span class="token punctuation">:</span> 
+        <span class="token key atrule">image</span><span class="token punctuation">:</span> web 
+        <span class="token key atrule">labels</span><span class="token punctuation">:</span> 
+            <span class="token key atrule">mylabel</span><span class="token punctuation">:</span> <span class="token string">&quot;any value&quot;</span>
+</code></pre></div></li></ul></li> <li><p><code>MODE</code></p> <ul><li><code>replicated</code> <ul><li><em>0...n</em> containers (DEFAULT)</li></ul></li> <li><code>global</code> <ul><li><em>1</em> container per swarm node.</li></ul></li> <li>eg</li></ul> <div class="language-yml extra-class"><pre class="language-yml"><code>   <span class="token key atrule">services</span><span class="token punctuation">:</span>
+    <span class="token key atrule">worker</span><span class="token punctuation">:</span>
+        <span class="token key atrule">image</span><span class="token punctuation">:</span> dockersamples/examplevotingapp_worker 
+        <span class="token key atrule">deploy</span><span class="token punctuation">:</span>
+            <span class="token key atrule">mode</span><span class="token punctuation">:</span> global
+</code></pre></div></li> <li><p><code>PLACEMENT</code></p> <ul><li>EG:</li></ul> <div class="language-yml extra-class"><pre class="language-yml"><code>    <span class="token key atrule">services</span><span class="token punctuation">:</span>
+        <span class="token key atrule">db</span><span class="token punctuation">:</span>
+            <span class="token key atrule">image</span><span class="token punctuation">:</span> postgres 
+            <span class="token key atrule">deploy</span><span class="token punctuation">:</span>
+                <span class="token key atrule">placement</span><span class="token punctuation">:</span> 
+                    <span class="token key atrule">constraints</span><span class="token punctuation">:</span>
+                        <span class="token punctuation">-</span> node.role == manager 
+                        <span class="token punctuation">-</span> engine.label.operatingsystem == ubuntu 14.04
+</code></pre></div></li> <li><p><code>REPLICAS</code></p> <ul><li>iF <code>replicated</code> mode then</li> <li>number of container replicas running on same time</li> <li>eg:</li></ul> <div class="language-yml extra-class"><pre class="language-yml"><code>    <span class="token key atrule">services</span><span class="token punctuation">:</span> 
+        <span class="token key atrule">worker</span><span class="token punctuation">:</span>
+            <span class="token key atrule">images</span><span class="token punctuation">:</span> dockersamples/examplevotingapp_worker 
+            <span class="token key atrule">networks</span><span class="token punctuation">:</span>
+                <span class="token punctuation">-</span> frontend
+                <span class="token punctuation">-</span> backend
+            <span class="token key atrule">deploy</span><span class="token punctuation">:</span>
+                <span class="token key atrule">mode</span><span class="token punctuation">:</span> replicated 
+                <span class="token key atrule">replicas</span><span class="token punctuation">:</span> <span class="token number">6</span>
+</code></pre></div></li> <li><p><code>RESOURCES</code>[VERSION 3]</p> <ul><li>Replaces <em>[cpu_shares, cpu_quota, cpuset, mem_limit, memswap_limit, mem_swappiness]</em></li> <li>eg:</li></ul> <div class="language-yml extra-class"><pre class="language-yml"><code>    <span class="token key atrule">deploy</span><span class="token punctuation">:</span>
+        <span class="token key atrule">limits</span><span class="token punctuation">:</span>
+            <span class="token key atrule">cpu</span><span class="token punctuation">:</span> <span class="token string">&quot;0.001&quot;</span>
+            <span class="token key atrule">memory</span><span class="token punctuation">:</span> 50M
+        <span class="token key atrule">reservations</span><span class="token punctuation">:</span>
+            <span class="token key atrule">cpu</span><span class="token punctuation">:</span> <span class="token string">&quot;0.0001&quot;</span>
+            <span class="token key atrule">memory</span><span class="token punctuation">:</span> 20M
+</code></pre></div></li> <li><p><code>OOME-Out Of Memory exceptions</code></p></li> <li><p><code>RESTART_POLICY</code></p> <ul><li>Restart containers</li> <li><code>condition</code> <ul><li><em>none</em> , <em>on-failure</em>, <em>any</em>.</li> <li><em>any</em> is default</li></ul></li> <li><code>delay</code>           # wait between restart attempts</li> <li><code>max_attempts</code>    # maximum restart attempts</li> <li><code>window</code>          # time to wait before concluding restart is successful</li> <li>eg:</li></ul> <div class="language-yml extra-class"><pre class="language-yml"><code>    <span class="token key atrule">deploy</span><span class="token punctuation">:</span>
+        <span class="token key atrule">restart_policy</span><span class="token punctuation">:</span>
+            <span class="token key atrule">condition</span><span class="token punctuation">:</span> on<span class="token punctuation">-</span>failure
+            <span class="token key atrule">dealy</span><span class="token punctuation">:</span> 5s
+            <span class="token key atrule">max_attempts</span><span class="token punctuation">:</span> <span class="token number">3</span> 
+            <span class="token key atrule">window</span><span class="token punctuation">:</span> 120s
+</code></pre></div></li> <li><p><code>UPDATE_CONFIG</code></p> <ul><li>Config for how to update service</li> <li><code>parallelism</code> # n containers update at a time</li> <li><code>delay</code>   # time between updating group of containers</li> <li><code>failure_action</code> [<em>continue</em>, <em>rollback</em>, <em>pause(default)</em>] # action on update failure</li> <li><code>monitor</code>     # duration after each task update to monitor for failure</li> <li><code>max_failure_ratio</code>   # failure rate to tolerate</li> <li>eg.</li></ul> <div class="language-yml extra-class"><pre class="language-yml"><code>    <span class="token key atrule">deploy</span><span class="token punctuation">:</span>
+        <span class="token key atrule">replicas</span><span class="token punctuation">:</span> <span class="token number">2</span>
+        <span class="token key atrule">update_config</span><span class="token punctuation">:</span>
+            <span class="token key atrule">parallelism</span><span class="token punctuation">:</span> <span class="token number">2</span> 
+            <span class="token key atrule">dealy</span><span class="token punctuation">:</span> 10s
+
+</code></pre></div></li></ul></li> <li><p><code>devices</code>  [<em>Ignored by swarm</em>]</p></li> <li><p><code>depends_on</code> [<em>Ignored by swarm</em>]</p></li> <li><p><code>dns</code> [<em>Ignored by swarm</em>]</p></li> <li><p><code>dns_search</code> [<em>Ignored by swarm</em>]</p></li> <li><p><code>tmpfs</code> [<em>Ignored by swarm</em>]</p></li> <li><p><code>entrypoint</code></p> <ul><li>override default entrypoint</li></ul></li> <li><p><code>env_file</code></p> <ul><li><em>VAR=VAL</em>  environment variables from a file</li> <li>can be single value or list</li> <li>file path is relative to</li> <li><code>environment</code>(see below) variables override variables in <code>env_file</code></li> <li><em>VAL</em> is same as mentioned including quotes</li> <li>Incase of same named variables.... last one is used</li> <li>this variable can be used inside <em>container</em></li> <li>this variables cannot be used in <em>.yml</em></li> <li>eg:</li></ul> <div class="language-yml extra-class"><pre class="language-yml"><code>    <span class="token key atrule">services</span><span class="token punctuation">:</span>
+        <span class="token key atrule">myservice</span><span class="token punctuation">:</span>
+            <span class="token key atrule">env_file</span><span class="token punctuation">:</span>
+                <span class="token punctuation">-</span> a.env 
+                <span class="token punctuation">-</span> b.env
+</code></pre></div></li> <li><p><code>environment</code></p> <ul><li>can use <em>array or dictionary</em></li> <li><em>Boolean</em> values like <em>true false yes no</em> are inside qoutes
+<ul><li>since yml parser makes them <em>True False</em></li></ul></li> <li>if no value but <em>only key</em> then those values are taken from machine in which compose runs</li> <li>eg:</li></ul> <div class="language-yml extra-class"><pre class="language-yml"><code>    <span class="token key atrule">environment</span><span class="token punctuation">:</span>
+        <span class="token key atrule">BACK_ENV</span><span class="token punctuation">:</span> development
+        <span class="token key atrule">SHOW</span><span class="token punctuation">:</span> `true`
+        SESSION_SECRET
+</code></pre></div><ul><li>eg:</li></ul> <div class="language-yml extra-class"><pre class="language-yml"><code>    <span class="token key atrule">environment</span><span class="token punctuation">:</span>
+        <span class="token punctuation">-</span> BACK_ENV=development
+        <span class="token punctuation">-</span> SHOW=true 
+        <span class="token punctuation">-</span> SESSION_SECRET
+
+</code></pre></div></li> <li><p><code>expose</code></p> <ul><li>expose but not published</li> <li>access to linked services only</li> <li>only internal ports</li> <li>rg</li></ul> <div class="language-yml extra-class"><pre class="language-yml"><code>    <span class="token key atrule">expose</span><span class="token punctuation">:</span> 
+        <span class="token punctuation">-</span> <span class="token string">&quot;3000&quot;</span>
+        <span class="token punctuation">-</span> <span class="token string">&quot;8000&quot;</span>
+</code></pre></div></li> <li><p><code>external_links</code>[<em>Ignored by swarm</em>]</p> <ul><li>use networks instead</li></ul></li> <li><p><code>extra_hosts</code></p></li> <li><p><code>healthcheck</code></p></li> <li><p><code>image</code></p> <ul><li>eg : <em>image: redis</em></li> <li>eg : <em>image: ubuntu:14.04</em></li></ul></li> <li><p><code>isolation</code></p></li> <li><p><code>labels</code></p> <ul><li>adds metadata to containers</li></ul></li> <li><p><code>links</code>[<em>Ignored by swarm</em>]</p></li> <li><p><code>logging</code></p> <ul><li>logs for services</li></ul></li> <li><p><code>network_mode</code> [<em>Ignored by swarm</em>]</p></li> <li><p><code>networks</code></p> <ul><li>eg:</li></ul> <div class="language-yml extra-class"><pre class="language-yml"><code>    <span class="token key atrule">services</span><span class="token punctuation">:</span>
+        <span class="token key atrule">myservice</span><span class="token punctuation">:</span>
+            <span class="token key atrule">networks</span><span class="token punctuation">:</span>
+                <span class="token punctuation">-</span> myneta
+                <span class="token punctuation">-</span> yournetb
+</code></pre></div><ul><li><p><code>ALIASES</code></p> <ul><li>alternative hostnames for this service on network</li> <li>other containers on same network (to connect this service's container)
+<ul><li>can use service <em>name</em> OR</li> <li>can use <em>aliases</em></li></ul></li> <li><em>Scope</em> is limited to network</li> <li>eg:</li></ul> <div class="language-yml extra-class"><pre class="language-yml"><code>    <span class="token key atrule">services</span><span class="token punctuation">:</span>
+        <span class="token key atrule">myservice</span><span class="token punctuation">:</span>
+            <span class="token key atrule">networks</span><span class="token punctuation">:</span>
+                <span class="token key atrule">aliases</span><span class="token punctuation">:</span>
+                    <span class="token punctuation">-</span> alias1
+                    <span class="token punctuation">-</span> alias2
+</code></pre></div></li> <li><p><code>IPV4_ADDRESS</code> / <code>IPV6_ADDRESS</code></p></li></ul></li> <li><p><code>pid</code></p></li> <li><p><code>ports</code></p> <ul><li>expose ports</li> <li>a] <em>SHORT SYNTAX</em> <ul><li><code>HOST:CONTAINER</code> or just <code>CONTAINER</code> which will choose random host port</li> <li>eg:</li></ul> <div class="language-yml extra-class"><pre class="language-yml"><code>    <span class="token key atrule">ports</span><span class="token punctuation">:</span>
+        <span class="token punctuation">-</span> <span class="token string">&quot;3000&quot;</span>
+        <span class="token punctuation">-</span> <span class="token string">&quot;3000:3005&quot;</span>
+        <span class="token punctuation">-</span> <span class="token string">&quot;8000:8000&quot;</span>
+        <span class="token punctuation">-</span> <span class="token string">&quot;9090-9091:8080-8081&quot;</span>
+        <span class="token punctuation">-</span> <span class="token string">&quot;49100:22&quot;</span>
+        <span class="token punctuation">-</span> <span class="token string">&quot;127.0.0.1:8001:8001&quot;</span>
+        <span class="token punctuation">-</span> <span class="token string">&quot;127.0.0.1:5000-5010:5000-5010&quot;</span>
+        <span class="token punctuation">-</span> <span class="token string">&quot;6060:6060/udp&quot;</span>
+</code></pre></div></li> <li>b] <em>LONG SYNTAX</em> [version 3.2]
+<ul><li><em>target</em> , <em>published</em>, <em>protocol</em>, <em>mode</em></li></ul></li></ul></li> <li><p><code>secrets</code></p> <ul><li>grant access to service to use <em>secrets</em></li> <li><em>secrets</em> must be already defined in top level of yml in order to add to service in yml</li> <li><em>SHORT SYNTAX</em> <ul><li>just secret name</li> <li>container gets access to secrets</li> <li>mounts at <code>/run/secrets/&lt;secret_name&gt;</code> within container</li> <li><em>external</em> means already defined in docker by <em>docker secret create</em> OR <em>other stacks</em></li> <li>eg</li></ul> <div class="language-yml extra-class"><pre class="language-yml"><code>    <span class="token key atrule">version</span><span class="token punctuation">:</span> <span class="token string">&quot;3.1&quot;</span>
+    <span class="token key atrule">services</span><span class="token punctuation">:</span>
+        <span class="token key atrule">redis</span><span class="token punctuation">:</span>
+            <span class="token key atrule">image</span><span class="token punctuation">:</span> redis<span class="token punctuation">:</span>latest
+            <span class="token key atrule">deploy</span><span class="token punctuation">:</span> 
+                <span class="token key atrule">replicas</span><span class="token punctuation">:</span> <span class="token number">1</span> 
+            <span class="token key atrule">secrets</span><span class="token punctuation">:</span>
+                <span class="token punctuation">-</span> my_secret
+                <span class="token punctuation">-</span> my_other_secret
+    <span class="token key atrule">secrets</span><span class="token punctuation">:</span>
+        <span class="token key atrule">my_secret</span><span class="token punctuation">:</span>
+            <span class="token key atrule">file</span><span class="token punctuation">:</span> ./my_secret.txt 
+        <span class="token key atrule">my_other_secret</span><span class="token punctuation">:</span>
+            <span class="token key atrule">external</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+</code></pre></div></li> <li><em>LONG SYNTAX</em></li></ul></li> <li><p><code>security_opt</code>[<em>Ignored by swarm</em>]</p></li> <li><p><code>stop_grace_period</code> [<em>Ignored by swarm</em>]</p></li> <li><p><code>sysctls</code> [<em>Ignored by swarm</em>]</p></li> <li><p><code>ulimits</code></p></li> <li><p><code>userns_mode</code>[<em>Ignored by swarm</em>]</p></li> <li><p><code>volumes</code> - (Reference)</p> <ul><li><em>host paths</em> or <em>named volumes</em></li> <li><em>host path</em> in single service without defining in top level <code>volumes</code> key</li> <li><em>named volumes</em> defined in top-level can be reused in many services</li> <li><em>named volumes</em> are better for swarms</li> <li>eg:</li></ul> <div class="language-yml extra-class"><pre class="language-yml"><code>    <span class="token key atrule">version</span><span class="token punctuation">:</span> <span class="token string">&quot;3.2&quot;</span>
+    <span class="token key atrule">services</span><span class="token punctuation">:</span>
+        <span class="token key atrule">web</span><span class="token punctuation">:</span>
+            <span class="token key atrule">image</span><span class="token punctuation">:</span> nginx<span class="token punctuation">:</span>alpine
+            <span class="token key atrule">volumes</span><span class="token punctuation">:</span> 
+                <span class="token punctuation">-</span> <span class="token key atrule">type</span><span class="token punctuation">:</span> volume 
+                  <span class="token key atrule">source</span><span class="token punctuation">:</span> mydata
+                  <span class="token key atrule">target</span><span class="token punctuation">:</span> /data 
+                  <span class="token key atrule">volume</span><span class="token punctuation">:</span>
+                    <span class="token key atrule">nocopy</span><span class="token punctuation">:</span> <span class="token boolean important">true</span> 
+                <span class="token punctuation">-</span> <span class="token key atrule">type</span><span class="token punctuation">:</span> bind 
+                  <span class="token key atrule">source</span><span class="token punctuation">:</span> ./static
+                  <span class="token key atrule">target</span><span class="token punctuation">:</span> /opt/app/static
+        <span class="token key atrule">db</span><span class="token punctuation">:</span>
+            <span class="token key atrule">image</span><span class="token punctuation">:</span> postgres  
+            <span class="token key atrule">volumes</span><span class="token punctuation">:</span> 
+                 <span class="token punctuation">-</span> <span class="token string">&quot;/var/run/postgres/postgres.sock:/var/run/postgres/postgres.sock&quot;</span>
+                 <span class="token punctuation">-</span> <span class="token string">&quot;dbdata:/var/lib/postgresql/data&quot;</span>
+    <span class="token key atrule">volumes</span><span class="token punctuation">:</span>
+        <span class="token key atrule">mydata</span><span class="token punctuation">:</span>
+        <span class="token key atrule">dbdata</span><span class="token punctuation">:</span>
+</code></pre></div><ul><li><code>SHORT SYNTAX</code> <ul><li><em>HOST:CONTAINER</em> OR <em>HOST:CONTAINER:ro</em></li> <li>mount a host data using <em>yml</em> relative paths <code>.</code> &amp; <code>..</code></li> <li>eg:</li></ul> <div class="language-yml extra-class"><pre class="language-yml"><code>    <span class="token key atrule">volumes</span><span class="token punctuation">:</span>
+        <span class="token punctuation">-</span> /var/lib/mysql    <span class="token comment"># give path &amp; engine will create volume</span>
+        <span class="token punctuation">-</span> /opt/data<span class="token punctuation">:</span>/var/lib/mysql  <span class="token comment"># absolute path</span>
+        <span class="token punctuation">-</span> ./cache<span class="token punctuation">:</span>/tmp/cache        <span class="token comment"># relative path to yml</span>
+        <span class="token punctuation">-</span> ~/configs<span class="token punctuation">:</span>/etc/configs/<span class="token punctuation">:</span>ro    <span class="token comment"># relative path to home</span>
+        <span class="token punctuation">-</span> myvolume<span class="token punctuation">:</span>/var/lib/mysql       <span class="token comment"># named volumes</span>
+</code></pre></div></li> <li><code>LONG SYNTAX</code></li></ul></li> <li><p><code>restart</code></p> <ul><li><em>no</em> , <em>always</em> , <em>on-failure</em> , <em>unless-stopped</em></li></ul></li> <li><p><code>domainname, hostname, ipc, mac_address, privileged, read_only, shm_size, stdin_open, tty, user, working_dir</code></p></li> <li><p><code>networks</code> (Reference)</p> <ul><li><code>driver</code> <ul><li><em>bridge</em> on single host</li> <li><em>overlay</em> on swarm</li></ul></li> <li><code>driver_opt</code> <ul><li>driver dependent options</li></ul></li> <li><code>attachable</code> <ul><li>for <em>overlays</em> only</li> <li>if <em>true</em> then standalone container can attach to this network</li> <li>And this container can connect with <em>service</em> &amp; other <em>standalone containers</em> already attached to this network</li> <li>eg:</li></ul> <div class="language-yml extra-class"><pre class="language-yml"><code>    <span class="token key atrule">networks</span><span class="token punctuation">:</span>
+        <span class="token key atrule">mynet</span><span class="token punctuation">:</span>
+            <span class="token key atrule">driver</span><span class="token punctuation">:</span> overlay
+            <span class="token key atrule">attachable</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+</code></pre></div></li></ul></li> <li><p><code>ipam</code> [version 2]</p></li></ul> <h1 id="keywords-notes-commands-used-in-file"><a href="#keywords-notes-commands-used-in-file" class="header-anchor">#</a> keywords &amp; notes &amp; commands used in file</h1> <ul><li><p>no tabs. Only 2 space</p></li> <li></li> <li><p>version: &quot;3&quot;      # swarm mode</p> <p>docker stack deploy     # version 3 with swarm mode
+docker-compose up       # version 3 with Non-swarm mode
+docker-compose down</p></li></ul></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">12/7/2020, 10:42:46 PM</span></div></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/technotes/assets/js/app.8104ebb8.js" defer></script><script src="/technotes/assets/js/2.caedfb41.js" defer></script><script src="/technotes/assets/js/82.b19a306b.js" defer></script>
+  </body>
+</html>
