@@ -78,8 +78,8 @@ let obj = {
 #### # Object Literal _(not a convention. Use constructors.)_
 
 ```js
-let parent = { x: 10 };
-let child = Object.create(parent, { y: 20 });
+let parent = {x: 10};
+let child = Object.create(parent, {y: 20});
 ```
 
 #### # Constructors
@@ -96,7 +96,7 @@ obj = new Parent();
 function Parent(x) {
   this.x = x;
 }
-Parent.prototype.sayHi = () => "Hi";
+Parent.prototype.sayHi = () => 'Hi';
 
 function Child(x, y) {
   Parent.call(this, x); // Run & Inherit
@@ -123,7 +123,7 @@ class Parent {
     this.x = x;
   }
   sayHi() {
-    return "hi";
+    return 'hi';
   }
 }
 
@@ -147,13 +147,13 @@ let obj = new Child(3, 4);
 ```js
 let student = {
   greet: function() {
-    return "Hello";
+    return 'Hello';
   },
 };
 
 let teacher = {
   greet: function() {
-    return "Good Morning";
+    return 'Good Morning';
   },
 };
 
@@ -174,18 +174,18 @@ _Polymorphism allows us to change program behavior at runtime._
 let person = {
   prototype: {},
 };
-person.prototype.greet = () => "Hello.";
+person.prototype.greet = () => 'Hello.';
 
 let student = {};
 student.prototype = Object.create(person.prototype);
-student.prototype.greet = () => "Hello student.";
+student.prototype.greet = () => 'Hello student.';
 
 let teacher = {};
 teacher.prototype = Object.create(person.prototype);
-teacher.prototype.greet = () => "Good morning.";
+teacher.prototype.greet = () => 'Good morning.';
 
-c(student.num());
-c(teacher.num());
+c(student.greet());
+c(teacher.greet());
 ```
 
 ## Instanceof
@@ -278,7 +278,7 @@ Objects are **Mutable** because they are always addressed by **reference**.
 ```js
 // passed by value - number/string/boolean/symbol/undefined/null
 // passed by reference - objects (array,functions,etc)
-let x = { n: 10 };
+let x = {n: 10};
 let y = x;
 x.n = 20;
 
@@ -408,20 +408,20 @@ Object.values(obj); // all values
 Object.getOwnPropertyDescriptor(obj, propName); // {value: , writable: true, enumerable: true, configurable: true, }
 
 // change flags
-Object.defineProperty(obj, propName, { value: "foo", enumerable: false }); // If flags are absent then all flags = false.
+Object.defineProperty(obj, propName, {value: 'foo', enumerable: false}); // If flags are absent then all flags = false.
 ```
 
 #### Add, Delete property
 
 ```js
 // add
-obj.newProp = "value";
-obj.["new-prop"] = "value";
+obj.newProp = 'value';
+obj['new-prop'] = 'value';
 
 // dynamic key
 let obj = {
-  [someVariable]: 'umesh'
-}
+  [someVariable]: 'umesh',
+};
 obj[someVariable];
 
 // delete
@@ -446,13 +446,13 @@ delete obj.newProp;
 // first, last = data property
 // user = accessor property
 var obj = {
-  first: "umesh",
-  last: "kadam",
+  first: 'umesh',
+  last: 'kadam',
   get user() {
     return `${this.first} ${this.last}`;
   },
   set user(name) {
-    let [first, last] = name.split(" "); // array destructuring
+    let [first, last] = name.split(' '); // array destructuring
     this.first = first;
     this.last = last;
   },
@@ -460,7 +460,7 @@ var obj = {
 
 // Object.defineProperty can be used here
 
-obj.user = "Foo Bar"; // set
+obj.user = 'Foo Bar'; // set
 console.log(obj.user); // get
 ```
 
@@ -474,7 +474,7 @@ console.log(obj.user); // get
 function Foo(name) {
   this.name = name;
 
-  Object.defineProperty(this, "user", {
+  Object.defineProperty(this, 'user', {
     get: () => {
       return this.name;
     },
@@ -486,8 +486,8 @@ function Foo(name) {
   });
 }
 
-let obj = new Foo("Harry");
-obj.user = "Potter"; // set
+let obj = new Foo('Harry');
+obj.user = 'Potter'; // set
 c(obj.user); // get - Potter
 ```
 
@@ -507,8 +507,8 @@ class Foo {
   }
 }
 
-let obj = new Foo("Umesh");
-obj.user = "Harry"; // set
+let obj = new Foo('Umesh');
+obj.user = 'Harry'; // set
 c(obj.user); // get
 ```
 
@@ -531,9 +531,9 @@ function Foo(name) {
     this.name = name;
   };
 }
-let obj = new Foo("umesh");
+let obj = new Foo('umesh');
 obj.getName();
-obj.setName("Harry");
+obj.setName('Harry');
 ```
 
 ## Private/Protected
@@ -592,16 +592,16 @@ class User {
     this.name = name;
   }
   one() {
-    console.log("one");
+    console.log('one');
     return this;
   }
   two() {
-    console.log("two");
+    console.log('two');
     return this;
   }
 }
 
-let user = new User("umesh");
+let user = new User('umesh');
 user.one().two();
 ```
 

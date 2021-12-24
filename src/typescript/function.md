@@ -8,7 +8,7 @@ type callback = (x: string) => string;
 
 // function
 function foo(func: callback) {
-  func("hello");
+  func('hello');
 }
 
 // arrow function
@@ -19,14 +19,16 @@ const bar: callback = (str) => {
 
 ## Signature
 
+- Use this if _callback_ has some extra properties in addition to function defination
+
 <vc-table>
 <template v-slot:cola>
 
 ```ts
 // call signature
 type callback = {
-  (s: string): string;
-  x: number;
+  (s: string): string; // actual function
+  x: number; // property  (callback.x)y
 };
 ```
 
@@ -58,7 +60,10 @@ function foo<T>(x: T[]): T {
 }
 
 foo([2, 4, 5]); // T = number
-foo(["a", "b"]); // T = string
+foo(['a', 'b']); // T = string
+
+// Generic arrow function
+const fooo = <T>(x: T) => x;
 ```
 
 </template>
@@ -72,7 +77,7 @@ function foo<T>(x: T[], y: T[]): T[] {
 
 // Limit types for `<T>` when call
 // T = string | number
-let z = foo<string | number>([1, 2], ["hi"]);
+let z = foo<string | number>([1, 2], ['hi']);
 ```
 
 </template>
@@ -80,13 +85,17 @@ let z = foo<string | number>([1, 2], ["hi"]);
 
 ### Generic + constraint
 
+> Note : if `extends` is used then it can have more properties than what it extends.
+>
+> [playground](https://www.typescriptlang.org/play?#code/C4TwDgpgBAogHlAvFA3gMwPYYFwGdgBOAlgHYDmA3AL4UBQtaAriQMbBEYlROtQA8AFSgQ4wCCQAmuWHAB8ACjjYBAShS0oUAhGCMCXAORwDdKvR4t56LNgO5cBgDSaARgEMCt+w6oqKUAHoAqBY3LhExSRkGZksUd087ewNffyCQsOFRcQkoF0ZgKBIICCluLCg3aRZOQjdSYCA)
+
 <vc-table>
 <template v-slot:cola>
 
 ```ts
 // Generic + constraint
 // hard to read
-function Max<T extends { length: number }>(x: T, y: T): T {
+function Max<T extends {length: number}>(x: T, y: T): T {
   if (x.length > y.length) return x;
   return y;
 }
@@ -96,9 +105,10 @@ function Max<T extends { length: number }>(x: T, y: T): T {
 <template v-slot:colb>
 
 ```ts
-// same as -  Generic + constraint
+// same but not possible to extend
+// but, can be extended using intersection (&)
 // easy to read
-type T = { length: number };
+type T = {length: number};
 
 function Max(x: T, y: T): T {
   if (x.length > y.length) return x;
@@ -111,7 +121,7 @@ function Max(x: T, y: T): T {
 
 ## Overload
 
-- Avoid Overload if Union can be used.
+- **Avoid Overload if Union can be used.**
 
 ```ts
 // overload signatures (atleast 2+)

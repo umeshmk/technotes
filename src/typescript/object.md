@@ -7,7 +7,7 @@
 
 ```ts
 // way 1 - {}
-function foo(x: { a: number; b: number }): number {
+function foo(x: {a: number; b: number}): number {
   // code
 }
 
@@ -51,7 +51,7 @@ interface fooInterface {
   y?: number;
 }
 
-function foo({ x, y = 0 }: fooInterface) {
+function foo({x, y = 0}: fooInterface) {
   return x + y;
 }
 ```
@@ -74,29 +74,30 @@ function foo(obj: fooInterface) {
 <template v-slot:cola>
 
 ```ts
-interface xInterface {
+interface A {
   x: number;
 }
-interface yInterface extends xInterface {
+interface B {
   y: number;
 }
+
+interface ComboInterface extends A, B {}
 ```
 
 </template>
 <template v-slot:colb>
 
 ```ts
-interface xInterface {
+interface A {
   x: number;
 }
-interface yInterface {
+interface B {
   y: number;
 }
-interface xyInterface extends xInterface, yInterface {}
-
-// intersection - almost same as extends
+// & = intersection
+// almost same as extends
 // difference is how error is handled
-type xyType = xInterface & yInterface;
+type ComboType = A & B;
 ```
 
 </template>

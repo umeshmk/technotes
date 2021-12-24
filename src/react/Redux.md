@@ -87,8 +87,8 @@ function squareAll(list) {
 
 ```ts
 // app/store.ts
-import { configureStore } from "@reduxjs/toolkit";
-import counterReducer from "../features/counter/counterSlice";
+import {configureStore} from '@reduxjs/toolkit';
+import counterReducer from '../features/counter/counterSlice';
 
 export const store = configureStore({
   reducer: {
@@ -102,8 +102,8 @@ export type RootState = ReturnType<typeof store.getState>;
 
 ```ts
 // app/hooks.ts
-import { TypedUseSelectorHook, useSelector, useDispatch } from "react-redux";
-import { RootState, AppDispatch } from "./store";
+import {TypedUseSelectorHook, useSelector, useDispatch} from 'react-redux';
+import {RootState, AppDispatch} from './store';
 
 export const useAppDispatch = () => useDispatch<AppDispatch>();
 export const useAppSelector: TypedUseSelectorHook<RootState> = useSelector;
@@ -122,6 +122,8 @@ const initialState: State = {
 };
 
 const counterSlice = createSlice({
+  name: 'counter',
+  initialState,
   /*...*/
   reducers:{
     // action.payload is of type number
@@ -130,7 +132,11 @@ const counterSlice = createSlice({
     }
 })
 
-const selectCount = (state:RootState) => state.counter.value;
+// actions
+export const { increment, decrement..... } = counterSlice.actions;
+
+// selectors
+export const selectCount = (state:RootState) => state.counter.value;
 ```
 
 ## Redux Toolkit
@@ -188,8 +194,8 @@ Toolkit use `immer` internally which allows us to write mutable code.
 - It uses hooks api. It is recommended instead of `connect()` api
 
 ```js
-import { Provider } from "react-redux";
-import store from "./store";
+import {Provider} from 'react-redux';
+import store from './store';
 
 // wrap App in Provider
 <Provider store={store}>
@@ -199,8 +205,8 @@ import store from "./store";
 
 ```js
 // Get data from store in component
-import { useSelector, useDispatch } from "react-redux";
-import { increment, selectCount } from "./counterSlice";
+import {useSelector, useDispatch} from 'react-redux';
+import {increment, selectCount} from './counterSlice';
 
 // use it like normal hooks
 const count = useSelector(selectCount);
@@ -226,7 +232,7 @@ const dispatch = useDispatch(); // dipatch(increment())
 - Just an object
 - Typically a redux app have **just 1 store** used globally.
 - `getState` - get current state value
-- `sunscribe` - update UI if state changes (returns a function to unsubscribe)
+- `subscribe` - update UI if state changes (returns a function to unsubscribe)
 - `dispatch` - dispatch an action
 
 <vc-table>
@@ -234,8 +240,8 @@ const dispatch = useDispatch(); // dipatch(increment())
 
 ```js
 // CORE REDUX
-import { createStore } from "redux";
-import fooReducer from "./fooReducer";
+import {createStore} from 'redux';
+import fooReducer from './fooReducer';
 
 let store = createStore(fooReducer);
 
@@ -243,7 +249,7 @@ store.getState();
 store.subscribe(() => {
   console.log(store.getState());
 });
-store.dispatch({ type: "foo/A", payload: data });
+store.dispatch({type: 'foo/A', payload: data});
 ```
 
 </template>
@@ -251,8 +257,8 @@ store.dispatch({ type: "foo/A", payload: data });
 
 ```js
 // REDUX TOOLKIT
-import { configureStore } from "@reduxjs/toolkit";
-import fooSlice, { A } from "./fooSlice";
+import {configureStore} from '@reduxjs/toolkit';
+import fooSlice, {A} from './fooSlice';
 
 const store = configureStore({
   reducer: fooSlice.reducer,
@@ -287,14 +293,14 @@ store.dispatch(A()); // action function
 ```js
 // CORE REDUX
 
-const initialState = { value: 0 };
+const initialState = {value: 0};
 function fooReducer(state = initialState, action) {
   switch (action.type) {
-    case "foo/A":
+    case 'foo/A':
       // Mutation not allowed
-      return { value: state.value + 1 };
+      return {value: state.value + 1};
 
-    case "foo/B":
+    case 'foo/B':
       // code
       return newState;
 
@@ -309,11 +315,11 @@ function fooReducer(state = initialState, action) {
 
 ```js
 // REDUX TOOLKIT
-import { createSlice } from "@reduxjs/toolkit";
+import {createSlice} from '@reduxjs/toolkit';
 
-const initialState = { value: 0 };
+const initialState = {value: 0};
 const fooSlice = createSlice({
-  name: "foo",
+  name: 'foo',
   initialState,
   reducers: {
     A: (state) => {
@@ -328,10 +334,10 @@ const fooSlice = createSlice({
 });
 
 const fooReducer = fooSlice.reducer;
-const { A, B } = fooSlice.actions;
+const {A, B} = fooSlice.actions;
 const selectCount = (state) => state.foo.value;
 
-export { fooReducer, A, B, selectCount };
+export {fooReducer, A, B, selectCount};
 ```
 
 </template>
@@ -345,17 +351,17 @@ export { fooReducer, A, B, selectCount };
 
 ```js
 const action = {
-  type: "foo/A",
+  type: 'foo/A',
   payload: {
     id: 3,
-    name: "umesh",
+    name: 'umesh',
   },
 };
 
 // action creator
 const actionCreator = (id, name) => {
   return {
-    type: "foo/A",
+    type: 'foo/A',
     payload: {
       id: id,
       name: name,
@@ -364,7 +370,7 @@ const actionCreator = (id, name) => {
 };
 
 // action creator from slice
-const { A, B } = fooSlice.actions;
+const {A, B} = fooSlice.actions;
 ```
 
 ### Async Thunks

@@ -6,14 +6,14 @@
 class Foo {
   x: number;
   y: number;
-  readonly z: string = "hi"; // write only in constructor
+  readonly z: string = 'hi'; // write only in constructor
 
   uninit: string; // error - if strictPropertyInitialization is enabled
   uninit2!: string; // ! disables strictPropertyInitialization
 
   constructor() {
-    this.uninit = "strictPropertyInitialization needs this to work";
-    this.z = "can be written only in constructor()";
+    this.uninit = 'strictPropertyInitialization needs this to work';
+    this.z = 'can be written only in constructor()';
   }
 }
 ```
@@ -42,16 +42,18 @@ interface FooInterface {
 }
 class Foo implements FooInterface {
   greet(msg: string) {
-    return "Hi" + msg;
+    return 'Hi' + msg;
   }
 
   // msg must be :string but no error by typescript
   // interface checks
   //    - method name, return type, num of args
   //    - not parameter types
-  // Here "msg:any" - not from interface
+
+  // Here "msg:any" - will throw error
+  // instead use msg :string
   greet2(msg) {
-    return "Hi" + msg;
+    return 'Hi' + msg;
   }
 }
 ```
@@ -60,13 +62,14 @@ class Foo implements FooInterface {
 
 ```ts
 class Foo {
-  x = "public";
+  x = 'public';
   protected y = 0; // can be used in subclass
   private z = 3; // only this class (but for typescript only. It's visible in javascript.)
 
   // static
   static a = 6; // use Foo.a
   private static b = 6; // visibility can be used
+  private static b = 6; // error - private must precede static
 }
 ```
 
@@ -80,8 +83,8 @@ class Foo<T> {
   }
 }
 
-let f = new Foo("hello");
-f.x = "2";
+let f = new Foo('hello');
+f.x = '2';
 f.x = 2; // error;
 ```
 

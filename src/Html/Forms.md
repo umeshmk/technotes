@@ -73,14 +73,14 @@ myElement.form; // form element is returned
 
 ```html
 <!-- HTML -->
-<form action="foo.php" method="post" enctype="multipart/form-data" id="formId">
+<form method="post" enctype="multipart/form-data" id="formId">
   <!-- input fields -->
 </form>
 
 <script>
   let fd = new FormData(formId); // pass form as parameter
   fetch(url, {
-    method: "POST",
+    method: 'POST',
     body: fd,
   });
 </script>
@@ -91,14 +91,14 @@ myElement.form; // form element is returned
 ```js
 // FormData is write-only object  - Values can be changed but not retrieved
 let fd = new FormData();
-fd.append("username", "umesh");
-fd.append("file", someFile);
+fd.append('username', 'umesh');
+fd.append('file', someFile);
 axios({
-  url: "....",
-  method: "post",
+  url: '....',
+  method: 'post',
   data: fd,
   headers: {
-    "content-type": "multipart/form-data",
+    'content-type': 'multipart/form-data',
   },
 }).then();
 ```

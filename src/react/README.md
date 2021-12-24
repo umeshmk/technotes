@@ -4,6 +4,7 @@
 - **Declarative views** - (Functional programming is Declarative)
   - Easy syntax
   - Good Debug
+  - It's like a layer of abstraction - [stackoverflow](https://stackoverflow.com/a/1784702).
 - **Component based**
   - Just javascript not templates (ie uses jsx)
   - Encapsulated state,
@@ -20,7 +21,7 @@
 
 - [roadmap.sh/react](https://roadmap.sh/react)
 - Build Tools
-  - Use `Create-react-app` with typescript _( also Check my [react-refresh-app](https://github.com/umeshmk/react-refresh-app) repo in my Github.)_
+  - Create-react-app
   - [vitejs.dev](https://vitejs.dev/)
 - Snippets
   - [_ES7 React/Redux/GraphQL/React-Native snippets_](https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets) - _Recommended_
@@ -81,16 +82,16 @@
   - `onclick` --> `onClick`
   - `tabindex` --> `tabIndex`
   - Except `aria-label` & `data-foo={bar}` which is same as html
-- Dot Notation - `<Fpp.A>` , `<Fpp.B>` etc can used for related react components.
+- Dot Notation - `<Foo.A>` , `<Foo.B>` etc can used for related react components.
   - Export from same module once `export default Foo;`
 
 ```jsx
 // passing multiple props using spread operator
-let data = { name: "umesh", age: "31" };
+let data = {name: 'umesh', age: '31'};
 return <Person {...data} />;
 
 // also
-let { foo, ...everythingElse } = props;
+let {foo, ...everythingElse} = props;
 return <Person {...everythingElse} />;
 ```
 
@@ -148,28 +149,28 @@ return <Person {...everythingElse} />;
 <template v-slot:colb>
 
 ```js
-React.createElement("div", null);
+React.createElement('div', null);
 
-React.createElement("div", null, this);
+React.createElement('div', null, this);
 
-React.createElement("div", null, "foo");
+React.createElement('div', null, 'foo');
 
 React.createElement(
-  "div",
+  'div',
   null,
-  "foo",
-  React.createElement("span", null, "bar")
+  'foo',
+  React.createElement('span', null, 'bar')
 );
 
 React.createElement(
-  "div",
+  'div',
   {
-    className: "bg-red",
-    onClick: () => alert("clicked"),
-    "data-foo": "bar",
-    tabIndex: "0",
+    className: 'bg-red',
+    onClick: () => alert('clicked'),
+    'data-foo': 'bar',
+    tabIndex: '0',
   },
-  "foo"
+  'foo'
 );
 ```
 
@@ -189,8 +190,8 @@ React.createElement(
   - _VirtualDOM --> Reconciliation slgorithm (old vs new VirtualDOM) --> Change only what's needed in BrowserDOM_
 
 ```js
-ReactDOM.render(<div>Hello, {name}</div>, document.getElementById("root"));
-ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.render(<div>Hello, {name}</div>, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('root'));
 ```
 
 ### Components and Props
@@ -268,13 +269,13 @@ class Welcome extends React.Component {
   // intialize state
   constructor(props) {
     super(props);
-    this.state = { surname: "kadam" };
+    this.state = {surname: 'kadam'};
   }
 
   // setstate
   doSomething() {
     // this.state.surname = "kadammm"; // wrong (no re-render)
-    this.setState({ surname: "kadammm" }); // right
+    this.setState({surname: 'kadammm'}); // right
   }
 
   // Lifecycle methods
@@ -683,7 +684,7 @@ function App(props) {
 ### Context
 
 - Share data (eg: theme, language, user, data-cache, etc) globally to many components.
-- Why ? - If we use top-down waterfall model for data sharing then we have to keep passing props throung all intermediate components
+- Why ? - If we use top-down waterfall model for data sharing then we have to keep passing props through all intermediate components
 - `<ThemeContext.Provider value = {theme}`
   - `.Provider` & `value` are always required. Can't use any other name than `value`
 - We can have nested Providers overriding other Providers.
@@ -800,7 +801,7 @@ function logging(WrappedComponent) {
     // do some logging
 
     render() {
-      const { myRef, ...rest } = this.props;
+      const {myRef, ...rest} = this.props;
       return <WrappedComponent {...rest} ref={myRef} />;
     }
   }
@@ -918,7 +919,7 @@ function subscription(WrappedComponent, dataUrl) {
     }
 
     render() {
-      const { something, ...rest } = this.props;
+      const {something, ...rest} = this.props;
       return <WrappedComponent {...rest} something={something} />;
     }
   };
@@ -950,7 +951,7 @@ const BarWithSubscription = subscription(Bar, "data/bar");
 
 ### JSX in Depth
 
-- Refer to [/technotes/react/#jsx](/technotes/react/#jsx)
+- Refer to react docs
 
 ### Optimizing Performance
 

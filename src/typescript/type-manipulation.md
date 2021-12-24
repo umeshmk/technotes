@@ -3,7 +3,7 @@
 ## Generic
 
 - `any` vs `<T>`
-  - If we use `any` we don't know the return type of function.
+  - eg: If we use `any` we don't know the return type of function.
 - We can't have generic enums and namespaces.
 
 <vc-table>
@@ -21,9 +21,9 @@ function foo<T>(x: T): T {
 
 ```ts
 // Use
-let x1 = foo<string>("hello");
+let x1 = foo<string>('hello');
 let x1 = foo<number>(3);
-let x2 = foo("hello"); // type is inferred
+let x2 = foo('hello'); // type is inferred
 ```
 
 </template>
@@ -37,7 +37,7 @@ function foo<T>(x: T): T {
   return x;
 }
 
-// Non-generiv functions - Derived from Root Generic
+// Non-generic functions - Derived from Root Generic
 // - new function with same implementation different types
 interface fooInterface<T> {
   (x: T): T;
@@ -78,12 +78,12 @@ console.log(double.result(3)); // 6
 ```ts
 // String
 let fooStr = new foo<string>();
-fooStr.factor = "Hi";
+fooStr.factor = 'Hi';
 fooStr.result = function(x) {
-  return this.factor + " " + x;
+  return this.factor + ' ' + x;
 };
 
-console.log(fooStr.result("world")); // Hi world
+console.log(fooStr.result('world')); // Hi world
 ```
 
 </template>
@@ -103,41 +103,43 @@ function foo<T extends fooInterface>(x: T): T {
 }
 ```
 
-## keyof / keyof extends
+## keyof / extends keyof
 
 - `keyof` gives union of property names of object.
 - `keyof extends` is not same as `extends` for interface.
 
 ```ts
-type Point = { x: number; y: number };
+// keyof
+type Point = {x: number; y: number};
 type P = keyof Point; // union  x | y
 
-let obj: Point = { x: 3, y: 5 };
-let key1: P = "x";
-let key2: P = "y";
+let obj: Point = {x: 3, y: 5};
+let key1: P = 'x';
+let key2: P = 'y';
 // let key3:P = 'z'; // error
 ```
 
 ```ts
+// extends keyof
 function getValue<T, K extends keyof T>(obj: T, key: K): T[K] {
   return obj[key];
 }
 
 let user = {
-  name: "umesh",
+  name: 'umesh',
 };
 
-let nameValue = getValue(user, "name"); // umesh
+let nameValue = getValue(user, 'name'); // umesh
 ```
 
 ## Indexed access types
 
 ```ts
-type foo = { x: number; y: string };
+type foo = {x: number; y: string};
 
-type fooX = foo["x"]; // number
-type fooY = foo["y"]; // string
-type fooXY = foo["x" | "y"]; // number | string
+type fooX = foo['x']; // number
+type fooY = foo['y']; // string
+type fooXY = foo['x' | 'y']; // number | string
 type fooKey = foo[keyof foo]; // number | string
 ```
 
@@ -158,13 +160,13 @@ type n = RegExp extends yInterface ? string : number; // number
 
 ```ts
 // Ex
-type c<T> = T extends { length: number } ? T : never;
+type c<T> = T extends {length: number} ? T : never;
 
 let xObj = {
   length: 3,
 };
 let xArr = [3, 4, 5];
-let xStr = "hello";
+let xStr = 'hello';
 let empty = {};
 
 type c1 = c<typeof xObj>; // { length: number }
@@ -181,7 +183,7 @@ type x = {
 };
 
 let x1: x = {
-  name: "umesh", // works
+  name: 'umesh', // works
 };
 let x2: x = {
   age: 2, // error,
@@ -217,10 +219,10 @@ type z = `${y}_${x}`; // `a_${string}` | `a_${number}` | `b_${string}` | `b_${nu
 
 ```
 
-_Intrinsic String Manipulation_
+## _Intrinsic String Manipulation_
 
 ```ts
-type x = "Hello wORLD";
+type x = 'Hello wORLD';
 type up = Uppercase<x>; // "HELLO WORLD"
 type low = Lowercase<x>; // "hello world"
 type cap = Capitalize<x>; // "Hello wORLD"

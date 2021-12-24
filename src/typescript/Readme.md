@@ -57,13 +57,13 @@ _tsconfig.json_
 
 ```ts
 // implicit - const vs let
-const foo = "hello world"; // foo: "hello world" - a Literal type
-let foo = "hello"; // foo: string
+const foo = 'hello world'; // foo: "hello world" - a Literal type
+let foo = 'hello'; // foo: string
 
 // Explicit types - only let
-let foo: string = "a string";
+let foo: string = 'a string';
 let foo: number = 5;
-let foo: string[] = ["foo", "bar"];
+let foo: string[] = ['foo', 'bar'];
 ```
 
 ### Literal type
@@ -71,12 +71,12 @@ let foo: string[] = ["foo", "bar"];
 ```ts
 interface User {
   name: string;
-  gender: "male" | "female" | "unspecified"; // not string but specific values only
+  gender: 'male' | 'female' | 'unspecified'; // not string but specific values only
 }
 
 let user: User = {
-  name: "umesh",
-  gender: "male",
+  name: 'umesh',
+  gender: 'male',
 };
 ```
 
@@ -87,7 +87,7 @@ const foo: number[] = [1, 3];
 const foo: readonly number[] = [1, 3];
 const bar: Array<number> = [1, 3]; // same as above
 const bar: ReadonlyArray<number> = [1, 3]; // push/pop not possible
-const doo: [number, string] = [1, "hello"]; // TUPLE - fixed number(and types) of items
+const doo: [number, string] = [1, 'hello']; // TUPLE - fixed number(and types) of items
 ```
 
 ### Function type
@@ -119,8 +119,8 @@ console.log(myFunc2(5, thrice)); // 15
 ### Object
 
 ```ts
-const user: { name: string; age: number; gender?: string } = {
-  name: "umesh",
+const user: {name: string; age: number; gender?: string} = {
+  name: 'umesh',
   age: 31,
   //   gender: 'male' // optional property
 };
@@ -133,8 +133,8 @@ const user: { name: string; age: number; gender?: string } = {
 let getLen = (params: string | string[]) => {
   return params.length;
 };
-getLen("foo"); // 3
-getLen(["foo", "bar"]); // 2
+getLen('foo'); // 3
+getLen(['foo', 'bar']); // 2
 getLen(23); // error
 ```
 
@@ -155,7 +155,7 @@ interface UserInterface {
 
 let user: UserInterface = {
   id: 23,
-  name: "umesh",
+  name: 'umesh',
 };
 ```
 
@@ -166,7 +166,7 @@ let user: UserInterface = {
 // type aliases
 type ID = number;
 type NAME = string;
-type STATUS = "Block" | "Unblocked";
+type STATUS = 'Block' | 'Unblocked';
 
 // EX
 type User = {
@@ -176,7 +176,7 @@ type User = {
 
 // Ex - Tuple (a strict array)
 type mytype = [string, number];
-let x: mytype = ["foo", 23];
+let x: mytype = ['foo', 23];
 ```
 
 </template>
@@ -191,6 +191,7 @@ let x: mytype = ["foo", 23];
 
 ```ts
 // allowed in interface
+// both id & name will be required
 interface UserInterface {
   id: number;
 }
@@ -221,16 +222,16 @@ type UserInterface = {
 
 ```ts
 // --- ex
-let page: unknown = "23";
+let page: unknown = '23';
 let pageNumber = page as number;
 
 // --- ex
-let page: string = "23";
+let page: string = '23';
 let pageNumber = (page as unknown) as number;
 
 // --- ex
-const x = "hello" as number; // error
-const x = ("hello" as unknown) as number; // works
+const x = 'hello' as number; // error
+const x = ('hello' as unknown) as number; // works
 ```
 
 ```ts
@@ -242,9 +243,10 @@ const [user, setUser] = React.useState<IUser>({} as IUser);
 setUser(newUser);
 ```
 
-### null/undefined`
+### null/undefined
 
 - use `!` at end of variable - value isn’t null or undefined
+- see **Working with DOM** below
 
 ### Unknown type
 
@@ -254,13 +256,13 @@ let foo: unknown;
 let bar: string;
 
 foo = 23;
-foo = "umesh";
+foo = 'umesh';
 
 // case 1
 bar = foo; // error
 
 // case 2
-if (typeof foo === "string") {
+if (typeof foo === 'string') {
   bar = foo; // no error
 }
 ```
@@ -271,12 +273,13 @@ if (typeof foo === "string") {
 
 ```ts
 function generateErrorVoid(message: string, code: number): void {
-  return; // error
+  // return ; // no error
+  return ''; // error (string is returned)
 }
 
 function generateError(message: string, code: number): never {
   // return; // error
-  throw { message: message, errCode: code }; // useful
+  throw {message: message, errCode: code}; // useful
 }
 ```
 
@@ -292,33 +295,36 @@ interface UserInterface {
   greet(): string; // return type
 }
 let user: UserInterface = {
-  name: "foo",
+  name: 'foo',
   age: 23,
+  // error - greet is missing error
 };
 ```
 
 ## Working with DOM
 
 ```ts
+// Note - Use `.ts` file and not typescript Playground
+
 // input
-let input = document.querySelector("#name"); // error
+let input = document.querySelector('#name'); // error
 
 // case 1 - add !
-let input = document.querySelector("#name")!; // no error - adding ! means #name will be definately available during runtime
+let input = document.querySelector('#name')!; // no error - adding ! means #name will be definately available during runtime
 
 // case 2 - add type check
-let input = document.querySelector("#name"); // just adding ! means #name will be definately available during runtime
+let input = document.querySelector('#name'); // just adding ! means #name will be definately available during runtime
 if (input) {
   // code
 }
 ```
 
 ```ts
-let input = document.querySelector("#name") as HTMLInputElement;
+let input = document.querySelector('#name') as HTMLInputElement;
 let value = input.value;
 
 // add listener
-input.addEventListener("click", (event) => {
+input.addEventListener('click', (event) => {
   let target = event.target as HTMLInputElement;
   console.log(target.value);
 });
@@ -334,7 +340,7 @@ class User {
   protected name: string;
   private age: number;
   readonly something: string;
-  static readonly blablah: string = "hooohaaaa"; // User.blablah
+  static readonly blablah: string = 'hooohaaaa'; // User.blablah
 
   constructor(name: string, age: number) {
     this.name = name;
@@ -343,7 +349,7 @@ class User {
   }
 }
 
-let foo = new User("foooo", 23);
+let foo = new User('foooo', 23);
 ```
 
 ```ts
@@ -355,7 +361,7 @@ class User implements UserInterface {
   // code something
 
   greet() {
-    return "Hello";
+    return 'Hello';
   }
 }
 
@@ -388,7 +394,7 @@ interface UserInterface {
 }
 
 let user: UserInterface = {
-  name: "foo",
+  name: 'foo',
 };
 
 // let result = addId(user); // works (implicit)
@@ -403,12 +409,12 @@ interface UserInterface<T, V> {
   info: V;
 }
 
-const user1: UserInterface<{ meta: string }, string> = {
-  name: "foo",
+const user1: UserInterface<{meta: string}, string> = {
+  name: 'foo',
   data: {
-    meta: "bar",
+    meta: 'bar',
   },
-  info: "hello",
+  info: 'hello',
 };
 ```
 
@@ -418,11 +424,12 @@ const user1: UserInterface<{ meta: string }, string> = {
 
 ```ts
 // Enums
+// Alternatives is to use Union of strings like 'On'|'Off'
 
 enum StatusEnum {
   On, // can be capital letters too
   Off,
-  Loading = "Pending", // equal not colon (:)
+  Loading = 'Pending', // equal not colon (:)
 }
 
 // let foo: StatusEnum = 'On'; // not assignable
@@ -438,6 +445,6 @@ It is common to use Enums inside Interfaces
 ```ts
 interface UserInterface {
   name: string;
-  ststus: StatusEnum;
+  status: StatusEnum;
 }
 ```

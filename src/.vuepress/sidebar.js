@@ -130,9 +130,9 @@ module.exports = {
     ],
     '/react/': [
       '',
-      // "libraries.md",
       'react-hooks.md',
       'redux.md',
+      // 'react-query.md',
       'awesome-react-components.md',
       'awesome-react.md',
     ],
