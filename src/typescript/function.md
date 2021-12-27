@@ -68,8 +68,8 @@ foo(['a', 'b']); // T = string
 type fooType = <T>(x: T) => T;
 
 // arrow func (def with type)
-// const foo2 = <T>(x: T) => x; // error since <T> is jsx
-const foo3 = <T>(x: T) => x; // no error - just add comma
+const foo2 = <T>(x: T) => x; // error since <T> is jsx
+// const foo3 = <T,>(x: T) => x; // no error - just add comma
 ```
 
 </template>

@@ -105,17 +105,14 @@ function foo<T extends fooInterface>(x: T): T {
 
 ## keyof / extends keyof
 
-- `keyof` gives union of property names of object.
-- `keyof extends` is not same as `extends` for interface.
-
 ```ts
 // keyof
 type Point = {x: number; y: number};
-type P = keyof Point; // union  x | y
+type PKey = keyof Point; // union  x | y
 
 let obj: Point = {x: 3, y: 5};
-let key1: P = 'x';
-let key2: P = 'y';
+let key1: PKey = 'x';
+let key2: PKey = 'y';
 // let key3:P = 'z'; // error
 ```
 
@@ -127,9 +124,11 @@ function getValue<T, K extends keyof T>(obj: T, key: K): T[K] {
 
 let user = {
   name: 'umesh',
+  role: 'frontend',
 };
 
-let nameValue = getValue(user, 'name'); // umesh
+let name = getValue(user, 'name'); // umesh
+let role = getValue(user, 'role'); // frontend
 ```
 
 ## Indexed access types
@@ -196,7 +195,7 @@ type X<T> = {
 };
 type Y = {
   a: string;
-  readonly b: number;
+  b: number;
 };
 
 type XY = X<Y>; // type xy = {a: boolean;b: boolean;}

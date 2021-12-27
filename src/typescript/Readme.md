@@ -19,17 +19,18 @@
 ```sh
 # install
 yarn add typescript
-tsc index.js
-tsc index.js -w # watch
+tsc index.ts
+tsc index.ts -w # watch
 
-
-# create tsconfig.json
-tsc --init
-# watch if tsconfig.json is configured
-tsc -w
+#  tsconfig.json
+tsc --init # create
+tsc -w # watch
 ```
 
 _tsconfig.json_
+
+- **Predefined `tsconfig.json` for env like react, node, vite, deno, etc**
+  - [https://www.typescriptlang.org/docs/handbook/tsconfig-json.html#tsconfig-bases](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html#tsconfig-bases)
 
 ```json
 {
@@ -84,9 +85,11 @@ let user: User = {
 
 ```ts
 const foo: number[] = [1, 3];
-const foo: readonly number[] = [1, 3];
+const foo: readonly number[] = [1, 3]; // No push/pop
+
 const bar: Array<number> = [1, 3]; // same as above
-const bar: ReadonlyArray<number> = [1, 3]; // push/pop not possible
+const bar: ReadonlyArray<number> = [1, 3]; // No push/pop
+
 const doo: [number, string] = [1, 'hello']; // TUPLE - fixed number(and types) of items
 ```
 
@@ -343,6 +346,7 @@ class User {
   static readonly blablah: string = 'hooohaaaa'; // User.blablah
 
   constructor(name: string, age: number) {
+    // error 'id' has no initializer (must be initialized or use '!' like id!)
     this.name = name;
     this.age = age;
     this.something = name + age; // readonly except in constructor
@@ -379,6 +383,7 @@ class Admin extends User {
 ```ts
 // <T> - no constraint and T can be anything
 // <T extends object> - constraint that T must be object only
+// <T extends {length:number}> - constraint that T must be object with length property
 
 // add constraint - <T> must be object
 const addId = <T extends object>(obj: T) => {

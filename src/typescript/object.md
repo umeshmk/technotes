@@ -59,11 +59,11 @@ function foo({x, y = 0}: fooInterface) {
 ### Readonly
 
 ```ts
-interface xInterface {
+interface Foo {
   readonly x: number;
 }
 
-function foo(obj: fooInterface) {
+function foo(obj: Foo) {
   obj.x = 34; // error
 }
 ```

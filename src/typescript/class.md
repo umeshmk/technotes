@@ -69,7 +69,7 @@ class Foo {
   // static
   static a = 6; // use Foo.a
   private static b = 6; // visibility can be used
-  private static c = 6; // error - private must precede static
+  // static private  c = 6; // error - private must precede static
 }
 ```
 
