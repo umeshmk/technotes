@@ -1151,8 +1151,8 @@ _Use Behaviour_
   - _Render component tree_ - just check output (_Jest , React-testing-library_)
   - _Run Complete App_ - end-to-end Testing (_Cypress_)
 - Difference between _“unit” and “integration”_ tests ? - Can be blurry. Depends on team & product.
-- _Jest_ - A test runner which provides `jsdom` to access DOM
-- _React-testing-library_ - A set of helpers to test react components. Implementation details of component is not needed.
+- **_Jest_** - A test runner which provides `jsdom` to access DOM. (Also _Mocha, Ava_)
+- **_React-testing-library_** - A set of helpers to test react components.
 - [Jest vs React-testing-library](https://stackoverflow.com/questions/66341449/testing-library-react-vs-jest)
 - _create-react-app_ has both Jest and React Testing Library
 

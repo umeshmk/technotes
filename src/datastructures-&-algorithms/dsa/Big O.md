@@ -17,16 +17,19 @@
 
 ## Time Complexity
 
-- **Runtimes list** (Not fixed)
+<vc-img url='https://i.imgur.com/LpSaHt4.jpg' size='xl'/>
 
-  - `O(log N)`
-  - `O(N log N)`
-  - `O(N)`
-  - `O(N^2)` (n square)
+**Runtimes list**
+
+- **Polynomial**
+  - Constant - `O(1)`
+  - Logrithmic/Binary - `O(log N)`
+  - Linear - `O(N)`
+  - Quasilinear - `O(N log N)`
+  - Quadratic - `O(N^2)` (n square)
   - O(2<sup>N</sup>) (2 raise to N)
-  - `O(x)`
-  - `O(xy)` ( any variables)
-
+- **Exponential** ie worse than Quadratic
+  - Factorial - `O(N!)` (travelling salesman)
 - **Best / Worst / Expected case**
   - Ex: For **quicksort**(uses pivot) on array
     - _Best case_ - `O(N)` - If all items are same. It will travel just once. {Not much useful in reality.}

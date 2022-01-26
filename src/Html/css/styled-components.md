@@ -15,7 +15,7 @@
 
 ```js
 // **Elements/Title.js**
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const Title = styled.h1`
   color: red;
@@ -29,7 +29,7 @@ export default Title;
 
 ```jsx
 // **App.js**
-import Title from "Elements/Title";
+import Title from 'Elements/Title';
 
 let App = () => {
   return (
@@ -110,7 +110,7 @@ let ButtonDark = styled(Button)`
 // ReactConponent
 // If (props) is passed then
 // use props.className , props.children
-let Link = ({ className, children }) => {
+let Link = ({className, children}) => {
   return (
     <a className={className} href="/">
       {children}
@@ -194,8 +194,8 @@ const Button = styled.button`
 
 ```js
 let Input = styled.input.attrs((props) => ({
-  type: "text",
-  size: props.size || "1em",
+  type: 'text',
+  size: props.size || '1em',
 }))`
   color: red;
   background: #666;
@@ -204,7 +204,7 @@ let Input = styled.input.attrs((props) => ({
 // we can override too
 // Just extend then change
 let Password = styled(Input).attrs((props) => ({
-  type: "password",
+  type: 'password',
 }))`
   color: black;
   background: green;
@@ -272,7 +272,7 @@ let Rotate = styled.div`
 ```js
 // global theme
 let theme = {
-  primary: "grey",
+  primary: 'grey',
 };
 
 // button
@@ -283,14 +283,14 @@ let Button = styled.button`
 // default theme for button
 Button.defaultProps = {
   theme: {
-    primary: "blue",
+    primary: 'blue',
   },
 };
 
 // global theme2 (function)
 // inherit from parent <ThemeProvider>
-let theme2 = ({ primary }) => ({
-  primary: "green",
+let theme2 = ({primary}) => ({
+  primary: 'green',
   secondary: primary, // red
 });
 ```
@@ -327,7 +327,7 @@ let theme2 = ({ primary }) => ({
 <template v-slot:cola>
 
 ```js
-import { css } from "styled-components";
+import {css} from 'styled-components';
 
 let styles = css`
   color: red;
